@@ -27,8 +27,8 @@ export default function FooterSection() {
               <span className="font-bold tracking-wider text-lg text-white font-mono">AROS SYSTEM</span>
             </div>
             <p className="text-xs text-neutral-500 leading-relaxed font-medium">
-               Building high-performance automated <br />
-               infrastructures for the modern enterprise.
+               Membina sistem jualan automatik 24/7 <br />
+               untuk pemilik bisnes Malaysia.
             </p>
           </div>
 

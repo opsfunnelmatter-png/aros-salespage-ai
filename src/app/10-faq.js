@@ -14,11 +14,15 @@ export default function FAQAccordion() {
   const faqs = [
     {
       q: "Adakah caj bulanan RM99 ini wajib? Kenapa tidak bayar one-off sahaja?",
-      a: "Sistem AI Agent berprestasi tinggi bukan sekadar bot 'auto-reply' biasa. Ia menuntut kuasa pemprosesan Cloud Server 24/7, kos pemprosesan token LLM yang berat, dan penyelenggaraan infrastruktur Meta Webhook yang berterusan. Sebagai perbandingan industri, platform pengurusan mesej biasa seperti Sleekf*** atau Resp***.io mengenakan caj langganan asas bermula RM300 hingga RM400+ sebulan (hanya untuk sistem inbox kaku, belum termasuk kapasiti AI). Komitmen RM99/bulan ini merangkumi kos operasi Cloud Server, pengurusan token AI, dan penyelenggaraan infrastruktur sistem anda secara berterusan."
+      a: "Sistem AI Agent berprestasi tinggi bukan sekadar bot 'auto-reply' biasa. Ia menuntut kuasa pemprosesan Cloud Server 24/7, kos pemprosesan token LLM yang berat, and penyelenggaraan infrastruktur Meta Webhook yang berterusan. Sebagai perbandingan industri, platform pengurusan mesej biasa seperti Sleekf*** atau Resp***.io mengenakan caj langganan asas bermula RM300 hingga RM400+ sebulan (hanya untuk sistem inbox kaku, belum termasuk kapasiti AI). Komitmen RM99/bulan ini merangkumi kos operasi Cloud Server, pengurusan token AI, dan penyelenggaraan infrastruktur sistem anda secara berterusan."
     },
     {
       q: "Saya stuck dengan Meta Ads / TikTok Ads — sesuai ke sistem ini?",
       a: "Sangat sesuai. Sistem ini dipasang bukan untuk kurangkan kos iklan secara magik, tetapi untuk elakkan leads malam anda terbiar 'mati'. Bila conversion rate leads malam naik dari 0% ke 30%+, ROI iklan anda akan automatik jadi positif."
+    },
+    {
+      q: "AI ni faham ke kalau pelanggan saya guna bahasa pasar atau singkatan macam 'pm brp', 'cod katne'?",
+      a: "Ya, 100%. Otak AI AROS dibina menggunakan NLP (Natural Language Processing) khusus untuk pasaran Malaysia. Ia dilatih untuk memahami 99% singkatan, bahasa slanga tempatan, malah kesilapan ejaan (typo), dan akan membalas secara automatik dengan gaya bahasa yang natural seperti staf manusia yang ramah."
     },
     {
       q: "Saya bukan orang technical — boleh ikut atau uruskan ke?",
@@ -29,12 +33,16 @@ export default function FAQAccordion() {
       a: "Kami menggunakan integrasi rasmi Cloud API WhatsApp Business (WABA) yang patuh terma Meta. Risiko ban hampir 0% berbanding jika anda menggunakan software haram jenis scraping/unofficial blast yang dilarang keras."
     },
     {
+      q: "Adakah saya kena bayar kos asing untuk WhatsApp Meta Cloud API?",
+      a: "Meta memberikan 1,000 perbualan PERCUMA setiap bulan untuk setiap akaun perniagaan. Majoriti perniagaan kecil tidak melebihi had percuma ini. Jika perniagaan anda berkembang dan melebihi 1,000 chat, caj langsung dari Meta adalah sekitar RM0.04 hingga RM0.12 bagi setiap sesi 24 jam. Kami akan bantu hubungkan kad debit/kredit anda terus ke Meta tanpa sebarang markup dari pihak kami."
+    },
+    {
       q: "Selepas pemasangan sistem integrasi ini, adakah terdapat caj tambahan lain?",
       a: "Satu-satunya komitmen berterusan sistem adalah RM99/bulan untuk kos penyelenggaraan Cloud Server infrastructure. Bagi kos penggunaan WhatsApp Cloud API, Meta memberikan 1,000 perbualan inbound (mesej masuk dari pelanggan) secara 100% PERCUMA setiap bulan. Sekiranya anda melakukan kempen outbound blasting menggunakan Meta template, caj perbualan standard akan dikenakan secara telus terus daripada kad kredit anda kepada pihak Meta tanpa sebarang markup tambahan daripada pihak kami."
     },
     {
       q: "Kalau saya tak puas hati dengan hasil, boleh minta refund?",
-      a: "Kami memberi jaminan 100% kepuasan sistem di mana kami sedia menala (tweak) logik flow 10-step closing anda di dalam playground sehingga ia berfungsi tepat seperti yang dimahukan. Oleh kerana kos pelaburan ini melibatkan komitmen masa kerja fulfillment fizikal jurutera sistem kami, tiada polisi pulangan wang (refund) ditawarkan selepas kerja pembangunan bermula."
+      a: "Jaminan Komitmen & Kualiti Penuh: Memandangkan sistem ini melibatkan kos penyediaan server awan khusus dan integrasi API rasmi Meta yang disesuaikan mengikut struktur perniagaan anda secara eksklusif, tiada pembatalan atau pulangan wang ditawarkan sebaik sahaja fasa pembangunan infrastruktur sistem anda dimulakan."
     }
   ];
 
@@ -79,7 +87,7 @@ export default function FAQAccordion() {
               {/* Accordion Collapsible Body */}
               <div 
                 className={`transition-all duration-300 ease-in-out ${
-                  isOpen ? 'max-h-[300px] border-t border-white/5' : 'max-h-0'
+                  isOpen ? 'max-h-[400px] border-t border-white/5' : 'max-h-0'
                 } overflow-hidden`}
               >
                 <p className="p-5 text-neutral-400 text-xs sm:text-sm leading-relaxed pl-5 font-medium bg-[#0A0E1A]/40">

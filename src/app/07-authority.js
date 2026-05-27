@@ -7,20 +7,20 @@ import { ShieldCheck, Award, CheckCircle2 } from 'lucide-react';
 export default function AuthoritySection() {
   const pillars = [
     {
-      title: "Event-Driven Workflow Orchestration",
-      subtitle: "Pengurusan tugasan berasaskan trigger untuk memastikan zero-latency dalam setiap operasi."
+      title: "Penyelarasan Webhook Pantas",
+      subtitle: "Integrasi sistem yang memastikan respons mesej kurang 0.2 saat tanpa sebarang delay."
     },
     {
-      title: "Cloud-Native Resilient Infrastructure",
-      subtitle: "Seni bina infrastruktur dengan uptime 99.9% yang direka khas untuk operasi mission-critical."
+      title: "Infrastruktur Pelayan Awan",
+      subtitle: "Seni bina cloud server berdaya tahan tinggi bagi memastikan sistem WhatsApp AI anda aktif 24/7."
     },
     {
-      title: "Autonomous Agentic Logic & Tuning",
-      subtitle: "Custom prompt engineering dan logic tuning yang dioptimumkan untuk kadar conversion maksimum."
+      title: "Prompt Engineering Tersuai",
+      subtitle: "Otak AI dilatih khusus mengikut produk, skrip closing, dan FAQ perniagaan anda sendiri."
     },
     {
-      title: "Distributed LLM Context Databases",
-      subtitle: "Pengurusan database yang selamat dan pantas bagi menyimpan context perbualan secara berpusat."
+      title: "Pangkalan Data Selamat",
+      subtitle: "Penyimpanan konteks perbualan pelanggan secara tersusun untuk penjejakan analitik iklan."
     }
   ];
 
@@ -36,14 +36,14 @@ export default function AuthoritySection() {
         {/* ROW 1: HEADLINE (Centered Full Width) */}
         <div className="mb-16 text-center max-w-3xl mx-auto space-y-4">
           <div className="inline-flex items-center gap-2 bg-orange-500/10 border border-orange-500/20 px-3 py-1.5 rounded-md text-[10px] font-mono font-bold text-orange-400 uppercase tracking-widest mx-auto shadow-sm">
-            <Award className="w-3.5 h-3.5" /> SYSTEM ARCHITECT AUTHORITY
+            <Award className="w-3.5 h-3.5" /> PENGASAS SISTEM AROS
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-white leading-[1.12]">
-            Di Sebalik Seni Bina <br className="hidden md:block"/>
-            Infrastruktur <span className="bg-gradient-to-r from-orange-500 to-amber-500 bg-clip-text text-transparent">AROS Engine</span>
+            Di Sebalik Pembangunan <br className="hidden md:block"/>
+            Enjin Automasi <span className="bg-gradient-to-r from-orange-500 to-amber-500 bg-clip-text text-transparent">AROS Engine</span>
           </h2>
           <p className="text-neutral-400 text-sm md:text-base leading-relaxed max-w-2xl mx-auto font-medium">
-            Sistem automasi berdaya saing tinggi tidak lahir dari konfigurasi templat generik. Ia memerlukan ketetapan logik dan integrasi teknikal gred enterprise.
+            Sistem automasi jualan yang dibina berdasarkan data jualan sebenar, bukan sekadar templat bot kosong.
           </p>
         </div>
 
@@ -77,10 +77,10 @@ export default function AuthoritySection() {
                   <div className="flex flex-col items-center gap-1.5 text-center">
                     <h4 className="font-black text-2xl text-neutral-100 tracking-tight">Amin Azman</h4>
                     <p className="text-[10px] font-mono text-orange-400 mt-1 uppercase tracking-widest font-black bg-orange-500/10 border border-orange-500/20 px-2 py-0.5 rounded">
-                      Enterprise System Architect
+                      AROS System Architect
                     </p>
                   </div>
-
+ 
                   {/* Firm's Legal Registration Badge */}
                   <div className="w-full bg-white/[0.04] border border-white/10 px-4 py-1.5 rounded-xl text-[9px] font-mono font-bold text-neutral-400 whitespace-nowrap backdrop-blur-md tracking-wider shadow-sm uppercase">
                     BROMOVER RESOURCES SDN. BHD. · EST. 2019
@@ -97,10 +97,13 @@ export default function AuthoritySection() {
             {/* Top Block: Premium Copywriting (Founder-to-Founder Hard Truth with Fact Injections) */}
             <div className="space-y-4 text-neutral-300 text-sm md:text-base leading-relaxed font-medium">
               <p>
-                Agensi biasa menjual laman web. Kami membina enjin jualan berprestasi tinggi. Sejak 2022, AROS direka khusus untuk satu matlamat matematik mutlak: memaksimumkan LTV (Lifetime Value) bagi setiap klik iklan yang anda belanjakan. Melalui integrasi Custom Logic Layer dan Agentic AI Workflows terus ke dalam WhatsApp Cloud API rasmi Meta, kami menyuntik keupayaan automasi bertaraf korporat.
+                Agensi biasa cuma buat website. Sejak 2019, agensi pemasaran kami (Bromover Resources) membina enjin jualan untuk membantu usahawan melonjakkan hasil ROI iklan. Kami telah mendigitalkan <strong>lebih 30 operasi perniagaan</strong> termasuk jenama E-Commerce tempatan, agensi perkhidmatan, pusat rawatan pergigian, dan pengurusan homestay berskala komersial.
               </p>
               <p>
-                Dengan portfolio melebihi 30 operasi perniagaan merentasi pelbagai sektor industri yang berjaya didigitalkan secara cloud-native, kami membina sistem autopilot berdaya tahan tinggi yang beroperasi tanpa henti — membebaskan perniagaan anda daripada sebarang limitasi biologi atau kesilapan manusia.
+                Sistem <strong>AROS Complete AI Engine</strong> ini adalah hasil gabungan pengalaman bertahun-tahun kami menguruskan iklan dan leads. Kami bina sistem ini khusus untuk menyelesaikan masalah terbesar klien agensi kami sendiri: leads masuk melimpah-limpah waktu malam tapi tersangkut sebab tiada siapa layan.
+              </p>
+              <p>
+                AROS adalah produk terbaru kami. Disebabkan ini adalah fasa pelancaran awal (Early Launch), kami menawarkan harga setup serendah <strong>RM999 sahaja</strong> (termasuk server bulan pertama) bagi mengumpul portfolio kes kajian (case studies) terawal. Harga setup sebenar sistem integrasi enterprise tersuai seperti ini bernilai sekurang-kurangnya RM2,999 ke atas.
               </p>
             </div>
 

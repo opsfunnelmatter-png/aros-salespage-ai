@@ -16,6 +16,15 @@ export default function BleedingMath({ dailyBudget, setDailyBudget }) {
 
   const isBudgetCompleted = budget !== '' && parseFloat(budget) > 0;
 
+  const handleScrollToPainGrid = () => {
+    const target = document.getElementById('pain_grid_section');
+    if (target) {
+      const yOffset = -80;
+      const y = target.getBoundingClientRect().top + window.scrollY + yOffset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+  };
+
   const containerCardClass = isBudgetCompleted
     ? "flex-1 p-5 rounded-2xl border border-white/5 bg-[#0F1424]/60 flex gap-4 items-center transition-all duration-500 hover:bg-[#0F1424]/90 shadow-xs"
     : "flex-1 p-5 rounded-2xl border-2 border-red-500/60 bg-red-950/15 flex gap-4 items-center transition-all duration-500 hover:border-red-400/80 hover:bg-red-950/25 shadow-[0_0_20px_rgba(239,68,68,0.25)]";
@@ -181,6 +190,19 @@ export default function BleedingMath({ dailyBudget, setDailyBudget }) {
                   Anda bukan tak ada jualan. Prospek sentiasa ada dan iklan terus berjalan setiap malam. Tapi disebabkan tiada sistem auto-closing WhatsApp yang bersedia melayan 24/7 tanpa had, prospek yang berminat beralih arah ke pesaing yang membalas lebih cepat.
                 </p>
               </div>
+
+              {/* HIGH-INTENT BRIDGE CTA */}
+              {!isIdle && (
+                <div className="pt-2">
+                  <button 
+                    onClick={handleScrollToPainGrid}
+                    className="w-full bg-gradient-to-r from-orange-500 via-amber-500 to-orange-500 text-black font-black text-xs py-4 rounded-xl cursor-pointer shadow-[0_0_20px_rgba(249,115,22,0.4)] hover:shadow-[0_0_35px_rgba(249,115,22,0.6)] hover:scale-[1.02] active:scale-95 transition-all duration-300 text-center tracking-wider font-sans select-none flex items-center justify-center gap-2 animate-premium-pulse"
+                  >
+                    HENTIKAN KEBOCORAN INI SEKARANG
+                    <ArrowRight className="w-4 h-4" />
+                  </button>
+                </div>
+              )}
             </div>
 
             {/* Micro Industrial Footer Tag */}
@@ -188,7 +210,12 @@ export default function BleedingMath({ dailyBudget, setDailyBudget }) {
               <div className="flex items-center gap-1.5 text-red-400">
                 <AlertTriangle className="w-3.5 h-3.5" /> KEBOCORAN BELUM DISELESAIKAN
               </div>
-              <div className="text-amber-400">PENGIRAAN BERDASARKAN PURATA INDUSTRI (80% DROP-OFF RATE)</div>
+              <div className="text-right flex flex-col items-center sm:items-end">
+                <div className="text-amber-400">PENGIRAAN BERDASARKAN PURATA INDUSTRI (80% DROP-OFF RATE)</div>
+                <div className="text-[8px] text-neutral-600 font-mono mt-0.5 uppercase tracking-tighter">
+                  [Sumber: Data Analitis Industri Meta Ads & Purata Respons WhatsApp Malaysia 2025/2026]
+                </div>
+              </div>
             </div>
           </div>
 

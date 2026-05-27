@@ -22,7 +22,7 @@ export default function PainGrid() {
   const scrollNext = React.useCallback(() => emblaApi && emblaApi.scrollNext(), [emblaApi]);
 
   return (
-    <section className="relative z-10 w-full bg-[#0B0F19] border-t border-white/5 py-20 text-white overflow-hidden">
+    <section id="pain_grid_section" className="relative z-10 w-full bg-[#0B0F19] border-t border-white/5 py-20 text-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         
         {/* HEADER */}
@@ -80,7 +80,7 @@ export default function PainGrid() {
           {/* ARROWS */}
           <button 
             onClick={scrollPrev} 
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-20 w-10 h-10 flex items-center justify-center transition-colors cursor-pointer text-neutral-400 hover:text-orange-400"
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-20 w-10 h-10 flex items-center justify-center transition-all cursor-pointer text-neutral-400 hover:text-orange-400 md:scale-100 scale-125 bg-zinc-900/80 border border-orange-500/30 rounded-full shadow-md hover:border-orange-500/60"
             aria-label="Previous slide"
           >
             <ChevronLeft className="w-5 h-5" />
@@ -88,11 +88,18 @@ export default function PainGrid() {
           
           <button 
             onClick={scrollNext} 
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-20 w-10 h-10 flex items-center justify-center transition-colors cursor-pointer text-neutral-400 hover:text-orange-400"
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-20 w-10 h-10 flex items-center justify-center transition-all cursor-pointer text-neutral-400 hover:text-orange-400 md:scale-100 scale-125 bg-zinc-900/80 border border-orange-500/30 rounded-full shadow-md hover:border-orange-500/60"
             aria-label="Next slide"
           >
             <ChevronRight className="w-5 h-5" />
           </button>
+        </div>
+
+        {/* BRIDGE TEXT */}
+        <div className="mt-16 text-center max-w-2xl mx-auto px-4 relative z-10">
+          <p className="text-sm md:text-base text-neutral-300 font-medium leading-relaxed">
+            Sebab itu <strong className="text-orange-400 font-black">AROS</strong> dibina. Bukan sekadar bot automatik, tetapi struktur kecerdasan buatan yang mengambil alih tugas jualan anda <span className="underline decoration-orange-500/50 underline-offset-4 font-semibold text-white">dalam masa 72 jam</span>.
+          </p>
         </div>
 
       </div>

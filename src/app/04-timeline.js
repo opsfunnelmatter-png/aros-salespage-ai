@@ -7,24 +7,24 @@ import { Cpu, FileCode2, GitMerge, CheckCircle2, KanbanSquare, ShieldCheck } fro
 export default function TimelineProcess() {
   const deliverables = [
     {
-      title: "Premium Static Salespage",
-      desc: "Seni bina halaman jualan berprestasi tinggi berasaskan Next.js/Vercel. Dioptimumkan untuk kelajuan 0.1 saat bagi meminimumkan bounce rate trafik iklan.",
-      tag: "FRONTEND_STACK"
+      title: "Salespage Ultra-Pantas",
+      desc: "Sales page premium Next.js dioptimumkan untuk kelajuan loading bawah 0.1 saat. Prospek tak lari selepas klik iklan.",
+      tag: "Halaman Jualan"
     },
     {
-      title: "10-Step AI Closing Brain",
-      desc: "Prompt engineering custom khusus untuk produk dan FAQ bisnes anda. Dilatih khusus untuk qualify leads, handle objections, dan automate sales closing 24/7.",
-      tag: "AI_CORE_PROMPT"
+      title: "Otak AI Closing WhatsApp",
+      desc: "Robot AI terlatih khusus mengikut skrip FAQ dan produk anda sendiri. Layan & closing leads secara automatik 24/7.",
+      tag: "Otak AI Utama"
     },
     {
-      title: "Behavioral Auto Follow-Up Node",
-      desc: "Webhook automation sequence. Sistem akan melancarkan mesej susulan secara berjadual mengikut reaksi state prospek (blue-tick, senyap, atau minat).",
-      tag: "AUTOMATION_FLOW"
+      title: "Auto Follow-Up Pintar",
+      desc: "Sistem susulan automatik. Ia mengejar semula prospek yang 'blue-tick' atau senyap mengikut reaksi perbualan.",
+      tag: "Follow-Up Auto"
     },
     {
-      title: "Instant Payment Gateway Node",
-      desc: "Direct checkout integration via Billplz, Stripe, atau FPX — disambungkan terus ke dalam salespage architecture. Zero redirect friction. Transaksi berlaku dalam ekosistem yang sama tanpa kehilangan conversion momentum.",
-      tag: "PAYMENT_NODE"
+      title: "Integrasi Bayaran Lancar",
+      desc: "Pautan gerbang pembayaran (Stripe/FPX) dipasang terus di dalam sales page. Checkout pantas tanpa friction.",
+      tag: "Gerbang Bayaran"
     }
   ];
 
@@ -32,20 +32,20 @@ export default function TimelineProcess() {
     { 
       step: "01", 
       day: "Hari Pertama", 
-      title: "Onboarding Form & FAQ Data Injection", 
-      desc: "Anda masukkan info FAQ bisnes, pilih template premium, dan pautkan nombor WhatsApp rasmi di master platform." 
+      title: "Penyerahan Info & FAQ Produk", 
+      desc: "Anda isi borang ringkas tentang bisnes, berikan FAQ produk, dan kami sambungkan nombor WhatsApp rasmi Meta Cloud API anda." 
     },
     { 
       step: "02", 
       day: "Hari Kedua", 
-      title: "Fulfillment & Deployment of AI Closing Brain", 
-      desc: "Kami suap prompt 10-step closing flow khusus ke dalam AI agent nombor anda dan deploy fail static salespage ke server global." 
+      title: "Latihan AI & Setup Salespage", 
+      desc: "Kami mula melatih sistem AI mengikut skrip closing anda dan membina reka bentuk halaman jualan Next.js premium." 
     },
     { 
       step: "03", 
       day: "Hari Ketiga", 
-      title: "System Validation & Operations Transfer", 
-      desc: "Audit logik penuh di live environment, simulasi latency, dan pengesahan parameter operasi. Sebaik sahaja selesai, kawalan sistem dan aliran database dipindahkan sepenuhnya kepada anda." 
+      title: "Ujian Penuh & Sistem Live", 
+      desc: "Kami jalankan simulasi perbualan untuk pastikan AI membalas lancar, sahkan parameter operasi, dan serahkan sistem autopilot kepada anda." 
     }
   ];
 
@@ -61,14 +61,14 @@ export default function TimelineProcess() {
         <div className="text-center mb-20 max-w-3xl mx-auto space-y-5">
           <div className="inline-flex items-center gap-2 bg-white/5 border border-white/10 text-white font-mono text-[10px] font-bold px-3 py-1.5 rounded uppercase tracking-widest shadow-sm">
             <KanbanSquare className="w-3.5 h-3.5 text-orange-500" />
-            ENGINEERING EXECUTION TIMELINE
+            GARIS MASA PELAKSANAAN
           </div>
           <h2 className="text-4xl md:text-5xl font-black tracking-tight text-white leading-[1.12]">
-            Dari Blueprint Teknikal <br className="hidden md:block"/>
+            Dari Rangka Pembangunan <br className="hidden md:block"/>
             Sehingga Sistem <span className="bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent">Sedia Beroperasi</span>
           </h2>
           <p className="text-neutral-400 text-sm md:text-base leading-relaxed max-w-2xl mx-auto font-medium">
-            Kebocoran leads anda bukan masalah strategi — ia masalah infrastruktur. Kami tidak menjual kursus atau panduan. Kami masuk sebagai jurutera, bina sistem secara native, uji, dan serahkan infrastruktur lengkap yang sedia menerima hot leads anda.
+            Kebocoran jualan anda bukan masalah iklan tak menarik — ia masalah sistem melayan customer. Kami bukan jual kelas atau buku panduan. Kami bertindak sebagai jurutera: bina sistem jualan tersusun, pasang AI, uji, dan serahkan enjin jualan autopilot yang lengkap kepada anda.
           </p>
         </div>
 
@@ -79,10 +79,10 @@ export default function TimelineProcess() {
           <div className="w-full lg:flex-[11] shrink-0 space-y-6">
             <div className="text-left border-b border-white/5 pb-4">
               <span className="text-[10px] font-mono font-bold text-orange-400 uppercase tracking-wider bg-orange-500/10 px-2.5 py-1 rounded border border-orange-500/20">
-                SYSTEM DELIVERABLES ARCHITECTURE
+                KOMPONEN PEMBANGUNAN
               </span>
-              <h3 className="text-xl font-black text-white mt-3 tracking-tight">Komponen Yang Kami Bina</h3>
-              <p className="text-neutral-400 text-xs mt-1 leading-relaxed font-medium">Empat lapisan infrastruktur utama terpasang yang akan disuntik native ke dalam perniagaan anda.</p>
+              <h3 className="text-xl font-black text-white mt-3 tracking-tight">Apa Yang Kami Bina</h3>
+              <p className="text-neutral-400 text-xs mt-1 leading-relaxed font-medium">Empat lapisan infrastruktur utama terpasang yang akan disambung terus ke perniagaan anda.</p>
             </div>
 
             {/* Premium Card Grid Layout inside proportional container */}
@@ -111,10 +111,10 @@ export default function TimelineProcess() {
           <div className="w-full lg:flex-[9] shrink-0 space-y-6 lg:pl-4">
             <div className="text-left border-b border-white/5 pb-4">
               <span className="text-[10px] font-mono font-bold text-emerald-400 uppercase tracking-wider bg-emerald-500/10 px-2.5 py-1 rounded border border-emerald-500/20">
-                FAST DEPLOYMENT TIMELINE PROTOCOL
+                TIMELINE PEMASANGAN
               </span>
-              <h3 className="text-xl font-black text-white mt-3 tracking-tight">Kitaran Deployment Berstruktur 3-Hari</h3>
-              <p className="text-neutral-400 text-xs mt-1 leading-relaxed font-medium">Proses fulfillment berstruktur, pantas, dan telus tanpa sebarang delay.</p>
+              <h3 className="text-xl font-black text-white mt-3 tracking-tight">Sistem Live Dalam Masa 3 Hari</h3>
+              <p className="text-neutral-400 text-xs mt-1 leading-relaxed font-medium">Proses setup tersusun, pantas, dan telus tanpa sebarang delay.</p>
             </div>
 
             {/* Timeline connector snap center aligned to 36px bullets (left-18px) */}
@@ -147,7 +147,7 @@ export default function TimelineProcess() {
           <div className="inline-flex items-start gap-3 bg-[#0F1424] border border-white/5 px-6 py-4 rounded-xl text-xs md:text-sm text-neutral-300 font-medium max-w-3xl mx-auto shadow-xs text-left leading-relaxed w-full sm:w-auto">
             <ShieldCheck className="w-5 h-5 text-orange-400 shrink-0 mt-0.5" />
             <span>
-              <strong>Fulfillment Performance Lock:</strong> Kami hadkan slot pengambilan projek hanya 3 syarikat sahaja seminggu, bagi menjamin kualiti kod static salespage dan kejituan AI Agent pada tahap optimum.
+              <strong>Had Setup Mingguan:</strong> Kami hadkan setup kepada 3 syarikat sahaja seminggu demi menjaga kualiti setup AI dan kelajuan sales page anda pada tahap terbaik.
             </span>
           </div>
         </div>

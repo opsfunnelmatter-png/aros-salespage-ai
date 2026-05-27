@@ -50,7 +50,9 @@ export default function HeroSection({ dailyBudget }) {
     setIsBoardPulsing(true);
     const target = document.getElementById('diagnostic_board');
     if (target) {
-      target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      const yOffset = -120; // 120px offset to ensure top of the board is fully visible without clipping
+      const y = target.getBoundingClientRect().top + window.scrollY + yOffset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
     }
     setTimeout(() => {
       setIsBoardPulsing(false);
@@ -58,11 +60,24 @@ export default function HeroSection({ dailyBudget }) {
   };
 
   return (
-    <section className="relative z-20 w-full bg-[#0B0F19] pt-40 md:pt-32 pb-24 px-6 overflow-hidden text-center">
+    <section className="relative z-20 w-full bg-[#0B0F19] pt-8 md:pt-10 pb-24 px-6 overflow-hidden text-center">
       
       {/* BACKGROUND AMBIENT GLOWS */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[500px] bg-[radial-gradient(circle_at_top,rgba(249,115,22,0.07)_0%,transparent_55%)] pointer-events-none" />
       <div className="absolute -top-40 -left-40 w-96 h-96 bg-orange-500/5 rounded-full blur-3xl pointer-events-none" />
+
+      {/* PREMIUM HEADER NAVBAR */}
+      <div className="max-w-5xl mx-auto mb-16 flex items-center justify-between gap-4 border-b border-white/5 pb-6 relative z-30">
+        <div className="flex items-center gap-2.5">
+          <span className="text-2xl font-black tracking-wider text-white">AROS</span>
+          <span className="text-[9px] font-mono font-bold tracking-widest bg-orange-500/10 text-orange-400 px-2.5 py-0.5 rounded border border-orange-500/20 select-none">
+            AI AUTOMATION
+          </span>
+        </div>
+        <div className="text-[9px] sm:text-[10px] font-mono text-neutral-500 tracking-tight text-right select-none">
+          ⚡ Powered by Bromover Resources Sdn. Bhd.
+        </div>
+      </div>
 
       {/* TOP ANCHOR BRANDING BADGE - SINGLE & CLEAN */}
       <div className="max-w-5xl mx-auto mb-8 flex justify-center px-4 relative z-10">
@@ -241,7 +256,7 @@ export default function HeroSection({ dailyBudget }) {
                       onClick={handleCalculateScore}
                       className="w-full bg-gradient-to-r from-orange-500 to-amber-500 text-black font-black text-xs py-3.5 rounded-xl hover:shadow-[0_0_15px_rgba(249,115,22,0.3)] transition-all cursor-pointer uppercase tracking-wider whitespace-nowrap active:scale-95 text-center shrink-0"
                     >
-                      CALCULATE AUDIT SCORE
+                      KIRA SKOR KEBOCORAN SISTEM
                     </button>
                     <div className="flex items-center justify-center gap-1.5 text-[9px] text-neutral-500 uppercase font-bold shrink-0">
                       <AlertCircle className="w-3.5 h-3.5 text-orange-500 shrink-0" /> Pengiraan memerlukan pengesahan manual
@@ -343,7 +358,7 @@ export default function HeroSection({ dailyBudget }) {
                       onClick={handleCalculateScore}
                       className="w-full sm:w-auto bg-gradient-to-r from-orange-500 to-amber-500 text-black font-black text-xs px-6 py-3.5 rounded-xl hover:shadow-[0_0_15px_rgba(249,115,22,0.3)] transition-all cursor-pointer uppercase tracking-wider whitespace-nowrap"
                     >
-                      CALCULATE AUDIT SCORE
+                      KIRA SKOR KEBOCORAN SISTEM
                     </button>
                   </div>
                 </div>

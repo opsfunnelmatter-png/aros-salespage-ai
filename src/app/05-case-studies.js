@@ -1,60 +1,94 @@
 // path: src/app/05-case-studies.js
 "use client";
 
-import React from 'react';
-import { Megaphone, UserPlus, FileText, Cpu, RefreshCw, Layers, ArrowRight, ArrowDown, KanbanSquare, ShieldCheck } from 'lucide-react';
+import React, { useState, useEffect, useRef } from 'react';
+import { KanbanSquare, ShieldCheck } from 'lucide-react';
 
 export default function CaseStudies() {
-  const steps = [
+
+
+  // FASA 5 Chat Sequence Data
+  const chatMessages = [
     {
-      num: "01",
-      title: "Traffic Acquisition",
-      desc: "Kempen iklan bersasar tinggi menerusi platform Meta dan TikTok menggunakan creative hooks yang tajam.",
-      badge: "Traffic Acquisition",
-      log: "METRIC: CTR_OPTIMIZED",
-      styles: "bg-blue-950/10 border-blue-500/20 hover:border-blue-500/50 text-neutral-200 hover:bg-blue-950/20"
+      id: 1,
+      sender: 'customer',
+      text: "salam, pm harga pakej... area mana ek? Cod boleh?",
+      time: "02:14 AM"
     },
     {
-      num: "02",
-      title: "Lead Capture",
-      desc: "Kemasukan data prospek secara real-time yang mengalir lancar melalui integrasi webhook pantas.",
-      badge: "Lead Capture",
-      log: "API: WEBHOOK_READY",
-      styles: "bg-indigo-950/10 border-indigo-500/20 hover:border-indigo-500/50 text-neutral-200 hover:bg-indigo-950/20"
+      id: 2,
+      sender: 'aros',
+      text: "Walaikumussalam! Terima kasih kerana berminat dengan AROS. Kami beroperasi sepenuhnya secara atas talian dari Kuala Lumpur. 🚀\n\nUntuk makluman, pakej kami sekarang sedang menawarkan harga diskaun promosi khas. Boleh saya tahu bisnes abang dalam industri apa ya? Supaya saya boleh sarankan modul AI yang paling sesuai. 😊",
+      time: "02:14 AM"
     },
     {
-      num: "03",
-      title: "Intent Warming",
-      desc: "Prospek mendarat di halaman jualan Premium Static Salespage (Deliverable 1) bagi mengekalkan minat dan fokus membeli secara serta-merta.",
-      badge: "Intent Warming",
-      log: "FUNNEL: RAMP_UP_CONVERSION",
-      styles: "bg-purple-950/10 border-purple-500/20 hover:border-purple-500/50 text-neutral-200 hover:bg-purple-950/20"
+      id: 3,
+      sender: 'customer',
+      text: "E-commerce jual produk skincare local bro. Ada staff tapi malam tido la hahah",
+      time: "02:15 AM"
     },
     {
-      num: "04",
-      title: "Autonomous Closing",
-      desc: "Sistem 10-Step AI Closing Brain (Deliverable 2) menguruskan sales closing dalam masa 0.2 saat secara autopilot penuh 24/7/365.",
-      badge: "Autonomous Closing",
-      log: "ENGINE: CLOSING_LIVE",
-      styles: "bg-orange-950/10 border-orange-500/20 hover:border-orange-500/50 text-neutral-200 hover:bg-orange-950/20"
-    },
-    {
-      num: "05",
-      title: "Lead Management",
-      desc: "Sistem melancarkan Behavioral Auto Follow-Up Node (Deliverable 3) secara dinamik berdasarkan status maklum balas perbualan prospek.",
-      badge: "Lead Management",
-      log: "FLOW: RECOVERY_RUN",
-      styles: "bg-emerald-950/10 border-emerald-500/20 hover:border-emerald-500/50 text-neutral-200 hover:bg-emerald-950/20"
-    },
-    {
-      num: "06",
-      title: "LTV Optimization",
-      desc: "Database pelanggan disusun rapi dan terstruktur untuk kempen retargeting serta cross-selling.",
-      badge: "LTV Optimization",
-      log: "DATABASE: LTV_MAXIMIZED",
-      styles: "bg-rose-950/10 border-rose-500/20 hover:border-rose-500/50 text-neutral-200 hover:bg-rose-950/20"
+      id: 4,
+      sender: 'aros',
+      text: "Faham sangat bang! Skincare local memang laju leads masuk malam. AI AROS dibina khas untuk situasi ni — dia akan terus layan & close jualan sementara staff berehat. 💤\n\nBerdasarkan niche skincare, modul **Complete AI Engine** kami adalah yang terbaik. Ini link pembayaran promosi khas untuk lock slot abang hari ini:",
+      time: "02:15 AM",
+      isStripe: true
     }
   ];
+
+  const [messages, setMessages] = useState([]);
+  const [isTyping, setIsTyping] = useState(false);
+  const [typingSender, setTypingSender] = useState('');
+  const chatContainerRef = useRef(null);
+
+  useEffect(() => {
+    let active = true;
+    let timerId = null;
+
+    const playSequence = async () => {
+      if (!active) return;
+      setMessages([]);
+      setIsTyping(false);
+
+      for (let i = 0; i < chatMessages.length; i++) {
+        if (!active) return;
+        
+        // Typing Phase
+        setTypingSender(chatMessages[i].sender);
+        setIsTyping(true);
+        await new Promise(resolve => { timerId = setTimeout(resolve, 1500); });
+        if (!active) return;
+        
+        // Message Phase
+        setIsTyping(false);
+        setMessages(prev => [...prev, chatMessages[i]]);
+        
+        // Wait before next message starts typing
+        await new Promise(resolve => { timerId = setTimeout(resolve, 2000); });
+        if (!active) return;
+      }
+
+      // Freeze for 6 seconds at the end of loop
+      await new Promise(resolve => { timerId = setTimeout(resolve, 2000); });
+      if (active) {
+        playSequence();
+      }
+    };
+
+    playSequence();
+
+    return () => {
+      active = false;
+      if (timerId) clearTimeout(timerId);
+    };
+  }, []);
+
+  // Auto Scroll
+  useEffect(() => {
+    if (chatContainerRef.current) {
+      chatContainerRef.current.scrollTop = chatContainerRef.current.scrollHeight;
+    }
+  }, [messages, isTyping]);
 
   return (
     <section className="relative z-10 w-full bg-[#0B0F19] border-t border-white/5 py-24 text-white overflow-hidden">
@@ -79,97 +113,170 @@ export default function CaseStudies() {
           </p>
         </div>
 
-        {/* HIGH-END STRUCTURED GRAPHIC GRID WITH INTERACTIVE CONNECTING ARROWS */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-16 gap-x-8 text-left items-stretch relative">
-          {steps.map((step, index) => (
-            <div key={index} className="relative flex flex-col group">
+        {/* TOP LAYOUT GRID: Left (Mockup), Right (Stats & Warning) */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center mb-24">
+          
+          {/* Lajur Kiri: Mobile Phone Mockup (lg:col-span-5) */}
+          <div className="lg:col-span-5 w-full flex justify-center">
+            
+            {/* REALISTIC SMARTPHONE CHASSIS */}
+            <div className="relative w-full max-w-[320px] aspect-[9/19.5] mx-auto border-[8px] sm:border-[12px] border-zinc-900 rounded-[40px] sm:rounded-[50px] bg-[#0b141a] overflow-hidden shadow-[0_0_0_1px_rgba(255,255,255,0.05),0_30px_60px_rgba(0,0,0,0.8),0_0_40px_rgba(16,185,129,0.15)] flex flex-col">
               
-              {/* CORE CARD COMPONENT WITH SUBTLE COLOUR VARIATION */}
-              <div className={`w-full border p-6 rounded-2xl shadow-xs transition-all duration-300 flex flex-col justify-between overflow-hidden relative flex-1 ${step.styles}`}>
-                
-                {/* Internal Step Watermark Grid */}
-                <div className="absolute -top-3 -right-3 font-mono text-7xl font-black opacity-[0.03] pointer-events-none z-0 text-white">
-                  {step.num}
-                </div>
+              {/* HARDWARE BUTTONS */}
+              <div className="absolute top-[120px] -left-[14px] w-1.5 h-[35px] bg-zinc-800 rounded-l-md" /> {/* Volume Up */}
+              <div className="absolute top-[170px] -left-[14px] w-1.5 h-[35px] bg-zinc-800 rounded-l-md" /> {/* Volume Down */}
+              <div className="absolute top-[140px] -right-[14px] w-1.5 h-[55px] bg-zinc-800 rounded-r-md" /> {/* Power */}
 
-                <div className="space-y-4 relative z-10">
-                  <div className="flex items-center justify-between">
-                    <span className="font-mono text-[9px] font-black uppercase tracking-wider bg-white/5 border border-white/10 px-2 py-0.5 rounded shadow-2xs text-neutral-300">
-                      {step.badge}
-                    </span>
-                    
-                    {/* Icon Select Switch Matrix */}
-                    <div className="text-neutral-400 group-hover:scale-110 transition-transform duration-300">
-                      {index === 0 && <Megaphone className="w-4 h-4 text-blue-400" />}
-                      {index === 1 && <UserPlus className="w-4 h-4 text-indigo-400" />}
-                      {index === 2 && <FileText className="w-4 h-4 text-purple-400" />}
-                      {index === 3 && <Cpu className="w-4 h-4 text-orange-400" />}
-                      {index === 4 && <RefreshCw className="w-4 h-4 text-emerald-400" />}
-                      {index === 5 && <Layers className="w-4 h-4 text-rose-400" />}
-                    </div>
-                  </div>
-                  
-                  <h3 className="text-lg font-black tracking-tight text-white">
-                    <span className="text-neutral-400 font-mono text-sm font-bold">{step.num}.</span> {step.title}
-                  </h3>
-                  
-                  <p className="text-neutral-400 text-xs md:text-sm leading-relaxed font-medium">
-                    {step.desc}
-                  </p>
-                </div>
+              {/* DYNAMIC ISLAND / NOTCH */}
+              <div className="absolute top-2 left-1/2 -translate-x-1/2 w-[100px] h-6 bg-black rounded-full z-40 flex items-center justify-between px-3 shadow-sm border border-white/5">
+                <div className="w-2 h-2 rounded-full bg-indigo-900/50" />
+                <div className="w-1.5 h-1.5 rounded-full bg-[#1a1a2e] border border-zinc-800/80" />
+              </div>
 
-                {/* Non-Repetitive Contextual System Footer Logs */}
-                <div className="mt-6 pt-3 border-t border-white/5 flex items-center justify-between font-mono text-[9px] text-neutral-400 font-bold">
-                  <span className="text-orange-400">{step.log}</span>
-                  <span className="text-emerald-400">● STABLE</span>
+              {/* PHONE STATUS BAR */}
+              <div className="bg-[#121b22] w-full px-5 py-2 pt-2.5 flex justify-between items-center z-30">
+                <span className="text-[10px] font-medium text-white font-sans mt-1">3:17</span>
+                <div className="flex items-center gap-1.5 mt-1">
+                  <div className="w-3 h-2.5 bg-white/90 rounded-[2px]" />
+                  <div className="w-3 h-2.5 bg-white/90 rounded-[2px]" />
+                  <div className="w-4 h-2.5 border border-white/90 rounded-[3px]" />
                 </div>
               </div>
 
-              {/* DYNAMIC CONNECTING ARROWS MATRIX */}
-              {/* 1. Horizontal Desktop Bridge Arrow (For Cards 1, 2 and 4, 5 - w-6 h-6, icon w-4 h-4, offset -right-[13px]) */}
-              {index !== 2 && index !== 5 && (
-                <div className="hidden lg:flex absolute top-1/2 -right-[13px] -translate-y-1/2 z-20 w-6 h-6 items-center justify-center text-neutral-600 group-hover:text-orange-500 group-hover:translate-x-0.5 transition-all duration-300">
-                  <ArrowRight className="w-4 h-4 stroke-[2.5]" />
+              {/* WHATSAPP HEADER */}
+              <div className="bg-[#121b22] px-4 py-3 border-b border-white/5 flex items-center justify-between shrink-0 relative z-30">
+                <div className="flex items-center gap-3">
+                  <div className="relative">
+                    <div className="w-9 h-9 rounded-full bg-emerald-500/10 border border-emerald-500/25 flex items-center justify-center font-bold text-emerald-400 font-mono text-sm">
+                      P
+                    </div>
+                    <span className="w-2.5 h-2.5 bg-emerald-500 rounded-full absolute bottom-0 right-0 border-2 border-[#121b22]" />
+                  </div>
+                  <div className="text-left">
+                    <div className="text-sm font-bold text-white leading-tight">Prospek AROS 12</div>
+                    <div className="text-[10px] text-emerald-400 font-medium">(online)</div>
+                  </div>
                 </div>
-              )}
-
-              {/* 2. Responsive Mobile/Tablet Down Arrow (Appears between ALL cards except the last one, filtered for tablet layout) */}
-              {index !== 5 && (
-                <div className={`lg:hidden flex justify-center items-center w-full absolute -bottom-10 left-0 text-neutral-600 py-1 z-20 animate-pulse ${index % 2 === 1 ? 'md:flex' : 'md:hidden'}`}>
-                  <ArrowDown className="w-4 h-4 stroke-[2.5]" />
+                <div className="text-[8px] font-mono font-bold text-neutral-500 tracking-wider bg-white/5 border border-white/10 px-2 py-1 rounded select-none">
+                  AI_BRAIN
                 </div>
-              )}
+              </div>
 
+              {/* CHAT BACKGROUND & MESSAGES AREA */}
+              <div ref={chatContainerRef} className="flex-1 overflow-y-auto p-3.5 space-y-3.5 scrollbar-hide flex flex-col bg-[#0b141a] scroll-smooth relative z-10 pb-6">
+                {messages.map((msg) => {
+                  const isCustomer = msg.sender === 'customer';
+                  return (
+                    <div 
+                      key={msg.id}
+                      className={`max-w-[85%] rounded-[18px] px-3.5 py-2.5 text-[13px] leading-relaxed shadow-sm flex flex-col relative transition-all duration-300 ${
+                        isCustomer 
+                          ? 'self-start bg-[#202c33] text-white rounded-tl-[4px]' 
+                          : 'self-end bg-[#005c4b] text-white rounded-tr-[4px]'
+                      }`}
+                    >
+                      {!isCustomer && (
+                        <div className="text-[9px] font-mono font-black text-emerald-300 tracking-widest uppercase mb-1.5 select-none">
+                          // AROS AI ENGINE (0.2s)
+                        </div>
+                      )}
+                      <p className="whitespace-pre-line text-left">{msg.text}</p>
+                      
+                      {msg.isStripe && (
+                        <div className="mt-3 mb-1 bg-black/40 border border-white/10 p-2.5 rounded-xl flex items-center justify-between gap-3 text-left">
+                          <div className="min-w-0">
+                            <div className="text-[8px] font-mono text-neutral-400 uppercase tracking-widest leading-none mb-1">STRIPE SECURE CHECKOUT</div>
+                            <div className="text-[10px] font-bold text-emerald-400 underline truncate max-w-[120px]">stripe.com/pay/aros-skincare</div>
+                          </div>
+                          <a href="#pricing_section" className="bg-emerald-500 hover:bg-emerald-400 text-black font-black text-[10px] px-3 py-1.5 rounded-lg transition-colors whitespace-nowrap shadow-xs leading-none">
+                            BAYAR
+                          </a>
+                        </div>
+                      )}
+
+                      {/* Footer / Time & Tick */}
+                      <div className="text-[9px] text-neutral-400/90 font-sans mt-1.5 self-end flex items-center gap-1 leading-none select-none">
+                        <span>{msg.time}</span>
+                        {!isCustomer && (
+                          <svg className="w-3.5 h-3.5 text-[#53bdeb] fill-current" viewBox="0 0 16 15" width="16" height="15">
+                            <path d="M15.01 3.3l-5.5 5.5-2.76-2.77-.88.88 3.64 3.64 6.38-6.38-.88-.87zm-5.5 8.25l-.88-.88-2.2 2.2 1.32 1.32 2.2-2.2-.44-.44zm-5.5-2.75L.37 5.16l-.88.88 4.52 4.52.88-.88-4.52-4.52.88-.88.37.37z" />
+                          </svg>
+                        )}
+                      </div>
+                    </div>
+                  );
+                })}
+
+                {/* TYPING DOTS INDICATOR */}
+                {isTyping && (
+                  <div 
+                    className={`max-w-[75px] rounded-[18px] px-4 py-3 text-sm shadow-sm flex items-center justify-center gap-1.5 transition-all duration-300 ${
+                      typingSender === 'customer' 
+                        ? 'self-start bg-[#202c33] text-white rounded-tl-[4px]' 
+                        : 'self-end bg-[#005c4b] text-white rounded-tr-[4px]'
+                    }`}
+                  >
+                    <span className="w-1.5 h-1.5 bg-neutral-400 rounded-full animate-bounce [animation-delay:-0.3s]" />
+                    <span className="w-1.5 h-1.5 bg-neutral-400 rounded-full animate-bounce [animation-delay:-0.15s]" />
+                    <span className="w-1.5 h-1.5 bg-neutral-400 rounded-full animate-bounce" />
+                  </div>
+                )}
+              </div>
+              
+              {/* HOME INDICATOR LINE */}
+              <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-32 h-1.5 bg-white/20 rounded-full z-40" />
             </div>
-          ))}
-        </div>
 
-        {/* 3-COLUMN INDUSTRY BENCHMARK RESULTS CALLOUT ROW */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 max-w-4xl mx-auto">
-          <div className="bg-[#0F1424] border border-white/5 p-5 rounded-2xl flex flex-col items-center justify-center text-center shadow-xs">
-            <span className="text-[9px] font-mono font-bold text-neutral-500 uppercase tracking-widest mb-1">PURATA RESPONSE TIME</span>
-            <span className="text-3xl font-black bg-gradient-to-r from-orange-400 to-amber-500 bg-clip-text text-transparent">0.2 Saat</span>
           </div>
-          <div className="bg-[#0F1424] border border-white/5 p-5 rounded-2xl flex flex-col items-center justify-center text-center shadow-xs">
-            <span className="text-[9px] font-mono font-bold text-neutral-500 uppercase tracking-widest mb-1">LEADS RECOVERED OVERNIGHT</span>
-            <span className="text-3xl font-black bg-gradient-to-r from-orange-400 to-amber-500 bg-clip-text text-transparent">3× Lebih Tinggi</span>
-          </div>
-          <div className="bg-[#0F1424] border border-white/5 p-5 rounded-2xl flex flex-col items-center justify-center text-center shadow-xs">
-            <span className="text-[9px] font-mono font-bold text-neutral-500 uppercase tracking-widest mb-1">DEPLOYMENT TURNAROUND</span>
-            <span className="text-3xl font-black bg-gradient-to-r from-orange-400 to-amber-500 bg-clip-text text-transparent">72 Jam</span>
-          </div>
-        </div>
 
-        {/* FOOTNOTE RE-ENFORCING ARCHITECT AUTHORITY */}
-        <div className="mt-16 text-center">
-          <div className="inline-flex items-center gap-3 bg-[#0F1424] border border-white/5 px-6 py-4 rounded-xl text-xs md:text-sm text-neutral-300 font-medium max-w-3xl mx-auto shadow-xs leading-relaxed">
-            <ShieldCheck className="w-5 h-5 text-orange-400 shrink-0 hidden sm:block" />
-            <span>
-              <span className="font-mono text-orange-400 text-[11px] font-black mr-1.5">▸</span><strong>Jika sistem anda sekarang tiada Fasa 03, 04, dan 05...</strong> modal iklan anda di Fasa 01 dan 02 secara matematik akan lebur 80% begitu sahaja tanpa sempat ditukarkan kepada hasil jualan bersih.
-            </span>
-          </div>
-        </div>
+          {/* Lajur Kanan: Stat (lg:col-span-7) - Vertically Centered */}
+          <div className="lg:col-span-7 w-full flex flex-col justify-center gap-4 mt-8 lg:mt-0">
+            
+            {/* 3-COLUMN INDUSTRY BENCHMARK RESULTS - VERTICAL STACK WITH MICRO-COPY */}
+            <div className="flex flex-col gap-4">
+              <div className="bg-[#0F1424] border border-white/5 p-6 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between text-left gap-4 shadow-xs relative overflow-hidden group hover:border-orange-500/30 transition-colors">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-orange-500/5 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none" />
+                <div className="flex flex-col gap-2 relative z-10">
+                  <span className="text-[11px] font-mono font-bold text-neutral-400 uppercase tracking-widest">PURATA RESPONSE TIME</span>
+                  <p className="text-sm text-neutral-500 font-medium max-w-[280px]">
+                    Sistem membalas pada saat emosi prospek memuncak bagi mengelakkan mereka beralih ke pesaing.
+                  </p>
+                </div>
+                <div className="relative z-10 shrink-0 self-start sm:self-center">
+                  <span className="text-3xl sm:text-4xl font-black bg-gradient-to-r from-orange-400 to-amber-500 bg-clip-text text-transparent">0.2 Saat</span>
+                </div>
+              </div>
 
+              <div className="bg-[#0F1424] border border-white/5 p-6 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between text-left gap-4 shadow-xs relative overflow-hidden group hover:border-amber-500/30 transition-colors">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-amber-500/5 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none" />
+                <div className="flex flex-col gap-2 relative z-10">
+                  <span className="text-[11px] font-mono font-bold text-neutral-400 uppercase tracking-widest">LEADS RECOVERED OVERNIGHT</span>
+                  <p className="text-sm text-neutral-500 font-medium max-w-[280px]">
+                    Kutipan trafik dan jualan diselamatkan pada waktu staf manusia sedang tidur (1 pagi - 6 pagi).
+                  </p>
+                </div>
+                <div className="relative z-10 shrink-0 self-start sm:self-center">
+                  <span className="text-3xl sm:text-4xl font-black bg-gradient-to-r from-orange-400 to-amber-500 bg-clip-text text-transparent">3× Ganda</span>
+                </div>
+              </div>
+
+              <div className="bg-[#0F1424] border border-white/5 p-6 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between text-left gap-4 shadow-xs relative overflow-hidden group hover:border-emerald-500/30 transition-colors">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/5 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none" />
+                <div className="flex flex-col gap-2 relative z-10">
+                  <span className="text-[11px] font-mono font-bold text-neutral-400 uppercase tracking-widest">DEPLOYMENT TURNAROUND</span>
+                  <p className="text-sm text-neutral-500 font-medium max-w-[280px]">
+                    Penyerahan sistem AI sepenuhnya ke dalam bisnes anda lengkap dengan integrasi platform.
+                  </p>
+                </div>
+                <div className="relative z-10 shrink-0 self-start sm:self-center">
+                  <span className="text-3xl sm:text-4xl font-black bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent">72 Jam</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
       </div>
     </section>
   );

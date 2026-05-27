@@ -73,7 +73,7 @@ export default function BonusStack() {
         <div className="grid grid-cols-3 gap-4 text-xs font-mono text-neutral-400 mb-4">
           <div>
             <div className="text-neutral-600">Seni Bina Sistem</div>
-            <div className="font-bold text-neutral-300 mt-1">Nilai RM2,999</div>
+            <div className="font-bold text-neutral-300 mt-1">Nilai RM3,098</div>
           </div>
           <div className="border-x border-white/5">
             <div className="text-neutral-600">2 Service Bonuses</div>
@@ -81,7 +81,7 @@ export default function BonusStack() {
           </div>
           <div>
             <div className="text-neutral-600">TOTAL NILAI SEBENAR</div>
-            <div className="font-bold text-orange-400 mt-1">RM3,597</div>
+            <div className="font-bold text-orange-400 mt-1">RM3,696</div>
           </div>
         </div>
         <div className="text-xs text-neutral-500 font-medium">

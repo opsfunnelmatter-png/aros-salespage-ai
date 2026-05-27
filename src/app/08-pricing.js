@@ -7,120 +7,47 @@ import { CheckCircle2, Lock, Zap, AlertCircle, Server, Plus, Brain, Database, Ta
 export default function PricingMatrix() {
   // Pautan Stripe Dinamik untuk Checkout
   const paymentLinks = {
-    frontend: {
-      promo: "https://buy.stripe.com/8x25kv43sgY64lU5XJ4ZG0i", // RM570 + RM129 = RM699
-      high: "https://buy.stripe.com/8x2eV59nM23c2dMadZ4ZG0j",  // RM870 + RM129 = RM999
-    },
-    complete: {
-      promo: "https://buy.stripe.com/8x2fZ98jI0Z87y64TF4ZG0k", // RM900 + RM99 = RM999
-      high: "https://buy.stripe.com/4gM14f7fE6js05EgCn4ZG0l",  // RM1400 + RM99 = RM1499
-    }
+    frontend: "https://buy.stripe.com/8x25kv43sgY64lU5XJ4ZG0i", // RM699 (Starter)
+    aiAgent: "https://buy.stripe.com/cNi8wHdE2bDM5pY3PB4ZG0m",  // RM699 (AROS AI Agent)
+    complete: "https://buy.stripe.com/8x2fZ98jI0Z87y64TF4ZG0k"  // RM999 (Complete)
   };
 
-
-  const [mounted, setMounted] = React.useState(false);
-  const [priceStatus, setPriceStatus] = React.useState('high'); // Default to high for safety
-  const [timeLeft, setTimeLeft] = React.useState('');
+  const [promoDate, setPromoDate] = React.useState('');
 
   React.useEffect(() => {
-    setMounted(true);
-
-    const updateTimer = () => {
-      try {
-        let expiry = localStorage.getItem('aros_pricing_expiry');
-        const now = Date.now();
-
-        if (!expiry) {
-          // First visit: set 24 hours countdown
-          expiry = String(now + 24 * 60 * 60 * 1000);
-          localStorage.setItem('aros_pricing_expiry', expiry);
-          localStorage.setItem('aros_pricing_status', 'promo');
-        }
-
-        const expiryTime = parseInt(expiry, 10);
-        let status = localStorage.getItem('aros_pricing_status') || 'promo';
-
-        if (now > expiryTime) {
-          if (status === 'promo') {
-            status = 'high';
-            localStorage.setItem('aros_pricing_status', 'high');
-          } else if (status === 'rollback') {
-            status = 'rollback_expired';
-            localStorage.setItem('aros_pricing_status', 'rollback_expired');
-          }
-        }
-
-        setPriceStatus(status);
-
-        if (status === 'promo' || status === 'rollback') {
-          const diff = expiryTime - now;
-          if (diff <= 0) {
-            if (status === 'promo') {
-              setPriceStatus('high');
-              localStorage.setItem('aros_pricing_status', 'high');
-            } else {
-              setPriceStatus('rollback_expired');
-              localStorage.setItem('aros_pricing_status', 'rollback_expired');
-            }
-            setTimeLeft('');
-          } else {
-            const hours = Math.floor(diff / (1000 * 60 * 60));
-            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-            
-            const formatNum = (num) => String(num).padStart(2, '0');
-            if (status === 'rollback') {
-              setTimeLeft(`${formatNum(minutes)}:${formatNum(seconds)}`);
-            } else {
-              setTimeLeft(`${formatNum(hours)}:${formatNum(minutes)}:${formatNum(seconds)}`);
-            }
-          }
-        } else {
-          setTimeLeft('');
-        }
-      } catch (err) {
-        setPriceStatus('high');
-        setTimeLeft('');
-      }
-    };
-
-    updateTimer();
-    const interval = setInterval(updateTimer, 1000);
-    return () => clearInterval(interval);
-  }, []);
-
-  const handleRollback = React.useCallback(() => {
-    try {
-      const now = Date.now();
-      const rollbackExpiry = String(now + 1 * 60 * 60 * 1000); // 1 Hour Rollback
-      localStorage.setItem('aros_pricing_expiry', rollbackExpiry);
-      localStorage.setItem('aros_pricing_status', 'rollback');
-      setPriceStatus('rollback');
-    } catch (err) {
-      // safe fallback
+    // Generate dynamic Malay week range
+    const today = new Date();
+    const day = today.getDay();
+    const diffToMonday = today.getDate() - day + (day === 0 ? -6 : 1);
+    const monday = new Date(today.getFullYear(), today.getMonth(), diffToMonday);
+    
+    const sunday = new Date(monday);
+    sunday.setDate(monday.getDate() + 6);
+    
+    const monthsMalay = [
+      "Januari", "Februari", "Mac", "April", "Mei", "Jun", 
+      "Julai", "Ogos", "September", "Oktober", "November", "Disember"
+    ];
+    
+    const startDay = monday.getDate();
+    const startMonth = monthsMalay[monday.getMonth()];
+    const endDay = sunday.getDate();
+    const endMonth = monthsMalay[sunday.getMonth()];
+    
+    let dateStr = '';
+    if (monday.getMonth() === sunday.getMonth()) {
+      dateStr = `${startDay} - ${endDay} ${startMonth} ${sunday.getFullYear()}`;
+    } else {
+      dateStr = `${startDay} ${startMonth} - ${endDay} ${endMonth} ${sunday.getFullYear()}`;
     }
+    setPromoDate(dateStr);
   }, []);
-
-  // Dynamic Prices
-  const leftPrice = (mounted && (priceStatus === 'promo' || priceStatus === 'rollback')) ? 'RM699' : 'RM999';
-  const leftSetupFee = (mounted && (priceStatus === 'promo' || priceStatus === 'rollback')) ? 'RM570' : 'RM870';
-  const rightPrice = (mounted && (priceStatus === 'promo' || priceStatus === 'rollback')) ? 'RM999' : 'RM1,499';
-  const rightSetupFee = (mounted && (priceStatus === 'promo' || priceStatus === 'rollback')) ? 'RM900' : 'RM1,400';
-
-  const frontendCheckoutUrl = (mounted && (priceStatus === 'promo' || priceStatus === 'rollback')) 
-    ? paymentLinks.frontend.promo 
-    : paymentLinks.frontend.high;
-
-  const completeCheckoutUrl = (mounted && (priceStatus === 'promo' || priceStatus === 'rollback')) 
-    ? paymentLinks.complete.promo 
-    : paymentLinks.complete.high;
 
   return (
-    <section className="relative z-10 w-full bg-[#0B0F19] py-24 text-white overflow-hidden">
-
+    <section id="pricing_section" className="relative z-10 w-full bg-[#0B0F19] py-24 text-white overflow-hidden">
       
       {/* INDUSTRIAL GRAPHIC MATRIX BACKGROUND LAYER */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff02_1px,transparent_1px),linear-gradient(to_bottom,#ffffff02_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff03_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
       <div className="absolute bottom-0 right-1/4 w-[600px] h-[400px] bg-[radial-gradient(circle_at_center,rgba(249,115,22,0.04)_0%,transparent_70%)] pointer-events-none" />
 
       <div className="max-w-5xl mx-auto px-6 relative z-10">
@@ -128,293 +55,319 @@ export default function PricingMatrix() {
         {/* HEADER BLOCK */}
         <div className="text-center mb-20 max-w-3xl mx-auto space-y-4">
           <span className="inline-flex items-center gap-1.5 text-[10px] font-mono font-bold tracking-widest text-orange-400 uppercase bg-orange-500/10 px-3 py-1.5 rounded-md border border-orange-500/20 shadow-sm">
-            <Zap className="w-3.5 h-3.5" /> AROS DEPLOYMENT INVESTMENT
+            <Zap className="w-3.5 h-3.5" /> PELAN PELABURAN AROS
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-white leading-[1.15]">
-            Pelan Pelaburan <span className="bg-gradient-to-r from-orange-400 to-amber-500 bg-clip-text text-transparent">Systems Integration</span>
+            Pilih Sistem Yang Sesuai Untuk <span className="bg-gradient-to-r from-orange-400 to-amber-500 bg-clip-text text-transparent">Perniagaan Anda</span>
           </h2>
           <p className="text-neutral-400 text-sm md:text-base max-w-xl mx-auto font-medium leading-relaxed">
-            Sistem setup premium satu kali untuk mendominasi pasaran digital. Tiada yuran agensi tersembunyi.
+            Satu pelaburan untuk sistem automasi jualan bertaraf premium. Tiada caj tersembunyi, setup diuruskan sepenuhnya oleh kami.
           </p>
           <div className="pt-2">
-            <div className="inline-flex items-center gap-2 bg-neutral-900/80 border border-white/10 px-4 py-2 rounded-xl text-xs font-mono text-neutral-400 shadow-inner">
-              <AlertCircle className="w-3.5 h-3.5 text-orange-400 shrink-0" />
-              Nilai Standard Pembangunan Sistem: <span className="text-base sm:text-lg font-black text-red-500 line-through animate-pulse ml-1">RM2,999</span>
+            <div className="inline-flex items-center gap-2 bg-orange-500/10 border border-orange-500/20 px-4 py-2 rounded-xl text-xs font-mono text-orange-400">
+              <AlertCircle className="w-3.5 h-3.5 text-orange-400 shrink-0 animate-pulse" />
+              Harga Pelancaran Awal (Early Adopter Offer) — Slot Terhad
             </div>
           </div>
         </div>
 
-        {/* GOLDEN TICKET ROLLBACK BANNER */}
-        {mounted && priceStatus === 'high' && (
-          <div className="sticky top-24 z-40 max-w-2xl mx-auto mb-10 bg-[#0F1424]/95 backdrop-blur-lg border border-yellow-500/30 rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-[0_15px_30px_rgba(0,0,0,0.5),0_0_35px_rgba(245,158,11,0.15)] transition-all duration-500">
-            <div className="text-left space-y-1.5 flex-1">
-              <span className="inline-flex items-center gap-1 bg-yellow-500/10 text-yellow-500 border border-yellow-500/25 px-2.5 py-0.5 rounded text-[9px] font-mono font-bold tracking-wider uppercase">
-                🔴 TAWARAN PROMO TERKUNCI
-              </span>
-              <h4 className="text-sm font-black text-white uppercase tracking-wide">
-                Kunci Harga Rollback Terakhir Anda
-              </h4>
-              <p className="text-[11px] text-neutral-400 leading-relaxed font-medium">
-                Tawaran pengenalan telah tamat tempoh. Walau bagaimanapun, anda layak menuntut 1× tiket keselamatan rollback untuk mengunci semula harga promo asal selama 1 Jam sahaja.
-              </p>
+        {/* PROMO TIME AND SLOT BANNER */}
+        {promoDate && (
+          <div className="max-w-3xl mx-auto mb-12 bg-gradient-to-r from-orange-500/5 to-amber-500/5 border border-orange-500/20 rounded-2xl p-6 shadow-[0_0_30px_rgba(249,115,22,0.05)] relative overflow-hidden">
+            <div className="absolute top-0 left-0 w-1.5 h-full bg-gradient-to-b from-orange-500 to-amber-500" />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center text-left pl-2">
+              <div className="space-y-1">
+                <span className="inline-flex items-center gap-1.5 text-[10px] font-mono font-black text-orange-400 uppercase tracking-widest bg-orange-500/10 px-2.5 py-1 rounded">
+                  PROMOSI MINGGU INI
+                </span>
+                <p className="text-sm text-neutral-300 font-medium pt-1">
+                  Harga promo pelancaran awal ini sah dari <strong className="text-white text-base font-black underline decoration-orange-500 underline-offset-4">{promoDate}</strong> sahaja.
+                </p>
+              </div>
+              <div className="flex items-start gap-3 bg-orange-500/10 border border-orange-500/15 p-4 rounded-xl h-full justify-center flex-col md:flex-row">
+                <div className="flex items-center gap-2 shrink-0">
+                  <span className="relative flex h-2 w-2 mt-0.5">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
+                  </span>
+                </div>
+                <p className="text-xs text-orange-200/90 leading-relaxed font-medium">
+                  Slot setup mingguan dihadkan bagi mengekalkan kualiti konfigurasi AI optimum untuk setiap klien.
+                </p>
+              </div>
             </div>
-            <button 
-              onClick={handleRollback}
-              className="w-full sm:w-auto shrink-0 bg-gradient-to-r from-yellow-600 via-amber-500 to-yellow-600 border border-yellow-400/40 text-black font-black uppercase tracking-widest px-6 py-3.5 rounded-xl hover:shadow-[0_0_20px_rgba(245,158,11,0.5)] hover:border-yellow-300 transition-all duration-300 transform active:scale-95 flex items-center justify-center gap-2 cursor-pointer text-xs"
-            >
-              <Tags className="w-4 h-4 text-black shrink-0" />
-              Claim Golden Ticket (Rollback)
-            </button>
           </div>
         )}
 
-        <div className="grid grid-cols-1 md:grid-cols-[11fr_13fr] gap-8 items-start max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 max-w-5xl mx-auto items-stretch">
           
           {/* ============================================================= */}
-          {/* LAJUR KIRI — FRONTEND PIPELINE (Decoy Card)                    */}
+          {/* COLUMN KIRI — SALESPAGE STARTER & AROS AI AGENT               */}
           {/* ============================================================= */}
-          <div className="bg-white/[0.01] border border-white/5 rounded-3xl p-7 flex flex-col text-left group hover:border-white/10 transition-all duration-300 h-full">
+          <div className="lg:col-span-6 flex flex-col gap-8 lg:h-full">
             
-            {/* Card Header */}
-            <div className="mb-5">
-              <div className="text-[9px] font-mono text-neutral-500 uppercase tracking-widest font-bold mb-1">STAGE 01 // FRONTEND ONLY</div>
-              <h3 className="text-xl font-black text-white tracking-tight">Frontend Pipeline</h3>
-            </div>
-
-            {/* ENGINE 01 ONLY Visual Tag */}
-            <div className="mb-6 p-3 rounded-xl bg-white/[0.02] border border-white/5 text-center">
-              <div className="text-[9px] font-mono text-neutral-600 uppercase tracking-widest mb-2">TERMASUK DALAM PAKEJ INI</div>
-              <div className="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-lg px-3 py-1.5 mb-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-orange-500/60 shrink-0" />
-                <span className="text-[11px] text-neutral-300 font-mono font-bold">ENGINE 01: FRONTEND SAHAJA</span>
+            {/* PAKEJ 1 — SALESPAGE STARTER */}
+            <div className="bg-[#0F1424]/40 border border-white/5 rounded-3xl p-6 sm:p-7 hover:border-white/10 transition-all duration-300 relative overflow-hidden flex flex-col justify-between lg:h-full">
+              <div className="text-left">
+                <div className="text-[9px] font-mono text-neutral-500 uppercase tracking-widest font-bold mb-1">PAKEJ PERMULAAN</div>
+                <h3 className="text-xl font-black text-white tracking-tight">Salespage Starter</h3>
+                <p className="text-xs text-neutral-400 font-medium mt-1 mb-5 leading-relaxed">
+                  Sesuai jika anda mahukan halaman jualan Next.js premium yang ultra-pantas untuk menerima trafik iklan.
+                </p>
+                
+                {/* Features List */}
+                <div className="text-[9px] font-mono text-neutral-600 uppercase tracking-widest mb-3">// SPESIFIKASI UTAMA</div>
+                <ul className="space-y-2.5 text-xs text-neutral-300 font-medium mb-6">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-orange-500/60 shrink-0 mt-0.5" /> 
+                    <span>Integrasi Custom Domain & Hosting (Percuma Tahun 1)</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-orange-500/60 shrink-0 mt-0.5" /> 
+                    <span>Seni Bina Salespage Premium Next.js (Laju & Lincah)</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-orange-500/60 shrink-0 mt-0.5" /> 
+                    <span>Ultra-Low Latency Load Time (&lt; 0.1s) via Edge CDN</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-orange-500/60 shrink-0 mt-0.5" /> 
+                    <span>High-Converting Sales Copywriting Architecture</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-orange-500/60 shrink-0 mt-0.5" /> 
+                    <span>Meta/TikTok Pixel Tracking Ready</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-orange-500/60 shrink-0 mt-0.5" /> 
+                    <span>Bimbingan Setup Payment Gateway</span>
+                  </li>
+                </ul>
               </div>
-              <div className="flex items-center justify-center gap-1.5 text-[10px] text-neutral-700 font-mono">
-                <Lock className="w-2.5 h-2.5" />
-                ENGINE 02 (AI CLOSER) — TIDAK TERMASUK
-              </div>
-            </div>
 
-            {/* Feature List */}
-            <ul className="space-y-3.5 text-xs text-neutral-300 mb-8 font-medium flex-1">
-              <li className="flex items-start gap-2.5">
-                <CheckCircle2 className="w-3.5 h-3.5 text-orange-500/60 shrink-0 mt-0.5" /> 
-                <span>Integrasi Custom Domain (.com) & Hosting (Percuma Tahun 1)</span>
-              </li>
-              <li className="flex items-start gap-2.5">
-                <CheckCircle2 className="w-3.5 h-3.5 text-orange-500/60 shrink-0 mt-0.5" /> 
-                <span>Seni Bina Salespage Premium (Next.js/React)</span>
-              </li>
-              <li className="flex items-start gap-2.5">
-                <CheckCircle2 className="w-3.5 h-3.5 text-orange-500/60 shrink-0 mt-0.5" /> 
-                <span>Ultra-Low Latency Load Time (&lt; 0.1s) via Edge CDN</span>
-              </li>
-              <li className="flex items-start gap-2.5">
-                <CheckCircle2 className="w-3.5 h-3.5 text-orange-500/60 shrink-0 mt-0.5" /> 
-                <span>High-Converting Sales Copywriting Architecture</span>
-              </li>
-              <li className="flex items-start gap-2.5">
-                <CheckCircle2 className="w-3.5 h-3.5 text-orange-500/60 shrink-0 mt-0.5" /> 
-                <span>Meta/TikTok Pixel Tracking Ready</span>
-              </li>
-              <li className="flex items-start gap-2.5">
-                <CheckCircle2 className="w-3.5 h-3.5 text-orange-500/60 shrink-0 mt-0.5" /> 
-                <span>Bimbingan Setup Payment Gateway (Akaun mutlak klien)</span>
-              </li>
-              <li className="flex items-start gap-2.5 text-neutral-600">
-                <Lock className="w-3 h-3 shrink-0 mt-0.5" /> 
-                <span>Tiada Autonomous AI Closing Brain</span>
-              </li>
-              <li className="flex items-start gap-2.5 text-neutral-600">
-                <Lock className="w-3 h-3 shrink-0 mt-0.5" /> 
-                <span>Tiada Algorithmic Follow-Up Loops</span>
-              </li>
-            </ul>
-
-            {mounted && (priceStatus === 'promo' || priceStatus === 'rollback') && (
-              <div className="mb-4 bg-red-500/10 border border-red-500/25 p-3 rounded-2xl text-center flex items-center justify-center gap-2 shadow-[0_0_15px_rgba(239,68,68,0.05)]">
-                <span className="relative flex h-1.5 w-1.5 shrink-0">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-red-500"></span>
-                </span>
-                <span className="text-[10px] sm:text-xs font-mono text-red-400 font-bold tracking-wide uppercase">
-                  {priceStatus === 'rollback' ? 'HARGA ROLLBACK TAMAT DALAM:' : 'HARGA PROMO TAMAT DALAM:'} {timeLeft}
-                </span>
-              </div>
-            )}
-
-            {/* Price Console - Stripe Breakdown */}
-            <div key={leftPrice} className="mb-6 font-mono p-5 rounded-2xl bg-black/40 border border-white/5 transition-all duration-500">
-              <span className="text-xs sm:text-sm text-red-500/80 line-through block font-black animate-pulse mb-1">RM1,499 VALUE</span>
-              <span className="text-[9px] text-neutral-500 font-bold block mb-1 uppercase tracking-widest">Total Pelaburan Hari Ini</span>
-              <div className="flex items-baseline gap-0.5">
-                <span className="text-4xl font-black text-white">{leftPrice}</span>
-              </div>
-              
-              {/* Billing Breakdown */}
-              <div className="mt-4 pt-4 border-t border-white/10 space-y-2">
-                <div className="flex justify-between items-center text-[10px] text-neutral-400">
-                  <span>Kos Setup Sistem (One-Off):</span>
-                  <span className="text-white font-bold">{leftSetupFee}</span>
+              <div className="text-left border-t border-white/5 pt-5 mt-auto">
+                {/* Price Console */}
+                <div className="mb-4 font-mono p-4 rounded-xl bg-black/40 border border-white/5">
+                  <span className="text-[10px] text-red-500/80 line-through block font-black mb-0.5">RM1,499 VALUE</span>
+                  <span className="text-[8px] text-neutral-500 font-bold block mb-0.5 uppercase tracking-widest">Total Pelaburan One-Off</span>
+                  <div className="flex items-baseline gap-0.5 mb-1">
+                    <span className="text-2xl font-black text-white">RM699</span>
+                  </div>
+                  <div className="text-[9px] text-neutral-400 leading-relaxed">
+                    Hosting & domain percuma tahun pertama. Seterusnya cuma RM129/tahun (tiada yuran bulanan).
+                  </div>
                 </div>
-                <div className="flex justify-between items-center text-[10px] text-neutral-400">
-                  <span>Domain & Hosting (Tahunan):</span>
-                  <span className="text-white font-bold">RM129<span className="text-neutral-500">/thn</span></span>
-                </div>
+
+                <button 
+                  onClick={() => {
+                    window.location.href = paymentLinks.frontend;
+                  }}
+                  className="w-full bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 text-white font-bold py-3 rounded-xl transition-all duration-200 cursor-pointer text-xs uppercase tracking-wider text-center block"
+                >
+                  Pilih Pakej Salespage Starter
+                </button>
               </div>
             </div>
 
-            <a 
-              href={frontendCheckoutUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-auto w-full bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 text-white font-bold py-3.5 rounded-xl transition-all duration-200 cursor-pointer text-xs uppercase tracking-wider transform hover:scale-[1.01] active:scale-95 text-center block"
-            >
-              Deploy Frontend Pipeline Only
-            </a>
+            {/* PAKEJ 2 — AROS AI AGENT */}
+            <div className="bg-[#0F1424]/40 border border-white/5 rounded-3xl p-6 sm:p-7 hover:border-white/10 transition-all duration-300 relative overflow-hidden flex flex-col justify-between lg:h-full">
+              <div className="text-left">
+                <div className="text-[9px] font-mono text-neutral-500 uppercase tracking-widest font-bold mb-1">INTEGRASI BACKEND AI</div>
+                <h3 className="text-xl font-black text-white tracking-tight">AROS AI Agent</h3>
+                <p className="text-xs text-neutral-400 font-medium mt-1 mb-5 leading-relaxed">
+                  Sistem AI backend WhatsApp untuk menguruskan FAQ, tagging, dan follow-up prospek secara automatik terus ke sistem/situs sedia ada anda.
+                </p>
+                
+                {/* Features List */}
+                <div className="text-[9px] font-mono text-neutral-600 uppercase tracking-widest mb-3">// SPESIFIKASI BACKEND AI</div>
+                <ul className="space-y-2.5 text-xs text-neutral-300 font-medium mb-6">
+                  <li className="flex items-start gap-2">
+                    <Brain className="w-4 h-4 text-orange-400 shrink-0 mt-0.5" /> 
+                    <span><strong className="text-white">AI Closing Brain:</strong> FAQ & closing sales 24/7/365</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Database className="w-4 h-4 text-orange-400 shrink-0 mt-0.5" /> 
+                    <span><strong className="text-white">Memori Pintar AI:</strong> Ingat sejarah pesanan & konteks lama</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <RefreshCw className="w-4 h-4 text-orange-400 shrink-0 mt-0.5" /> 
+                    <span><strong className="text-white">Auto Follow-Up:</strong> Kejar leads 'blue-tick' secara autonomi</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Tags className="w-4 h-4 text-orange-400 shrink-0 mt-0.5" /> 
+                    <span><strong className="text-white">Auto Tagging Pelanggan:</strong> Sistem tag status terus ke DB</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <UserCheck className="w-4 h-4 text-orange-400 shrink-0 mt-0.5" /> 
+                    <span><strong className="text-white">Transisi Staf Manusia:</strong> Laluan sembang manual bila perlu</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Megaphone className="w-4 h-4 text-orange-400 shrink-0 mt-0.5" /> 
+                    <span><strong className="text-white">Lesen Meta Cloud API:</strong> Hantar blast pukal rasmi & selamat</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="text-left border-t border-white/5 pt-5 mt-auto">
+                {/* Price Console */}
+                <div className="mb-4 font-mono p-4 rounded-xl bg-black/40 border border-white/5">
+                  <span className="text-[10px] text-red-500/80 line-through block font-black mb-0.5">RM2,197 VALUE</span>
+                  <span className="text-[8px] text-neutral-500 font-bold block mb-0.5 uppercase tracking-widest">Total Pelaburan One-Off</span>
+                  <div className="flex items-baseline gap-0.5 mb-1">
+                    <span className="text-2xl font-black text-white">RM699</span>
+                  </div>
+                  <div className="mt-3 pt-3 border-t border-white/5 flex justify-between items-center text-[10px]">
+                    <span className="text-neutral-500">Mulai Bulan Kedua:</span>
+                    <span className="text-orange-400 font-bold text-sm">RM99<span className="text-neutral-500 text-[10px]">/bln</span></span>
+                  </div>
+                </div>
+
+                <button 
+                  onClick={() => {
+                    window.location.href = paymentLinks.aiAgent;
+                  }}
+                  className="w-full bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 text-white font-bold py-3 rounded-xl transition-all duration-200 cursor-pointer text-xs uppercase tracking-wider text-center block"
+                >
+                  Pilih Pakej AROS AI Agent
+                </button>
+              </div>
+            </div>
+
           </div>
 
           {/* ============================================================= */}
-          {/* LAJUR KANAN — AROS COMPLETE ENGINE (Hero Card)                 */}
+          {/* COLUMN KANAN — AROS COMPLETE AI ENGINE                        */}
           {/* ============================================================= */}
-          <div className="relative h-full flex flex-col">
-            
+          <div className="lg:col-span-6 relative flex flex-col lg:h-full mt-6 lg:mt-0">
             {/* RECOMMENDED BADGE */}
-            <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-orange-500 to-amber-500 text-black text-[9px] font-mono font-black px-4 py-1.5 rounded-full uppercase tracking-wider shadow-[0_0_20px_rgba(249,115,22,0.4)] whitespace-nowrap z-20 flex items-center gap-1.5">
+            <div className="absolute -top-3.5 left-6 bg-gradient-to-r from-orange-500 to-amber-500 text-black text-[9px] font-mono font-black px-4 py-1.5 rounded-full uppercase tracking-wider shadow-[0_0_20px_rgba(249,115,22,0.4)] whitespace-nowrap z-20 flex items-center gap-1.5">
               <span className="relative flex h-1.5 w-1.5">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-black opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-black"></span>
               </span>
-              RECOMMENDED SYSTEMS SOLUTION
+              PILIHAN UTAMA BISNES: JIMAT RM399
             </div>
 
             {/* Pulsing Border Shell Overlay */}
             <div className="absolute inset-0 border-2 border-orange-500 rounded-3xl animate-pulse pointer-events-none z-10" />
 
-            <div className="bg-[#0F1424]/90 border-2 border-transparent rounded-3xl p-7 flex flex-col text-left shadow-[0_20px_50px_rgba(249,115,22,0.15)] relative overflow-hidden flex-1">
-              
-              <div className="mb-6 pt-2">
-                 <div className="text-[10px] font-mono text-orange-400 uppercase tracking-widest font-bold">THE CORE HYBRID SYSTEM</div>
-                <h3 className="text-2xl font-black text-white mt-0.5 tracking-tight">
-                  AROS Complete Autonomous AI Engine
-                </h3>
-                <p className="text-xs text-neutral-400 font-medium leading-relaxed mt-2">
-                  Satu pelaburan. Dua enjin beroperasi serentak — sistem hadapan dan otak AI — aktif 24/7 secara autopilot.
+            <div className="bg-[#0F1424]/90 border-2 border-transparent rounded-3xl p-6 sm:p-8 flex flex-col justify-between lg:h-full shadow-[0_20px_50px_rgba(249,115,22,0.15)] relative overflow-hidden">
+              <div className="text-left">
+                <div className="text-[10px] font-mono text-orange-400 uppercase tracking-widest font-bold mb-1">GABUNGAN PENUH (FRONTEND + BACKEND)</div>
+                <h3 className="text-2xl sm:text-3xl font-black text-white mt-0.5 tracking-tight">Complete AI Engine</h3>
+                <p className="text-xs sm:text-sm text-neutral-400 font-medium leading-relaxed mt-2 mb-6">
+                  Sistem hadapan (Salespage Next.js Premium) disambung terus dengan otak AI WhatsApp untuk melayan dan closing sales secara autopilot 24/7.
                 </p>
+
+                {/* Features List */}
+                <div className="text-[10px] font-mono text-orange-500/80 uppercase tracking-widest mb-3.5">// KELENGKAPAN EKOSISTEM PENUH</div>
+                <ul className="space-y-3.5 text-xs text-neutral-300 font-medium mb-6">
+                  <li className="flex items-start gap-2.5 text-[11px]">
+                    <CheckCircle2 className="w-4 h-4 text-orange-400 shrink-0 mt-0.5" />
+                    <span><strong className="text-white">Semua Kelebihan Salespage Starter:</strong> Halaman jualan Next.js premium, domain (.com), ultra-pantas &amp; copywriter-engineered.</span>
+                  </li>
+                  <li className="flex items-start gap-2.5 text-[11px]">
+                    <CheckCircle2 className="w-4 h-4 text-orange-400 shrink-0 mt-0.5" />
+                    <span><strong className="text-white">Semua Kelebihan AROS AI Agent:</strong> Otak AI WhatsApp, memori pintar, transisi staf manual, &amp; enjin blast rasmi Meta Cloud API.</span>
+                  </li>
+                  <li className="flex items-start gap-2.5 text-[11px]">
+                    <CheckCircle2 className="w-4 h-4 text-orange-400 shrink-0 mt-0.5" />
+                    <span><strong className="text-white">Integrasi Lancar End-to-End:</strong> Sambungan automatik antara borang pesanan salespage terus ke WhatsApp AI autopilot.</span>
+                  </li>
+                  <li className="flex items-start gap-2.5 text-[11px]">
+                    <CheckCircle2 className="w-4 h-4 text-orange-400 shrink-0 mt-0.5" />
+                    <span><strong className="text-white">Setup Webhook &amp; Pangkalan Data:</strong> Rekod penuh log perbualan untuk analitik &amp; pemantauan kempen.</span>
+                  </li>
+                  <li className="flex items-start gap-2.5 text-[11px]">
+                    <CheckCircle2 className="w-4 h-4 text-orange-400 shrink-0 mt-0.5" />
+                    <span><strong className="text-white">30 Hari Sokongan Pasca Pelancaran:</strong> Pasukan jurutera kami pantau &amp; tala semula respon AI untuk closing maksima.</span>
+                  </li>
+                </ul>
+
+                {/* BREAKDOWN NILAI KOMPONEN */}
+                <div className="mb-6 bg-black/20 border border-white/5 rounded-2xl p-4">
+                  <div className="text-[9px] font-mono font-bold text-neutral-500 uppercase tracking-widest mb-3">// BREAKDOWN NILAI KOMPONEN (Pakej Complete)</div>
+                  <div className="space-y-2">
+                    {[
+                      { label: 'Custom Next.js Salespage (Mobile-Optimised)', value: 'RM 1,499' },
+                      { label: 'AI Training + Prompt Engineering', value: 'RM 700' },
+                      { label: 'Meta Cloud API Integration + Setup', value: 'RM 500' },
+                      { label: 'Webhook + Database Architecture', value: 'RM 400' },
+                      { label: '30-Day Post-Launch Support', value: 'RM 299' },
+                      { label: 'Meta Cloud API License (Bulan 1)', value: 'RM 299' },
+                    ].map((item, i) => (
+                      <div key={i} className="flex justify-between items-center gap-3">
+                        <span className="text-[10px] font-mono text-neutral-500 leading-snug">{item.label}</span>
+                        <span className="text-[10px] font-mono font-black text-neutral-300 shrink-0">{item.value}</span>
+                      </div>
+                    ))}
+                    <div className="border-t border-white/10 pt-2 mt-1 flex justify-between items-center">
+                      <span className="text-[10px] font-mono font-bold text-neutral-400 uppercase tracking-wide">Total Nilai Sebenar</span>
+                      <span className="text-sm font-mono font-black text-red-400/80 line-through">RM 3,696</span>
+                    </div>
+                  </div>
+                </div>
               </div>
 
-              {/* ============================================================= */}
-              {/* THE UNIFIED FEATURE LIST (Vertical Stack Layout)               */}
-              {/* ============================================================= */}
-              <div className="mb-8 flex-1">
-                <div className="text-[10px] font-mono text-neutral-500 uppercase tracking-widest mb-3 text-center">
-                  — 2 ENJIN DIINTEGRASIKAN SERENTAK —
-                </div>
-                
-                <div className="flex flex-col gap-3">
+              <div className="text-left border-t border-white/5 pt-6 mt-6">
+                {/* PRICE CONSOLE */}
+                <div className="bg-black/40 border border-orange-500/20 rounded-2xl p-5 mb-5 font-mono text-xs">
+                  <span className="text-xs text-red-500/80 line-through block font-black mb-1">RM3,696 VALUE</span>
+                  <span className="text-[9px] text-neutral-500 font-bold block mb-1 uppercase tracking-widest">Total Pelaburan Hari Ini</span>
+                  <div className="flex items-baseline gap-0.5 mb-3">
+                    <span className="text-3xl sm:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-400 tracking-tight">RM999</span>
+                  </div>
                   
-                  {/* ENGINE 01: MINIMALIST SUMMARY */}
-                  <div className="bg-white/[0.03] border border-white/10 rounded-xl p-4 flex items-center gap-3 hover:border-white/20 transition-colors">
-                    <div className="flex flex-col">
-                      <div className="flex items-center gap-1.5 mb-0.5">
-                        <span className="text-[9px] font-mono font-black text-neutral-500 uppercase tracking-widest">ENGINE 01</span>
-                      </div>
-                      <div className="text-sm font-black text-white leading-tight">
-                        Frontend Pipeline <span className="text-neutral-400 font-medium text-[11px] ml-1 hidden sm:inline">— Termasuk semua spec premium.</span>
-                      </div>
-                      <div className="text-neutral-400 font-medium text-[11px] mt-1 sm:hidden">
-                        Termasuk semua spec premium.
+                  {/* Billing Breakdown */}
+                  <div className="mt-4 pt-4 border-t border-orange-500/20 space-y-2">
+                    <div className="text-[10px] text-orange-400 leading-relaxed font-bold">
+                      🔥 JIMAT RM399 berbanding beli berasingan (RM699 + RM699). Percuma setup penuh &amp; lesen bulan pertama!
+                    </div>
+                    <div className="pt-2 border-t border-white/5 space-y-1.5">
+                      <p className="text-[10px] text-neutral-300 leading-relaxed font-medium">
+                        AI anda kekal aktif mengejar leads, membalas prospek &amp; generate sale —{' '}
+                        <strong className="text-white">24/7 tanpa henti.</strong>
+                      </p>
+                      <div className="flex justify-between items-center">
+                        <span className="text-[10px] text-neutral-500 font-mono">Mulai Bulan Kedua:</span>
+                        <span className="text-orange-400 font-bold text-sm">RM99<span className="text-neutral-500 text-[10px]">/bln</span></span>
                       </div>
                     </div>
                   </div>
-
-                  {/* ENGINE 02: HIGH-VALUE AI FEATURES */}
-                  <div className="bg-orange-500/[0.05] border border-orange-500/25 rounded-2xl p-5 hover:border-orange-500/40 transition-colors duration-200 relative overflow-hidden">
-                    {/* Subtle glow accent */}
-                    <div className="absolute top-0 right-0 w-32 h-32 bg-[radial-gradient(circle_at_center,rgba(249,115,22,0.08)_0%,transparent_70%)] pointer-events-none" />
-                    
-                    <div className="flex items-center gap-1.5 mb-1.5">
-                      <span className="text-[10px] font-mono font-black text-orange-500/80 uppercase tracking-widest">ENGINE 02</span>
-                    </div>
-                    <div className="text-base font-black text-white tracking-tight mb-4 leading-tight">AI Closer System</div>
-                    
-                    <ul className="space-y-3.5">
-                      <li className="flex items-start gap-2.5 text-[11px] text-neutral-300">
-                        <Brain className="w-4 h-4 text-orange-400 shrink-0 mt-0.5" />
-                        <span><strong className="text-white">10-Step AI Closing Brain:</strong> Ejen pintar beroperasi 24/7 membalas soalan pelanggan tanpa henti.</span>
-                      </li>
-                      <li className="flex items-start gap-2.5 text-[11px] text-neutral-300">
-                        <Database className="w-4 h-4 text-orange-400 shrink-0 mt-0.5" />
-                        <span><strong className="text-white">Smart AI Memory:</strong> Sistem berkuasa mengingati sejarah pesanan dan rujukan perbualan prospek terdahulu.</span>
-                      </li>
-                      <li className="flex items-start gap-2.5 text-[11px] text-neutral-300">
-                        <RefreshCw className="w-4 h-4 text-orange-400 shrink-0 mt-0.5" />
-                        <span><strong className="text-white">Auto Follow-Up Loop:</strong> Kejar prospek senyap atau 'blue-tick' secara automatik mengikut logik sela masa.</span>
-                      </li>
-                      <li className="flex items-start gap-2.5 text-[11px] text-neutral-300">
-                        <Tags className="w-4 h-4 text-orange-400 shrink-0 mt-0.5" />
-                        <span><strong className="text-white">Auto-Label & Segmentation:</strong> Tagging pelanggan (Hot Lead, Support) secara *real-time* berdasarkan konteks mesej.</span>
-                      </li>
-                      <li className="flex items-start gap-2.5 text-[11px] text-neutral-300">
-                        <UserCheck className="w-4 h-4 text-orange-400 shrink-0 mt-0.5" />
-                        <span><strong className="text-white">Seamless Human Takeover:</strong> Transisi automatik kepada *human agent* jika mengesan pelanggan marah atau isu kritikal.</span>
-                      </li>
-                      <li className="flex items-start gap-2.5 text-[11px] text-neutral-300">
-                        <Megaphone className="w-4 h-4 text-orange-400 shrink-0 mt-0.5" />
-                        <span><strong className="text-white">Broadcast Blaster Engine:</strong> Keupayaan hantaran kempen promosi pukal yang selamat dari risiko nombor di-ban.</span>
-                      </li>
-                    </ul>
-                  </div>
-
                 </div>
 
-                {/* Supplementary technical note */}
-                <p className="text-[10px] text-neutral-600 font-mono mt-4 text-center">
-                  + Meta Cloud API · Webhook Berenkripsi · Database Setup · 30-Hari Support
-                </p>
-              </div>
+                {/* CTA BUTTON */}
+                <button 
+                  onClick={() => {
+                    window.location.href = paymentLinks.complete;
+                  }}
+                  className="w-full bg-gradient-to-r from-orange-500 to-amber-500 text-black hover:shadow-[0_0_25px_rgba(249,115,22,0.4)] hover:scale-[1.02] font-black py-4 rounded-xl transition-all duration-200 transform active:scale-95 cursor-pointer text-sm tracking-wide text-center uppercase block"
+                >
+                  Pilih Pakej AROS Complete AI Engine
+                </button>
 
-              {mounted && (priceStatus === 'promo' || priceStatus === 'rollback') && (
-                <div className="mb-4 bg-red-500/10 border border-red-500/25 p-3 rounded-2xl text-center flex items-center justify-center gap-2 shadow-[0_0_15px_rgba(239,68,68,0.05)]">
-                  <span className="relative flex h-1.5 w-1.5 shrink-0">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                    <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-red-500"></span>
-                  </span>
-                  <span className="text-[10px] sm:text-xs font-mono text-red-400 font-bold tracking-wide uppercase">
-                    {priceStatus === 'rollback' ? 'HARGA ROLLBACK TAMAT DALAM:' : 'HARGA PROMO TAMAT DALAM:'} {timeLeft}
-                  </span>
+                {/* 100% DONE-FOR-YOU (DFY) GUARANTEE */}
+                <div className="mt-6 p-4 rounded-xl bg-zinc-900/40 border border-zinc-800/80">
+                  <div className="flex items-center gap-2 mb-2 text-emerald-400 font-semibold text-sm tracking-wide uppercase">
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                    100% Done-For-You (DFY)
+                  </div>
+                  <p className="text-xs leading-relaxed text-zinc-400">
+                    Dipasang secara <span className="text-zinc-200 font-medium">Autopilot</span>{" "}oleh jurutera kami. Anda sedia maklumat bisnes &amp; FAQ, kami uruskan setup server, latihan AI &amp; integrasi Meta API sehingga live. Anda tidak perlu sakit kepala setup teknikal yang rumit — kami uruskan semuanya untuk anda.
+                  </p>
                 </div>
-              )}
 
-              {/* PRICE CONSOLE - Stripe Breakdown */}
-              <div key={rightPrice} className="bg-black/40 border border-orange-500/20 rounded-2xl p-5 mb-6 font-mono text-xs transition-all duration-500">
-                <span className="text-xs sm:text-sm text-red-500/80 line-through block font-black animate-pulse mb-1">RM2,999 VALUE</span>
-                <span className="text-[9px] text-neutral-500 font-bold block mb-1 uppercase tracking-widest">Total Pelaburan Hari Ini</span>
-                <div className="flex items-baseline gap-0.5">
-                  <span className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-400 tracking-tight">{rightPrice}</span>
-                </div>
-                
-                {/* Billing Breakdown */}
-                <div className="mt-4 pt-4 border-t border-orange-500/20 space-y-2">
-                  <div className="flex justify-between items-center text-[10px] text-neutral-400">
-                    <span>Kos Setup Sistem (One-Off):</span>
-                    <span className="text-white font-bold">{rightSetupFee}</span>
-                  </div>
-                  <div className="flex justify-between items-center text-[10px] text-neutral-400">
-                    <span>Server AI, Domain & Hosting (Bulanan):</span>
-                    <span className="text-orange-400 font-bold">RM99<span className="text-neutral-500">/bln</span></span>
-                  </div>
+                {/* MICRO-TRUST ANCHORS */}
+                <div className="mt-4 text-center flex flex-wrap items-center justify-center gap-1.5 text-[8px] sm:text-[9px] font-mono text-neutral-500 select-none">
+                  <span>🔒 Pembayaran Selamat SSL</span>
+                  <span>•</span>
+                  <span>Secure Stripe Checkout</span>
+                  <span>•</span>
+                  <span>Bromover Resources Sdn. Bhd. (201901003230)</span>
                 </div>
               </div>
-
-              {/* CTA BUTTON */}
-              <a 
-                href={completeCheckoutUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-auto w-full bg-gradient-to-r from-orange-500 to-amber-500 text-black hover:shadow-[0_0_25px_rgba(249,115,22,0.4)] hover:scale-[1.02] font-black py-4 rounded-xl transition-all duration-200 transform active:scale-95 cursor-pointer text-sm tracking-wide text-center uppercase block"
-              >
-                Deploy AROS Autonomous AI Engine
-              </a>
             </div>
           </div>
 
@@ -422,71 +375,72 @@ export default function PricingMatrix() {
 
         {/* INFRASTRUCTURE TRANSPARENCY BANNER */}
         <div className="max-w-4xl mx-auto mt-12 bg-gradient-to-r from-[#0f1424] to-[#0A0E1A] border border-white/10 rounded-2xl p-6 sm:p-8 relative overflow-hidden shadow-2xl">
-          {/* Subtle background glow */}
           <div className="absolute top-0 right-0 w-64 h-64 bg-orange-500/5 rounded-full blur-3xl pointer-events-none -translate-y-1/2 translate-x-1/2" />
           
           <div className="relative z-10 grid grid-cols-1 md:grid-cols-[80px_1fr_1fr] gap-6 md:gap-8 items-start">
             
-            {/* Column 1 (Icon) */}
+            {/* Column 1 */}
             <div className="flex justify-center md:justify-start">
               <div className="w-12 h-12 rounded-xl bg-orange-500/10 border border-orange-500/20 flex items-center justify-center shrink-0 mt-1">
                 <Server className="w-8 h-8 text-orange-400" />
               </div>
             </div>
             
-            {/* Column 2 (Features) */}
-            <div className="text-left space-y-4">
-              <div>
-                <h4 className="text-sm md:text-base font-black text-white mb-2 uppercase tracking-wide">
-                  Kenapa Ada Caj RM99/bln Untuk AROS Complete Autonomous AI Engine?
-                </h4>
-                <p className="text-xs md:text-sm text-neutral-400 leading-relaxed font-medium">
-                  Sistem AI Agent berprestasi tinggi bukan sekadar skrip bot biasa. Komitmen RM99 anda disalurkan terus untuk menggerakkan infrastruktur Enterprise yang kritikal:
-                </p>
-              </div>
+            {/* Column 2 */}
+            <div className="text-left flex flex-col justify-center">
+              <h4 className="text-sm font-black text-white mb-2 uppercase tracking-wide">
+                Kenapa Ada Caj RM99/Bulan Mulai Bulan Kedua?
+              </h4>
+              <p className="text-xs text-neutral-400 leading-relaxed font-medium mb-4">
+                Untuk pastikan AI anda beroperasi 24/7 tanpa henti. Caj kos terus (zero-markup) ini bagi menampung:
+              </p>
               
-              <ul className="space-y-3.5">
-                <li className="flex items-start gap-2.5 text-xs md:text-sm text-neutral-300">
+              <ul className="space-y-3">
+                <li className="flex items-start gap-2.5 text-xs text-neutral-300">
                   <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
-                  <span><strong className="text-white">Algorithmic Auto Follow-Up:</strong> Kos pemprosesan Cloud Server untuk enjin susulan pintar yang mengejar prospek senyap atau 'blue-tick' secara automatik siang dan malam.</span>
+                  <span><strong className="text-white">Cloud Server 24/7:</strong> Enjin kuasa pemprosesan AI pantas.</span>
                 </li>
-                <li className="flex items-start gap-2.5 text-xs md:text-sm text-neutral-300">
+                <li className="flex items-start gap-2.5 text-xs text-neutral-300">
                   <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
-                  <span><strong className="text-white">Official Broadcast (Blaster) Engine:</strong> Akses sistem pemasaran pukal berkelajuan tinggi menggunakan lesen rasmi Meta Cloud API tanpa risiko nombor di-ban.</span>
+                  <span><strong className="text-white">Lesen Meta Cloud API:</strong> Sambungan rasmi selamat & broadcast.</span>
                 </li>
-                <li className="flex items-start gap-2.5 text-xs md:text-sm text-neutral-300">
+                <li className="flex items-start gap-2.5 text-xs text-neutral-300">
                   <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
-                  <span><strong className="text-white">Penyelenggaraan Keseluruhan:</strong> Merangkumi pengurusan token AI dinamik, pembaharuan Domain (.com), Hosting, dan Database Live Inbox 24/7.</span>
+                  <span><strong className="text-white">Maintenance & Database:</strong> Hosting & token AI berterusan.</span>
                 </li>
               </ul>
             </div>
 
-            {/* Column 3 (Comparison) */}
-            <div className="bg-black/40 border border-white/5 p-5 rounded-xl h-full">
-              <p className="text-xs md:text-sm text-neutral-400 leading-relaxed">
-                Sebagai perbandingan industri, platform pengurusan mesej standard seperti <strong className="text-orange-400">Sleekf***</strong> atau <strong className="text-orange-400">Resp***.io</strong> mengenakan caj bermula <strong className="text-red-400">RM300 hingga RM400+ sebulan</strong> (HANYA untuk sistem inbox kaku, tanpa sebarang kapasiti otak AI, Auto Follow-Up pintar, mahupun Blaster). 
-                <br /><br />
-                <strong className="text-emerald-400">RM99/bulan</strong> ini memastikan ekosistem pemasaran digital anda sentiasa berjalan secara optimum tanpa kos tersembunyi.
+            {/* Column 3 */}
+            <div className="bg-black/40 border border-white/5 p-5 rounded-xl lg:h-full flex flex-col justify-center text-left">
+              <div className="text-[10px] font-mono text-neutral-500 uppercase tracking-widest font-bold mb-2">// REALITI INDUSTRI</div>
+              <p className="text-xs text-neutral-400 leading-relaxed">
+                Platform inbox biasa (tanpa AI) & logik yang anda perlu setup sendiri seperti <strong className="text-white">Sleekf***/Resp***.io</strong> caj sehingga <strong className="text-red-400">RM300-RM400+ sebulan</strong>.
               </p>
+              <div className="mt-4 pt-4 border-t border-white/5">
+                <p className="text-xs text-neutral-300 font-medium leading-relaxed">
+                  Dengan AROS, <strong className="text-emerald-400 font-bold">RM99/bulan</strong> menjana ekosistem autonomi penuh. <strong className="text-white">Tiada kos tersembunyi.</strong>
+                </p>
+              </div>
             </div>
 
           </div>
         </div>
 
-        {/* INFRASTRUCTURE COST DISCLAIMER */}
-        <p className="text-center text-[10px] sm:text-xs text-neutral-600 mt-6 max-w-3xl mx-auto leading-relaxed px-4">
-          * Nota: Komitmen penyelenggaraan tertakluk kepada kadar pembekal Cloud Server global dan Meta Cloud API. Pihak kami berhak menyemak semula kos ini dari semasa ke semasa bagi menjamin kestabilan infrastruktur sistem pada tahap optimum.
-        </p>
-
-        {/* SCARCITY INDICATOR */}
-        <div className="mt-10 w-full max-w-2xl mx-auto flex items-center justify-center gap-2 text-[10px] sm:text-[11px] font-mono text-red-400 bg-red-500/5 border border-red-500/20 px-4 py-3 rounded-2xl select-none shadow-[0_0_20px_rgba(239,68,68,0.05)]">
-          <span className="relative flex h-2 w-2 shrink-0 flex-shrink-0">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
-          </span>
-          <span className="leading-relaxed font-semibold animate-pulse text-center">
-            Status Semasa: Hanya tinggal 1 slot integrasi dibuka untuk minggu ini.
-          </span>
+        {/* NO-MARKUP COST GUARANTEE */}
+        <div className="max-w-3xl mx-auto mt-8 bg-emerald-500/5 border border-emerald-500/20 rounded-2xl p-5 flex items-start gap-3 text-left">
+          <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5 animate-pulse" />
+          <div>
+            <h4 className="text-xs sm:text-sm font-bold text-white uppercase tracking-wide">
+              🛡️ JAMINAN KOS BERSIH (NO-MARKUP COST)
+            </h4>
+            <p className="text-[11px] sm:text-xs text-neutral-400 leading-relaxed mt-1">
+              RM99/bulan adalah kos terus pelayan awan & lesen API rasmi. Kami salurkan 100% pada harga kos tanpa sebarang markup keuntungan dari pihak kami.
+            </p>
+            <div className="mt-3 pt-3 border-t border-emerald-500/10 text-[10px] font-mono text-neutral-500">
+              Diselia oleh entiti sah: <strong className="text-neutral-400">BROMOVER RESOURCES SDN. BHD.</strong> (No. SSM: 201901003230)
+            </div>
+          </div>
         </div>
 
         {/* FOOTER NOTE */}
