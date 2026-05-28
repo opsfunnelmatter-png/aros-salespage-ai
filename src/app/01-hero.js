@@ -108,7 +108,7 @@ export default function HeroSection({ dailyBudget }) {
           }`}
           style={{ transitionDelay: '400ms' }}
         >
-          Kami pasang sistem AI ke nombor WhatsApp rasmi anda — dia balas dalam <strong className="text-orange-400">0.2 saat</strong>, tapis prospek yang serius, dan hantar pautan pembayaran terus. <strong className="text-neutral-200">Automatik 24/7</strong> tanpa anda perlu angkat jari.
+          Kami pasang sistem AI ke nombor WhatsApp rasmi anda — dia balas dalam <strong className="text-orange-400">0.2 saat</strong>, tapis prospek yang serius, dan hantar pautan pembayaran terus. <strong className="text-neutral-200">Automatik 24/7/365.</strong>
         </p>
 
         {/* CONVERSION DIRECT INTERACTIVE TRIGGER */}

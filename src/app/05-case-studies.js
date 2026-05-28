@@ -234,6 +234,19 @@ export default function CaseStudies() {
             
             {/* 3-COLUMN INDUSTRY BENCHMARK RESULTS - VERTICAL STACK WITH MICRO-COPY */}
             <div className="flex flex-col gap-4">
+              <div className="bg-[#0F1424] border border-white/5 p-6 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between text-left gap-4 shadow-xs relative overflow-hidden group hover:border-indigo-500/30 transition-colors">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-500/5 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none" />
+                <div className="flex flex-col gap-2 relative z-10">
+                  <span className="text-[11px] font-mono font-bold text-neutral-400 uppercase tracking-widest">VERSATILITY & ADAPTABILITY</span>
+                  <p className="text-sm text-neutral-500 font-medium max-w-[280px]">
+                    Sokongan menyeluruh untuk sebarang produk, sebarang industri, dan sebarang bahasa secara natural.
+                  </p>
+                </div>
+                <div className="relative z-10 shrink-0 self-start sm:self-center">
+                  <span className="text-3xl sm:text-4xl font-black bg-gradient-to-r from-indigo-400 to-violet-500 bg-clip-text text-transparent">Universal</span>
+                </div>
+              </div>
+
               <div className="bg-[#0F1424] border border-white/5 p-6 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between text-left gap-4 shadow-xs relative overflow-hidden group hover:border-orange-500/30 transition-colors">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-orange-500/5 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none" />
                 <div className="flex flex-col gap-2 relative z-10">
