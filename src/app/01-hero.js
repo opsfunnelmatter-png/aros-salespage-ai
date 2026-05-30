@@ -53,29 +53,6 @@ export default function HeroSection({ dailyBudget }) {
           </span>
         </h1>
 
-        {/* CREDIBILITY ANCHOR BAR */}
-        <div
-          className={`flex items-center justify-center gap-2 flex-wrap mb-6 mt-2 transform transition-all duration-1000 ${
-            isMounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-          }`}
-          style={{ transitionDelay: '350ms' }}
-        >
-          {[
-            'Bromover Resources Sdn. Bhd.',
-            'EST. 2019',
-            '30+ Bisnes Didigitalkan',
-          ].map((label, i) => (
-            <span
-              key={i}
-              className="flex items-center gap-1.5 bg-white/5 border border-white/10 rounded-full px-3 py-1.5 text-xs font-mono font-bold text-neutral-400 uppercase tracking-widest"
-            >
-              {i === 0 && (
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse inline-block" />
-              )}
-              {label}
-            </span>
-          ))}
-        </div>
 
         {/* METRIC SPECIFIC SUB-HEADLINE */}
         <p 
@@ -115,6 +92,30 @@ export default function HeroSection({ dailyBudget }) {
               <ShieldCheck className="w-4 h-4 text-orange-500" /> SETUP RASMI META CLOUD API (100% SELAMAT)
             </span>
           </div>
+        </div>
+
+        {/* CREDIBILITY ANCHOR BAR */}
+        <div
+          className={`flex items-center justify-center gap-2 flex-wrap mt-8 transform transition-all duration-1000 ${
+            isMounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+          }`}
+          style={{ transitionDelay: '750ms' }}
+        >
+          {[
+            'Bromover Resources Sdn. Bhd.',
+            'EST. 2019',
+            '30+ Bisnes Didigitalkan',
+          ].map((label, i) => (
+            <span
+              key={i}
+              className="flex items-center gap-1.5 bg-white/5 border border-white/10 rounded-full px-3 py-1.5 text-xs font-mono font-bold text-neutral-400 uppercase tracking-widest"
+            >
+              {i === 0 && (
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse inline-block" />
+              )}
+              {label}
+            </span>
+          ))}
         </div>
 
       </div>
