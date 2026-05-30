@@ -117,7 +117,7 @@ export default function CaseStudies() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center mb-24">
           
           {/* Lajur Kiri: Mobile Phone Mockup (lg:col-span-5) */}
-          <div className="lg:col-span-5 w-full flex justify-center">
+          <div className="lg:col-span-5 w-full flex flex-col items-center justify-center">
             
             {/* REALISTIC SMARTPHONE CHASSIS */}
             <div className="relative w-full max-w-[320px] aspect-[9/19.5] mx-auto border-[8px] sm:border-[12px] border-zinc-900 rounded-[40px] sm:rounded-[50px] bg-[#0b141a] overflow-hidden shadow-[0_0_0_1px_rgba(255,255,255,0.05),0_30px_60px_rgba(0,0,0,0.8),0_0_40px_rgba(16,185,129,0.15)] flex flex-col">
@@ -225,6 +225,26 @@ export default function CaseStudies() {
               
               {/* HOME INDICATOR LINE */}
               <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-32 h-1.5 bg-white/20 rounded-full z-40" />
+            </div>
+
+            {/* PREMIUM CTA BUTTON FOR BOT TESTING */}
+            <div className="mt-8 w-full max-w-[320px] text-center space-y-2.5 relative z-20">
+              <a 
+                href="https://wa.me/601112755161?text=Salam%20AROS%2C%20saya%20nak%20test%20kehebatan%20bot%20ni%20sekarang"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-orange-500 via-amber-500 to-orange-500 text-black font-black text-[11px] sm:text-xs py-4 px-6 rounded-2xl cursor-pointer overflow-hidden transform transition-all duration-300 animate-premium-pulse hover:scale-[1.03] active:scale-95 whitespace-normal tracking-wide shadow-[0_0_25px_rgba(249,115,22,0.45)] select-none text-center"
+              >
+                <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
+                <span className="relative flex h-2 w-2 mr-0.5 shrink-0">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-black opacity-75" />
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-black" />
+                </span>
+                TEST AI BOT KAMI SEKARANG (LIVE PANDU UJI)
+              </a>
+              <p className="text-[10px] sm:text-xs font-mono text-neutral-400 leading-normal">
+                Cuba hantar apa sahaja soalan & tengok kelajuan respons bot
+              </p>
             </div>
 
           </div>
