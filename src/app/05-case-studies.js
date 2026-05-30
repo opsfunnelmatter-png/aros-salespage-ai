@@ -227,13 +227,18 @@ export default function CaseStudies() {
               <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-32 h-1.5 bg-white/20 rounded-full z-40" />
             </div>
 
+          </div>
+
+          {/* Lajur Kanan: Stat (lg:col-span-7) - Vertically Centered */}
+          <div className="lg:col-span-7 w-full flex flex-col justify-center gap-5 mt-8 lg:mt-0">
+            
             {/* PREMIUM CTA BUTTON FOR BOT TESTING */}
-            <div className="mt-8 w-full max-w-[320px] text-center space-y-2.5 relative z-20">
+            <div className="w-full text-center space-y-2 relative z-20 mb-2">
               <a 
                 href="https://wa.me/601112755161?text=Salam%20AROS%2C%20saya%20nak%20test%20kehebatan%20bot%20ni%20sekarang"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-orange-500 via-amber-500 to-orange-500 text-black font-black text-[11px] sm:text-xs py-4 px-6 rounded-2xl cursor-pointer overflow-hidden transform transition-all duration-300 animate-premium-pulse hover:scale-[1.03] active:scale-95 whitespace-normal tracking-wide shadow-[0_0_25px_rgba(249,115,22,0.45)] select-none text-center"
+                className="group relative w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-orange-500 via-amber-500 to-orange-500 text-black font-black text-xs py-4 px-6 rounded-2xl cursor-pointer overflow-hidden transform transition-all duration-300 animate-premium-pulse hover:scale-[1.02] active:scale-95 whitespace-normal tracking-wide shadow-[0_0_25px_rgba(249,115,22,0.45)] select-none text-center"
               >
                 <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
                 <span className="relative flex h-2 w-2 mr-0.5 shrink-0">
@@ -247,11 +252,6 @@ export default function CaseStudies() {
               </p>
             </div>
 
-          </div>
-
-          {/* Lajur Kanan: Stat (lg:col-span-7) - Vertically Centered */}
-          <div className="lg:col-span-7 w-full flex flex-col justify-center gap-4 mt-8 lg:mt-0">
-            
             {/* 3-COLUMN INDUSTRY BENCHMARK RESULTS - VERTICAL STACK WITH MICRO-COPY */}
             <div className="flex flex-col gap-4">
               <div className="bg-[#0F1424] border border-white/5 p-6 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between text-left gap-4 shadow-xs relative overflow-hidden group hover:border-indigo-500/30 transition-colors">
