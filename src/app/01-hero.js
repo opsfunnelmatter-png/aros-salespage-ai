@@ -85,6 +85,10 @@ export default function HeroSection({ dailyBudget }) {
             Kira Berapa RM Anda Rugi Setiap Malam
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1.5 transition-transform duration-200 shrink-0" />
           </button>
+          
+          <div className="mt-3.5 text-xs font-mono text-neutral-400/90 tracking-wide flex items-center justify-center gap-1.5 select-none">
+            ⏱️ Hanya ambil masa 5 saat sahaja untuk mula mengira.
+          </div>
         </div>
 
         {/* CREDIBILITY ANCHOR BAR */}
