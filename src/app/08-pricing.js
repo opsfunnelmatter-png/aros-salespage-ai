@@ -238,7 +238,7 @@ export default function PricingMatrix() {
           {/* ============================================================= */}
           {/* COLUMN KANAN — AROS COMPLETE AI ENGINE                        */}
           {/* ============================================================= */}
-          <div className="relative flex flex-col lg:h-full mt-6 lg:mt-0">
+          <div id="complete_price_card" className="relative flex flex-col lg:h-full mt-6 lg:mt-0">
             {/* RECOMMENDED BADGE */}
             <div className="absolute -top-3.5 left-6 bg-gradient-to-r from-orange-500 to-amber-500 text-black text-[9px] font-mono font-black px-4 py-1.5 rounded-full uppercase tracking-wider shadow-[0_0_20px_rgba(249,115,22,0.4)] whitespace-nowrap z-20 flex items-center gap-1.5">
               <span className="relative flex h-1.5 w-1.5">
