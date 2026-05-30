@@ -66,7 +66,7 @@ export default function HeroSection({ dailyBudget }) {
 
         {/* CONVERSION DIRECT INTERACTIVE TRIGGER */}
         <div 
-          className={`mb-20 transform transition-all duration-1000 ${
+          className={`mb-12 transform transition-all duration-1000 ${
             isMounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
           }`}
           style={{ transitionDelay: '600ms' }}
@@ -85,21 +85,14 @@ export default function HeroSection({ dailyBudget }) {
             Kira Berapa RM Anda Rugi Setiap Malam
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1.5 transition-transform duration-200 shrink-0" />
           </button>
-
-          {/* EVERGREEN SUB-CTA QUANTUM BAR */}
-          <div className="mt-5 flex items-center justify-center gap-6 text-xs font-mono text-neutral-500 tracking-wider">
-            <span className="flex items-center gap-1.5">
-              <ShieldCheck className="w-4 h-4 text-orange-500" /> SETUP RASMI META CLOUD API (100% SELAMAT)
-            </span>
-          </div>
         </div>
 
         {/* CREDIBILITY ANCHOR BAR */}
         <div
-          className={`flex items-center justify-center gap-2 flex-wrap mt-8 transform transition-all duration-1000 ${
+          className={`flex items-center justify-center gap-2 flex-wrap mb-6 transform transition-all duration-1000 ${
             isMounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
           }`}
-          style={{ transitionDelay: '750ms' }}
+          style={{ transitionDelay: '700ms' }}
         >
           {[
             'Bromover Resources Sdn. Bhd.',
@@ -116,6 +109,18 @@ export default function HeroSection({ dailyBudget }) {
               {label}
             </span>
           ))}
+        </div>
+
+        {/* EVERGREEN SUB-CTA QUANTUM BAR */}
+        <div 
+          className={`flex items-center justify-center gap-6 text-xs font-mono text-neutral-500 tracking-wider transform transition-all duration-1000 ${
+            isMounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+          }`}
+          style={{ transitionDelay: '800ms' }}
+        >
+          <span className="flex items-center gap-1.5">
+            <ShieldCheck className="w-4 h-4 text-orange-500" /> SETUP RASMI META CLOUD API (100% SELAMAT)
+          </span>
         </div>
 
       </div>
