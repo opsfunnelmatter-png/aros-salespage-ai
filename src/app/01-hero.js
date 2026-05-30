@@ -87,7 +87,7 @@ export default function HeroSection({ dailyBudget }) {
           </button>
           
           <div className="mt-3.5 text-xs font-mono text-neutral-400/90 tracking-wide flex items-center justify-center gap-1.5 select-none">
-            ⏱️ Hanya ambil masa 5 saat sahaja untuk mula mengira.
+            ⏱️ Tak sampai 5 saat untuk dapat jawapan.
           </div>
         </div>
 

@@ -16,8 +16,8 @@ export default function BleedingMath({ dailyBudget, setDailyBudget }) {
 
   const isBudgetCompleted = budget !== '' && parseFloat(budget) > 0;
 
-  const handleScrollToPainGrid = () => {
-    const target = document.getElementById('pain_grid_section');
+  const handleScrollToDiagnostic = () => {
+    const target = document.getElementById('diagnostic_board');
     if (target) {
       const yOffset = -80;
       const y = target.getBoundingClientRect().top + window.scrollY + yOffset;
@@ -195,7 +195,7 @@ export default function BleedingMath({ dailyBudget, setDailyBudget }) {
               {!isIdle && (
                 <div className="pt-2">
                   <button 
-                    onClick={handleScrollToPainGrid}
+                    onClick={handleScrollToDiagnostic}
                     className="w-full bg-gradient-to-r from-orange-500 via-amber-500 to-orange-500 text-black font-black text-xs py-4 rounded-xl cursor-pointer shadow-[0_0_20px_rgba(249,115,22,0.4)] hover:shadow-[0_0_35px_rgba(249,115,22,0.6)] hover:scale-[1.02] active:scale-95 transition-all duration-300 text-center tracking-wider font-sans select-none flex items-center justify-center gap-2 animate-premium-pulse"
                   >
                     Lihat Kenapa Ini Berlaku
