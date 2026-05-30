@@ -54,7 +54,7 @@ export default function BleedingMath({ dailyBudget, setDailyBudget }) {
     : "bg-black/60 border-b-2 border-red-500 text-white font-black text-2xl p-2 pr-8 rounded-t-lg focus:outline-none focus:border-red-400 focus:ring-1 focus:ring-red-500 w-36 text-center min-h-[44px] animate-pulse focus:animate-none [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none transition-all duration-500";
 
   return (
-    <section className="relative z-10 w-full bg-[#0B0F19] border-t border-white/5 py-24 text-white overflow-hidden">
+    <section id="bleeding_math_section" className="relative z-10 w-full bg-[#0B0F19] border-t border-white/5 py-24 text-white overflow-hidden">
       
       {/* EXCLUSIVE INDUSTRIAL GRAPHIC BACKGROUND FOR CONTINUITY */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff03_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)] bg-[size:20px_20px] pointer-events-none" />
@@ -198,7 +198,7 @@ export default function BleedingMath({ dailyBudget, setDailyBudget }) {
                     onClick={handleScrollToPainGrid}
                     className="w-full bg-gradient-to-r from-orange-500 via-amber-500 to-orange-500 text-black font-black text-xs py-4 rounded-xl cursor-pointer shadow-[0_0_20px_rgba(249,115,22,0.4)] hover:shadow-[0_0_35px_rgba(249,115,22,0.6)] hover:scale-[1.02] active:scale-95 transition-all duration-300 text-center tracking-wider font-sans select-none flex items-center justify-center gap-2 animate-premium-pulse"
                   >
-                    HENTIKAN KEBOCORAN INI SEKARANG
+                    Lihat Kenapa Ini Berlaku
                     <ArrowRight className="w-4 h-4" />
                   </button>
                 </div>

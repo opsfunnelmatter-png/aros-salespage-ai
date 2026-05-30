@@ -7,10 +7,54 @@ import useEmblaCarousel from 'embla-carousel-react';
 
 export default function PainGrid() {
   const painCards = [
-    { badge: "TRAFIK BANYAK, SALES SIKIT", title: "Iklan Dah Viral, Tapi Sales Tetap Flat", desc: "Kempen ads di TikTok/Facebook dah cukup viral, leads masuk mencurah-curah — tapi sales tetap sifar sebab tiada sistem penapis automatik yang tolong layan & close prospek segera.", icon: <ZapOff className="w-5 h-5 text-red-400" />, bgIcon: "bg-red-500/10 border-red-500/20", footer: "TIADA SISTEM CLOSING" },
-    { badge: "KOS LEADS MAKIN MAHAL", title: "Pembaziran Kredit Iklan Setiap Minggu", desc: "Bila topup kredit iklan, lead masuk banyak tapi 'sejuk' sebab lambat layan. Akhirnya cost-per-lead (CPL) melambung naik dan margin untung makin nipis.", icon: <TrendingDown className="w-5 h-5 text-orange-400" />, bgIcon: "bg-orange-500/10 border-orange-500/20", footer: "MARGIN UNTUNG NIPIS" },
-    { badge: "DATABASE HANGUS", title: "Risiko Nombor WhatsApp Kena Ban Kekal", desc: "Guna sistem blast haram atau personal phone untuk kejar customer? Bila-bila masa sahaja nombor rasmi boleh kena ban dengan Meta. Database beribu pelanggan boleh hilang sekelip mata.", icon: <ShieldAlert className="w-5 h-5 text-red-400" />, bgIcon: "bg-red-500/10 border-red-500/20", footer: "RISIKO NOMBOR KENA BAN" },
-    { badge: "LEADS MATI WAKTU TIDUR", title: "Bocor 80% Leads Selepas Jam 10 Malam", desc: "Staff tidur, tapi iklan tetap berjalan 24 jam. Leads masuk pukul 2 pagi terpaksa tunggu esok pagi baru dibalas. Bila tunggu lama, prospek dah beli dengan pesaing.", icon: <Clock className="w-5 h-5 text-orange-400" />, bgIcon: "bg-orange-500/10 border-orange-500/20", footer: "LEADS MATI WAKTU MALAM" }
+    { 
+      badge: "TRAFIK BANYAK, SALES SIKIT", 
+      title: "Iklan Dah Viral, Tapi Sales Tetap Flat", 
+      desc: [
+        "Leads mencurah masuk — tapi tiada sistem layan automatik",
+        "Prospek sejuk sebab terlalu lama tunggu balas",
+        "Duit ads terbakar, closing tetap sifar"
+      ], 
+      icon: <ZapOff className="w-5 h-5 text-red-400" />, 
+      bgIcon: "bg-red-500/10 border-red-500/20", 
+      footer: "TIADA SISTEM CLOSING" 
+    },
+    { 
+      badge: "KOS LEADS MAKIN MAHAL", 
+      title: "Pembaziran Kredit Iklan Setiap Minggu", 
+      desc: [
+        "Leads masuk banyak tapi 'sejuk' — lambat dilayan",
+        "Cost-per-lead (CPL) naik, margin untung makin nipis",
+        "Modal topup iklan, hasil tak setimpal"
+      ], 
+      icon: <TrendingDown className="w-5 h-5 text-orange-400" />, 
+      bgIcon: "bg-orange-500/10 border-orange-500/20", 
+      footer: "MARGIN UNTUNG NIPIS" 
+    },
+    { 
+      badge: "DATABASE HANGUS", 
+      title: "Risiko Nombor WhatsApp Kena Ban Kekal", 
+      desc: [
+        "Blast guna phone peribadi = risiko ban permanen Meta",
+        "Database beribu pelanggan boleh hilang sekelip mata",
+        "Tiada sistem rasmi = operasi jualan tak selamat"
+      ], 
+      icon: <ShieldAlert className="w-5 h-5 text-red-400" />, 
+      bgIcon: "bg-red-500/10 border-red-500/20", 
+      footer: "RISIKO NOMBOR KENA BAN" 
+    },
+    { 
+      badge: "LEADS MATI WAKTU TIDUR", 
+      title: "Bocor 80% Leads Selepas Jam 10 Malam", 
+      desc: [
+        "Staff tidur, iklan tetap jalan — leads masuk pukul 2 pagi",
+        "Balas esok pagi = prospek dah beli dengan pesaing",
+        "80% leads waktu malam tidak pernah di-follow up"
+      ], 
+      icon: <Clock className="w-5 h-5 text-orange-400" />, 
+      bgIcon: "bg-orange-500/10 border-orange-500/20", 
+      footer: "LEADS MATI WAKTU MALAM" 
+    }
   ];
 
   const [emblaRef, emblaApi] = useEmblaCarousel({
@@ -39,35 +83,36 @@ export default function PainGrid() {
         {/* EMBLA WRAPPER */}
         <div className="relative px-8 md:px-14">
           <div className="overflow-hidden" ref={emblaRef}>
-            {/* Trik Embla Sebenar: 
-              1. Buang 'gap-6'.
-              2. Guna '-ml-6' pada container. 
-              3. Guna 'pl-6' pada setiap kad. 
-            */}
             <div className="flex -ml-6">
               {painCards.map((card, idx) => (
                 <div 
                   key={idx} 
                   className="flex-[0_0_100%] sm:flex-[0_0_360px] min-w-0 pl-6"
                 >
-                  <div className="h-full bg-[#0F1424] border border-white/5 rounded-2xl p-6 relative flex flex-col justify-between hover:border-red-500/30 transition-all duration-300 min-h-[340px]">
+                  <div className="h-full bg-[#0F1424] border border-white/5 rounded-2xl p-6 relative flex flex-col justify-between min-h-[340px]">
                     <div>
                       <div className="flex items-center justify-between mb-5">
                         <div className={`w-9 h-9 rounded-xl ${card.bgIcon} border flex items-center justify-center shadow-xs`}>
                           {card.icon}
                         </div>
-                        <span className="font-mono text-[9px] font-bold text-orange-400 bg-white/5 border border-white/10 px-2.5 py-1 rounded tracking-wide truncate max-w-[120px] sm:max-w-[200px]">
+                        <span className="font-mono text-xs font-bold text-orange-400 bg-white/5 border border-white/10 px-2.5 py-1 rounded tracking-wide truncate max-w-[120px] sm:max-w-[200px]">
                           {card.badge}
                         </span>
                       </div>
                       <h3 className="font-black text-lg mb-3 text-white tracking-tight leading-snug">
                         {card.title}
                       </h3>
-                      <p className="text-neutral-400 text-xs leading-relaxed font-medium">
-                        {card.desc}
-                      </p>
+                      
+                      <ul className="space-y-2 mt-3">
+                        {card.desc.map((point, i) => (
+                          <li key={i} className="flex items-start gap-2 text-sm text-neutral-400 font-medium leading-snug">
+                            <span className="text-orange-500/60 mt-0.5 shrink-0">▸</span>
+                            {point}
+                          </li>
+                        ))}
+                      </ul>
                     </div>
-                    <div className="mt-6 pt-4 border-t border-white/5 flex items-center gap-1.5 font-mono text-[10px] font-bold text-red-400/90 uppercase tracking-wider">
+                    <div className="mt-6 pt-4 border-t border-white/5 flex items-center gap-1.5 font-mono text-xs font-bold text-red-400/90 uppercase tracking-wider">
                       <X className="w-3.5 h-3.5 text-red-500" />
                       {card.footer}
                     </div>
@@ -100,6 +145,21 @@ export default function PainGrid() {
           <p className="text-sm md:text-base text-neutral-300 font-medium leading-relaxed">
             Sebab itu <strong className="text-orange-400 font-black">AROS</strong> dibina. Bukan sekadar bot automatik, tetapi struktur kecerdasan buatan yang mengambil alih tugas jualan anda <span className="underline decoration-orange-500/50 underline-offset-4 font-semibold text-white">dalam masa 72 jam</span>.
           </p>
+        </div>
+
+        <div className="text-center mt-12">
+          <button
+            onClick={() => {
+              const target = document.getElementById('timeline_section');
+              if (target) {
+                const y = target.getBoundingClientRect().top + window.scrollY - 80;
+                window.scrollTo({ top: y, behavior: 'smooth' });
+              }
+            }}
+            className="inline-flex items-center gap-2 text-orange-400 border border-orange-500/30 hover:border-orange-500/60 bg-orange-500/5 hover:bg-orange-500/10 font-bold text-sm px-6 py-3 rounded-xl transition-all duration-200 cursor-pointer"
+          >
+            Tengok Macam Mana AROS Selesaikan Ini →
+          </button>
         </div>
 
       </div>

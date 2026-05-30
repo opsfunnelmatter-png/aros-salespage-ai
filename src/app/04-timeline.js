@@ -50,7 +50,7 @@ export default function TimelineProcess() {
   ];
 
   return (
-    <section className="relative z-10 w-full bg-[#0B0F19] border-t border-white/5 py-24 text-white overflow-hidden">
+    <section id="timeline_section" className="relative z-10 w-full bg-[#0B0F19] border-t border-white/5 py-24 text-white overflow-hidden">
       
       {/* INDUSTRIAL GRAPHIC MATRIX BACKGROUND */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff03_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)] bg-[size:20px_20px] pointer-events-none" />
@@ -150,6 +150,21 @@ export default function TimelineProcess() {
               <strong>Had Setup Mingguan:</strong> Kami hadkan setup kepada 3 syarikat sahaja seminggu demi menjaga kualiti setup AI dan kelajuan sales page anda pada tahap terbaik.
             </span>
           </div>
+        </div>
+
+        <div className="text-center mt-12">
+          <button
+            onClick={() => {
+              const target = document.getElementById('pricing_section');
+              if (target) {
+                const y = target.getBoundingClientRect().top + window.scrollY - 80;
+                window.scrollTo({ top: y, behavior: 'smooth' });
+              }
+            }}
+            className="inline-flex items-center gap-2 text-orange-400 border border-orange-500/30 hover:border-orange-500/60 bg-orange-500/5 hover:bg-orange-500/10 font-bold text-sm px-6 py-3 rounded-xl transition-all duration-200 cursor-pointer"
+          >
+            Lihat Pakej & Harga →
+          </button>
         </div>
 
       </div>
