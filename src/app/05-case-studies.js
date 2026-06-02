@@ -4,11 +4,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { KanbanSquare, ShieldCheck } from 'lucide-react';
 
-export default function CaseStudies() {
-
-
+export default function CaseStudies({ dict }) {
   // FASA 5 Chat Sequence Data
-  const chatMessages = [
+  const defaultChatMessages = [
     {
       id: 1,
       sender: 'customer',
@@ -35,6 +33,33 @@ export default function CaseStudies() {
       isStripe: true
     }
   ];
+
+  const dictChat = dict?.chat || [];
+  const chatMessages = defaultChatMessages.map((staticConfig, idx) => {
+    const dictMsg = dictChat[idx] || {};
+    return {
+      ...staticConfig,
+      text: dictMsg.text || staticConfig.text
+    };
+  });
+
+  const defaultMetrics = [
+    { label: "VERSATILITY & ADAPTABILITY", title: "Universal", desc: "Sokongan menyeluruh untuk sebarang produk, sebarang industri, dan sebarang bahasa secara natural.", colorGradiant: "from-indigo-400 to-violet-500", glowColor: "bg-indigo-500/5", hoverBorder: "hover:border-indigo-500/30" },
+    { label: "PURATA RESPONSE TIME", title: "0.2 Saat", desc: "Sistem membalas pada saat emosi prospek memuncak bagi mengelakkan mereka beralih ke pesaing.", colorGradiant: "from-orange-400 to-amber-500", glowColor: "bg-orange-500/5", hoverBorder: "hover:border-orange-500/30" },
+    { label: "LEADS RECOVERED OVERNIGHT", title: "3× Ganda", desc: "Kutipan trafik dan jualan diselamatkan pada waktu staf manusia sedang tidur (1 pagi - 6 pagi).", colorGradiant: "from-orange-400 to-amber-500", glowColor: "bg-amber-500/5", hoverBorder: "hover:border-amber-500/30" },
+    { label: "DEPLOYMENT TURNAROUND", title: "72 Jam", desc: "Penyerahan sistem AI sepenuhnya ke dalam bisnes anda lengkap dengan integrasi platform.", colorGradiant: "from-emerald-400 to-teal-500", glowColor: "bg-emerald-500/5", hoverBorder: "hover:border-emerald-500/30" }
+  ];
+
+  const dictMetrics = dict?.metrics || [];
+  const metrics = defaultMetrics.map((staticConfig, idx) => {
+    const dictMetric = dictMetrics[idx] || {};
+    return {
+      ...staticConfig,
+      label: dictMetric.label || staticConfig.label,
+      title: dictMetric.title || staticConfig.title,
+      desc: dictMetric.desc || staticConfig.desc
+    };
+  });
 
   const [messages, setMessages] = useState([]);
   const [isTyping, setIsTyping] = useState(false);
@@ -90,6 +115,14 @@ export default function CaseStudies() {
     }
   }, [messages, isTyping]);
 
+  // General texts
+  const section_sub = dict?.section_sub || "THE ENTERPRISE REVENUE ARCHITECTURE";
+  const section_title = dict?.section_title || "Hentikan Kebocoran Leads. Seni Bina Ekosistem Pemasaran Autopilot 24/7";
+  const section_desc = dict?.section_desc || "Seni bina kempen pemasaran moden bukan sekadar menjalankan iklan dan berharap staf manusia membalas secara manual. Anda perlukan kitaran ekosistem kalis bocor berautomasi tinggi dari fasa perolehan trafik sehingga ke pengiraan nilai LTV prospek.";
+  const cta_board_title = dict?.cta_board_title || "KLIK & UJI AI BOT KAMI SEKARANG";
+  const cta_board_desc = dict?.cta_board_desc || "Cuba hantar apa sahaja soalan & tengok kelajuan respons bot";
+  const btn_chat_pay = dict?.btn_chat_pay || "BAYAR";
+
   return (
     <section className="relative z-10 w-full bg-[#0B0F19] border-t border-white/5 py-24 text-white overflow-hidden">
       
@@ -102,14 +135,13 @@ export default function CaseStudies() {
         <div className="text-center mb-20 max-w-3xl mx-auto space-y-5">
           <div className="inline-flex items-center gap-2 bg-white/5 border border-white/10 text-white font-mono text-[10px] font-bold px-3 py-1.5 rounded uppercase tracking-widest shadow-sm">
             <KanbanSquare className="w-3.5 h-3.5 text-orange-400" />
-            THE ENTERPRISE REVENUE ARCHITECTURE
+            {section_sub}
           </div>
           <h2 className="text-4xl md:text-5xl font-black tracking-tight text-white leading-[1.12]">
-            Hentikan Kebocoran Leads. <br className="hidden md:block"/>
-            Seni Bina <span className="bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent">Ekosistem Pemasaran Autopilot 24/7</span>
+            {section_title}
           </h2>
           <p className="text-neutral-400 text-sm md:text-base leading-relaxed max-w-2xl mx-auto font-medium">
-            Seni bina kempen pemasaran moden bukan sekadar menjalankan iklan dan berharap staf manusia membalas secara manual. Anda perlukan kitaran ekosistem kalis bocor berautomasi tinggi dari fasa perolehan trafik sehingga ke pengiraan nilai LTV prospek.
+            {section_desc}
           </p>
         </div>
 
@@ -123,9 +155,9 @@ export default function CaseStudies() {
             <div className="relative w-full max-w-[320px] aspect-[9/19.5] mx-auto border-[8px] sm:border-[12px] border-zinc-900 rounded-[40px] sm:rounded-[50px] bg-[#0b141a] overflow-hidden shadow-[0_0_0_1px_rgba(255,255,255,0.05),0_30px_60px_rgba(0,0,0,0.8),0_0_40px_rgba(16,185,129,0.15)] flex flex-col">
               
               {/* HARDWARE BUTTONS */}
-              <div className="absolute top-[120px] -left-[14px] w-1.5 h-[35px] bg-zinc-800 rounded-l-md" /> {/* Volume Up */}
-              <div className="absolute top-[170px] -left-[14px] w-1.5 h-[35px] bg-zinc-800 rounded-l-md" /> {/* Volume Down */}
-              <div className="absolute top-[140px] -right-[14px] w-1.5 h-[55px] bg-zinc-800 rounded-r-md" /> {/* Power */}
+              <div className="absolute top-[120px] -left-[14px] w-1.5 h-[35px] bg-zinc-800 rounded-l-md" />
+              <div className="absolute top-[170px] -left-[14px] w-1.5 h-[35px] bg-zinc-800 rounded-l-md" />
+              <div className="absolute top-[140px] -right-[14px] w-1.5 h-[55px] bg-zinc-800 rounded-r-md" />
 
               {/* DYNAMIC ISLAND / NOTCH */}
               <div className="absolute top-2 left-1/2 -translate-x-1/2 w-[100px] h-6 bg-black rounded-full z-40 flex items-center justify-between px-3 shadow-sm border border-white/5">
@@ -189,7 +221,7 @@ export default function CaseStudies() {
                             <div className="text-[10px] font-bold text-emerald-400 underline truncate max-w-[120px]">stripe.com/pay/aros-skincare</div>
                           </div>
                           <a href="#pricing_section" className="bg-emerald-500 hover:bg-emerald-400 text-black font-black text-[10px] px-3 py-1.5 rounded-lg transition-colors whitespace-nowrap shadow-xs leading-none">
-                            BAYAR
+                            {btn_chat_pay}
                           </a>
                         </div>
                       )}
@@ -245,66 +277,29 @@ export default function CaseStudies() {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-black opacity-75" />
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-black" />
                 </span>
-                TEST AI BOT KAMI SEKARANG (LIVE PANDU UJI)
+                {cta_board_title}
               </a>
               <p className="text-[10px] sm:text-xs font-mono text-neutral-400 leading-normal">
-                Cuba hantar apa sahaja soalan & tengok kelajuan respons bot
+                {cta_board_desc}
               </p>
             </div>
 
             {/* 3-COLUMN INDUSTRY BENCHMARK RESULTS - VERTICAL STACK WITH MICRO-COPY */}
             <div className="flex flex-col gap-4">
-              <div className="bg-[#0F1424] border border-white/5 p-6 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between text-left gap-4 shadow-xs relative overflow-hidden group hover:border-indigo-500/30 transition-colors">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-500/5 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none" />
-                <div className="flex flex-col gap-2 relative z-10">
-                  <span className="text-[11px] font-mono font-bold text-neutral-400 uppercase tracking-widest">VERSATILITY & ADAPTABILITY</span>
-                  <p className="text-sm text-neutral-500 font-medium max-w-[280px]">
-                    Sokongan menyeluruh untuk sebarang produk, sebarang industri, dan sebarang bahasa secara natural.
-                  </p>
+              {metrics.map((item, idx) => (
+                <div key={idx} className={`bg-[#0F1424] border border-white/5 p-6 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between text-left gap-4 shadow-xs relative overflow-hidden group ${item.hoverBorder} transition-colors`}>
+                  <div className={`absolute top-0 right-0 w-32 h-32 ${item.glowColor} rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none`} />
+                  <div className="flex flex-col gap-2 relative z-10">
+                    <span className="text-[11px] font-mono font-bold text-neutral-400 uppercase tracking-widest">{item.label}</span>
+                    <p className="text-sm text-neutral-500 font-medium max-w-[280px]">
+                      {item.desc}
+                    </p>
+                  </div>
+                  <div className="relative z-10 shrink-0 self-start sm:self-center">
+                    <span className={`text-3xl sm:text-4xl font-black bg-gradient-to-r ${item.colorGradiant} bg-clip-text text-transparent`}>{item.title}</span>
+                  </div>
                 </div>
-                <div className="relative z-10 shrink-0 self-start sm:self-center">
-                  <span className="text-3xl sm:text-4xl font-black bg-gradient-to-r from-indigo-400 to-violet-500 bg-clip-text text-transparent">Universal</span>
-                </div>
-              </div>
-
-              <div className="bg-[#0F1424] border border-white/5 p-6 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between text-left gap-4 shadow-xs relative overflow-hidden group hover:border-orange-500/30 transition-colors">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-orange-500/5 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none" />
-                <div className="flex flex-col gap-2 relative z-10">
-                  <span className="text-[11px] font-mono font-bold text-neutral-400 uppercase tracking-widest">PURATA RESPONSE TIME</span>
-                  <p className="text-sm text-neutral-500 font-medium max-w-[280px]">
-                    Sistem membalas pada saat emosi prospek memuncak bagi mengelakkan mereka beralih ke pesaing.
-                  </p>
-                </div>
-                <div className="relative z-10 shrink-0 self-start sm:self-center">
-                  <span className="text-3xl sm:text-4xl font-black bg-gradient-to-r from-orange-400 to-amber-500 bg-clip-text text-transparent">0.2 Saat</span>
-                </div>
-              </div>
-
-              <div className="bg-[#0F1424] border border-white/5 p-6 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between text-left gap-4 shadow-xs relative overflow-hidden group hover:border-amber-500/30 transition-colors">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-amber-500/5 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none" />
-                <div className="flex flex-col gap-2 relative z-10">
-                  <span className="text-[11px] font-mono font-bold text-neutral-400 uppercase tracking-widest">LEADS RECOVERED OVERNIGHT</span>
-                  <p className="text-sm text-neutral-500 font-medium max-w-[280px]">
-                    Kutipan trafik dan jualan diselamatkan pada waktu staf manusia sedang tidur (1 pagi - 6 pagi).
-                  </p>
-                </div>
-                <div className="relative z-10 shrink-0 self-start sm:self-center">
-                  <span className="text-3xl sm:text-4xl font-black bg-gradient-to-r from-orange-400 to-amber-500 bg-clip-text text-transparent">3× Ganda</span>
-                </div>
-              </div>
-
-              <div className="bg-[#0F1424] border border-white/5 p-6 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between text-left gap-4 shadow-xs relative overflow-hidden group hover:border-emerald-500/30 transition-colors">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/5 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none" />
-                <div className="flex flex-col gap-2 relative z-10">
-                  <span className="text-[11px] font-mono font-bold text-neutral-400 uppercase tracking-widest">DEPLOYMENT TURNAROUND</span>
-                  <p className="text-sm text-neutral-500 font-medium max-w-[280px]">
-                    Penyerahan sistem AI sepenuhnya ke dalam bisnes anda lengkap dengan integrasi platform.
-                  </p>
-                </div>
-                <div className="relative z-10 shrink-0 self-start sm:self-center">
-                  <span className="text-3xl sm:text-4xl font-black bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent">72 Jam</span>
-                </div>
-              </div>
+              ))}
             </div>
 
           </div>

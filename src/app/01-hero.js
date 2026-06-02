@@ -4,12 +4,21 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowRight, ShieldCheck } from 'lucide-react';
 
-export default function HeroSection({ dailyBudget }) {
+export default function HeroSection({ dailyBudget, dict }) {
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
     setIsMounted(true);
   }, []);
+
+  // Fallback values just in case
+  const badge = dict?.badge || "SISTEM JUALAN AUTOMATIK WHATSAPP";
+  const headline_1 = dict?.headline_1 || "Leads Masuk Malam.";
+  const headline_2 = dict?.headline_2 || "Esok Pagi Dah Ada Sale.";
+  const subheadline = dict?.subheadline || "Kami pasang sistem AI ke nombor WhatsApp rasmi anda — AI balas dalam 0.2 saat, tapis prospek yang serius, dan hantar pautan pembayaran terus. Automatik 24/7/365.";
+  const cta = dict?.cta || "Kira Berapa RM Anda Rugi Setiap Malam";
+  const cta_sub = dict?.cta_sub || "⏱️ Tak sampai 5 saat untuk dapat jawapan.";
+  const meta_setup = dict?.meta_setup || "SETUP RASMI META CLOUD API (100% SELAMAT)";
 
   return (
     <section className="relative z-20 w-full bg-[#0B0F19] pt-8 md:pt-10 pb-24 px-6 overflow-hidden text-center">
@@ -34,7 +43,7 @@ export default function HeroSection({ dailyBudget }) {
       {/* TOP ANCHOR BRANDING BADGE - SINGLE & CLEAN */}
       <div className="max-w-5xl mx-auto mb-8 flex justify-center px-4 relative z-10">
         <span className="text-xs sm:text-sm font-mono font-bold tracking-widest uppercase bg-orange-500/10 text-orange-400 px-4 py-2 rounded-full border border-orange-500/20 shadow-[0_0_15px_rgba(249,115,22,0.05)] text-center">
-          SISTEM JUALAN AUTOMATIK WHATSAPP
+          {badge}
         </span>
       </div>
 
@@ -47,9 +56,9 @@ export default function HeroSection({ dailyBudget }) {
           }`}
           style={{ transitionDelay: '200ms' }}
         >
-          Leads Masuk Malam.{' '}
+          {headline_1}{' '}
           <span className="bg-gradient-to-r from-orange-400 via-amber-400 to-orange-500 bg-clip-text text-transparent drop-shadow-[0_2px_15px_rgba(249,115,22,0.15)]">
-            Esok Pagi Dah Ada Sale.
+            {headline_2}
           </span>
         </h1>
 
@@ -61,7 +70,7 @@ export default function HeroSection({ dailyBudget }) {
           }`}
           style={{ transitionDelay: '400ms' }}
         >
-          Kami pasang sistem AI ke nombor WhatsApp rasmi anda — AI balas dalam <strong className="text-orange-400">0.2 saat</strong>, tapis prospek yang serius, dan hantar pautan pembayaran terus. <strong className="text-neutral-200">Automatik 24/7/365.</strong>
+          {subheadline}
         </p>
 
         {/* CONVERSION DIRECT INTERACTIVE TRIGGER */}
@@ -82,12 +91,12 @@ export default function HeroSection({ dailyBudget }) {
             className="group relative inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-orange-500 via-amber-500 to-orange-500 text-black font-black text-sm sm:text-base md:text-lg px-5 py-3.5 sm:px-6 sm:py-4 md:px-8 md:py-4 rounded-2xl cursor-pointer overflow-hidden transform transition-all duration-300 animate-premium-pulse hover:scale-[1.03] active:scale-95 whitespace-normal sm:whitespace-nowrap tracking-wide max-w-full"
           >
             <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
-            Kira Berapa RM Anda Rugi Setiap Malam
+            {cta}
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1.5 transition-transform duration-200 shrink-0" />
           </button>
           
           <div className="mt-3.5 text-xs font-mono text-neutral-400/90 tracking-wide flex items-center justify-center gap-1.5 select-none">
-            ⏱️ Tak sampai 5 saat untuk dapat jawapan.
+            {cta_sub}
           </div>
         </div>
 
@@ -123,7 +132,7 @@ export default function HeroSection({ dailyBudget }) {
           style={{ transitionDelay: '800ms' }}
         >
           <span className="flex items-center gap-1.5">
-            <ShieldCheck className="w-4 h-4 text-orange-500" /> SETUP RASMI META CLOUD API (100% SELAMAT)
+            <ShieldCheck className="w-4 h-4 text-orange-500" /> {meta_setup}
           </span>
         </div>
 

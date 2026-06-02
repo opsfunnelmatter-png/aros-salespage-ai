@@ -4,31 +4,31 @@
 import React from 'react';
 import { Cpu, FileCode2, GitMerge, CheckCircle2, KanbanSquare, ShieldCheck } from 'lucide-react';
 
-export default function TimelineProcess() {
-  const deliverables = [
+export default function TimelineProcess({ dict }) {
+  const defaultDeliverables = [
     {
+      tag: "Halaman Jualan",
       title: "Salespage Ultra-Pantas",
-      desc: "Sales page premium Next.js dioptimumkan untuk kelajuan loading bawah 0.1 saat. Prospek tak lari selepas klik iklan.",
-      tag: "Halaman Jualan"
+      desc: "Sales page premium Next.js dioptimumkan untuk kelajuan loading bawah 0.1 saat. Prospek tak lari selepas klik iklan."
     },
     {
+      tag: "Otak AI Utama",
       title: "Otak AI Closing WhatsApp",
-      desc: "Robot AI terlatih khusus mengikut skrip FAQ dan produk anda sendiri. Layan & closing leads secara automatik 24/7.",
-      tag: "Otak AI Utama"
+      desc: "Robot AI terlatih khusus mengikut skrip FAQ dan produk anda sendiri. Layan & closing leads secara automatik 24/7."
     },
     {
+      tag: "Follow-Up Auto",
       title: "Auto Follow-Up Pintar",
-      desc: "Sistem susulan automatik. Ia mengejar semula prospek yang 'blue-tick' atau senyap mengikut reaksi perbualan.",
-      tag: "Follow-Up Auto"
+      desc: "Sistem susulan automatik. Ia mengejar semula prospek yang 'blue-tick' atau senyap mengikut reaksi perbualan."
     },
     {
+      tag: "Gerbang Bayaran",
       title: "Integrasi Bayaran Lancar",
-      desc: "Pautan gerbang pembayaran (Stripe/FPX) dipasang terus di dalam sales page. Checkout pantas tanpa friction.",
-      tag: "Gerbang Bayaran"
+      desc: "Pautan gerbang pembayaran (Stripe/FPX) dipasang terus di dalam sales page. Checkout pantas tanpa friction."
     }
   ];
 
-  const deployment = [
+  const defaultDeployment = [
     { 
       step: "01", 
       day: "Hari Pertama", 
@@ -49,6 +49,41 @@ export default function TimelineProcess() {
     }
   ];
 
+  const dictDeliverables = dict?.cards || [];
+  const deliverables = defaultDeliverables.map((staticConfig, idx) => {
+    const dictCard = dictDeliverables[idx] || {};
+    return {
+      tag: dictCard.tag || staticConfig.tag,
+      title: dictCard.title || staticConfig.title,
+      desc: dictCard.desc || staticConfig.desc
+    };
+  });
+
+  const dictDeployment = dict?.steps || [];
+  const deployment = defaultDeployment.map((staticConfig, idx) => {
+    const dictStep = dictDeployment[idx] || {};
+    return {
+      step: dictStep.step || staticConfig.step,
+      day: dictStep.day || staticConfig.day,
+      title: dictStep.title || staticConfig.title,
+      desc: dictStep.desc || staticConfig.desc
+    };
+  });
+
+  // Fallbacks
+  const section_sub = dict?.section_sub || "GARIS MASA PELAKSANAAN";
+  const section_title = dict?.section_title || "Dari Rangka Pembangunan Sehingga Sistem Sedia Beroperasi";
+  const section_desc = dict?.section_desc || "Kebocoran jualan anda bukan masalah iklan tak menarik — ia masalah sistem melayan customer. Kami bukan jual kelas atau buku panduan. Kami bertindak sebagai jurutera: bina sistem jualan tersusun, pasang AI, uji, dan serahkan enjin jualan autopilot yang lengkap kepada anda.";
+  const component_title_sub = dict?.component_title_sub || "KOMPONEN PEMBANGUNAN";
+  const component_title = dict?.component_title || "Apa Yang Kami Bina";
+  const component_desc = dict?.component_desc || "Empat lapisan infrastruktur utama terpasang yang akan disambung terus ke perniagaan anda.";
+  const deployment_title_sub = dict?.deployment_title_sub || "TIMELINE PEMASANGAN";
+  const deployment_title = dict?.deployment_title || "Sistem Live Dalam Masa 3 Hari";
+  const deployment_desc = dict?.deployment_desc || "Proses setup tersusun, pantas, dan telus tanpa sebarang delay.";
+  const limit_note_title = dict?.limit_note_title || "Had Setup Mingguan:";
+  const limit_note_desc = dict?.limit_note_desc || "Kami hadkan setup kepada 3 syarikat sahaja seminggu demi menjaga kualiti setup AI dan kelajuan sales page anda pada tahap terbaik.";
+  const btn_action = dict?.btn_action || "Lihat Pakej & Harga →";
+
   return (
     <section id="timeline_section" className="relative z-10 w-full bg-[#0B0F19] border-t border-white/5 py-24 text-white overflow-hidden">
       
@@ -61,14 +96,13 @@ export default function TimelineProcess() {
         <div className="text-center mb-20 max-w-3xl mx-auto space-y-5">
           <div className="inline-flex items-center gap-2 bg-white/5 border border-white/10 text-white font-mono text-[10px] font-bold px-3 py-1.5 rounded uppercase tracking-widest shadow-sm">
             <KanbanSquare className="w-3.5 h-3.5 text-orange-500" />
-            GARIS MASA PELAKSANAAN
+            {section_sub}
           </div>
           <h2 className="text-4xl md:text-5xl font-black tracking-tight text-white leading-[1.12]">
-            Dari Rangka Pembangunan <br className="hidden md:block"/>
-            Sehingga Sistem <span className="bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent">Sedia Beroperasi</span>
+            {section_title}
           </h2>
           <p className="text-neutral-400 text-sm md:text-base leading-relaxed max-w-2xl mx-auto font-medium">
-            Kebocoran jualan anda bukan masalah iklan tak menarik — ia masalah sistem melayan customer. Kami bukan jual kelas atau buku panduan. Kami bertindak sebagai jurutera: bina sistem jualan tersusun, pasang AI, uji, dan serahkan enjin jualan autopilot yang lengkap kepada anda.
+            {section_desc}
           </p>
         </div>
 
@@ -79,10 +113,10 @@ export default function TimelineProcess() {
           <div className="w-full lg:flex-[11] shrink-0 space-y-6">
             <div className="text-left border-b border-white/5 pb-4">
               <span className="text-[10px] font-mono font-bold text-orange-400 uppercase tracking-wider bg-orange-500/10 px-2.5 py-1 rounded border border-orange-500/20">
-                KOMPONEN PEMBANGUNAN
+                {component_title_sub}
               </span>
-              <h3 className="text-xl font-black text-white mt-3 tracking-tight">Apa Yang Kami Bina</h3>
-              <p className="text-neutral-400 text-xs mt-1 leading-relaxed font-medium">Empat lapisan infrastruktur utama terpasang yang akan disambung terus ke perniagaan anda.</p>
+              <h3 className="text-xl font-black text-white mt-3 tracking-tight">{component_title}</h3>
+              <p className="text-neutral-400 text-xs mt-1 leading-relaxed font-medium">{component_desc}</p>
             </div>
 
             {/* Premium Card Grid Layout inside proportional container */}
@@ -111,10 +145,10 @@ export default function TimelineProcess() {
           <div className="w-full lg:flex-[9] shrink-0 space-y-6 lg:pl-4">
             <div className="text-left border-b border-white/5 pb-4">
               <span className="text-[10px] font-mono font-bold text-emerald-400 uppercase tracking-wider bg-emerald-500/10 px-2.5 py-1 rounded border border-emerald-500/20">
-                TIMELINE PEMASANGAN
+                {deployment_title_sub}
               </span>
-              <h3 className="text-xl font-black text-white mt-3 tracking-tight">Sistem Live Dalam Masa 3 Hari</h3>
-              <p className="text-neutral-400 text-xs mt-1 leading-relaxed font-medium">Proses setup tersusun, pantas, dan telus tanpa sebarang delay.</p>
+              <h3 className="text-xl font-black text-white mt-3 tracking-tight">{deployment_title}</h3>
+              <p className="text-neutral-400 text-xs mt-1 leading-relaxed font-medium">{deployment_desc}</p>
             </div>
 
             {/* Timeline connector snap center aligned to 36px bullets (left-18px) */}
@@ -147,7 +181,7 @@ export default function TimelineProcess() {
           <div className="inline-flex items-start gap-3 bg-[#0F1424] border border-white/5 px-6 py-4 rounded-xl text-xs md:text-sm text-neutral-300 font-medium max-w-3xl mx-auto shadow-xs text-left leading-relaxed w-full sm:w-auto">
             <ShieldCheck className="w-5 h-5 text-orange-400 shrink-0 mt-0.5" />
             <span>
-              <strong>Had Setup Mingguan:</strong> Kami hadkan setup kepada 3 syarikat sahaja seminggu demi menjaga kualiti setup AI dan kelajuan sales page anda pada tahap terbaik.
+              <strong>{limit_note_title}</strong> {limit_note_desc}
             </span>
           </div>
         </div>
@@ -163,7 +197,7 @@ export default function TimelineProcess() {
             }}
             className="inline-flex items-center gap-2 text-orange-400 border border-orange-500/30 hover:border-orange-500/60 bg-orange-500/5 hover:bg-orange-500/10 font-bold text-sm px-6 py-3 rounded-xl transition-all duration-200 cursor-pointer"
           >
-            Lihat Pakej & Harga →
+            {btn_action}
           </button>
         </div>
 

@@ -4,57 +4,67 @@
 import React from 'react';
 import { Megaphone, UserPlus, FileText, Cpu, RefreshCw, Layers, ArrowRight, ArrowDown, ShieldCheck } from 'lucide-react';
 
-export default function TechnicalArchitecture() {
-  const steps = [
+export default function TechnicalArchitecture({ dict }) {
+  const defaultSteps = [
     {
       num: "01",
-      title: "Traffic Acquisition",
-      desc: "Kempen iklan bersasar tinggi menerusi platform Meta dan TikTok menggunakan creative hooks yang tajam.",
       badge: "Traffic Acquisition",
       log: "METRIC: CTR_OPTIMIZED",
-      styles: "bg-blue-950/10 border-blue-500/20 hover:border-blue-500/50 text-neutral-200 hover:bg-blue-950/20"
+      styles: "bg-blue-950/10 border-blue-500/20 hover:border-blue-500/50 text-neutral-200 hover:bg-blue-950/20",
+      iconIndex: 0
     },
     {
       num: "02",
-      title: "Lead Capture",
-      desc: "Kemasukan data prospek secara real-time yang mengalir lancar melalui integrasi webhook pantas.",
       badge: "Lead Capture",
       log: "API: WEBHOOK_READY",
-      styles: "bg-indigo-950/10 border-indigo-500/20 hover:border-indigo-500/50 text-neutral-200 hover:bg-indigo-950/20"
+      styles: "bg-indigo-950/10 border-indigo-500/20 hover:border-indigo-500/50 text-neutral-200 hover:bg-indigo-950/20",
+      iconIndex: 1
     },
     {
       num: "03",
-      title: "Intent Warming",
-      desc: "Prospek mendarat di halaman jualan Premium Static Salespage (Deliverable 1) bagi mengekalkan minat dan fokus membeli secara serta-merta.",
       badge: "Intent Warming",
       log: "FUNNEL: RAMP_UP_CONVERSION",
-      styles: "bg-purple-950/10 border-purple-500/20 hover:border-purple-500/50 text-neutral-200 hover:bg-purple-950/20"
+      styles: "bg-purple-950/10 border-purple-500/20 hover:border-purple-500/50 text-neutral-200 hover:bg-purple-950/20",
+      iconIndex: 2
     },
     {
       num: "04",
-      title: "Autonomous Closing",
-      desc: "Sistem 10-Step AI Closing Brain (Deliverable 2) menguruskan sales closing dalam masa 0.2 saat secara autopilot penuh 24/7/365.",
       badge: "Autonomous Closing",
       log: "ENGINE: CLOSING_LIVE",
-      styles: "bg-orange-950/10 border-orange-500/20 hover:border-orange-500/50 text-neutral-200 hover:bg-orange-950/20"
+      styles: "bg-orange-950/10 border-orange-500/20 hover:border-orange-500/50 text-neutral-200 hover:bg-orange-950/20",
+      iconIndex: 3
     },
     {
       num: "05",
-      title: "Lead Management",
-      desc: "Sistem melancarkan Behavioral Auto Follow-Up Node (Deliverable 3) secara dinamik berdasarkan status maklum balas perbualan prospek.",
       badge: "Lead Management",
       log: "FLOW: RECOVERY_RUN",
-      styles: "bg-emerald-950/10 border-emerald-500/20 hover:border-emerald-500/50 text-neutral-200 hover:bg-emerald-950/20"
+      styles: "bg-emerald-950/10 border-emerald-500/20 hover:border-emerald-500/50 text-neutral-200 hover:bg-emerald-950/20",
+      iconIndex: 4
     },
     {
       num: "06",
-      title: "LTV Optimization",
-      desc: "Database pelanggan disusun rapi dan terstruktur untuk kempen retargeting serta cross-selling.",
       badge: "LTV Optimization",
       log: "DATABASE: LTV_MAXIMIZED",
-      styles: "bg-rose-950/10 border-rose-500/20 hover:border-rose-500/50 text-neutral-200 hover:bg-rose-950/20"
+      styles: "bg-rose-950/10 border-rose-500/20 hover:border-rose-500/50 text-neutral-200 hover:bg-rose-950/20",
+      iconIndex: 5
     }
   ];
+
+  const dictSteps = dict?.steps || [];
+  const steps = defaultSteps.map((staticConfig, idx) => {
+    const dictStep = dictSteps[idx] || {};
+    return {
+      ...staticConfig,
+      num: dictStep.id || staticConfig.num,
+      title: dictStep.title || "",
+      desc: dictStep.desc || ""
+    };
+  });
+
+  const section_sub = dict?.section_sub || "▸ ALIRAN INFRASTRUKTUR TEKNIKAL";
+  const section_title = dict?.section_title || "Seni Bina Ekosistem Jualan Di Sebalik Tabir";
+  const warn_title = dict?.warn_title || "AMARAN INFRASTRUKTUR SISTEM:";
+  const warn_desc = dict?.warn_desc || "Jika sistem anda sekarang tiada struktur Fasa 03, 04, dan 05 (Intent Warming & Auto-Close), modal iklan di Fasa 01 and 02 secara matematik akan hangus dan lebur 80% begitu sahaja.";
 
   return (
     <section className="relative z-10 w-full bg-[#0B0F19] border-t border-white/5 py-24 text-white overflow-hidden">
@@ -66,14 +76,11 @@ export default function TechnicalArchitecture() {
         {/* SECTION SUBHEADER FOR BLUEPRINT */}
         <div className="text-center mb-20 max-w-3xl mx-auto space-y-5">
           <span className="text-[10px] font-mono font-bold text-orange-400 tracking-widest uppercase bg-orange-500/10 border border-orange-500/20 px-3 py-1.5 rounded-md w-fit mx-auto select-none">
-            ▸ ALIRAN INFRASTRUKTUR TEKNIKAL
+            {section_sub}
           </span>
           <h2 className="text-4xl md:text-5xl font-black tracking-tight text-white leading-[1.12]">
-            Seni Bina <span className="bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent">Ekosistem Jualan</span> Di Sebalik Tabir
+            {section_title}
           </h2>
-          <p className="text-neutral-400 text-sm md:text-base leading-relaxed max-w-2xl mx-auto font-medium">
-            Seni bina kempen pemasaran moden bukan sekadar menjalankan iklan dan berharap staf manusia membalas secara manual. Anda perlukan kitaran ekosistem kalis bocor berautomasi tinggi dari fasa perolehan trafik sehingga ke pengiraan nilai LTV prospek.
-          </p>
         </div>
 
         {/* HIGH-END STRUCTURED GRAPHIC GRID WITH INTERACTIVE CONNECTING ARROWS */}
@@ -97,12 +104,12 @@ export default function TechnicalArchitecture() {
                     
                     {/* Icon Select Switch Matrix */}
                     <div className="text-neutral-400 group-hover:scale-110 transition-transform duration-300">
-                      {index === 0 && <Megaphone className="w-4 h-4 text-blue-400" />}
-                      {index === 1 && <UserPlus className="w-4 h-4 text-indigo-400" />}
-                      {index === 2 && <FileText className="w-4 h-4 text-purple-400" />}
-                      {index === 3 && <Cpu className="w-4 h-4 text-orange-400" />}
-                      {index === 4 && <RefreshCw className="w-4 h-4 text-emerald-400" />}
-                      {index === 5 && <Layers className="w-4 h-4 text-rose-400" />}
+                      {step.iconIndex === 0 && <Megaphone className="w-4 h-4 text-blue-400" />}
+                      {step.iconIndex === 1 && <UserPlus className="w-4 h-4 text-indigo-400" />}
+                      {step.iconIndex === 2 && <FileText className="w-4 h-4 text-purple-400" />}
+                      {step.iconIndex === 3 && <Cpu className="w-4 h-4 text-orange-400" />}
+                      {step.iconIndex === 4 && <RefreshCw className="w-4 h-4 text-emerald-400" />}
+                      {step.iconIndex === 5 && <Layers className="w-4 h-4 text-rose-400" />}
                     </div>
                   </div>
                   
@@ -145,8 +152,8 @@ export default function TechnicalArchitecture() {
             <ShieldCheck className="w-6 h-6 text-red-500" />
           </div>
           <p className="text-sm text-neutral-300 leading-relaxed font-medium">
-            <strong className="text-red-400 block mb-1">AMARAN INFRASTRUKTUR SISTEM:</strong>
-            Jika sistem anda sekarang tiada struktur Fasa 03, 04, dan 05 (Intent Warming & Auto-Close), modal iklan di Fasa 01 dan 02 secara matematik akan hangus dan lebur 80% begitu sahaja.
+            <strong className="text-red-400 block mb-1">{warn_title}</strong>
+            {warn_desc}
           </p>
         </div>
 

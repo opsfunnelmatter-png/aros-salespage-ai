@@ -3,7 +3,9 @@
 
 import React from 'react';
 
-export default function FooterSection() {
+export default function FooterSection({ dict }) {
+  if (!dict) return null;
+
   return (
     <footer 
       className="relative z-10 bg-[#070A13] border-t border-white/10 pt-16 text-neutral-400 font-sans"
@@ -27,27 +29,27 @@ export default function FooterSection() {
               <span className="font-bold tracking-wider text-lg text-white font-mono">AROS SYSTEM</span>
             </div>
             <p className="text-xs text-neutral-500 leading-relaxed font-medium">
-               Membina sistem jualan automatik 24/7 <br />
-               untuk pemilik bisnes Malaysia.
+               {dict.brand_desc_part1} <br />
+               {dict.brand_desc_part2}
             </p>
           </div>
 
           {/* Kolum 2: Corporate Registration */}
           <div className="space-y-3">
-            <h4 className="text-xs font-mono font-bold tracking-wider text-white uppercase">Corporate Info</h4>
+            <h4 className="text-xs font-mono font-bold tracking-wider text-white uppercase">{dict.corporate_info_title}</h4>
             <div className="text-xs leading-relaxed space-y-1">
-              <div className="font-bold text-neutral-300">BROMOVER RESOURCES SDN. BHD.</div>
-              <div className="text-neutral-500 font-mono text-[11px]">SSM REG: 201901003230 (1312556-H)</div>
+              <div className="font-bold text-neutral-300">{dict.corporate_info_name}</div>
+              <div className="text-neutral-500 font-mono text-[11px]">{dict.corporate_info_ssm}</div>
             </div>
           </div>
 
           {/* Kolum 3: Registered Office Address */}
           <div className="space-y-3">
-            <h4 className="text-xs font-mono font-bold tracking-wider text-white uppercase">Registered Office</h4>
+            <h4 className="text-xs font-mono font-bold tracking-wider text-white uppercase">{dict.office_title}</h4>
             <p className="text-xs text-neutral-500 leading-relaxed font-medium">
-              Unit B-3A-22, 4th Floor, Block B,<br />
-              Ativo Plaza @ Damansara Avenue,<br />
-              52200 Kuala Lumpur, Wilayah Persekutuan.
+              {dict.office_line1}<br />
+              {dict.office_line2}<br />
+              {dict.office_line3}
             </p>
           </div>
 
@@ -58,18 +60,18 @@ export default function FooterSection() {
           
           {/* Facebook Inc Mandatory Disclaimer - FORCE ALIGN CENTER */}
           <p className="italic text-center max-w-4xl mx-auto">
-            Disclaimer: This website is not part of the Facebook, Instagram, TikTok, or Twitter/X websites, nor is it affiliated with Meta Platforms, Inc., ByteDance Ltd., or X Corp. Additionally, this site is NOT endorsed by Facebook, Instagram, TikTok, or Twitter/X in any way. Facebook and Instagram are trademarks of Meta Platforms, Inc. TikTok is a trademark of ByteDance Ltd. Twitter/X is a trademark of X Corp.
+            {dict.disclaimer}
           </p>
 
           {/* Privacy Links and Copyright Summation */}
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-4 border-t border-white/[0.02]">
             <div className="flex gap-4 font-medium">
-              <a href="https://bromover.com/privacy-policy.html" target="_blank" rel="noopener noreferrer" className="hover:text-neutral-400 transition-colors">Privacy Policy</a>
+              <a href="https://bromover.com/privacy-policy.html" target="_blank" rel="noopener noreferrer" className="hover:text-neutral-400 transition-colors">{dict.link_privacy}</a>
               <span className="text-neutral-800">|</span>
-              <a href="https://bromover.com/terms-of-service.html" target="_blank" rel="noopener noreferrer" className="hover:text-neutral-400 transition-colors">Terms of Service</a>
+              <a href="https://bromover.com/terms-of-service.html" target="_blank" rel="noopener noreferrer" className="hover:text-neutral-400 transition-colors">{dict.link_terms}</a>
             </div>
             <div className="font-mono text-[10px] tracking-wide text-neutral-500">
-              © 2026 Bromover Resources Sdn. Bhd. All Rights Reserved.
+              {dict.copyright}
             </div>
           </div>
 

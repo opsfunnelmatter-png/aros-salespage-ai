@@ -4,7 +4,7 @@
 import React, { useState } from 'react';
 import { DollarSign, Users, TrendingDown, AlertTriangle, Calculator, ArrowRight, Edit2, Check } from 'lucide-react';
 
-export default function BleedingMath({ dailyBudget, setDailyBudget }) {
+export default function BleedingMath({ dailyBudget, setDailyBudget, dict }) {
   const [localBudget, setLocalBudget] = useState('');
   const budget = dailyBudget !== undefined ? dailyBudget : localBudget;
   const setBudget = setDailyBudget !== undefined ? setDailyBudget : setLocalBudget;
@@ -53,6 +53,37 @@ export default function BleedingMath({ dailyBudget, setDailyBudget }) {
     ? "bg-black/40 border-b-2 border-orange-500/50 text-white font-black text-2xl p-2 pr-8 rounded-t-lg focus:outline-none focus:border-orange-400 focus:ring-1 focus:ring-orange-500 w-36 text-center min-h-[44px] focus:animate-none [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none transition-all duration-500"
     : "bg-black/60 border-b-2 border-red-500 text-white font-black text-2xl p-2 pr-8 rounded-t-lg focus:outline-none focus:border-red-400 focus:ring-1 focus:ring-red-500 w-36 text-center min-h-[44px] animate-pulse focus:animate-none [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none transition-all duration-500";
 
+  // Fallbacks
+  const title = dict?.title || "KALKULATOR KEBOCORAN IKLAN WHATSAPP";
+  const sub_title = dict?.sub_title || "Kira Berapa RM Bajet Iklan Anda";
+  const highlight_text = dict?.highlight_text || "Terbakar Setiap Malam";
+  const desc = dict?.desc || "Masukkan bajet iklan harian anda di bawah. Kalkulator ini akan menunjukkan anggaran matematik berapa banyak duit iklan anda hangus begitu sahaja apabila tiada staff membalas mesej selepas jam 10 malam.";
+  const input_budget_title = dict?.input_budget_title || "1. BAJET IKLAN HARIAN";
+  const input_budget_q = dict?.input_budget_q || "Berapa anda spend untuk FB/TikTok Ads?";
+  const input_budget_label = dict?.input_budget_label || "Masukkan bajet iklan harian anda (RM):";
+  const input_placeholder = dict?.input_placeholder || "cth: 300";
+  const unit_day = dict?.unit_day || "/ Hari";
+  const unit_month = dict?.unit_month || "/ Bln";
+  const auto_calc_note = dict?.auto_calc_note || "Anggaran kerugian tahunan dikira secara automatik.";
+  const traffic_night_title = dict?.traffic_night_title || "2. TRAFIK WAKTU MALAM";
+  const traffic_night_sub = dict?.traffic_night_sub || "Trafik Masuk Malam (10 PM - 7 AM)";
+  const traffic_night_desc = dict?.traffic_night_desc || "40% Leads Masuk Waktu Malam (Tiada Siapa Layan)";
+  const drop_rate_title = dict?.drop_rate_title || "3. KADAR PROSPEK LARI";
+  const drop_rate_sub = dict?.drop_rate_sub || "Sebab Layan Lambat / Esok Pagi Baru Balas";
+  const drop_rate_desc = dict?.drop_rate_desc || "80% Prospek Lari Sebab Lambat Balas";
+  const output_title = dict?.output_title || "ANGGARAN KERUGIAN ANDA";
+  const output_subtitle = dict?.output_subtitle || "ANGGARAN DUIT TERBAKAR SETAHUN (WASTED AD SPEND)";
+  const output_critical = dict?.output_critical || "SANGAT KRITIKAL";
+  const output_waiting = dict?.output_waiting || "MENUNGGU INPUT...";
+  const output_waiting_desc = dict?.output_waiting_desc || "* Sila masukkan bajet iklan di sebelah kiri untuk mula pengiraan.";
+  const unit_year_loss = dict?.unit_year_loss || "/ SETAHUN HANGUS";
+  const loss_heading = dict?.loss_heading || "Duit Iklan Anda Lebur Begitu Sahaja";
+  const loss_desc = dict?.loss_desc || "Anda bukan tak ada jualan. Prospek sentiasa ada dan iklan terus berjalan setiap malam. Tapi disebabkan tiada sistem auto-closing WhatsApp yang bersedia melayan 24/7 tanpa had, prospek yang berminat beralih arah ke pesaing yang membalas lebih cepat.";
+  const btn_action = dict?.btn_action || "Lihat Kenapa Ini Berlaku";
+  const footer_unresolved = dict?.footer_unresolved || "KEBOCORAN BELUM DISELESAIKAN";
+  const footer_average_note = dict?.footer_average_note || "PENGIRAAN BERDASARKAN PURATA INDUSTRI (80% DROP-OFF RATE)";
+  const footer_source = dict?.footer_source || "[Sumber: Data Analitis Industri Meta Ads & Purata Respons WhatsApp Malaysia 2025/2026]";
+
   return (
     <section id="bleeding_math_section" className="relative z-10 w-full bg-[#0B0F19] border-t border-white/5 py-24 text-white overflow-hidden">
       
@@ -66,13 +97,13 @@ export default function BleedingMath({ dailyBudget, setDailyBudget }) {
         <div className="text-center mb-20 max-w-3xl mx-auto space-y-5">
           <div className="inline-flex items-center gap-2 bg-orange-500/10 text-orange-400 border border-orange-500/20 px-3 py-1.5 rounded-md text-[11px] font-mono font-bold uppercase tracking-widest shadow-xs">
             <Calculator className="w-3.5 h-3.5 text-orange-400 animate-pulse" />
-            KALKULATOR KEBOCORAN IKLAN WHATSAPP
+            {title}
           </div>
           <h2 className="text-4xl md:text-5xl font-black tracking-tight text-white leading-[1.12]">
-            Kira Berapa RM Bajet Iklan Anda <span className="bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent">Terbakar Setiap Malam</span>
+            {sub_title} <span className="bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent">{highlight_text}</span>
           </h2>
           <p className="text-neutral-400 text-sm md:text-base leading-relaxed max-w-2xl mx-auto font-medium">
-            Masukkan bajet iklan harian anda di bawah. Kalkulator ini akan menunjukkan anggaran matematik berapa banyak duit iklan anda hangus begitu sahaja apabila tiada staff membalas mesej selepas jam 10 malam.
+            {desc}
           </p>
         </div>
 
@@ -88,12 +119,12 @@ export default function BleedingMath({ dailyBudget, setDailyBudget }) {
                 <DollarSign className="w-5 h-5"/>
               </div>
               <div className="space-y-1 w-full">
-                <div className={variableTitleClass}>1. BAJET IKLAN HARIAN</div>
-                <div className="text-xs text-neutral-400 font-semibold">Berapa anda spend untuk FB/TikTok Ads?</div>
+                <div className={variableTitleClass}>{input_budget_title}</div>
+                <div className="text-xs text-neutral-400 font-semibold">{input_budget_q}</div>
                 <div className={promptTextClass}>
                   <span className={dotPingClass} />
                   <span className={dotClass} />
-                  <span>Masukkan bajet iklan harian anda (RM):</span>
+                  <span>{input_budget_label}</span>
                 </div>
                 <div className="flex items-center gap-2 font-black text-white text-base md:text-lg flex-wrap mt-1">
                   <span>RM</span>
@@ -107,7 +138,7 @@ export default function BleedingMath({ dailyBudget, setDailyBudget }) {
                       }}
                       className={inputClass}
                       min="0"
-                      placeholder="cth: 300"
+                      placeholder={input_placeholder}
                     />
                     {isBudgetCompleted ? (
                       <Check className="w-4 h-4 text-emerald-400 absolute right-2 pointer-events-none font-bold" />
@@ -115,12 +146,12 @@ export default function BleedingMath({ dailyBudget, setDailyBudget }) {
                       <Edit2 className="w-4 h-4 text-red-500 absolute right-2 pointer-events-none opacity-80 animate-pulse" />
                     )}
                   </div>
-                  <span>/ Hari</span>
+                  <span>{unit_day}</span>
                   <span className="text-xs font-mono font-bold text-neutral-500 ml-1 whitespace-nowrap">
-                    (RM{Intl.NumberFormat('en-US').format(monthlyBudget)} / Bln)
+                    (RM{Intl.NumberFormat('en-US').format(monthlyBudget)} {unit_month})
                   </span>
                 </div>
-                <div className="text-[10px] italic text-neutral-500 mt-1">Anggaran kerugian tahunan dikira secara automatik.</div>
+                <div className="text-[10px] italic text-neutral-500 mt-1">{auto_calc_note}</div>
               </div>
             </div>
             
@@ -130,9 +161,9 @@ export default function BleedingMath({ dailyBudget, setDailyBudget }) {
                 <Users className="w-5 h-5"/>
               </div>
               <div className="space-y-1">
-                <div className="text-[10px] font-mono font-bold text-orange-400 uppercase tracking-wider">2. TRAFIK WAKTU MALAM</div>
-                <div className="text-xs text-neutral-400 font-semibold">Trafik Masuk Malam (10 PM - 7 AM)</div>
-                <div className="font-black text-white text-base md:text-lg">40% Leads <span className="text-xs text-red-400 font-bold bg-red-500/10 px-1.5 py-0.5 rounded border border-red-500/20 uppercase font-mono">Masuk Waktu Malam (Tiada Siapa Layan)</span></div>
+                <div className="text-[10px] font-mono font-bold text-orange-400 uppercase tracking-wider">{traffic_night_title}</div>
+                <div className="text-xs text-neutral-400 font-semibold">{traffic_night_sub}</div>
+                <div className="font-black text-white text-base md:text-lg">{traffic_night_desc}</div>
               </div>
             </div>
             
@@ -142,9 +173,9 @@ export default function BleedingMath({ dailyBudget, setDailyBudget }) {
                 <TrendingDown className="w-5 h-5"/>
               </div>
               <div className="space-y-1">
-                <div className="text-[10px] font-mono font-bold text-amber-400 uppercase tracking-wider">3. KADAR PROSPEK LARI</div>
-                <div className="text-xs text-red-300/80 font-semibold">Sebab Layan Lambat / Esok Pagi Baru Balas</div>
-                <div className="font-black text-red-400 text-base md:text-lg">80% Prospek Lari Sebab Lambat Balas</div>
+                <div className="text-[10px] font-mono font-bold text-amber-400 uppercase tracking-wider">{drop_rate_title}</div>
+                <div className="text-xs text-red-300/80 font-semibold">{drop_rate_sub}</div>
+                <div className="font-black text-red-400 text-base md:text-lg">{drop_rate_desc}</div>
               </div>
             </div>
 
@@ -153,24 +184,24 @@ export default function BleedingMath({ dailyBudget, setDailyBudget }) {
           {/* RIGHT COLUMN: CORE CALCULATION OUTPUT CONSOLE (7 COLS) */}
           <div className={`lg:col-span-7 relative rounded-3xl border-2 border-red-500/80 bg-[#0F1424] p-8 overflow-hidden shadow-[0_20px_50px_rgba(239,68,68,0.15)] flex flex-col justify-between text-center lg:text-left min-h-full transition-opacity duration-300 ${isIdle ? 'opacity-40' : 'opacity-100'}`}>
             <div className="absolute top-0 right-0 bg-red-500 text-white font-mono text-[9px] font-black px-5 py-2 rounded-b uppercase tracking-widest shadow-sm">
-              ANGGARAN KERUGIAN ANDA
+              {output_title}
             </div>
             
             <div className="absolute top-0 right-0 w-32 h-32 bg-[radial-gradient(circle_at_center,rgba(239,68,68,0.08)_0%,transparent_70%)] pointer-events-none" />
             
             <div className="space-y-6 my-auto relative z-10">
               <div className="flex flex-col lg:flex-row lg:items-center justify-between border-b border-white/5 pb-4 gap-2">
-                <span className="text-xs font-mono font-bold text-orange-400 uppercase tracking-wider">ANGGARAN DUIT TERBAKAR SETAHUN (WASTED AD SPEND)</span>
-                <span className="font-mono text-[9px] font-black text-red-400 bg-red-500/10 border border-red-500/20 px-2 py-0.5 rounded w-fit mx-auto lg:mx-0">SANGAT KRITIKAL</span>
+                <span className="text-xs font-mono font-bold text-orange-400 uppercase tracking-wider">{output_subtitle}</span>
+                <span className="font-mono text-[9px] font-black text-red-400 bg-red-500/10 border border-red-500/20 px-2 py-0.5 rounded w-fit mx-auto lg:mx-0">{output_critical}</span>
               </div>
               
               {isIdle ? (
                 <div className="space-y-2">
                   <div className="text-2xl font-mono text-white/30 animate-pulse [animation-duration:1s]">
-                    MENUNGGU INPUT...
+                    {output_waiting}
                   </div>
                   <div className="text-[10px] text-neutral-600 font-mono mt-4">
-                    * Sila masukkan bajet iklan di sebelah kiri untuk mula pengiraan.
+                    {output_waiting_desc}
                   </div>
                 </div>
               ) : (
@@ -179,15 +210,15 @@ export default function BleedingMath({ dailyBudget, setDailyBudget }) {
                     RM{Intl.NumberFormat('en-US').format(yearlyLoss)}
                   </div>
                   <div className="text-sm font-mono font-black text-red-500 tracking-widest uppercase animate-pulse">
-                    / SETAHUN HANGUS
+                    {unit_year_loss}
                   </div>
                 </div>
               )}
               
               <div className="space-y-3">
-                <div className="text-white font-bold text-base tracking-tight">Duit Iklan Anda Lebur Begitu Sahaja</div>
+                <div className="text-white font-bold text-base tracking-tight">{loss_heading}</div>
                 <p className="text-neutral-400 text-sm leading-relaxed font-medium">
-                  Anda bukan tak ada jualan. Prospek sentiasa ada dan iklan terus berjalan setiap malam. Tapi disebabkan tiada sistem auto-closing WhatsApp yang bersedia melayan 24/7 tanpa had, prospek yang berminat beralih arah ke pesaing yang membalas lebih cepat.
+                  {loss_desc}
                 </p>
               </div>
 
@@ -198,7 +229,7 @@ export default function BleedingMath({ dailyBudget, setDailyBudget }) {
                     onClick={handleScrollToDiagnostic}
                     className="w-full bg-gradient-to-r from-orange-500 via-amber-500 to-orange-500 text-black font-black text-xs py-4 rounded-xl cursor-pointer shadow-[0_0_20px_rgba(249,115,22,0.4)] hover:shadow-[0_0_35px_rgba(249,115,22,0.6)] hover:scale-[1.02] active:scale-95 transition-all duration-300 text-center tracking-wider font-sans select-none flex items-center justify-center gap-2 animate-premium-pulse"
                   >
-                    Lihat Kenapa Ini Berlaku
+                    {btn_action}
                     <ArrowRight className="w-4 h-4" />
                   </button>
                 </div>
@@ -208,12 +239,12 @@ export default function BleedingMath({ dailyBudget, setDailyBudget }) {
             {/* Micro Industrial Footer Tag */}
             <div className="mt-6 pt-4 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between text-[10px] font-mono font-bold text-neutral-500 gap-2">
               <div className="flex items-center gap-1.5 text-red-400">
-                <AlertTriangle className="w-3.5 h-3.5" /> KEBOCORAN BELUM DISELESAIKAN
+                <AlertTriangle className="w-3.5 h-3.5" /> {footer_unresolved}
               </div>
               <div className="text-right flex flex-col items-center sm:items-end">
-                <div className="text-amber-400">PENGIRAAN BERDASARKAN PURATA INDUSTRI (80% DROP-OFF RATE)</div>
+                <div className="text-amber-400">{footer_average_note}</div>
                 <div className="text-[8px] text-neutral-600 font-mono mt-0.5 uppercase tracking-tighter">
-                  [Sumber: Data Analitis Industri Meta Ads & Purata Respons WhatsApp Malaysia 2025/2026]
+                  {footer_source}
                 </div>
               </div>
             </div>

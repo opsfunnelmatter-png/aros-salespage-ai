@@ -1,24 +1,26 @@
-// path: src/app/10-bonus-stack.js
+// path: src/app/09-bonus-stack.js
 "use client";
 
 import React from 'react';
 import { Database, Wrench } from 'lucide-react';
 
-export default function BonusStack() {
+export default function BonusStack({ dict }) {
+  if (!dict) return null;
+
   const bonuses = [
     {
       id: "SERVICE 01",
       title: "FREE 30-Days System Fine-Tuning",
       duration: "Post-Launch",
-      value: "INCLUDED FREE",
-      desc: "Pemantauan logik perbualan and talaan prompt eksklusif oleh engineer kami selepas sistem live."
+      value: dict.label_free,
+      desc: dict.bonuses?.[0]
     },
     {
       id: "SERVICE 02",
       title: "FREE Native Database Scrubbing & Onboarding Setup",
       duration: "Onboarding Phase",
-      value: "INCLUDED FREE",
-      desc: "Integrasi and penyusunan semula database sedia ada secara selamat ke dalam ekosistem sistem pusat."
+      value: dict.label_free,
+      desc: dict.bonuses?.[1]
     }
   ];
 
@@ -28,13 +30,13 @@ export default function BonusStack() {
       {/* Header Stack */}
       <div className="text-center mb-12">
         <span className="text-xs font-mono tracking-widest text-emerald-400 uppercase bg-emerald-400/5 px-3 py-1 rounded-md border border-emerald-400/10">
-          FREE EXCLUSIVE SERVICE BONUSES
+          {dict.section_sub}
         </span>
         <h2 className="text-2xl md:text-4xl font-bold mt-4 bg-gradient-to-r from-white to-neutral-400 bg-clip-text text-transparent">
-          Servis Premium Tambahan · Termasuk Dalam Pakej
+          {dict.section_title}
         </h2>
         <p className="text-neutral-500 mt-2 text-sm md:text-base">
-          PERCUMA 2 Servis Tambahan Gred Enterprise Untuk Menjamin Kelancaran Integrasi Sistem AROS.
+          {dict.section_desc}
         </p>
       </div>
 
@@ -69,25 +71,27 @@ export default function BonusStack() {
       </div>
 
       {/* Value Accumulation Summary Banner */}
-      <div className="max-w-2xl mx-auto rounded-2xl border border-white/5 bg-white/[0.01] p-6 backdrop-blur-sm text-center">
-        <div className="grid grid-cols-3 gap-4 text-xs font-mono text-neutral-400 mb-4">
-          <div>
-            <div className="text-neutral-600">Seni Bina Sistem</div>
-            <div className="font-bold text-neutral-300 mt-1">Nilai RM3,098</div>
+      {dict.summary && (
+        <div className="max-w-2xl mx-auto rounded-2xl border border-white/5 bg-white/[0.01] p-6 backdrop-blur-sm text-center">
+          <div className="grid grid-cols-3 gap-4 text-xs font-mono text-neutral-400 mb-4">
+            <div>
+              <div className="text-neutral-600">{dict.summary.item1_title}</div>
+              <div className="font-bold text-neutral-300 mt-1">{dict.summary.item1_val}</div>
+            </div>
+            <div className="border-x border-white/5">
+              <div className="text-neutral-600">{dict.summary.item2_title}</div>
+              <div className="font-bold text-emerald-400 mt-1">{dict.summary.item2_val}</div>
+            </div>
+            <div>
+              <div className="text-neutral-600">{dict.summary.total_title}</div>
+              <div className="font-bold text-orange-400 mt-1">{dict.summary.total_val}</div>
+            </div>
           </div>
-          <div className="border-x border-white/5">
-            <div className="text-neutral-600">2 Service Bonuses</div>
-            <div className="font-bold text-emerald-400 mt-1">+ Nilai RM598</div>
-          </div>
-          <div>
-            <div className="text-neutral-600">TOTAL NILAI SEBENAR</div>
-            <div className="font-bold text-orange-400 mt-1">RM3,696</div>
+          <div className="text-xs text-neutral-500 font-medium">
+            {dict.summary.footer_desc}
           </div>
         </div>
-        <div className="text-xs text-neutral-500 font-medium">
-          Pelaburan combo premium yang membebaskan anda daripada batasan manual dan kerugian kos iklan.
-        </div>
-      </div>
+      )}
 
     </section>
   );

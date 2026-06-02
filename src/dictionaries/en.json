@@ -1,0 +1,625 @@
+{
+  "hero": {
+    "badge": "AUTOMATED WHATSAPP SALES SYSTEM",
+    "headline_1": "Leads Flow In At Night.",
+    "headline_2": "Wake Up To Closed Sales.",
+    "subheadline": "We integrate an AI system onto your official WhatsApp number — replying in 0.2 seconds, filtering hot prospects, and sending payment links instantly. 24/7/365 automated.",
+    "cta": "Calculate How Much RM You Lose Every Night",
+    "cta_sub": "⏱️ Takes less than 5 seconds for results.",
+    "meta_setup": "OFFICIAL META CLOUD API SETUP (100% SECURE)"
+  },
+  "diagnostic": {
+    "sys_title": "SYSTEM_DIAGNOSTIC_BOARD.SYS",
+    "state_audit": "STATE: AUDIT_COMPLETED",
+    "state_ready": "STATE: READY_TO_RUN",
+    "user_instruction": "USER INSTRUCTIONS",
+    "sub_title": "Audit Your Funnel: Tick the elements already active in your business now.",
+    "label_deficit": "AUTOMATION_DEFICIT",
+    "label_efficiency": "Efficiency Rate",
+    "label_active": "Active",
+    "label_of": "out of",
+    "label_waiting": "Awaiting Full Diagnosis",
+    "btn_calculate": "CALCULATE SYSTEM LEAKAGE SCORE",
+    "dynamic_score_note": "Score is calculated dynamically.",
+    "feedback_high": "Your business foundation is solid. This means AROS will operate at maximum capacity to fully leverage every single dollar of ad spend. Proceed to the analysis below to inspect residual leakage impacts.",
+    "feedback_low": "Critical leakage detected in your sales pipeline. Your current system is bleeding high-value sales momentum, especially outside standard operational hours.",
+    "items": [
+      "Ultra-fast salespage (< 0.5 seconds) optimized for mobile conversion (not just another slow, generic WordPress template)",
+      "Official Meta WhatsApp Cloud API integration (no risky, illegal blast software or personal phones prone to instant bans)",
+      "Automated intent screening (Lead Filtering) before processing (stopping you from wasting time on non-serious leads)",
+      "Real-time Lead Capture instantly when prospects land, even if they exit the page without completing a purchase",
+      "Direct Payment Gateway Integration inside the salespage without external redirects that kill buying momentum",
+      "Real-time synchronized Cloud Database for precise ad ROI analytics tracking",
+      "24/7 non-stop Autonomous Closing Engine trained specifically on your company's behavior and scripts",
+      "Algorithmic Follow-Up Loops automated based on the prospect's real-time chat state (blue-ticks, silent, or interested)",
+      "Official Meta-licensed Broadcast Engine to securely reactivate cold databases with zero ban risks"
+    ]
+  },
+  "bleeding_math": {
+    "title": "WHATSAPP AD LEAKAGE CALCULATOR",
+    "sub_title": "Calculate How Much Ad Budget You Are",
+    "highlight_text": "Burning Every Night",
+    "desc": "Enter your daily ad budget below. This calculator will generate an exact mathematical estimation of how much money slips through the cracks when no team members are awake to reply after 10 PM.",
+    "input_budget_title": "1. DAILY AD SPEND",
+    "input_budget_q": "How much do you spend on FB/TikTok Ads?",
+    "input_budget_label": "Enter your daily ad budget (RM):",
+    "input_placeholder": "e.g., 300",
+    "unit_day": "/ Day",
+    "unit_month": "/ Mth",
+    "auto_calc_note": "Annual loss estimation is calculated automatically.",
+    "traffic_night_title": "2. NIGHT-TIME TRAFFIC",
+    "traffic_night_sub": "Night Traffic Influx (10 PM - 7 AM)",
+    "traffic_night_desc": "40% of Total Leads Arrive At Night (Left Unattended)",
+    "drop_rate_title": "3. PROSPECT DROPOUT RATE",
+    "drop_rate_sub": "Due to Delayed Replies / Morning Responders",
+    "drop_rate_desc": "80% of Prospects Abandon Chat Due to Delayed Response",
+    "output_title": "YOUR ESTIMATED LOSS",
+    "output_subtitle": "ESTIMATED ANNUAL WASTED AD SPEND",
+    "output_critical": "CRITICAL STATE",
+    "output_waiting": "AWAITING INPUT...",
+    "output_waiting_desc": "* Please enter your daily ad budget on the left to initialize calculations.",
+    "unit_year_loss": "/ YEAR WASTED",
+    "loss_heading": "Your Ad Dollars Blown Away for Nothing",
+    "loss_desc": "It's not that you lack demand. Prospects are browsing and ads keep running every night. But without a 24/7 limitless WhatsApp auto-closing system ready to respond instantly, warm prospects simply jump to competitors who answer faster.",
+    "btn_action": "See Why This Happens",
+    "footer_unresolved": "UNRESOLVED SALES LEAKAGE",
+    "footer_average_note": "CALCULATIONS BASED ON INDUSTRY AVERAGE (80% DROP-OFF RATE)",
+    "footer_source": "[Source: Meta Ads Industry Analytics Data & Malaysia WhatsApp Response Averages 2025/2026]"
+  },
+  "pain_grid": {
+    "section_sub": "SALES LEAKAGE ANALYSIS",
+    "section_title_line1": "4 Major Cracks That Are Currently",
+    "section_title_line2": "Draining Your Ad Budget",
+    "section_desc": "This is exactly why AROS was built. Not just a basic automated bot, but an artificial intelligence infrastructure that fully assumes your sales operations within 72 hours.",
+    "btn_action": "See How AROS Plugs Responsibility →",
+    "cards": [
+      {
+        "badge": "HIGH TRAFFIC, FLAT SALES",
+        "title": "Ads Are Going Viral, But Revenue Stays Flat",
+        "bullets": [
+          "Leads pouring in — but zero automated closing systems in place",
+          "Prospects freeze out because response times take too long",
+          "Ad dollars burned while conversion rates remain zero"
+        ],
+        "footer": "NO CLOSING INFRASTRUCTURE"
+      },
+      {
+        "badge": "RISING LEAD COSTS",
+        "title": "Bleeding Marketing Ad Credits Every Single Week",
+        "bullets": [
+          "High lead volume instantly cools down due to delayed handling",
+          "Cost-per-lead (CPL) spikes, crushing your profit margins",
+          "Topping up ad capital with non-viable commercial returns"
+        ],
+        "footer": "THINNING PROFIT MARGINS"
+      },
+      {
+        "badge": "BURNT DATABASES",
+        "title": "High Risk of Getting Permanently Banned on WhatsApp",
+        "bullets": [
+          "Blasting from personal devices = high risk of permanent Meta bans",
+          "Thousands of customer records can disappear overnight",
+          "Operating without official APIs leaves your core channels insecure"
+        ],
+        "footer": "PERMANENT BAN RISK"
+      },
+      {
+        "badge": "LEADS DIE AT BEDTIME",
+        "title": "Bleeding 80% of Incoming Leads Past 10 PM",
+        "bullets": [
+          "Staff is asleep, but ads keep running — leads land at 2 AM",
+          "Replying the next morning means they already bought from competitors",
+          "80% of midnight traffic never receives proper follow-ups"
+        ],
+        "footer": "NIGHT TRAFFIC DROPOUT"
+      }
+    ]
+  },
+  "timeline": {
+    "section_sub": "IMPLEMENTATION TIMELINE",
+    "section_title": "From Development Framework To Fully Operational System",
+    "section_desc": "Your sales leakage isn't caused by bad ads — it's an infrastructure problem in handling customers. We don't sell courses or standard guidebooks. We operate as engineers: we build a structured funnel, deploy the AI, test it extensively, and hand over a complete autopilot sales engine directly to you.",
+    "component_title_sub": "DEVELOPMENT STACK",
+    "component_title": "What We Build",
+    "component_desc": "Four core infrastructure layers deployed and connected directly to your operational ecosystem.",
+    "deployment_title_sub": "DEPLOYMENT SCHEDULE",
+    "deployment_title": "System Live In Exactly 3 Days",
+    "deployment_desc": "A highly structured, rapid, and transparent onboarding workflow with zero delays.",
+    "limit_note_title": "Weekly Setup Limit:",
+    "limit_note_desc": "We strictly cap configuration to 3 companies per week to maintain optimal AI quality and ensure premium, lightning-fast salespage loading thresholds.",
+    "btn_action": "View Packages & Pricing →",
+    "cards": [
+      {
+        "tag": "Sales Page",
+        "title": "Ultra-Fast Salespage",
+        "desc": "Premium Next.js static engine optimized for loading times under 0.1 seconds. Zero dropout rates post ad clicks."
+      },
+      {
+        "tag": "Core AI Brain",
+        "title": "WhatsApp AI Closing Engine",
+        "desc": "Custom-trained AI model configured to execute your unique FAQ assets and sales scripts. Auto-closes 24/7."
+      },
+      {
+        "tag": "Auto Follow-Up",
+        "title": "Algorithmic Follow-Up Node",
+        "desc": "Automated behavioral chasing mechanism targeting prospects who left on blue-tick or went silent."
+      },
+      {
+        "tag": "Payment Gateway",
+        "title": "Frictionless Checkout Node",
+        "desc": "Direct payment gateway integration (Stripe/FPX) embedded straight into your page. High-speed checkout loops."
+      }
+    ],
+    "steps": [
+      {
+        "step": "01",
+        "day": "Day One",
+        "title": "Asset Handover & Product FAQ",
+        "desc": "You submit a brief business profile along with product FAQs, and we instantly connect your official Meta Cloud API WhatsApp number."
+      },
+      {
+        "step": "02",
+        "day": "Day Two",
+        "title": "AI Model Training & Page Architecture",
+        "desc": "We initialize local training algorithms based on your sales scripts while engineering your premium Next.js interface."
+      },
+      {
+        "step": "03",
+        "day": "Day Three",
+        "title": "Comprehensive Testing & Deployment",
+        "desc": "We execute live conversational simulation stress-tests, calibrate operational parameters, and transition the engine to autopilot."
+      }
+    ]
+  },
+  "case_studies": {
+    "section_sub": "THE ENTERPRISE REVENUE ARCHITECTURE",
+    "section_title": "Plug Your Lead Leaks. 24/7 Autopilot Sales Ecosystem Engineering",
+    "section_desc": "Modern digital marketing isn't just about driving traffic and expecting human agents to manage responses manually. You need a high-conversion, leak-proof automated loop spanning from acquisition to accurate customer LTV tracking.",
+    "cta_board_title": "TEST OUR CONVERSATIONAL AI BOT NOW",
+    "cta_board_desc": "Fire any complex product questions and inspect our lightning response speed.",
+    "btn_chat_pay": "PAY NOW",
+    "chat": [
+      {
+        "sender": "customer",
+        "text": "hi, pm price details... where are you guys located? Can COD?"
+      },
+      {
+        "sender": "ai",
+        "text": "Walaikumussalam! Thank you for reaching out to AROS. We operate 100% online out of Kuala Lumpur. 🚀\n\nFor your information, we are running an exclusive promotional discount package today. May I know what industry your business is in? This allows me to recommend the most optimal AI module for your operations. 😊"
+      },
+      {
+        "sender": "customer",
+        "text": "E-commerce selling local skincare products bro. Got agents but they sleep at night lol"
+      },
+      {
+        "sender": "ai",
+        "text": "Completely get you bro! Local skincare brands get a massive surge of high-intent traffic in the middle of the night. AROS is engineered specifically for this — it takes over and closes deals on autopilot while your team gets their sleep. 💤\n\nBased on your skincare niche, our **Complete AI Engine** is your best match. Here is your custom promotional checkout link to secure your configuration slot today:"
+      }
+    ],
+    "metrics": [
+      {
+        "label": "VERSATILITY & ADAPTABILITY",
+        "title": "Universal",
+        "desc": "Comprehensive out-of-the-box support for any product catalog, business vertical, or language naturally."
+      },
+      {
+        "label": "AVERAGE RESPONSE TIME",
+        "title": "0.2 Seconds",
+        "desc": "Instant, sub-second response loops deployed right at the absolute peak of customer buying intent."
+      },
+      {
+        "label": "LEADS RECOVERED OVERNIGHT",
+        "title": "3× Multiplication",
+        "desc": "Capturing and saving warm traffic when your human staff is completely offline (1 AM - 6 AM)."
+      },
+      {
+        "label": "DEPLOYMENT TURNAROUND",
+        "title": "72 Hours",
+        "desc": "Full production environment hand-off integrated straight into your operational business channels."
+      }
+    ]
+  },
+  "technical_architecture": {
+    "section_sub": "▸ TECHNICAL INFRASTRUCTURE STACK",
+    "section_title": "The Backend Conversion Flow Mechanism",
+    "warn_title": "INFRASTRUCTURE SECURITY NOTICE:",
+    "warn_desc": "If your current funnel lacks Phase 03, 04, and 05 integrations (Intent Warming & Auto-Close), 80% of your marketing capital spent on Phase 01 and 02 will mathematically melt away.",
+    "steps": [
+      {
+        "id": "01",
+        "title": "Traffic Acquisition",
+        "desc": "High-intent customer target acquisition deployed across Meta and TikTok systems utilizing razor-sharp creative hooks."
+      },
+      {
+        "id": "02",
+        "title": "Lead Capture",
+        "desc": "Real-time structural propagation of client data via hyper-responsive custom webhook frameworks."
+      },
+      {
+        "id": "03",
+        "title": "Intent Warming",
+        "desc": "Direct routing of inbound traffic onto your Premium Static Salespage (Deliverable 1) to lock focus and preserve purchasing velocity."
+      },
+      {
+        "id": "04",
+        "title": "Autonomous Closing",
+        "desc": "Our proprietary 10-Step AI Closing Brain (Deliverable 2) takes over conversational mechanics within 0.2 seconds under full 24/7/365 autonomy."
+      },
+      {
+        "id": "05",
+        "title": "Lead Management",
+        "desc": "The ecosystem dynamically deploys the Behavioral Auto Follow-Up Node (Deliverable 3) optimized against localized contact states."
+      },
+      {
+        "id": "06",
+        "title": "LTV Optimization",
+        "desc": "Customer historical records are indexed into deep, clean relational structures engineered for high-yield retargeting and cross-selling campaigns."
+      }
+    ]
+  },
+  "testimonials": {
+    "section_sub": "SYSTEM EFFICIENCY ANALYSIS",
+    "section_title": "Efficiency Benchmark: AROS AI Engine vs Traditional Methods",
+    "section_desc": "In enterprise, data represents the ultimate truth. Below is a direct efficiency matrix comparing human agents, rigid keyword chatbots, and the AROS Complete AI Engine.",
+    "recommendation_badge": "RECOMMENDED (BEST VALUE)",
+    "performance_badge": "HIGH PERFORMANCE CHOICE",
+    "traditional_badge": "TRADITIONAL APPROACH",
+    "limited_badge": "RESTRICTED SYSTEM",
+    "summary_heading": "AROS Efficiency Executive Summary:",
+    "summary_desc": "Sub-second response speed on WhatsApp and the capacity to handle hundreds of concurrent conversations outpaces absolute human biological limitations. AROS was engineered not to replace your sales force, but to ensure 100% of generated leads are converted instantly without leakage, especially during critical midnight hours.",
+    "matrix": {
+      "heading_aros": "▲ AROS COMPLETE AI ENGINE",
+      "desc_aros": "Intelligent 24/7/365 absolute sales autopilot infrastructure.",
+      "heading_human": "MANUAL HUMAN STAFF",
+      "desc_human": "Managing sales sequences manually via human workforce allocations.",
+      "heading_bot": "KEYWORD BUTTON CHATBOT",
+      "desc_bot": "Utilizing basic linear flows entirely devoid of artificial intelligence.",
+      "rows": [
+        {
+          "metric": "Response Speed (Latency)",
+          "desc": "The turnaround delay before sending the initial WhatsApp reply after a prospect clicks your advertisement.",
+          "human": "15 - 45 Minutes (80% lead dropout/freeze rate)",
+          "bot": "3 - 5 Minutes (Rigidly restricted to menu buttons)",
+          "aros": "0.2 Seconds (Instantaneous conversion closing loop)",
+          "status": "RAPID RESPONSE"
+        },
+        {
+          "metric": "Simultaneous Inbound Capacity",
+          "desc": "The operational bandwidth to manage concurrent heavy traffic spikes or viral ad spend runs.",
+          "human": "Max 3 - 5 Chats (Agents experience fatigue & typographical errors)",
+          "bot": "System crashes or lags under massive data payloads",
+          "aros": "Limitless (Seamlessly sustains thousands of parallel lead strings)",
+          "status": "UNLIMITED CONCURRENCY"
+        },
+        {
+          "metric": "Auto Follow-Up Precision",
+          "desc": "The accuracy of re-engaging prospects who went silent or left conversations on 'blue-tick'.",
+          "human": "90% Abandoned (Overlooked or entirely forgotten by staff)",
+          "bot": "Repetitive static broadcast templates (High risk of account ban triggers)",
+          "aros": "Intelligent Behavioral Auto Follow-Up (Context-aware parsing)",
+          "status": "SMART FOLLOW-UP"
+        },
+        {
+          "metric": "Operational Hours Window",
+          "desc": "The availability window for managing and capturing inbound market interest without breaks.",
+          "human": "8 Hours / Day (Completely offline on nights, weekends, and holidays)",
+          "bot": "24/7 Active (But completely static; unable to resolve custom product FAQs)",
+          "aros": "24/7/365 Full Production Autopilot (AI operates continuously without breaks)",
+          "status": "24-HOUR AVAILABILITY"
+        },
+        {
+          "metric": "Monthly Overhead Structure",
+          "desc": "Aggregated short-term and long-term operating cash commitments.",
+          "human": "RM2,500 - RM4,000 / Mth (Fixed basic salaries, overheads, and bonuses)",
+          "bot": "RM150 - RM400 / Mth (Rigid message inbox software devoid of AI assets)",
+          "aros": "RM999 One-Time Setup (Includes Month 1 cloud server) + RM99/mth starting Month 2",
+          "status": "MAXIMUM ROI PENNY-SAVING"
+        }
+      ]
+    }
+  },
+  "authority": {
+    "section_sub": "AROS FOUNDATION ARCHITECT",
+    "section_title": "The Engineering Blueprint Behind The AROS Automation Framework",
+    "section_desc": "A commercial automation system forged from actual high-scale conversion records, not another template bot.",
+    "name": "Amin Azman",
+    "role": "AROS System Architect",
+    "company_tag": "BROMOVER RESOURCES SDN. BHD. · EST. 2019",
+    "pilot_title": "// EARLY ACCESS LAUNCH — PILOT CLIENT OFFER",
+    "pilot_desc": "AROS is currently deployed under an exclusive early access launch timeline. We are strictly onboarding only 3 pilot client slots this week to ensure our backend engineers provide absolute structural dedication. As an early pilot client, you secure full grandfathered launch pricing — and we stand committed to making your environment live within 72 hours, or we issue a 100% immediate no-questions refund.",
+    "footer_left": "ADVANCED SYSTEM ARCHITECTURE PROTOCOL SECURED",
+    "footer_right": "AROS SYSTEM CORE // BROMOVER RESOURCES SDN. BHD.",
+    "pillars": [
+      {
+        "title": "Sub-Second Webhook Alignment",
+        "subtitle": "Deep systemic integration ensuring incoming chat execution under 0.2 seconds with zero operational latency."
+      },
+      {
+        "title": "Resilient Cloud Server Infrastructure",
+        "subtitle": "High-availability cluster server topology engineered to preserve your automated client workflows 24/7/365."
+      },
+      {
+        "title": "Enterprise Prompt Engineering Nodes",
+        "subtitle": "Proprietary AI model alignment custom-trained to ingest your specific catalog specs, closing scripts, and FAQ databases."
+      },
+      {
+        "title": "Secure Context Storage Relational Database",
+        "subtitle": "Clean parsing and structured encryption of client chat context built for granular ad performance metrics tracking."
+      }
+    ],
+    "stats": [
+      {
+        "value": "17",
+        "unit": "Years",
+        "label": "In The Commercial Arena",
+        "sub": "Since 2008"
+      },
+      {
+        "value": "RM12M",
+        "unit": "Run Rate",
+        "label": "Launch Record Metrics",
+        "sub": "New Business Scaled Within Year One"
+      },
+      {
+        "value": "6+",
+        "unit": "Industries",
+        "label": "Cross-Sector Crossings",
+        "sub": "MLM · Transport · F&B · Cosmetics · Supplements · Construction"
+      },
+      {
+        "value": "30+",
+        "unit": "Enterprises",
+        "label": "Fully Digitalized",
+        "sub": "Since Establishment In 2019"
+      }
+    ],
+    "bio_narrative": [
+      "I have operated inside the raw business ecosystem since 2008 — spending 17 years aggressively navigating high-stakes market terrains across diverse industries: enterprise SMS infrastructure, MLM networks, F&B operations, cosmetics, supplements, and heavy structural construction sectors.",
+      "Following years of relentless execution, failures, and structural rebuilds, I engineered a proprietary Business Engineering Framework built on cold, mathematically proven scaling mechanisms that fundamentally flipped my operational direction. Utilizing strategic Hero Product funnels, calculated Negative CAC acquisition models, and extreme Lifetime Value (LTV) maximization, I successfully propelled a newly launched asset to hit a RM12 Million annual run rate within its first 12 months of deployment.",
+      "This output was neither luck nor commercial magic — it is pure business mathematics designed to be replicated.",
+      "AROS is the direct infrastructural manifestation born from these real-world scaling battles. We engineered this system to plug the exact wounds we bled from: massive surges of high-intent traffic crashing in past midnight, left completely unanswered while ad spend dissolved with zero returns. If this operational architecture is resilient enough to anchor a RM12 Million pipeline, it is more than capable of protecting every single piece of revenue entering your business."
+    ]
+  },
+  "pricing": {
+    "section_sub": "AROS INVESTMENT FRAMEWORK",
+    "section_title_line1": "Choose the Ideal System for ",
+    "section_title_line2": "Your Business",
+    "section_desc": "A single investment for a premium-grade sales automation framework. No hidden parameters, structural deployment fully managed by our engineering force.",
+    "early_adopter_badge": "Early Adopter Offer — Limited Slots Remaining",
+    "promo_badge": "THIS WEEK'S PROMOTION",
+    "promo_text_start": "This early adopter promo pricing stands valid from ",
+    "promo_text_end": " only.",
+    "promo_limit_note": "Weekly server onboarding configurations are strictly capped to sustain optimum AI architecture calibration metrics for each enterprise profile.",
+    "dfy_badge": "100% Done-For-You (DFY)",
+    "dfy_title": "Fully Deployed on ",
+    "dfy_highlight": "Autopilot",
+    "dfy_desc": " by our engineers. You supply the raw business data & product FAQs; we execute cloud cluster configuration, algorithm fine-tuning, and Meta API pipeline alignment right until live production states. Bypass code complexities completely — we anchor the lifecycle for you.",
+    "secure_payment_label": "🔒 Secure SSL Encrypted Payment Routing",
+    "corporate_ssm_label": "Bromover Resources Sdn. Bhd. (201901003230)",
+    "fee_faq_q": "Why is there a Recurring RM99/Month Overhead Starting From Month Two?",
+    "fee_faq_a_part1": "Your autonomous AI operates 24/7/365 on an enterprise cloud infrastructure layer — containing dedicated cluster nodes, official Meta Cloud API secure licenses, and constant backend technical updates managed directly by our team. This entirely offsets the capital allocation of hiring a night shift team costing ",
+    "fee_faq_a_salary": "RM2,500+/month",
+    "fee_faq_a_part2": " or subscribing to generic shared communication inbox software costing ",
+    "fee_faq_a_inbox_cost": "RM300–400/month",
+    "fee_faq_a_part3": " — while unleashing incomparably superior processing concurrency and conversational conversion intelligence.",
+    "entity_verification_label": "Supervised by verified corporate entity: ",
+    "corporate_title_raw": "BROMOVER RESOURCES SDN. BHD.",
+    "footer_architecture_note": "Enterprise Framework Administered Fully by the Bromover AI Engineering Force",
+    "packages": {
+      "starter": {
+        "badge": "STARTER PLAN",
+        "name": "Salespage Starter",
+        "desc": "Ideal if you require an ultra-low latency, premium Next.js landing interface architecture to absorb incoming advertising traffic channels.",
+        "spec_label": "// CORE FUNCTIONAL SPECIFICATIONS",
+        "specs": [
+          "Custom Domain & Cloud Hosting (100% Free Year 1)",
+          "Premium Next.js Static Interface Engineering (High Velocity)",
+          "Ultra-Low Latency Load Speeds (< 0.1s) via Edge CDN Mapping",
+          "High-Conversion Sales Copywriting Infrastructure Design",
+          "Meta / TikTok Pixel Structural Tracking Ready",
+          "Onboarding & Integration Guide for Native Payment Gateways"
+        ],
+        "value_label": "RM1,499 REAL VALUE",
+        "investment_label": "Total One-Time Technical Investment",
+        "price": "RM699",
+        "renewal_note": "Complementary custom domain & hosting for the initial 12 months. Subsequently only RM129/year (zero monthly licensing fees).",
+        "btn_cta": "Select Salespage Starter Configuration"
+      },
+      "agent": {
+        "badge": "BACKEND AI INTEGRATION",
+        "name": "AROS AI Agent",
+        "desc": "A dedicated WhatsApp backend AI core engineered to autonomously process user FAQs, client lead tagging, and behavioral follow-up nodes directly into your legacy database frameworks.",
+        "spec_label": "// BACKEND INDUSTRIAL SPECIFICATIONS",
+        "specs_bold": [
+          {
+            "title": "Cognitive AI Closing Brain:",
+            "desc": " Resolves custom FAQs & executes sales loops 24/7/365"
+          },
+          {
+            "title": "Smart Context Long-Term Memory:",
+            "desc": " Indexes client transaction histories & continuous conversation logs"
+          },
+          {
+            "title": "Algorithmic Follow-Up Loops:",
+            "desc": " Autonomously re-engages prospects stalled on 'blue-tick' states"
+          },
+          {
+            "title": "Automated Customer Pipeline Tagging:",
+            "desc": " Streams pipeline categorization flags directly to core database layers"
+          },
+          {
+            "title": "Seamless Human Takeover Safeguard:",
+            "desc": " Instantly reroutes to live-agent chat channels when manual intervention triggers"
+          },
+          {
+            "title": "Official Meta Cloud API Authorization:",
+            "desc": " Deploy high-yield mass broadcast notifications securely and legally"
+          }
+        ],
+        "value_label": "RM2,197 REAL VALUE",
+        "investment_label": "Total One-Time Technical Investment",
+        "price": "RM699",
+        "monthly_label": "Commencing Month Two onwards:",
+        "monthly_fee": "RM99",
+        "monthly_unit": "/mth",
+        "btn_cta": "Select AROS AI Agent Configuration"
+      },
+      "complete": {
+        "top_badge": "ENTERPRISE BULK CHOICE: SAVE RM399 INSTANTLY",
+        "badge": "FULL-STACK ECOSYSTEM HYBRID (FRONTEND + BACKEND)",
+        "name": "Complete AI Engine",
+        "desc": "Your high-velocity frontend landing asset (Premium Next.js Salespage) linked end-to-end to your automated WhatsApp AI core brain to absorb, nurture, and close conversions on complete 24/7 autonomy.",
+        "spec_label": "// FULL ECOSYSTEM INTEGRATION LIFECYCLE",
+        "specs_bold": [
+          {
+            "title": "All Salespage Starter Enhancements Included:",
+            "desc": " Premium Next.js static rendering environment, .com domain, ultra-low latency & copywriting-engineered schemas."
+          },
+          {
+            "title": "All AROS AI Agent Capacities Bundled:",
+            "desc": " Advanced NLP AI brain model alignment, persistent tracking memory, agent takeovers, & official Meta broadcasting infrastructure."
+          },
+          {
+            "title": "Seamless End-to-End Pipeline Bridge:",
+            "desc": " Instantaneous automated processing mapping salespage lead captures straight into the WhatsApp conversion funnel."
+          },
+          {
+            "title": "Custom Webhook Configuration & Analytical Database:",
+            "desc": " Complete indexation of structural conversation telemetry logs engineered for conversion metric audits."
+          },
+          {
+            "title": "30-Day post-Launch Dedicated Optimization Support:",
+            "desc": " Our systems engineering crew monitors and fine-tunes prompt calibrations to extract maximum close rates."
+          }
+        ],
+        "breakdown_label": "// CORE ASSET ECONOMIC BREAKDOWN (Complete Bundle)",
+        "value_label": "Total True Aggregate Value",
+        "value_price": "RM3,696 VALUE",
+        "investment_label": "Total Premium Investment Today",
+        "price": "RM999",
+        "separate_buy_label": "Purchased via individual standalone components: ",
+        "separate_buy_price": "RM1,398",
+        "bundle_save_label": "→ Instant combo bundle savings of RM399",
+        "fire_save_desc": "🔥 SAVE RM399 compared to setting up standalone environments (RM699 + RM699). Environment mapping and Month One licensing included completely FREE!",
+        "unstop_desc_start": "Your private AI asset remains continuously operational chasing leads, converting queries, and engineering revenue — ",
+        "unstop_desc_end": "24/7 with zero friction.",
+        "btn_cta": "Lock AROS Complete AI Engine System Bundle"
+      }
+    }
+  },
+  "roi_bridge": {
+    "section_sub": "YOUR ENTERPRISE ROI MATRIX METRICS",
+    "section_title": "ROI SIMULATION PROJECTION — BASED ON RM300/DAY CONVERSION PARAMS",
+    "label_leak": "Estimated Annual Advertising Capital Bleed",
+    "sub_leak": "40% night traffic influx × 80% unattended dropout rate",
+    "label_cost": "Aggregated Annual AROS Operating Overhead",
+    "sub_cost": "RM999 setup infrastructure + RM99 × 12 operational months",
+    "label_saving": "Net Projected Structural Capital Recovered",
+    "sub_saving_part1": "calculated against your daily ad accounts spend thresholds",
+    "sub_saving_part2": "modeled using an standard baseline RM300/day allocation",
+    "cta_text_line1": "For enterprises scaling active traffic campaigns daily, ",
+    "cta_text_highlight": "the operational cost of AROS dissolves itself entirely",
+    "cta_text_line2": " within the absolute first week of real-time production launch.",
+    "btn_action": "Review AROS Investment Framework"
+  },
+  "bonus_stack": {
+    "section_sub": "FREE EXCLUSIVE SERVICE BONUSES",
+    "section_title": "Premium Add-On Engineering Services · Included In Bundle Packs",
+    "section_desc": "COMPLIMENTARY: 2 Enterprise-Grade Engineering Add-Ons to Guarantee Flawless System Architecture Integration.",
+    "label_free": "INCLUDED 100% FREE",
+    "bonuses": [
+      "Proactive live chat telemetry monitoring and custom prompt tuning executed by our engineering force post production deployment.",
+      "Secure, isolated encryption mapping and structural migration of historical customer databases straight into the unified environment."
+    ],
+    "summary": {
+      "item1_title": "Core System Infrastructure Architecture",
+      "item1_val": "Worth RM3,098",
+      "item2_title": "2 High-Yield Service Bonuses",
+      "item2_val": "+ Worth RM598",
+      "total_title": "TOTAL AGGREGATE CORE ASSET VALUE",
+      "total_val": "RM3,696",
+      "footer_desc": "A high-leverage premium hybrid investment engineered to permanently break the biological limits of manual sales handling and ad budget bleed."
+    }
+  },
+  "closure": {
+    "section_sub": "THE MOMENT OF STRUCTURAL BUSINESS DECISION",
+    "section_title_line1": "The Choice Rests Securely In ",
+    "section_title_line2": "Your Hands Today...",
+    "opt1_badge": "OPTION 1",
+    "opt1_title": "Maintain The Legacy Status Quo",
+    "opt1_desc": "You can step aside, ignore this development, and close this web page. Continue dissolving thousands of dollars annually inside leaking ad pipelines, let prime midnight traffic die cold due to delayed manual response windows, and permit fast-moving competitors to capture your market share while your team sleeps.",
+    "opt1_footer": "● PERPETUAL CAPITAL LIQUIDATION METRICS",
+    "opt2_badge": "OPTION 2",
+    "opt2_title": "OPTIMIZED RETURN Funnel",
+    "opt2_heading": "Deploy the AROS Complete AI Engine System",
+    "opt2_desc": "Visualize this production scenario: It is 3:17 AM in the morning — your personal smartphone is dead silent, and you are getting deep, restorative rest. Meanwhile, the enterprise cloud instances hosting your private AROS AI are aggressively processing 7 inbound user intents, screening out 4 cold leads, and pushing secure payment links directly to their WhatsApp screens. You wake up next morning, look at your screen, and browse a row of automated cash captures processed entirely while you slept.",
+    "opt2_footer": "● 100% COMPLETE AUTOMATED REVENUE ECOSYSTEM",
+    "cta_warn": "⚠️ EARLY BIRD FLASH LOCK: Exactly 1 final technical activation slot remaining for this weekly batch allocation.",
+    "btn_action": "Secure My Autonomous WhatsApp Configuration Slot Instantly",
+    "cta_note": "* Core system architecture deployment protocols will initialize within exactly 24 hours once your active slot reservation logs clear."
+  },
+  "faq": {
+    "section_sub": "OBJECTION KILLER QUESTIONS",
+    "section_title_line1": "Frequently Asked Questions",
+    "section_title_line2": " (FAQ)",
+    "section_desc": "Every critical technical, architectural, and commercial validation clear and uncompromised.",
+    "footer_sub": "CONTINUOUS SERVICE LEVEL ASSURANCE PROTOCOLS",
+    "footer_grace_start": "In the event a monthly infrastructure support overhead subscription is paused, your specific environment enters a safe ",
+    "footer_grace_highlight": "30-Day Grace Period Window",
+    "footer_grace_end": " for temporary data parking suspension before absolute node teardown sequences execute to preserve cluster network integrity. Re-activation attempts logged outside this grace window threshold are subject to standard structural database rebuild and port restoration fees.",
+    "questions": [
+      {
+        "q": "Is the RM99 monthly commitment mandatory? Why isn't this sold as an absolute one-off buy option?",
+        "a": "A high-scale, real-time Autonomous AI Agent ecosystem is fundamentally distinct from an outdated, static 'auto-reply' menu script script. It requires persistent 24/7 computing allocations on enterprise cluster cloud networks, high-concurrency LLM token generation processing, and non-stop operational optimization of custom Meta Webhook pipelines. For context on software market metrics, baseline legacy multi-agent messaging software architectures devoid of closing intelligence (such as Sleekf*** or Resp***.io) command starting subscription overheads tracking from RM300 to north of RM400+ per month purely to host a dead, rigid shared inbox interface. Your minimal RM99 monthly commitment completely absorbs dedicated cloud host hardware fees, text calculation processing, and perpetual architecture security optimization."
+      },
+      {
+        "q": "My active marketing run-rates are currently stuck with poor Meta Ads / TikTok Ads metrics — is this system viable?",
+        "a": "Extremely viable. This system is not engineered to magically edit front-end creative algorithms, but to systematically prevent your high-cost midnight inbound leads from dying completely due to human response latency gaps. When you escalate your midnight traffic conversion efficiency metrics from an absolute 0% baseline up to a consistent 30%+, your aggregated front-end ad spend ROI mathematically swings into highly viable, profitable positive territory."
+      },
+      {
+        "q": "Can the trained AI accurately decode unstructured local street slangs, code-switching dialects, or shortcodes like 'pm brp', 'cod katne'?",
+        "a": "Yes, 100% precision threshold. The conversational processing core of the AROS AI Brain utilizes advanced fine-tuned Natural Language Processing (NLP) matrix models calibrated explicitly against Malaysian street dialogue telemetry. It is deeply trained to decode 99% of localized short-codes, multi-language slangs, phonetic variations, and heavy typographical errors (typos) — delivering automated responses mirroring the exact warmth and behavioral cadence of a high-converting human sales master."
+      },
+      {
+        "q": "I possess zero technical background or code capability — can I follow along or manage this dashboard?",
+        "a": "The entire AROS architecture operates on top of official Meta-sanctioned and approved Cloud API enterprise layers. The heavy structural lift of cloud API authorization, 10-step custom AI logic calibration, and Next.js static production environment deployment are managed entirely by our deployment crew from A-to-Z. Your singular input loop is to submit an uncomplicated onboarding asset form and review a clean video walkthrough to master your visualization analytics dashboard."
+      },
+      {
+        "q": "Does deploying this Autonomous AI Agent infrastructure expose my business numbers to WhatsApp account ban risks?",
+        "a": "We build exclusively on official WhatsApp Business Cloud API (WABA) protocols completely aligned with Meta's strict developer terms of service framework. This keeps your compliance risk profile near 0%, entirely separating your core business assets from hazardous, illegal scraping systems or unofficial desktop automation blast softwares that trigger instant, permanent hardware and profile bans."
+      },
+      {
+        "q": "Am I required to sustain independent auxiliary bills to clear WhatsApp Meta Cloud API transaction fees?",
+        "a": "Meta natively grants every verified corporate business profile 1,000 inbound conversation sessions completely FREE every single month. The overwhelming majority of developing SMB funnels do not exceed this complimentary structural allocation quota. In scale events where your traffic velocity pushes past the 1,000 monthly chat limit, Meta's direct standard network rates transparently track between RM0.04 to RM0.12 per unique 24-hour conversational lifetime window. We assist you to securely hook your own billing method directly inside Meta Developer Center — ensuring absolute pass-through transparency with zero middleman markups from our company."
+      },
+      {
+        "q": "Post-production environment integration, are there any hidden technical surcharges or auxiliary billing layers?",
+        "a": "Your singular, absolute ongoing financial commitment to our firm is the flat RM99/month cluster server maintenance overhead. On data consumption metrics, Meta completely waives fees for the first 1,000 inbound conversation sessions generated by arriving clients monthly 100% FREE. Should your internal team execute hyper-scale outbound blasting campaigns utilizing official Meta broadcast templates, standard messaging tolls are parsed transparently and charged directly from your payment method to Meta — completely clear of any middleman markup additions from our engineering firm."
+      },
+      {
+        "q": "If the final framework build fails to satisfy my commercial operational expectations, can I file a refund claim?",
+        "a": "Absolute Quality and Technical Commitment Assurance: Because each single production build involves instant dedicated enterprise cloud node procurement and custom technical allocations to forge official Meta API pipelines unique exclusively to your internal business data, no cancellations or commercial refunds are offered the exact millisecond your infrastructure development phase initializes."
+      }
+    ]
+  },
+  "footer": {
+    "brand_desc_part1": "Architecting high-yield 24/7 autonomous sales ecosystems ",
+    "brand_desc_part2": "engineered specifically for Malaysian enterprise owners.",
+    "corporate_info_title": "Corporate Identification",
+    "corporate_info_name": "BROMOVER RESOURCES SDN. BHD.",
+    "corporate_info_ssm": "SSM REG: 201901003230 (1312556-H)",
+    "office_title": "Statutory Registered Office",
+    "office_line1": "Unit B-3A-22, 4th Floor, Block B,",
+    "office_line2": "Ativo Plaza @ Damansara Avenue,",
+    "office_line3": "52200 Kuala Lumpur, Wilayah Persekutuan.",
+    "disclaimer": "Disclaimer: This website is not part of the Facebook, Instagram, TikTok, or Twitter/X websites, nor is it affiliated with Meta Platforms, Inc., ByteDance Ltd., or X Corp. Additionally, this site is NOT endorsed by Facebook, Instagram, TikTok, or Twitter/X in any way. Facebook and Instagram are trademarks of Meta Platforms, Inc. TikTok is a trademark of ByteDance Ltd. Twitter/X is a trademark of X Corp.",
+    "link_privacy": "Privacy Policy",
+    "link_terms": "Terms of Service",
+    "copyright": "© 2026 Bromover Resources Sdn. Bhd. All Rights Reserved."
+  },
+  "sticky_cta": {
+    "warn_note": "⚠️ Slots for this weekly configuration batch are near capacity",
+    "ssm_note": "Bromover Resources Sdn. Bhd. · Corporate Registered SSM: 201901003230",
+    "btn_text": "Secure My Activation Slot Now"
+  }
+}

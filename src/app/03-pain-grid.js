@@ -5,57 +5,37 @@ import React from 'react';
 import { X, ZapOff, TrendingDown, ShieldAlert, Clock, ChevronLeft, ChevronRight } from 'lucide-react';
 import useEmblaCarousel from 'embla-carousel-react';
 
-export default function PainGrid() {
-  const painCards = [
+export default function PainGrid({ dict }) {
+  const defaultCards = [
     { 
-      badge: "TRAFIK BANYAK, SALES SIKIT", 
-      title: "Iklan Dah Viral, Tapi Sales Tetap Flat", 
-      desc: [
-        "Leads mencurah masuk — tapi tiada sistem layan automatik",
-        "Prospek sejuk sebab terlalu lama tunggu balas",
-        "Duit ads terbakar, closing tetap sifar"
-      ], 
       icon: <ZapOff className="w-5 h-5 text-red-400" />, 
-      bgIcon: "bg-red-500/10 border-red-500/20", 
-      footer: "TIADA SISTEM CLOSING" 
+      bgIcon: "bg-red-500/10 border-red-500/20"
     },
     { 
-      badge: "KOS LEADS MAKIN MAHAL", 
-      title: "Pembaziran Kredit Iklan Setiap Minggu", 
-      desc: [
-        "Leads masuk banyak tapi 'sejuk' — lambat dilayan",
-        "Cost-per-lead (CPL) naik, margin untung makin nipis",
-        "Modal topup iklan, hasil tak setimpal"
-      ], 
       icon: <TrendingDown className="w-5 h-5 text-orange-400" />, 
-      bgIcon: "bg-orange-500/10 border-orange-500/20", 
-      footer: "MARGIN UNTUNG NIPIS" 
+      bgIcon: "bg-orange-500/10 border-orange-500/20"
     },
     { 
-      badge: "DATABASE HANGUS", 
-      title: "Risiko Nombor WhatsApp Kena Ban Kekal", 
-      desc: [
-        "Blast guna phone peribadi = risiko ban permanen Meta",
-        "Database beribu pelanggan boleh hilang sekelip mata",
-        "Tiada sistem rasmi = operasi jualan tak selamat"
-      ], 
       icon: <ShieldAlert className="w-5 h-5 text-red-400" />, 
-      bgIcon: "bg-red-500/10 border-red-500/20", 
-      footer: "RISIKO NOMBOR KENA BAN" 
+      bgIcon: "bg-red-500/10 border-red-500/20"
     },
     { 
-      badge: "LEADS MATI WAKTU TIDUR", 
-      title: "Bocor 80% Leads Selepas Jam 10 Malam", 
-      desc: [
-        "Staff tidur, iklan tetap jalan — leads masuk pukul 2 pagi",
-        "Balas esok pagi = prospek dah beli dengan pesaing",
-        "80% leads waktu malam tidak pernah di-follow up"
-      ], 
       icon: <Clock className="w-5 h-5 text-orange-400" />, 
-      bgIcon: "bg-orange-500/10 border-orange-500/20", 
-      footer: "LEADS MATI WAKTU MALAM" 
+      bgIcon: "bg-orange-500/10 border-orange-500/20"
     }
   ];
+
+  const dictCards = dict?.cards || [];
+  const painCards = defaultCards.map((staticConfig, idx) => {
+    const dictCard = dictCards[idx] || {};
+    return {
+      ...staticConfig,
+      badge: dictCard.badge || "",
+      title: dictCard.title || "",
+      desc: dictCard.bullets || dictCard.desc || [],
+      footer: dictCard.footer || ""
+    };
+  });
 
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: true,
@@ -65,6 +45,12 @@ export default function PainGrid() {
   const scrollPrev = React.useCallback(() => emblaApi && emblaApi.scrollPrev(), [emblaApi]);
   const scrollNext = React.useCallback(() => emblaApi && emblaApi.scrollNext(), [emblaApi]);
 
+  const section_sub = dict?.section_sub || "ANALISIS KEBOCORAN JUALAN";
+  const section_title_line1 = dict?.section_title_line1 || "4 Kebocoran Besar Yang Sedang";
+  const section_title_line2 = dict?.section_title_line2 || "Membakar Duit Iklan Anda";
+  const section_desc = dict?.section_desc || "Sebab itu AROS dibina. Bukan sekadar bot automatik, tetapi struktur kecerdasan buatan yang mengambil alih tugas jualan anda dalam masa 72 jam.";
+  const btn_action = dict?.btn_action || "Tengok Macam Mana AROS Selesaikan Ini →";
+
   return (
     <section id="pain_grid_section" className="relative z-10 w-full bg-[#0B0F19] border-t border-white/5 py-20 text-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
@@ -73,10 +59,10 @@ export default function PainGrid() {
         <div className="text-center mb-16 max-w-3xl mx-auto space-y-5">
           <div className="inline-flex items-center gap-2 bg-red-500/10 text-red-400 border border-red-500/20 px-3 py-1.5 rounded-md text-[11px] font-mono font-bold uppercase tracking-widest shadow-xs">
             <span className="w-1.5 h-1.5 rounded-full bg-red-500 animate-ping" />
-            ANALISIS KEBOCORAN JUALAN
+            {section_sub}
           </div>
           <h2 className="text-3xl md:text-5xl font-black tracking-tight text-white leading-[1.12]">
-            4 Kebocoran Besar Yang Sedang <span className="bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent">Membakar Duit Iklan Anda</span>
+            {section_title_line1} <span className="bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent">{section_title_line2}</span>
           </h2>
         </div>
 
@@ -143,7 +129,7 @@ export default function PainGrid() {
         {/* BRIDGE TEXT */}
         <div className="mt-16 text-center max-w-2xl mx-auto px-4 relative z-10">
           <p className="text-sm md:text-base text-neutral-300 font-medium leading-relaxed">
-            Sebab itu <strong className="text-orange-400 font-black">AROS</strong> dibina. Bukan sekadar bot automatik, tetapi struktur kecerdasan buatan yang mengambil alih tugas jualan anda <span className="underline decoration-orange-500/50 underline-offset-4 font-semibold text-white">dalam masa 72 jam</span>.
+            {section_desc}
           </p>
         </div>
 
@@ -158,7 +144,7 @@ export default function PainGrid() {
             }}
             className="inline-flex items-center gap-2 text-orange-400 border border-orange-500/30 hover:border-orange-500/60 bg-orange-500/5 hover:bg-orange-500/10 font-bold text-sm px-6 py-3 rounded-xl transition-all duration-200 cursor-pointer"
           >
-            Tengok Macam Mana AROS Selesaikan Ini →
+            {btn_action}
           </button>
         </div>
 

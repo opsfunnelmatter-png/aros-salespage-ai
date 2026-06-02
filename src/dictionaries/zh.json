@@ -1,0 +1,625 @@
+{
+  "hero": {
+    "badge": "智能微信/WhatsApp自动销售系统",
+    "headline_1": "深夜引流进客，",
+    "headline_2": "明早订单到手。",
+    "subheadline": "我们将AI系统接入您的官方WhatsApp账号——0.2秒内秒回，自动筛选意向客户，并直接发送付款链接。365天全天候自动运行。",
+    "cta": "计算您每晚损失了多少营业额",
+    "cta_sub": "⏱️ 仅需不到5秒即可获取分析结果。",
+    "meta_setup": "META官方云端API接入（100%安全安全）"
+  },
+  "diagnostic": {
+    "sys_title": "SYSTEM_DIAGNOSTIC_BOARD.SYS",
+    "state_audit": "STATE: AUDIT_COMPLETED",
+    "state_ready": "STATE: READY_TO_RUN",
+    "user_instruction": "操作指南",
+    "sub_title": "诊断您的销售漏斗：勾选您目前业务中已经到位的元素。",
+    "label_deficit": "AUTOMATION_DEFICIT",
+    "label_efficiency": "系统转化率",
+    "label_active": "已激活",
+    "label_of": " / ",
+    "label_waiting": "等待完整诊断",
+    "btn_calculate": "计算系统漏钱指数",
+    "dynamic_score_note": "指数将实时动态计算。",
+    "feedback_high": "您的业务基础非常扎实！这意味着 AROS 可以在最高效能下运作，帮你把每一分广告费的效果放到最大。请查看下方分析，进一步排查潜在的微小漏洞。",
+    "feedback_low": "销售漏斗检测到严重的‘漏钱’危机。您的营销系统正在严重流失精准客户，特别是在非营业时间。",
+    "items": [
+      "专为移动端转化优化的超流畅销售页 (< 0.5 秒)（拒绝加载缓慢的普通 WordPress 模板）",
+      "对接 Meta 官方 WhatsApp Cloud API 渠道（拒绝使用随时会被封号的非正规群发软件或私人手机）",
+      "自动化的客户意向筛选机制 (Lead Filtering)（避免把黄金时间浪费在不认真的“隐形”Leads身上）",
+      "实时客户数据拦截抓取 system (Real-time Lead Capture)（即便客户中途关掉页面也能锁死资料）",
+      "销售页内直接完成无缝支付 (Payment Gateway)（减少因外部跳出而流失 of 购买冲动）",
+      "实时同步的云端 Leads 数据库，确保广告 ROI 数据追踪精准无误",
+      "24/7 全天候无休的 AI 自动化成交大脑 (Autonomous Closing Engine)，完美输入您的公司话术",
+      "根据客户聊天状态（已读不回、完全静音、高度意向）自动触发的智能跟进算法机制",
+      "Meta 官方授权的 Broadcast 群发引擎，100% 安全激活老客数据库，告别封号风险"
+    ]
+  },
+  "bleeding_math": {
+    "title": "WHATSAPP 广告漏钱计算器",
+    "sub_title": "精准计算：每一晚您的广告费",
+    "highlight_text": "到底烧掉了多少钱",
+    "desc": "在下方输入您每天的广告预算。计算器将通过最直接 sectional 的数学模型，告诉你每晚 10 点员工入睡后，由于无人回复而导致白白蒸发的广告费。",
+    "input_budget_title": "1. 每日广告预算",
+    "input_budget_q": "您每天投入多少广告费 (FB / TikTok Ads)?",
+    "input_budget_label": "输入每日广告预算 (RM):",
+    "input_placeholder": "例: 300",
+    "unit_day": "/ 天",
+    "unit_month": "/ 月",
+    "auto_calc_note": "年度预计损失将自动计算完成。",
+    "traffic_night_title": "2. 深夜流量占比",
+    "traffic_night_sub": "深夜进人高峰期 (10 PM - 7 AM)",
+    "traffic_night_desc": "40% 的精准 Leads 都是在深夜深夜涌入 (完全处于无人接待状态)",
+    "drop_rate_title": "3. 客户直接跑单率",
+    "drop_rate_sub": "因为回复太慢 / 拖到隔天清晨才回复",
+    "drop_rate_desc": "80% 的客户会因为回复太慢而直接跳出跑单",
+    "output_title": "您的漏钱数据评估",
+    "output_subtitle": "年度白白浪费的广告费估算 (WASTED AD SPEND)",
+    "output_critical": "处于高危状态",
+    "output_waiting": "等待数据输入...",
+    "output_waiting_desc": "* 请在左侧输入广告预算以启动实时漏钱计算。",
+    "unit_year_loss": "/ 一年白白烧掉",
+    "loss_heading": "您的广告费就是这样打水漂的",
+    "loss_desc": "问题不是你没有销量，广告天天在跑，深夜也一直有客户在问。但正因为缺少一套 24/7 全天候待命的 WhatsApp 智能自动成交系统，原本属于你的精准客户全跑去秒回的同行那里了。",
+    "btn_action": "揭开背后的漏钱真相",
+    "footer_unresolved": "未解决的销售漏洞",
+    "footer_average_note": "数据基于行业平均水平计算 (80% DROP-OFF RATE)",
+    "footer_source": "[数据来源: Meta Ads 行业分析报告 & 2025/2026 年度马来西亚 WhatsApp 真实响应均值]"
+  },
+  "pain_grid": {
+    "section_sub": "销售漏洞全盘 analysis",
+    "section_title_line1": "4 个正在疯狂火烧广告费",
+    "section_title_line2": "的核心销售漏洞",
+    "section_desc": "这就是 AROS 诞生的核心原因。它不仅仅是一个呆板的自动回复 Bot，而是在 72 小时内全面接管并优化您销售业务 of AI 智能架构体系。",
+    "btn_action": "亲眼见证 AROS 如何锁死漏洞 →",
+    "cards": [
+      {
+        "badge": "有流量，没销量",
+        "title": "广告明明爆单Viral，但实际销量却卡着不动",
+        "bullets": [
+          "Leads 疯狂涌入 — 却完全没有自动成交系统去接盘",
+          "回复太慢导致精准意向直接变冷、卡死",
+          "广告费天天都在烧，最终的成交率依然是零"
+        ],
+        "footer": "缺乏自动成交系统"
+      },
+      {
+        "badge": "获客成本越来越贵",
+        "title": "广告账户里的广告信用额度每周都在白白蒸发",
+        "bullets": [
+          "进来的 Leads 因为卡着没及时回复，直接变成死粉冷掉",
+          "获客成本 (CPL) 狂飙，导致净利润 margin 越来越薄",
+          "一直充值广告费，收到的实际回报却完全不对等"
+        ],
+        "footer": "净利润不断被榨干"
+      },
+      {
+        "badge": "精准老客数据库全毁",
+        "title": "面临 WhatsApp 号码被 Meta 永久封号的重大风险",
+        "bullets": [
+          "直接用私人手机和软件群发 = 随时触发 Meta 永久封号机制",
+          "好不容易累积的几千个精准客户资料，一瞬间可能直接归零",
+          "不用官方正规 API 渠道，整个团队的资产根本没有安全感"
+        ],
+        "footer": "随时面临封号风险"
+      },
+      {
+        "badge": "Leads 睡前直接死掉",
+        "title": "每晚 10 点过后，直接白白流失 80% 的潜在 Leads",
+        "bullets": [
+          "员工睡了广告还在跑 — 凌晨 2 点进来的 Leads 处于断线状态",
+          "拖到隔天早上才回复，客户早就跟秒回的同行下单了",
+          "80% 在深夜进来的精准流量，从来没有得到及时的智能跟进"
+        ],
+        "footer": "深夜流量直接蒸发"
+      }
+    ]
+  },
+  "timeline": {
+    "section_sub": "系统落地执行时间表",
+    "section_title": "从架构搭建，到全自动化系统交付上线",
+    "section_desc": "你的销售漏斗严重漏钱，真不是因为广告创意不够好 — 而是你的获客承接系统出了问题。我们不卖没有用的干货课程，也不是信息指南。我们是系统工程师：为你量身搭建销售架构、输入AI大脑、进行压力测试、最后把整套Autopilot自动化成交引擎完整交到你手上。",
+    "component_title_sub": "核心技术堆栈",
+    "component_title": "What We Build",
+    "component_desc": "为您企业直连部署的四大核心底层基础设施。",
+    "deployment_title_sub": "系统上线部署流程",
+    "deployment_title": "最快 3 天，系统全面 live跑单",
+    "deployment_desc": "高效、透明、极速的标准化配置流程，拒绝任何无意义的延误拖工。",
+    "limit_note_title": "每周限定名额：",
+    "limit_note_desc": "为了确保每一个系统的大脑训练精确度以及销售页面的极致加载速度，我们每周严格限制仅为 3 家企业进行高品质系统部署。",
+    "btn_action": "查看系统配置方案 & 价格 →",
+    "cards": [
+      {
+        "tag": "极速销售页",
+        "title": "Next.js 超流畅落地页",
+        "desc": "基于 Next.js 框架精细化开发的静态网页，加载速度快达 0.1 秒以内，完美锁死广告进来的每一个点击。"
+      },
+      {
+        "tag": "核心AI大脑",
+        "title": "WhatsApp 智能成交引擎",
+        "desc": "深度学习并输入您独家 FAQ 和成交话术的 AI 机器人，24 小时全天候不知疲倦地自动回复并成交单子。"
+      },
+      {
+        "tag": "智能自动跟进",
+        "title": "行为追踪自动跟进逻辑",
+        "desc": "针对‘已读不回’或‘突然静音’的精准 Leads，系统将根据上下文语气算法自动触发二轮追单和跟进。"
+      },
+      {
+        "tag": "无缝支付接入",
+        "title": "免跳出在线支付闭环",
+        "desc": "直接在销售落地页内嵌入官方支付网关 (Stripe / FPX)，极速完成结算付款，降低客户中途退出的跑单率。"
+      }
+    ],
+    "steps": [
+      {
+        "step": "01",
+        "day": "第一天",
+        "title": "企业资料提交与官方接口对接",
+        "desc": "您只需填写一份简单的业务核心 FAQ 问答表，我们的团队会立即帮您无缝连接 Meta 官方 WhatsApp Cloud API 接口通道。"
+      },
+      {
+        "step": "02",
+        "day": "第二天",
+        "title": "AI 大脑深度训练与前端开发",
+        "desc": "我们开始根据您的独家销讲逻辑训练 AI 成交系统，并同步为您搭建 Next.js 极速前端流量承接落地页。"
+      },
+      {
+        "step": "03",
+        "day": "第三天",
+        "title": "模拟流测试与全盘 autopilot 交付",
+        "desc": "我们启动高密度的真人对话模拟测试，确保 AI 回复语气完全对味、确认付款链路畅通后，正式把全自动赚钱系统移交至您手上。"
+      }
+    ]
+  },
+  "case_studies": {
+    "section_sub": "THE ENTERPRISE REVENUE ARCHITECTURE",
+    "section_title": "堵死流失流量。打造 24/7 全天候自动运转的闭环获客系统",
+    "section_desc": "现代化的数字营销，绝对不是疯狂砸钱跑广告，然后把希望全部寄托在客服人员手动敲键盘回复上。你需要的是一套从流量获取到客户生命周期价值 (LTV) 沉淀、高自动化且完全闭合的营销生态网。",
+    "cta_board_title": "立即现场测试我们的智能成交 AI",
+    "cta_board_desc": "随意输入任何刁钻的常规产品问题，亲自感受我们 sub-second 的极速回复体验。",
+    "btn_chat_pay": "立即付款",
+    "chat": [
+      {
+        "sender": "customer",
+        "text": "哈罗，pm价格配套... 你们在什么area啊？可以COD吗？"
+      },
+      {
+        "sender": "ai",
+        "text": "哈罗！谢谢您对 AROS 系统感兴趣。我们的技术支持团队位于吉隆坡，全盘提供高效的线上部署服务。🚀\n\n为了回馈市场，目前我们的系统配置正在跑着限时的特惠折扣。在为您匹配方案前，可以先了解一下您的业务目前属于哪一个行业和赛道吗？这样我能为您推荐最能有效提效的 AI 模块组件哦。😊"
+      },
+      {
+        "sender": "customer",
+        "text": "做电商E-commerce的，卖本地Skincare护肤品 bro。有请admin但是半夜他们去睡觉了哈哈"
+      },
+      {
+        "sender": "ai",
+        "text": "非常理解老板！本地 Skincare 赛道的进人高峰期往往就在半夜。AROS 系统就是专门为了解决这个痛点而研发的 — 在您的员工休息睡觉时，AI 会无缝接管并自动转化和出单。💤\n\n结合 Skincare 行业的快节奏高流转特性，我们的 **Complete AI Engine (全能版)** 是最完美的配置。您可以点击下方的专属锁定链接，今天就拿下特惠升级名额："
+      }
+    ],
+    "metrics": [
+      {
+        "label": "系统高度兼容性与自适应",
+        "title": "Universal",
+        "desc": "天然支持任何类型的产品线目录、任何商业模式赛道以及任何语言的自然顺畅交流。"
+      },
+      {
+        "label": "平均响应速度快达",
+        "title": "0.2 秒",
+        "desc": "在客户购买情绪冲动最顶峰的瞬间完成秒回，绝不给对方转头跑去同行那里的时间窗口。"
+      },
+      {
+        "label": "深夜挽回的流失单量达",
+        "title": "3 倍暴涨",
+        "desc": "在员工完全下线（凌晨 1 点 - 清晨 6 点）的黄金空窗期内，自动挽回并拯救大笔白白烧掉的广告流量。"
+      },
+      {
+        "label": "全盘架构交付上线仅需",
+        "title": "72 小时",
+        "desc": "72小时内将调试完毕的完整医用级 AI 销售环境无缝部署至您的核心日常业务运营中。"
+      }
+    ]
+  },
+  "technical_architecture": {
+    "section_sub": "▸ 系统底层技术基础设施架构流",
+    "section_title": "揭开 AROS 幕后高效转化的底层逻辑",
+    "warn_title": "营销基础设施高危警告：",
+    "warn_desc": "如果您的销售链路中缺乏了 Phase 03、04 和 05（即落地页意向加温与 AI 自动化关单拦截机制），根据流量漏斗数学模型，您投入在 Phase 01 和 02 的高额广告费将会白白蒸发掉 80% 以上。",
+    "steps": [
+      {
+        "id": "01",
+        "title": "Traffic Acquisition",
+        "desc": "在 Meta 和 TikTok 广告生态圈中，利用高穿透力的营销钩子 (Creative Hooks) 进行高精度流量捕捉投放。"
+      },
+      {
+        "id": "02",
+        "title": "Lead Capture",
+        "desc": "通过毫秒级的 Webhook 响应处理架构，将进入的意向数据实时无缝流转至您的核心数据库中。"
+      },
+      {
+        "id": "03",
+        "title": "Intent Warming",
+        "desc": "将进来的流量瞬间导入极速的 Premium Static Salespage (交付物 1)，锁死用户注意力，让购买欲望瞬间加温。"
+      },
+      {
+        "id": "04",
+        "title": "Autonomous Closing",
+        "desc": "内置的 10-Step AI Closing Brain (交付物 2) 在 0.2 秒内全面接管对话，启动全天候 24/7/365 的 autopilot 成交逻辑。"
+      },
+      {
+        "id": "05",
+        "title": "Lead Management",
+        "desc": "系统根据客户聊天的实时状态模型，动态激活 Behavioral Auto Follow-Up Node (交付物 3) 进行差异化智能追单。"
+      },
+      {
+        "id": "06",
+        "title": "LTV Optimization",
+        "desc": "所有转化和未转化的老客数据将被统一归档进高响应的结构化关系模型中，为您后续的跨界复购和二次营销做最强的资产储备。"
+      }
+    ]
+  },
+  "testimonials": {
+    "section_sub": "系统效能全盘数据分析",
+    "section_title": "多维效能横向对比：AROS AI 智能引擎 vs 传统获客承接手段",
+    "section_desc": "在商业战场上，数据是唯一的终极事实。以下是人工客服、呆板关键词菜单机器人与 AROS 全能版 AI 智能成交引擎的效率硬核对比。",
+    "recommendation_badge": "官方极力推荐（最佳回报率）",
+    "performance_badge": "高能效转化首选",
+    "traditional_badge": "传统人工运营模式",
+    "limited_badge": "基础局限型系统",
+    "summary_heading": "AROS 效能核心总结：",
+    "summary_desc": "在 WhatsApp 上的 sub-second 秒级响应以及同时处理数百组对话的能力，早已超越了人类纯粹的生理极限。AROS 的诞生绝不是为了淘汰你的优秀销售员工，而是为了在客服处于深夜盲区或高峰期时，确保 100% 进来的精准 Leads 都能被瞬间拦截并完成闭环转化，绝不漏掉一分钱利润。",
+    "matrix": {
+      "heading_aros": "▲ AROS 全能版 AI 成交引擎",
+      "desc_aros": "24/7/365 全天候自动驾驶式智能闭环成交基础设施。",
+      "heading_human": "传统纯人工客服团队",
+      "desc_human": "完全依赖人工手动敲键盘来跟进并消化销售链路。",
+      "heading_bot": "关键词菜单机器人（按键式 Bot）",
+      "desc_bot": "基于固定的死板逻辑树运行，毫无任何人工智能属性。",
+      "rows": [
+        {
+          "metric": "首次信息回复速度 (延迟率)",
+          "desc": "精准客户点击广告切入 WhatsApp 聊天框后，系统响应并发出首条信息的时间延迟。",
+          "human": "15 - 45 分钟 (80% 的客户因等待过久直接冷掉或跳出跑单)",
+          "bot": "3 - 5 分钟 (只能机械化死板跟随菜单按钮进行点击交互)",
+          "aros": "0.2 秒 (瞬间锁死客户购买冲动，直接切入成交转化循环)",
+          "status": "极速响应响应"
+        },
+        {
+          "metric": "高并发客户同时承接量",
+          "desc": "在流量高峰期、节假日促销或广告意外爆单时，系统无缝并发处理海量对话的极限承载力。",
+          "human": "上限 3 - 5 组对话 (客服开始手忙脚乱，频繁出现漏回、打错字或语气敷衍)",
+          "bot": "当瞬时信息密度过高时，系统会出现高延迟、卡顿甚至直接崩溃",
+          "aros": "毫无上限 (可同时、同频率高情商应答数千名客户的咨询并发)",
+          "status": "极致并发无上限"
+        },
+        {
+          "metric": "智能自动追单与跟进精准度",
+          "desc": "针对聊到一半‘已读不回’、‘突然断线’或留下‘Blue-tick’的潜在客户，二轮追单的执行效率。",
+          "human": "90% 被彻底放弃 (员工精力有限，极易看漏、遗忘或选择性忽略)",
+          "bot": "重复群发毫无情感温度的死板长文本硬广 (极易引发客户反感并触发永久封号)",
+          "aros": "智能上下文语义跟进机制 (根据客户上一句话的真实语境和意向动态追单)",
+          "status": "智能灵动追单"
+        },
+        {
+          "metric": "全天候非营业时间续航力",
+          "desc": "系统处于高转化就绪状态、不间断消化订单的真实运转周期。",
+          "human": "每天 8 小时 (下班时间、深夜、周末或公共假期处于完全断线瘫痪状态)",
+          "bot": "24/7 在线 (但完全没有灵魂和应变力，无法解答任何独特的复杂产品 FAQ)",
+          "aros": "24/7/365 纯自动化运行 (AI 永不疲惫、无须调休，全天候狂飙成交)",
+          "status": "24小时全天候"
+        },
+        {
+          "metric": "每月日常固定运营成本",
+          "desc": "企业在销售承接链路上累计投入的短期与长期财务现金流开支。",
+          "human": "每月 RM2,500 - RM4,000 (固定的底薪、加薪、公积金、津贴以及提成大锅饭)",
+          "bot": "每月 RM150 - RM400 (仅仅是个死板的聚合收件箱工具，不具备任何智能成交能力)",
+          "aros": "RM999 一次性系统配置部署 (包含首月云端服务器费用) + 次月起仅固定 RM99/月",
+          "status": "极致性价比方案"
+        }
+      ]
+    }
+  },
+  "authority": {
+    "section_sub": "AROS 系统核心总架构师",
+    "section_title": "揭秘 AROS 全自动化成交引擎背后的研发总指挥",
+    "section_desc": "一套真正基于大体量真实成交流水和实战数据锻造出来的自动化财富系统，绝非普通的空壳死 Bot。",
+    "name": "Amin Azman",
+    "role": "AROS 系统架构师",
+    "company_tag": "BROMOVER RESOURCES SDN. BHD. · 创立于 2019 年",
+    "pilot_title": "// 公测上线首发阶段 — PILOT 种子客户限定特惠方案",
+    "pilot_desc": "AROS 智能系统目前正处于极少数的早期公测首发阶段。为了确保我们的资深系统工程团队能够提供1対1的绝对底层技术倾注，我们本周在全球范围内仅严格开放 3 个 Pilot 种子客户名额。作为首批种子用户，你将永久锁定最原始 of 公测尊享价 — 并且我们硬性承诺系统在 72 小时内全面调试上线跑单，否则 100% 全额退款，绝不找任何借口推诿。",
+    "footer_left": "ADVANCED SYSTEM ARCHITECTURE PROTOCOL SECURED",
+    "footer_right": "AROS SYSTEM CORE // BROMOVER RESOURCES SDN. BHD.",
+    "pillars": [
+      {
+        "title": "微秒级 Webhook 极速同步",
+        "subtitle": "深度系统底层调优，确保进人数据和消息收发控制在 0.2 秒内，实现零延迟承接。"
+      },
+      {
+        "title": "高可用弹性云端服务器集群",
+        "subtitle": "采用多节点容灾云端架构，确保您的 AI 成交大脑 24/7/365 永远处于高能在线状态。"
+      },
+      {
+        "title": "企业级定制化 Prompt 提示词工程",
+        "subtitle": "针对您独家的产品目录、销讲收单话术以及复杂 FAQ 资产进行高精度的私有化模型训练对齐。"
+      },
+      {
+        "title": "高密安全上下文关联数据库",
+        "subtitle": "将客户聊天轨迹全盘进行结构化加密存储，为后续高阶广告 ROI 精准投流提供核心数据链。"
+      }
+    ],
+    "stats": [
+      {
+        "value": "17",
+        "unit": "年",
+        "label": "深耕商业实战前沿",
+        "sub": "始于 2008 年"
+      },
+      {
+        "value": "RM12M",
+        "unit": "流水线",
+        "label": "首发项目骄人战绩",
+        "sub": "新项目启动首年跑出 1200 万令吉 Run Rate"
+      },
+      {
+        "value": "6+",
+        "unit": "跨界赛道",
+        "label": "横跨多维产业生态",
+        "sub": "涵盖 矩阵微商 · 跨境物流 · 连锁餐饮 · 美妆护肤 · 大健康胶囊 · 实体建筑"
+      },
+      {
+        "value": "30+",
+        "unit": "传统企业",
+        "label": "全面数字化转型",
+        "sub": "自 2019 年公司设立以来"
+      }
+    ],
+    "bio_narrative": [
+      "我自 2008 年起便在残酷的商业大熔炉里摸爬滚打 — 17 年的创业征途，我在无数个行业赛道里交过巨额学费、切切实实“流过血”：从早期的企业级批量系统开发、大团队矩阵微商、连锁 F&B 餐饮、护肤美妆线、健康大补品，一直杀到最重资产的实体建筑工程大板块。",
+      "在经历了无数次疯狂测试、惨烈失败并重新绝地反击之后 — 我终于研发出了一套基于纯粹硬核数学模型的“企业工程学系统 (Business Engineering Framework)”，彻底扭转了我的商业大盘运势。通过独特的【Hero Product 爆款爆破策略】、极致的【Negative CAC 负获客成本战术】以及【客户生命周期价值 (LTV) 最大化模型】，我成功在短短 12 个月内，将一个完全从零开始的新实体资产，硬生生拉升到了年流水超 1200 万令吉 (RM12 Million) 的大盘 Run Rate。",
+      "这个结果从来不是什么玄学，更不是什么商业运气 — 它是纯粹的商业数学逻辑，完全可以被完美复制。",
+      "AROS 成交系统，就是在这场没有硝烟的千万元级财富战役中淬炼出来的终极产物。我们开发它，就是为了彻底解决我们自己曾夜夜失眠、痛彻心扉的死穴：每天半夜两三点广告进人最猛的时候，员工全在睡觉无人回复，导致白白烧掉几千块广告费。如果这套底层系统架构足够强悍到能支撑起我 1200 万令吉的财富流水线，那它就绝对足够强悍，能够死死锁住你企业进来的每一个精准点击和每一分应得的利润。"
+    ]
+  },
+  "pricing": {
+    "section_sub": "AROS 资本投资技术方案",
+    "section_title_line1": "选择最适合您企业的",
+    "section_title_line2": "自动化成交系统",
+    "section_desc": "一次性投资部署企业级智能成交系统。绝无隐形收费，技术配置全盘由我们代劳。",
+    "early_adopter_badge": "公测首发特惠 (Early Adopter Offer) — 席位有限",
+    "promo_badge": "本周特惠狂飙",
+    "promo_text_start": "此公测首发特惠价格仅限 ",
+    "promo_text_end": " 锁定有效。",
+    "promo_limit_note": "每周配置名额有限，以此确保为每一位客户调试出最极致、精准的 AI 闭环大脑。",
+    "dfy_badge": "100% 全代劳全托管 (Done-For-You)",
+    "dfy_title": "技术底层由工程师团队 ",
+    "dfy_highlight": "全自动全托管",
+    "dfy_desc": " 落地配置上线。您只需准备企业基础 FAQ 资料包，其余的服务器架设、模型微调、Meta Cloud API 联调全部由我们技术总队一手代劳。您无需面对任何复杂的代码或底层阻碍 — 躺着收网即可。",
+    "secure_payment_label": "🔒 SSL 银行级加密安全支付",
+    "corporate_ssm_label": "Bromover Resources Sdn. Bhd. (201901003230)",
+    "fee_faq_q": "为什么从第二个月开始需要固定支付每月 RM99 的系统维护费？",
+    "fee_faq_a_part1": "您的智能 AI 销售大脑是 24/7 高清无休运行在企业级高配云端架构之上的 — 包含了独立服务器开销、Meta 官方通讯端口授权以及长期的系统健壮性技术维护。它彻底砍掉了您原本必须雇佣夜班客服人员的 ",
+    "fee_faq_a_salary": "每月 RM2,500+",
+    "fee_faq_a_part2": " 固定大额硬性开支，或者是订购市面上普通的死板聚合收件箱工具 ",
+    "fee_faq_a_inbox_cost": "每月 RM300–400",
+    "fee_faq_a_part3": " — 却能为您释放出呈几何倍数暴涨的响应并发量与千万元级成交智商。",
+    "entity_verification_label": "由合规正规大实体全盘监控护航：",
+    "corporate_title_raw": "BROMOVER RESOURCES SDN. BHD.",
+    "footer_architecture_note": "全盘底层系统架构由 Bromover AI 工程师团队提供独家技术全托管运维",
+    "packages": {
+      "starter": {
+        "badge": "基础入门版",
+        "name": "Salespage Starter",
+        "desc": "适合仅需一套超极速、Premium 的 Next.js 落地页来精准锁死广告投流流量的企业。",
+        "spec_label": "// 核心前端技术specifications",
+        "specs": [
+          "独家顶级域名与高性能云端托管服务器 (首年免费)",
+          "Premium Next.js 落地页视觉开发 (极速、流畅渲染)",
+          "全球 Edge CDN 节点调优实现 sub-0.1 秒静态瞬时加载",
+          "深度结合消费者心理学的高转化商业销讲文案底层架构",
+          "Meta / TikTok Pixel 转化追踪像素精准埋点配置就绪",
+          "独立在线支付网关 (Payment Gateway) 对接配置深度指导"
+        ],
+        "value_label": "总价值 RM1,499 VALUE",
+        "investment_label": "一次性买断技术投资价",
+        "price": "RM699",
+        "renewal_note": "首年免费提供域名与服务器托管。次年续费仅需 RM129/年（绝无任何月开销月租）。",
+        "btn_cta": "锁定 Salespage Starter 方案"
+      },
+      "agent": {
+        "badge": "后端 AI 智能接入版",
+        "name": "AROS AI Agent",
+        "desc": "专为直连您现有网站/系统打造的 WhatsApp 后端 AI 承接架构，全自动消化 FAQ、标签分类及智能追单。",
+        "spec_label": "// 核心后端 AI 智能specifications",
+        "specs_bold": [
+          {
+            "title": "AI 自动化成交大脑:",
+            "desc": " 24/7/365 全天候、多线程自动应答 FAQ 并锁死收单"
+          },
+          {
+            "title": "AI 智能上下文多轮记忆:",
+            "desc": " 深度锁死客户历史订单轨迹、会话语境与老客资料"
+          },
+          {
+            "title": "行为算法精准自动跟进:",
+            "desc": " 针对‘已读不回’或蓝标（Blue-tick）Leads 触发智能自动化催单"
+          },
+          {
+            "title": "精准客户标签自动化分类:",
+            "desc": " 将实时意向状态分类打标，并瞬间同步至您的云数据库"
+          },
+          {
+            "title": "人工客服无缝介入风控 fallback:",
+            "desc": " 遇到极特殊情况时，一键无缝切回人工客服手动接管控制"
+          },
+          {
+            "title": "Meta 官方 Cloud API 许可授权:",
+            "desc": " 100% 安全合规运行官方高转化、大体量群发端口引擎"
+          }
+        ],
+        "value_label": "总价值 RM2,197 VALUE",
+        "investment_label": "一次性买断技术投资价",
+        "price": "RM699",
+        "monthly_label": "从次月起固定基础服务器维护费:",
+        "monthly_fee": "RM99",
+        "monthly_unit": "/月",
+        "btn_cta": "锁定 AROS AI Agent 方案"
+      },
+      "complete": {
+        "top_badge": "企业首选黄金方案：打包购买立减 RM399 现金",
+        "badge": "全盘联动顶配版 (前端落地页 + 后端 AI 大脑)",
+        "name": "Complete AI Engine",
+        "desc": "前端静态极速落地页与后端 WhatsApp AI 智能大脑实现端到端闭环直连，打造 24/7 全天候托管的闭环财富印钞机。",
+        "spec_label": "// 全生态技术链条闭环闭环配套",
+        "specs_bold": [
+          {
+            "title": "囊括 Salespage Starter 的全部极致前端优势:",
+            "desc": " 包含 Premium Next.js 架构开发、独立域名、全球 Edge CDN 瞬时加载与销讲文案底层。"
+          },
+          {
+            "title": "完美继承 AROS AI Agent 的全部后端能效:",
+            "desc": " 包含私有化 AI 深度话术模型训练、上下文长效记忆、合规 Meta 官方批量群发底层接口。"
+          },
+          {
+            "title": "全链路端 to 端无缝自动化串联:",
+            "desc": " 落地页订单/表单提交动作瞬间毫秒级触发 WhatsApp 后端 AI 进行闭环跟踪成交。"
+          },
+          {
+            "title": "定制化 Webhook 联调与独立云数据库搭建:",
+            "desc": " 结构化归档全盘会话日志，提供完美无瑕的投流转化漏斗复盘核心指标。"
+          },
+          {
+            "title": "上线后 30 天全方位技术护航与微调:",
+            "desc": " 资深系统工程师贴身监控真实上下文，根据反馈调优提示词，压榨极致最高成交率。"
+          }
+        ],
+        "breakdown_label": "// 顶配打包方案真实技术公允价值 (Complete Bundle)",
+        "value_label": "核心技术总生态总公允价值",
+        "value_price": "RM3,696 VALUE",
+        "investment_label": "今日全套秒杀打包特惠价",
+        "price": "RM999",
+        "separate_buy_label": "单独拆分购买两套系统总价: ",
+        "separate_buy_price": "RM1,398",
+        "bundle_save_label": "→ 组合打包购买立减 RM399 现金",
+        "fire_save_desc": "🔥 相比单独拆分购买直接简单暴利【立省 RM399】！全盘环境搭建与首月技术底层授权、服务器开销完全免费！",
+        "unstop_desc_start": "您的定制 AI 大脑将永远在一线不间断高能追单、应答并疯狂创造销售转化 — ",
+        "unstop_desc_end": "24/7 全天候永不停歇。",
+        "btn_cta": "锁定 AROS Complete AI Engine 顶配打包方案"
+      }
+    }
+  },
+  "roi_bridge": {
+    "section_sub": "您企业的真实投入产出比 (ROI) 深度复盘",
+    "section_title": "数据模拟：以每日消耗 RM300 广告费的本地商户为例",
+    "label_leak": "年度预估赤裸裸漏掉 of 广告费 (Wasted Spend)",
+    "sub_leak": "40% 深夜进人流量 × 80% 缺乏跟进直接跑单率",
+    "label_cost": "全面部署 AROS 系统一整年的技术总开销",
+    "sub_cost": "RM999 一次性搭建费 + RM99 × 12 个月托管维护费",
+    "label_saving": "预计通过系统帮您彻底截留并拯救的【纯利润】",
+    "sub_saving_part1": "完全基于您当前真实的广告流量消耗基数科学平摊",
+    "sub_saving_part2": "本案例以标准日耗 RM300 作为数学公式参数进行推演",
+    "cta_text_line1": "对于每天都在雷打不动投放广告烧钱的商业大盘来说，",
+    "cta_text_highlight": "AROS 系统所需的微小投入会在极短时间内完成自我回本",
+    "cta_text_line2": " 基本上在系统上线 live 跑单的第一周内，就能帮你把本金完全赚回来。",
+    "btn_action": "立即查阅 AROS 顶配资产投资方案"
+  },
+  "bonus_stack": {
+    "section_sub": "FREE EXCLUSIVE SERVICE BONUSES",
+    "section_title": "限时捆绑顶级技术增值服务 · 直接包含在配套内",
+    "section_desc": "完全免费：独家绑定赠送 2 大企业级高阶工程服务，确保 AROS 技术大盘完美无缝落地。",
+    "label_free": "免除全部费用 (INCLUDED FREE)",
+    "bonuses": [
+      "系统上线运行后，由技术总监亲自贴身监控真实话术上下文，针对大马市场环境进行极致高阶提示词微调对齐。",
+      "提供医用级安全防护，协助您把现有的历史客户老客旧数据库进行结构化无缝迁移至中央自动化生态圈中。"
+    ],
+    "summary": {
+      "item1_title": "核心系统全盘开发",
+      "item1_val": "总公允价值 RM3,098",
+      "item2_title": "2 大顶级技术增值大礼包",
+      "item2_val": "+ 净值 RM598",
+      "total_title": "全套真实资产总公允公允价值",
+      "total_val": "RM3,696",
+      "footer_desc": "一套极其暴力的顶级技术组合拳，彻底把您从低效的人力肉搏和火烧广告费的黑洞中永恒解脱出来。"
+    }
+  },
+  "closure": {
+    "section_sub": "现在，是向左看还是向右看的时间了",
+    "section_title_line1": "未来的商业运势，全在您今天的",
+    "section_title_line2": "一个起心动念之间...",
+    "opt1_badge": "抉择一",
+    "opt1_title": "固守陈旧的旧有抗性现状",
+    "opt1_desc": "您可以选择直接无视并关掉这个网页。继续任由每年几万块的广告费在深夜白白打水漂，任由那些高度有购买欲的黄金客户因为没人回复而活活死掉，然后眼睁睁看着最敏锐的同行在您熟睡时，把你所有的利润池和客户全部连根拔起割走。",
+    "opt1_footer": "● 广告资本无休止地陷入黑洞死循环",
+    "opt2_badge": "抉择二",
+    "opt2_title": "极致压榨最高投资回报率 (ROI)",
+    "opt2_heading": "全面架构部署 AROS 智能成交引擎",
+    "opt2_desc": "想象一下这个极度震撼的真实场景：凌晨 3 点 17 分 — 您的私人手机静音，您正在卧室里享受深度的睡眠和休息。而在云端高配服务器上，您的 AROS AI 大脑正在以闪电般的并发速度，狂飙应答着 7 个涌入的意向客户，精准筛选剔除掉无效白嫖党，并把直接付款网关链接秒发到了他们的 WhatsApp 里。隔天早晨您一睁眼，打开手机，屏幕上全是系统在半夜自动帮您收单出单的银行到账通知。",
+    "opt2_footer": "● 100% 极速全自动托管闭环财富转化网络",
+    "cta_warn": "⚠️ 抢收公测红利：本周仅剩下最后一个【黄金技术部署席位】。",
+    "btn_action": "立即锁死名额，开启我的 WhatsApp 全自动印钞机",
+    "cta_note": "* 名额一旦成功锁死，我们的核心工程师团队将在 24 小时内全面进场配置底层体系。"
+  },
+  "faq": {
+    "section_sub": "OBJECTION KILLER QUESTIONS",
+    "section_title_line1": "常见硬核问答",
+    "section_title_line2": " (FAQ)",
+    "section_desc": "所有老板在做决策前，必须死磕掌握的底层技术与商业逻辑闭环。",
+    "footer_sub": "长期运维服务持续性保障条款",
+    "footer_grace_start": "若因企业自身原因导致次月维护费暂停，您的全盘系统将瞬间安全进入 ",
+    "footer_grace_highlight": "30 天数据宽限保护期 (Grace Period)",
+    "footer_grace_end": " 的技术挂起置顶状态，以此全力捍卫您云端服务器内的老客会话资产完整度。一旦超过 30 天宽限期导致底层架构被系统自动清空，后续的二度重组激活将必须严格按照公司标准，酌情加收一次性底层数据重构和端口恢复费。",
+    "questions": [
+      {
+        "q": "每个月固定 RM99 的费用是必须的吗？为什么不能一次性买断 (One-off)？",
+        "a": "一个能够上战场打仗、具备高成交情商的 AI 销售大脑，绝对不是市面上那种几块钱、死板配置的‘自动回复 Bot’。它在底层深度消耗着 24/7 纯云端高端服务器的算力、极其昂贵的 LLM 大模型原始 Token 计算流费用，以及 Meta Webhook 实时高并发的链路维护。纵观整个行业，普通的死板聚合收件箱工具（如 Sleekf*** 或 Resp***.io）在完全没有智能化 AI 闭关资产的情况下，单单基础月租就已经开到每月 RM300 至 RM400+。而这笔 RM99 的底层维护开销，已经帮您全部打包全垫付了独立云端物理服务器、AI 算力损耗大盘以及专属长线架构维护费。"
+      },
+      {
+        "q": "我现在的 Meta Ads / TikTok Ads 投流广告投得卡住不动、效果很差 — 这套系统还适合 me 吗？",
+        "a": "极其适合。部署这套系统的终极底层目的，绝对不是用什么魔法去玄学降低你的前段投流成本，而是为了帮你100%死死拦截住深夜进人最猛时、那些原本因为无人回复而活活死掉的巨额黄金 Leads。当你的深夜流量整体转化率直接从极度绝望的 0% 被暴力拉升到 30%+ 以上时，你的全盘广告投流 ROI 就会顺理成章、符合数学逻辑地瞬间扭亏为盈。"
+      },
+      {
+        "q": "这个 AI 真的能听懂马来西亚本地市场极度碎片化的各种缩写、接地气的巴刹话（Slang）或火星文（例如 'pm brp', 'cod katne'）吗？",
+        "a": "是的，100% 毫无压力。AROS AI 的成交核心采用了专门针对大马本土多语种会话特性优化定制的高阶自然语言处理 (NLP) 底层。它经过了极其庞大的本土话术深度训练，能瞬间秒懂 99% 以上的马来西亚本土缩写、跨语种混搭话语（Slang）、错别字（Typo）以及大白话，并会以极具高情商、像一个经验丰富的顶级华人老客服一样，散发着极度自然和充满人情味的温度进行高转化对位回复。"
+      },
+      {
+        "q": "我自己是完全不懂代码和技术的小白 — 部署上线后，我自己有能力跟着跑或轻松管理吗？",
+        "a": "AROS 系统是完美运行在经过 Meta 官方严格审核合规的官方 Cloud API 技术架构之ans 上的。那些最让人头秃的 API 端口配置、后端 10-Step AI 深度逻辑对齐训练、Next.js 极速前端网站全盘架构等重体力活，全部由我们团队为您提供全包 A-to-Z 的一站式落地。您唯一要做的，只是填写一份极"
+      },
+      {
+        "q": "部署这套智能系统，会有 WhatsApp 账号被 ban 的风险吗？",
+        "a": "我们完全基于 Meta 官方认可的 WhatsApp Business Cloud API (WABA) 技术进行深度开发，安全合规，封号风险接近 0%，绝非市面上违规的模拟群发软件。"
+      },
+      {
+        "q": "我需要额外支付 WhatsApp 官方的会话费用给 Meta 吗？",
+        "a": "Meta 官方每月免费提供 1,000 次主动发起或被动回复的免费会话额度。超出后官方直接透明按次扣费，无中间商差价，且由您信用卡直扣 Meta。"
+      },
+      {
+        "q": "后期系统上线后，还会有其他隐形消费或额外收费吗？",
+        "a": "除每月固定的云端维护和系统支持服务 RM99 外，无任何隐形二次消费，真正透明省心。"
+      },
+      {
+        "q": "如果我对系统上线后的最终效果不满意，可以申请退款吗？",
+        "a": "因为该系统涉及高成本的独立云服务器搭建以及 Meta API 的专属一对一开发对接，名额一旦确认并进入配置开发阶段，概不接受中途取消或退款申请。"
+      }
+    ]
+  },
+  "footer": {
+    "brand_desc_part1": "提供全天候 24/7 高效自动化成交方案 ",
+    "brand_desc_part2": "助力马来西亚企业主轻松翻倍广告回报率。",
+    "corporate_info_title": "企业资质认证",
+    "corporate_info_name": "BROMOVER RESOURCES SDN. BHD.",
+    "corporate_info_ssm": "SSM 注册号: 201901003230 (1312556-H)",
+    "office_title": "法定注册办公地址",
+    "office_line1": "Unit B-3A-22, 4th Floor, Block B,",
+    "office_line2": "Ativo Plaza @ Damansara Avenue,",
+    "office_line3": "52200 Kuala Lumpur, Wilayah Persekutuan.",
+    "disclaimer": "Disclaimer: This website is not part of the Facebook, Instagram, TikTok, or Twitter/X websites, nor is it affiliated with Meta Platforms, Inc., ByteDance Ltd., or X Corp. Additionally, this site is NOT endorsed by Facebook, Instagram, TikTok, or Twitter/X in any way. Facebook and Instagram are trademarks of Meta Platforms, Inc. TikTok is a trademark of ByteDance Ltd. Twitter/X is a trademark of X Corp.",
+    "link_privacy": "Privacy Policy",
+    "link_terms": "Terms of Service",
+    "copyright": "© 2026 Bromover Resources Sdn. Bhd. All Rights Reserved."
+  },
+  "sticky_cta": {
+    "warn_note": "⚠️ 本周系统部署名额即将满额",
+    "ssm_note": "Bromover Resources Sdn. Bhd. · SSM 企业合规认证: 201901003230",
+    "btn_text": "立即锁死名额"
+  }
+}
