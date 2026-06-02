@@ -58,7 +58,7 @@ export default function LanguageToggle({ currentLang }) {
       className={`right-4 z-[9999] transition-all duration-200 ${
         isSticky 
           ? "fixed top-4" 
-          : "absolute top-14 md:top-10"
+          : "absolute top-[88px] sm:top-[76px] md:top-10"
       }`}
     >
       {/* Main Toggle Button */}
