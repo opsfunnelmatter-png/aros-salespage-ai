@@ -107,11 +107,10 @@ export default function HeroSection({ dailyBudget, dict }) {
           }`}
           style={{ transitionDelay: '700ms' }}
         >
-          {[
-            'Bromover Resources Sdn. Bhd.',
-            'EST. 2019',
-            '30+ Bisnes Didigitalkan',
-          ].map((label, i) => (
+          {(dict?.company_tag || "Bromover Resources Sdn. Bhd. · EST. 2019 · 30+ Bisnes Didigitalkan")
+            .split('·')
+            .map(s => s.trim())
+            .map((label, i) => (
             <span
               key={i}
               className="flex items-center gap-1.5 bg-white/5 border border-white/10 rounded-full px-3 py-1.5 text-xs font-mono font-bold text-neutral-400 uppercase tracking-widest"
