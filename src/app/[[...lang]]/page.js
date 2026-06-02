@@ -21,6 +21,7 @@ import ClosureManifesto from '../09-closure.js';
 import FAQAccordion from '../10-faq.js';
 import FooterSection from '../11-footer.js';
 import StickyCTA from '../sticky-cta.js';
+import LanguageToggle from '../language-toggle.js';
 
 export default function Home({ params }) {
   const [dailyBudget, setDailyBudget] = useState('');
@@ -49,6 +50,9 @@ export default function Home({ params }) {
       {/* GLOBAL BACKGROUND GLOW EFFECTS */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[600px] bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.08)_0%,transparent_65%)] pointer-events-none z-0" />
       <div className="absolute top-[1200px] left-1/2 -translate-x-1/2 w-full max-w-7xl h-[600px] bg-[radial-gradient(circle_at_center,rgba(249,115,22,0.03)_0%,transparent_65%)] pointer-events-none z-0" />
+
+      {/* FLOATING LANGUAGE TOGGLE SELECTOR */}
+      <LanguageToggle currentLang={lang} />
 
       {/* 🚀 THE 12 CHRONOLOGICAL SALESPAGE SECTIONS TREE (PSYCHOLOGICAL CONVERSION FLOW) */}
       <HeroSection dailyBudget={dailyBudget} dict={dict.hero} />
