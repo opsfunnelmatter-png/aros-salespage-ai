@@ -145,7 +145,7 @@ export default function DiagnosticBoard({ dailyBudget, dict }) {
             {/* 2. Checklist Section */}
             <div className="flex-1 min-h-0 flex flex-col overflow-hidden">
               <div className="text-xs text-neutral-500 font-black uppercase tracking-widest mb-2 shrink-0">
-                {dict?.label_active_title || "Tanda Elemen Yang Sudah Aktif:"}
+                {dict?.active_elements_label || "TANDA ELEMEN YANG SUDAH AKTIF:"}
               </div>
               
               <div className="flex-1 overflow-y-auto space-y-2 pr-1 scrollbar-thin scrollbar-thumb-white/10 relative">
@@ -266,7 +266,7 @@ export default function DiagnosticBoard({ dailyBudget, dict }) {
             {/* LIVE CHECKLIST WORK AREA (8 COLS) - COMPACT SCROLL ON BOTH MOBILE & DESKTOP */}
             <div className="col-span-8 p-6 flex flex-col bg-black/20">
               <div className="text-xs text-neutral-500 font-black uppercase tracking-widest mb-4">
-                {dict?.label_active_title || "Tanda Elemen Yang Sudah Aktif Dalam Aliran Jualan Anda:"}
+                {dict?.active_elements_label || "TANDA ELEMEN YANG SUDAH AKTIF:"}
               </div>
               
               {/* SCROLLABLE INNER CONTAINER - LOCKED MAX HEIGHT */}
