@@ -72,7 +72,8 @@ export default function TimelineProcess({ dict }) {
 
   // Fallbacks
   const section_sub = dict?.section_sub || "GARIS MASA PELAKSANAAN";
-  const section_title = dict?.section_title || "Dari Rangka Pembangunan Sehingga Sistem Sedia Beroperasi";
+  const section_title_line1 = dict?.section_title_line1 || "Dari Rangka Pembangunan Sehingga ";
+  const section_title_highlight = dict?.section_title_highlight || "Sistem Sedia Beroperasi";
   const section_desc = dict?.section_desc || "Kebocoran jualan anda bukan masalah iklan tak menarik — ia masalah sistem melayan customer. Kami bukan jual kelas atau buku panduan. Kami bertindak sebagai jurutera: bina sistem jualan tersusun, pasang AI, uji, dan serahkan enjin jualan autopilot yang lengkap kepada anda.";
   const component_title_sub = dict?.component_title_sub || "KOMPONEN PEMBANGUNAN";
   const component_title = dict?.component_title || "Apa Yang Kami Bina";
@@ -99,7 +100,7 @@ export default function TimelineProcess({ dict }) {
             {section_sub}
           </div>
           <h2 className="text-4xl md:text-5xl font-black tracking-tight text-white leading-[1.12]">
-            {section_title}
+            {section_title_line1}<span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-amber-500 block sm:inline">{section_title_highlight}</span>
           </h2>
           <p className="text-neutral-400 text-sm md:text-base leading-relaxed max-w-2xl mx-auto font-medium">
             {section_desc}

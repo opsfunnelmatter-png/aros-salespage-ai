@@ -82,7 +82,8 @@ export default function AuthoritySection({ dict }) {
 
   // General translated tags and strings
   const section_sub = dict?.section_sub || "PENGASAS SISTEM AROS";
-  const section_title = dict?.section_title || "Di Sebalik Pembangunan Enjin Automasi AROS Engine";
+  const section_title_line1 = dict?.section_title_line1 || "Di Sebalik Pembangunan Enjin ";
+  const section_title_highlight = dict?.section_title_highlight || "Automasi AROS Engine";
   const section_desc = dict?.section_desc || "Sistem automasi jualan yang dibina berdasarkan data jualan sebenar, bukan sekadar templat bot kosong.";
   const name = dict?.name || "Amin Azman";
   const role = dict?.role || "AROS System Architect";
@@ -108,7 +109,7 @@ export default function AuthoritySection({ dict }) {
           </div>
           
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-white leading-[1.12]">
-            {section_title}
+            {section_title_line1}<span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-amber-500 block sm:inline">{section_title_highlight}</span>
           </h2>
           <p className="text-neutral-400 text-sm md:text-base leading-relaxed max-w-2xl mx-auto font-medium">
             {section_desc}

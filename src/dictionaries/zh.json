@@ -117,7 +117,6 @@
   },
   "timeline": {
     "section_sub": "系统落地执行时间表",
-    "section_title": "从架构搭建，到全自动化系统交付上线",
     "section_desc": "你的销售漏斗严重漏钱，真不是因为广告创意不够好 — 而是你的获客承接系统出了问题。我们不卖没有用的干货课程，也不是信息指南。我们是系统工程师：为你量身搭建销售架构、输入AI大脑、进行压力测试、最后把整套Autopilot自动化成交引擎完整交到你手上。",
     "component_title_sub": "核心技术堆栈",
     "component_title": "What We Build",
@@ -169,11 +168,12 @@
         "title": "模拟流测试与全盘 autopilot 交付",
         "desc": "我们启动高密度的真人对话模拟测试，确保 AI 回复语气完全对味、确认付款链路畅通后，正式把全自动赚钱系统移交至您手上。"
       }
-    ]
+    ],
+    "section_title_line1": "从架构搭建，到",
+    "section_title_highlight": "全自动化系统交付上线"
   },
   "case_studies": {
     "section_sub": "THE ENTERPRISE REVENUE ARCHITECTURE",
-    "section_title": "堵死流失流量。打造 24/7 全天候自动运转的闭环获客系统",
     "section_desc": "现代化的数字营销，绝对不是疯狂砸钱跑广告，然后把希望全部寄托在客服人员手动敲键盘回复上。你需要的是一套从流量获取到客户生命周期价值 (LTV) 沉淀、高自动化且完全闭合的营销生态网。",
     "cta_board_title": "立即现场测试我们的智能成交 AI",
     "cta_board_desc": "随意输入任何刁钻的常规产品问题，亲自感受我们 sub-second 的极速回复体验。",
@@ -217,11 +217,12 @@
         "title": "72 小时",
         "desc": "72小时内将调试完毕的完整医用级 AI 销售环境无缝部署至您的核心日常业务运营中。"
       }
-    ]
+    ],
+    "section_title_line1": "堵死流失流量。",
+    "section_title_highlight": "打造 24/7 全天候自动运转的闭环获客系统"
   },
   "technical_architecture": {
     "section_sub": "▸ 系统底层技术基础设施架构流",
-    "section_title": "揭开 AROS 幕后高效转化的底层逻辑",
     "warn_title": "营销基础设施高危警告：",
     "warn_desc": "如果您的销售链路中缺乏了 Phase 03、04 和 05（即落地页意向加温与 AI 自动化关单拦截机制），根据流量漏斗数学模型，您投入在 Phase 01 和 02 的高额广告费将会白白蒸发掉 80% 以上。",
     "steps": [
@@ -255,11 +256,12 @@
         "title": "LTV Optimization",
         "desc": "所有转化和未转化的老客数据将被统一归档进高响应的结构化关系模型中，为您后续的跨界复购和二次营销做最强的资产储备。"
       }
-    ]
+    ],
+    "section_title_line1": "揭开 AROS 幕后高效转化的",
+    "section_title_highlight": "底层逻辑"
   },
   "testimonials": {
     "section_sub": "系统效能全盘数据分析",
-    "section_title": "多维效能横向对比：AROS AI 智能引擎 vs 传统获客承接手段",
     "section_desc": "在商业战场上，数据是唯一的终极事实。以下是人工客服、呆板关键词菜单机器人与 AROS 全能版 AI 智能成交引擎的效率硬核对比。",
     "recommendation_badge": "官方极力推荐（最佳回报率）",
     "performance_badge": "高能效转化首选",
@@ -316,11 +318,12 @@
           "status": "极致性价比方案"
         }
       ]
-    }
+    },
+    "section_title_line1": "多维效能横向对比：",
+    "section_title_highlight": "AROS AI 智能引擎 vs 传统获客承接手段"
   },
   "authority": {
     "section_sub": "AROS 系统核心总架构师",
-    "section_title": "揭秘 AROS 全自动化成交引擎背后的研发总指挥",
     "section_desc": "一套真正基于大体量真实成交流水和实战数据锻造出来的自动化财富系统，绝非普通的空壳死 Bot。",
     "name": "Amin Azman",
     "role": "AROS 系统架构师",
@@ -378,12 +381,13 @@
       "在经历了无数次疯狂测试、惨烈失败并重新绝地反击之后 — 我终于研发出了一套基于纯粹硬核数学模型的“企业工程学系统 (Business Engineering Framework)”，彻底扭转了我的商业大盘运势。通过独特的【Hero Product 爆款爆破策略】、极致的【Negative CAC 负获客成本战术】以及【客户生命周期价值 (LTV) 最大化模型】，我成功在短短 12 个月内，将一个完全从零开始的新实体资产，硬生生拉升到了年流水超 1200 万令吉 (RM12 Million) 的大盘 Run Rate。",
       "这个结果从来不是什么玄学，更不是什么商业运气 — 它是纯粹的商业数学逻辑，完全可以被完美复制。",
       "AROS 成交系统，就是在这场没有硝烟的千万元级财富战役中淬炼出来的终极产物。我们开发它，就是为了彻底解决我们自己曾夜夜失眠、痛彻心扉的死穴：每天半夜两三点广告进人最猛的时候，员工全在睡觉无人回复，导致白白烧掉几千块广告费。如果这套底层系统架构足够强悍到能支撑起我 1200 万令吉的财富流水线，那它就绝对足够强悍，能够死死锁住你企业进来的每一个精准点击和每一分应得的利润。"
-    ]
+    ],
+    "section_title_line1": "揭秘 AROS 全自动化成交引擎背后的",
+    "section_title_highlight": "研发总指挥"
   },
   "pricing": {
     "section_sub": "AROS 资本投资技术方案",
     "section_title_line1": "选择最适合您企业的",
-    "section_title_line2": "自动化成交系统",
     "section_desc": "一次性投资部署企业级智能成交系统。绝无隐形收费，技术配置全盘由我们代劳。",
     "early_adopter_badge": "公测首发特惠 (Early Adopter Offer) — 席位有限",
     "promo_badge": "本周特惠狂飙",
@@ -505,7 +509,8 @@
         "unstop_desc_end": "24/7 全天候永不停歇。",
         "btn_cta": "锁定 AROS Complete AI Engine 顶配打包方案"
       }
-    }
+    },
+    "section_title_highlight": "自动化成交系统"
   },
   "roi_bridge": {
     "section_sub": "您企业的真实投入产出比 (ROI) 深度复盘",

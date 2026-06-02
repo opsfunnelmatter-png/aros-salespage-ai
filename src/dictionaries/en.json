@@ -117,7 +117,6 @@
   },
   "timeline": {
     "section_sub": "IMPLEMENTATION TIMELINE",
-    "section_title": "From Development Framework To Fully Operational System",
     "section_desc": "Your sales leakage isn't caused by bad ads — it's an infrastructure problem in handling customers. We don't sell courses or standard guidebooks. We operate as engineers: we build a structured funnel, deploy the AI, test it extensively, and hand over a complete autopilot sales engine directly to you.",
     "component_title_sub": "DEVELOPMENT STACK",
     "component_title": "What We Build",
@@ -169,11 +168,12 @@
         "title": "Comprehensive Testing & Deployment",
         "desc": "We execute live conversational simulation stress-tests, calibrate operational parameters, and transition the engine to autopilot."
       }
-    ]
+    ],
+    "section_title_line1": "From Development Framework To ",
+    "section_title_highlight": "Fully Operational System"
   },
   "case_studies": {
     "section_sub": "THE ENTERPRISE REVENUE ARCHITECTURE",
-    "section_title": "Plug Your Lead Leaks. 24/7 Autopilot Sales Ecosystem Engineering",
     "section_desc": "Modern digital marketing isn't just about driving traffic and expecting human agents to manage responses manually. You need a high-conversion, leak-proof automated loop spanning from acquisition to accurate customer LTV tracking.",
     "cta_board_title": "TEST OUR CONVERSATIONAL AI BOT NOW",
     "cta_board_desc": "Fire any complex product questions and inspect our lightning response speed.",
@@ -217,11 +217,12 @@
         "title": "72 Hours",
         "desc": "Full production environment hand-off integrated straight into your operational business channels."
       }
-    ]
+    ],
+    "section_title_line1": "Plug Your Lead Leaks. ",
+    "section_title_highlight": "24/7 Autopilot Sales Ecosystem Engineering"
   },
   "technical_architecture": {
     "section_sub": "▸ TECHNICAL INFRASTRUCTURE STACK",
-    "section_title": "The Backend Conversion Flow Mechanism",
     "warn_title": "INFRASTRUCTURE SECURITY NOTICE:",
     "warn_desc": "If your current funnel lacks Phase 03, 04, and 05 integrations (Intent Warming & Auto-Close), 80% of your marketing capital spent on Phase 01 and 02 will mathematically melt away.",
     "steps": [
@@ -255,11 +256,12 @@
         "title": "LTV Optimization",
         "desc": "Customer historical records are indexed into deep, clean relational structures engineered for high-yield retargeting and cross-selling campaigns."
       }
-    ]
+    ],
+    "section_title_line1": "The Backend Conversion ",
+    "section_title_highlight": "Flow Mechanism"
   },
   "testimonials": {
     "section_sub": "SYSTEM EFFICIENCY ANALYSIS",
-    "section_title": "Efficiency Benchmark: AROS AI Engine vs Traditional Methods",
     "section_desc": "In enterprise, data represents the ultimate truth. Below is a direct efficiency matrix comparing human agents, rigid keyword chatbots, and the AROS Complete AI Engine.",
     "recommendation_badge": "RECOMMENDED (BEST VALUE)",
     "performance_badge": "HIGH PERFORMANCE CHOICE",
@@ -316,11 +318,12 @@
           "status": "MAXIMUM ROI PENNY-SAVING"
         }
       ]
-    }
+    },
+    "section_title_line1": "Efficiency Benchmark: ",
+    "section_title_highlight": "AROS AI Engine vs Traditional Methods"
   },
   "authority": {
     "section_sub": "AROS FOUNDATION ARCHITECT",
-    "section_title": "The Engineering Blueprint Behind The AROS Automation Framework",
     "section_desc": "A commercial automation system forged from actual high-scale conversion records, not another template bot.",
     "name": "Amin Azman",
     "role": "AROS System Architect",
@@ -378,12 +381,13 @@
       "Following years of relentless execution, failures, and structural rebuilds, I engineered a proprietary Business Engineering Framework built on cold, mathematically proven scaling mechanisms that fundamentally flipped my operational direction. Utilizing strategic Hero Product funnels, calculated Negative CAC acquisition models, and extreme Lifetime Value (LTV) maximization, I successfully propelled a newly launched asset to hit a RM12 Million annual run rate within its first 12 months of deployment.",
       "This output was neither luck nor commercial magic — it is pure business mathematics designed to be replicated.",
       "AROS is the direct infrastructural manifestation born from these real-world scaling battles. We engineered this system to plug the exact wounds we bled from: massive surges of high-intent traffic crashing in past midnight, left completely unanswered while ad spend dissolved with zero returns. If this operational architecture is resilient enough to anchor a RM12 Million pipeline, it is more than capable of protecting every single piece of revenue entering your business."
-    ]
+    ],
+    "section_title_line1": "The Engineering Blueprint Behind ",
+    "section_title_highlight": "The AROS Automation Framework"
   },
   "pricing": {
     "section_sub": "AROS INVESTMENT FRAMEWORK",
     "section_title_line1": "Choose the Ideal System for ",
-    "section_title_line2": "Your Business",
     "section_desc": "A single investment for a premium-grade sales automation framework. No hidden parameters, structural deployment fully managed by our engineering force.",
     "early_adopter_badge": "Early Adopter Offer — Limited Slots Remaining",
     "promo_badge": "THIS WEEK'S PROMOTION",
@@ -505,7 +509,8 @@
         "unstop_desc_end": "24/7 with zero friction.",
         "btn_cta": "Lock AROS Complete AI Engine System Bundle"
       }
-    }
+    },
+    "section_title_highlight": "Your Business"
   },
   "roi_bridge": {
     "section_sub": "YOUR ENTERPRISE ROI MATRIX METRICS",

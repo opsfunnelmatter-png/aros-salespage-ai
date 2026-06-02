@@ -62,7 +62,8 @@ export default function TechnicalArchitecture({ dict }) {
   });
 
   const section_sub = dict?.section_sub || "▸ ALIRAN INFRASTRUKTUR TEKNIKAL";
-  const section_title = dict?.section_title || "Seni Bina Ekosistem Jualan Di Sebalik Tabir";
+  const section_title_line1 = dict?.section_title_line1 || "Seni Bina Ekosistem ";
+  const section_title_highlight = dict?.section_title_highlight || "Jualan Di Sebalik Tabir";
   const warn_title = dict?.warn_title || "AMARAN INFRASTRUKTUR SISTEM:";
   const warn_desc = dict?.warn_desc || "Jika sistem anda sekarang tiada struktur Fasa 03, 04, dan 05 (Intent Warming & Auto-Close), modal iklan di Fasa 01 and 02 secara matematik akan hangus dan lebur 80% begitu sahaja.";
 
@@ -79,7 +80,7 @@ export default function TechnicalArchitecture({ dict }) {
             {section_sub}
           </span>
           <h2 className="text-4xl md:text-5xl font-black tracking-tight text-white leading-[1.12]">
-            {section_title}
+            {section_title_line1}<span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-amber-500 block sm:inline">{section_title_highlight}</span>
           </h2>
         </div>
 

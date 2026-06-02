@@ -117,7 +117,6 @@
   },
   "timeline": {
     "section_sub": "GARIS MASA PELAKSANAAN",
-    "section_title": "Dari Rangka Pembangunan Sehingga Sistem Sedia Beroperasi",
     "section_desc": "Kebocoran jualan anda bukan masalah iklan tak menarik — ia masalah sistem melayan customer. Kami bukan jual kelas atau buku panduan. Kami bertindak sebagai jurutera: bina sistem jualan tersusun, pasang AI, uji, dan serahkan enjin jualan autopilot yang lengkap kepada anda.",
     "component_title_sub": "KOMPONEN PEMBANGUNAN",
     "component_title": "What We Build",
@@ -169,11 +168,12 @@
         "title": "Ujian Penuh & Sistem Live",
         "desc": "Kami jalankan simulasi perbualan untuk pastikan AI membalas lancar, sahkan parameter operasi, dan serahkan sistem autopilot kepada anda."
       }
-    ]
+    ],
+    "section_title_line1": "Dari Rangka Pembangunan Sehingga ",
+    "section_title_highlight": "Sistem Sedia Beroperasi"
   },
   "case_studies": {
     "section_sub": "THE ENTERPRISE REVENUE ARCHITECTURE",
-    "section_title": "Hentikan Kebocoran Leads. Seni Bina Ekosistem Pemasaran Autopilot 24/7",
     "section_desc": "Seni bina kempen pemasaran moden bukan sekadar menjalankan iklan dan berharap staf manusia membalas secara manual. Anda perlukan kitaran ekosistem kalis bocor berautomasi tinggi dari fasa perolehan trafik sehingga ke pengiraan nilai LTV prospek.",
     "cta_board_title": "KLIK & UJI AI BOT KAMI SEKARANG",
     "cta_board_desc": "Cuba hantar apa sahaja soalan & tengok kelajuan respons bot",
@@ -217,11 +217,12 @@
         "title": "72 Jam",
         "desc": "Penyerahan sistem AI sepenuhnya ke dalam bisnes anda lengkap dengan integrasi platform."
       }
-    ]
+    ],
+    "section_title_line1": "Hentikan Kebocoran Leads. ",
+    "section_title_highlight": "Seni Bina Ekosistem Pemasaran Autopilot 24/7"
   },
   "technical_architecture": {
     "section_sub": "▸ ALIRAN INFRASTRUKTUR TEKNIKAL",
-    "section_title": "Seni Bina Ekosistem Jualan Di Sebalik Tabir",
     "warn_title": "AMARAN INFRASTRUKTUR SISTEM:",
     "warn_desc": "Jika sistem anda sekarang tiada struktur Fasa 03, 04, dan 05 (Intent Warming & Auto-Close), modal iklan di Fasa 01 and 02 secara matematik akan hangus dan lebur 80% begitu sahaja.",
     "steps": [
@@ -255,11 +256,12 @@
         "title": "LTV Optimization",
         "desc": "Database pelanggan disusun rapi dan terstruktur untuk kempen retargeting serta cross-selling."
       }
-    ]
+    ],
+    "section_title_line1": "Seni Bina Ekosistem ",
+    "section_title_highlight": "Jualan Di Sebalik Tabir"
   },
   "testimonials": {
     "section_sub": "ANALISIS KECEKAPAN SISTEM",
-    "section_title": "Perbandingan Kecekapan: AROS AI Engine vs Kaedah Biasa",
     "section_desc": "Dalam perniagaan, angka adalah fakta mutlak. Berikut adalah perbandingan terus kecekapan antara kaedah staf manual, chatbot menu kaku, dan AROS Complete AI Engine.",
     "recommendation_badge": "REKOMENDASI (TERBAIK)",
     "performance_badge": "PILIHAN PRESTASI TINGGI",
@@ -316,11 +318,12 @@
           "status": "KOS PALING PENJIMATAN"
         }
       ]
-    }
+    },
+    "section_title_line1": "Perbandingan Kecekapan: ",
+    "section_title_highlight": "AROS AI Engine vs Kaedah Biasa"
   },
   "authority": {
     "section_sub": "PENGASAS SISTEM AROS",
-    "section_title": "Di Sebalik Pembangunan Enjin Automasi AROS Engine",
     "section_desc": "Sistem automasi jualan yang dibina berdasarkan data jualan sebenar, bukan sekadar templat bot kosong.",
     "name": "Amin Azman",
     "role": "AROS System Architect",
@@ -378,12 +381,13 @@
       "Selepas bertahun-tahun mencuba, gagal, dan bangkit semula — saya menemui satu Sistem Kejuruteraan Bisnes (Business Engineering) berasaskan matematik tegar yang mengubah kompas perniagaan saya sepenuhnya. Melalui strategi Hero Product, taktik Negative CAC, dan pemaksimuman Lifetime Value (LTV), saya berjaya memacu sebuah perniagaan baru sehingga mencapai run rate RM12 Juta dalam tahun pertama.",
       "Ini bukan kebetulan atau magik — ini matematik bisnes yang boleh direplikasi.",
       "AROS adalah sistem yang lahir dari pengalaman sebenar ini. Kami bina untuk menyelesaikan masalah yang kami sendiri hadapi: leads masuk waktu tidur, tiada siapa layan, duit iklan hangus tanpa hasil. Kalau sistem ini cukup kuat untuk memacu RM12 juta, ia cukup kuat untuk menjaga setiap lead yang masuk ke bisnes anda."
-    ]
+    ],
+    "section_title_line1": "Di Sebalik Pembangunan Enjin ",
+    "section_title_highlight": "Automasi AROS Engine"
   },
   "pricing": {
     "section_sub": "PELAN PELABURAN AROS",
     "section_title_line1": "Pilih Sistem Yang Sesuai Untuk ",
-    "section_title_line2": "Perniagaan Anda",
     "section_desc": "Satu pelaburan untuk sistem automasi jualan bertaraf premium. Tiada caj tersembunyi, setup diuruskan sepenuhnya oleh kami.",
     "early_adopter_badge": "Harga Pelancaran Awal (Early Adopter Offer) — Slot Terhad",
     "promo_badge": "PROMOSI MINGGU INI",
@@ -505,7 +509,8 @@
         "unstop_desc_end": "24/7 tanpa henti.",
         "btn_cta": "Pilih Pakej AROS Complete AI Engine"
       }
-    }
+    },
+    "section_title_highlight": "Perniagaan Anda"
   },
   "roi_bridge": {
     "section_sub": "ANALISIS ROI PERNIAGAAN ANDA",

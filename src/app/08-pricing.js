@@ -75,7 +75,7 @@ export default function PricingMatrix({ dict, lang = 'bm' }) {
             <Zap className="w-3.5 h-3.5" /> {dict.section_sub}
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-white leading-[1.15]">
-            {dict.section_title_line1}<span className="bg-gradient-to-r from-orange-400 to-amber-500 bg-clip-text text-transparent">{dict.section_title_line2}</span>
+            {dict.section_title_line1}<span className="bg-gradient-to-r from-orange-400 to-amber-500 bg-clip-text text-transparent">{dict.section_title_highlight}</span>
           </h2>
           <p className="text-neutral-400 text-sm md:text-base max-w-xl mx-auto font-medium leading-relaxed">
             {dict.section_desc}

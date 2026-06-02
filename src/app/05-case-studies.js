@@ -117,7 +117,8 @@ export default function CaseStudies({ dict }) {
 
   // General texts
   const section_sub = dict?.section_sub || "THE ENTERPRISE REVENUE ARCHITECTURE";
-  const section_title = dict?.section_title || "Hentikan Kebocoran Leads. Seni Bina Ekosistem Pemasaran Autopilot 24/7";
+  const section_title_line1 = dict?.section_title_line1 || "Hentikan Kebocoran Leads. ";
+  const section_title_highlight = dict?.section_title_highlight || "Seni Bina Ekosistem Pemasaran Autopilot 24/7";
   const section_desc = dict?.section_desc || "Seni bina kempen pemasaran moden bukan sekadar menjalankan iklan dan berharap staf manusia membalas secara manual. Anda perlukan kitaran ekosistem kalis bocor berautomasi tinggi dari fasa perolehan trafik sehingga ke pengiraan nilai LTV prospek.";
   const cta_board_title = dict?.cta_board_title || "KLIK & UJI AI BOT KAMI SEKARANG";
   const cta_board_desc = dict?.cta_board_desc || "Cuba hantar apa sahaja soalan & tengok kelajuan respons bot";
@@ -138,7 +139,7 @@ export default function CaseStudies({ dict }) {
             {section_sub}
           </div>
           <h2 className="text-4xl md:text-5xl font-black tracking-tight text-white leading-[1.12]">
-            {section_title}
+            {section_title_line1}<span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-amber-500 block sm:inline">{section_title_highlight}</span>
           </h2>
           <p className="text-neutral-400 text-sm md:text-base leading-relaxed max-w-2xl mx-auto font-medium">
             {section_desc}
