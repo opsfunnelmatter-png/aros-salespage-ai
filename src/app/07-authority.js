@@ -87,7 +87,7 @@ export default function AuthoritySection({ dict }) {
   const section_desc = dict?.section_desc || "Sistem automasi jualan yang dibina berdasarkan data jualan sebenar, bukan sekadar templat bot kosong.";
   const name = dict?.name || "Amin Azman";
   const role = dict?.role || "AROS System Architect";
-  const company_tag = dict?.company_tag || "BROMOVER RESOURCES SDN. BHD. · EST. 2019";
+  const company_tag = dict?.company_tag || "BROMOVER RESOURCES SDN. BHD. · EST. 2019 · 30+ Bisnes Didigitalkan";
   const pilot_title = dict?.pilot_title || "// FASA PELANCARAN AWAL — PILOT CLIENT OFFER";
   const pilot_desc = dict?.pilot_desc || "AROS kini dalam fasa pelancaran awal. Kami membuka 3 slot pilot klien sahaja minggu ini bagi memastikan setiap setup mendapat perhatian penuh pasukan jurutera kami. Sebagai pilot klien pertama, anda mendapat harga pelancaran — dan kami committed untuk sistem live dalam masa 72 jam, atau kami refund 100% tanpa soal.";
   const footer_left = dict?.footer_left || "ADVANCED SYSTEM ARCHITECTURE PROTOCOL SECURED";
