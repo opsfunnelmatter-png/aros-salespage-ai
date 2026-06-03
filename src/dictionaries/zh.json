@@ -180,6 +180,7 @@
     "cta_board_title": "立即现场测试我们的智能成交 AI",
     "cta_board_desc": "随意输入任何刁钻的常规产品问题，亲自感受我们 sub-second 的极速回复体验。",
     "btn_chat_pay": "立即付款",
+    "whatsapp_link": "https://api.whatsapp.com/send/?phone=601112755161&text=%E6%82%A8%E5%A5%BDAROS%EF%BC%8C%E6%88%91%E6%83%B3%E7%8E%B0%E5%9C%A8%E6%B5%8B%E8%AF%95%E4%B8%80%E4%B8%8B%E8%BF%99%E4%B8%AA%E6%9C%BA%E5%99%A8%E4%BA%BA%E7%9A%84%E5%8A%9F%E8%83%BD&type=phone_number&app_absent=0",
     "chat": [
       {
         "sender": "customer",

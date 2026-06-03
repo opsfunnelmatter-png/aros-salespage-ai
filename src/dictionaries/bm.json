@@ -180,6 +180,7 @@
     "cta_board_title": "KLIK & UJI AI BOT KAMI SEKARANG",
     "cta_board_desc": "Cuba hantar apa sahaja soalan & tengok kelajuan respons bot",
     "btn_chat_pay": "BAYAR",
+    "whatsapp_link": "https://api.whatsapp.com/send/?phone=601112755161&text=Salam+AROS%2C+saya+nak+test+kehebatan+bot+ni+sekarang&type=phone_number&app_absent=0",
     "chat": [
       {
         "sender": "customer",

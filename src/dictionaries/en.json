@@ -180,6 +180,7 @@
     "cta_board_title": "TEST OUR CONVERSATIONAL AI BOT NOW",
     "cta_board_desc": "Fire any complex product questions and inspect our lightning response speed.",
     "btn_chat_pay": "PAY NOW",
+    "whatsapp_link": "https://api.whatsapp.com/send/?phone=601112755161&text=Hi+AROS%2C+I+want+to+test+this+bot%27s+capabilities+now&type=phone_number&app_absent=0",
     "chat": [
       {
         "sender": "customer",

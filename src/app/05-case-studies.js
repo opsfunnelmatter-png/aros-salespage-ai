@@ -123,6 +123,7 @@ export default function CaseStudies({ dict }) {
   const cta_board_title = dict?.cta_board_title || "KLIK & UJI AI BOT KAMI SEKARANG";
   const cta_board_desc = dict?.cta_board_desc || "Cuba hantar apa sahaja soalan & tengok kelajuan respons bot";
   const btn_chat_pay = dict?.btn_chat_pay || "BAYAR";
+  const whatsapp_link = dict?.whatsapp_link || "https://api.whatsapp.com/send/?phone=601112755161&text=Salam+AROS%2C+saya+nak+test+kehebatan+bot+ni+sekarang&type=phone_number&app_absent=0";
 
   return (
     <section className="relative z-10 w-full bg-[#0B0F19] border-t border-white/5 py-24 text-white overflow-hidden">
@@ -268,7 +269,7 @@ export default function CaseStudies({ dict }) {
             {/* PREMIUM CTA BUTTON FOR BOT TESTING */}
             <div className="w-full text-center space-y-2 relative z-20 mb-2">
               <a 
-                href="https://wa.me/601112755161?text=Salam%20AROS%2C%20saya%20nak%20test%20kehebatan%20bot%20ni%20sekarang"
+                href={whatsapp_link}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group relative w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-orange-500 via-amber-500 to-orange-500 text-black font-black text-xs py-4 px-6 rounded-2xl cursor-pointer overflow-hidden transform transition-all duration-300 animate-premium-pulse hover:scale-[1.02] active:scale-95 whitespace-normal tracking-wide shadow-[0_0_25px_rgba(249,115,22,0.45)] select-none text-center"
