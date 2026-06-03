@@ -121,11 +121,11 @@ export default function PricingMatrix({ dict, lang = 'bm' }) {
           {/* ============================================================= */}
           {/* COLUMN KIRI — SALESPAGE STARTER & AROS AI AGENT               */}
           {/* ============================================================= */}
-          <div className="flex flex-col gap-8 lg:h-full">
+          <div className="flex flex-col gap-8">
             
             {/* PAKEJ 1 — SALESPAGE STARTER */}
             {starterPkg && (
-              <div className="bg-[#0F1424]/40 border border-white/5 rounded-3xl p-6 sm:p-7 hover:border-white/10 transition-all duration-300 relative overflow-hidden flex flex-col justify-between lg:h-full">
+              <div className="bg-[#0F1424]/40 border border-white/5 rounded-3xl p-6 sm:p-7 hover:border-white/10 transition-all duration-300 relative overflow-hidden flex flex-col justify-between">
                 <div className="text-left">
                   <div className="text-[9px] font-mono text-neutral-500 uppercase tracking-widest font-bold mb-1">{starterPkg.badge}</div>
                   <h3 className="text-xl font-black text-white tracking-tight">{starterPkg.name}</h3>
@@ -172,7 +172,7 @@ export default function PricingMatrix({ dict, lang = 'bm' }) {
 
             {/* PAKEJ 2 — AROS AI AGENT */}
             {agentPkg && (
-              <div className="bg-[#0F1424]/40 border border-white/5 rounded-3xl p-6 sm:p-7 hover:border-white/10 transition-all duration-300 relative overflow-hidden flex flex-col justify-between lg:h-full">
+              <div className="bg-[#0F1424]/40 border border-white/5 rounded-3xl p-6 sm:p-7 hover:border-white/10 transition-all duration-300 relative overflow-hidden flex flex-col justify-between">
                 <div className="text-left">
                   <div className="text-[9px] font-mono text-neutral-500 uppercase tracking-widest font-bold mb-1">{agentPkg.badge}</div>
                   <h3 className="text-xl font-black text-white tracking-tight">{agentPkg.name}</h3>
