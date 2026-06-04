@@ -3,7 +3,7 @@
     "badge": "SISTEM JUALAN AUTOMATIK WHATSAPP",
     "headline_1": "Leads Masuk Malam.",
     "headline_2": "Esok Pagi Dah Ada Sale.",
-    "subheadline": "Kami pasang sistem AI ke nombor WhatsApp rasmi anda — AI balas dalam 0.2 saat, tapis prospek yang serius, dan hantar pautan pembayaran terus. Automatik 24/7/365.",
+    "subheadline": "Kami pasang otak AI terus ke nombor WhatsApp rasmi anda — layan, qualify, dan close leads secara autopilot. Tanpa tukar website. Tanpa henti. 24/7/365.",
     "cta": "Kira Berapa RM Anda Rugi Setiap Malam",
     "cta_sub": "⏱️ Tak sampai 5 saat untuk dapat jawapan.",
     "meta_setup": "SETUP RASMI META CLOUD API (100% SELAMAT)",
@@ -127,18 +127,18 @@
     "deployment_title": "Sistem Live Dalam Masa 3 Hari",
     "deployment_desc": "Proses setup tersusun, pantas, dan telus tanpa sebarang delay.",
     "limit_note_title": "Had Setup Mingguan:",
-    "limit_note_desc": "Kami hadkan setup kepada 3 syarikat sahaja seminggu demi menjaga kualiti setup AI dan kelajuan sales page anda pada tahap terbaik.",
+    "limit_note_desc": "Kami hadkan setup kepada 3 syarikat sahaja seminggu demi menjaga kualiti konfigurasi AI dan integrasi sistem pada tahap terbaik untuk setiap klien.",
     "btn_action": "Lihat Pakej & Harga →",
     "cards": [
       {
-        "tag": "Halaman Jualan",
-        "title": "Salespage Ultra-Pantas",
-        "desc": "Sales page premium Next.js dioptimumkan untuk kelajuan loading bawah 0.1 saat. Prospek tak lari selepas klik iklan."
+        "tag": "Latihan AI",
+        "title": "Custom AI Brain Training",
+        "desc": "Otak AI dilatih khusus mengikut produk, skrip FAQ dan objection-handling perniagaan anda sendiri — bukan templat generik."
       },
       {
         "tag": "Otak AI Utama",
         "title": "Otak AI Closing WhatsApp",
-        "desc": "Robot AI terlatih khusus mengikut skrip FAQ and produk anda sendiri. Layan & closing leads secara automatik 24/7."
+        "desc": "Robot AI terlatih khusus mengikut skrip FAQ dan produk anda sendiri. Layan & closing leads secara automatik 24/7."
       },
       {
         "tag": "Follow-Up Auto",
@@ -146,9 +146,9 @@
         "desc": "Sistem susulan automatik. Ia mengejar semula prospek yang 'blue-tick' atau senyap mengikut reaksi perbualan."
       },
       {
-        "tag": "Gerbang Bayaran",
-        "title": "Integrasi Bayaran Lancar",
-        "desc": "Pautan gerbang pembayaran (Stripe/FPX) dipasang terus di dalam sales page. Checkout pantas tanpa friction."
+        "tag": "Analitik",
+        "title": "Laporan Analitik Bulanan",
+        "desc": "Dashboard prestasi AI anda setiap bulan — leads yang dilayan, kadar respons, dan anggaran recovery jualan yang diselamatkan."
       }
     ],
     "steps": [
@@ -317,7 +317,7 @@
           "desc": "Komitmen kewangan bulanan dan tahunan.",
           "human": "RM2,500 - RM4,000 / Bln (Kos gaji & bonus staff)",
           "bot": "RM150 - RM400 / Bln (Inbox kaku tanpa AI)",
-          "aros": "RM999 Setup (Termasuk server bulan pertama) + RM99/bln mulai bulan ke-2",
+          "aros": "RM499 Setup (Bulan 1 All-In) + RM99/bln mulai bulan ke-2",
           "status": "KOS PALING PENJIMATAN"
         }
       ]
@@ -389,139 +389,93 @@
     "section_title_highlight": "Automasi AROS Engine"
   },
   "pricing": {
-    "section_sub": "PELAN PELABURAN AROS",
-    "section_title_line1": "Pilih Sistem Yang Sesuai Untuk ",
-    "section_desc": "Satu pelaburan untuk sistem automasi jualan bertaraf premium. Tiada caj tersembunyi, setup diuruskan sepenuhnya oleh kami.",
-    "early_adopter_badge": "Harga Pelancaran Awal (Early Adopter Offer) — Slot Terhad",
-    "promo_badge": "PROMOSI MINGGU INI",
-    "promo_text_start": "Harga promo pelancaran awal ini sah dari ",
-    "promo_text_end": " sahaja.",
-    "promo_limit_note": "Slot setup mingguan dihadkan bagi mengekalkan kualiti konfigurasi AI optimum untuk setiap klien.",
-    "dfy_badge": "100% Done-For-You (DFY)",
-    "dfy_title": "Dipasang secara ",
-    "dfy_highlight": "Autopilot",
-    "dfy_desc": " oleh jurutera kami. Anda sedia maklumat bisnes & FAQ, kami uruskan setup server, latihan AI & integrasi Meta API sehingga live. Anda tidak perlu sakit kepala setup teknikal yang rumit — kami uruskan semuanya untuk anda.",
-    "secure_payment_label": "🔒 Pembayaran Selamat SSL",
-    "corporate_ssm_label": "Bromover Resources Sdn. Bhd. (201901003230)",
-    "fee_faq_q": "Kenapa Ada Caj RM99/Bulan Mulai Bulan Kedua?",
-    "fee_faq_a_part1": "Sistem AI anda berjalan 24/7 di atas infrastruktur awan enterprise — cloud server, lesen Meta Cloud API rasmi, dan maintenance berterusan — semuanya diuruskan penuh oleh pasukan jurutera kami. Ini menggantikan keperluan untuk mengupah staf malam ",
-    "fee_faq_a_salary": "RM2,500+/bulan",
-    "fee_faq_a_part2": " atau berlangganan platform inbox biasa ",
-    "fee_faq_a_inbox_cost": "RM300–400/bulan",
-    "fee_faq_a_part3": " — dengan kapasiti dan kecerdasan yang jauh lebih tinggi.",
-    "entity_verification_label": "Diselia oleh entiti sah: ",
-    "corporate_title_raw": "BROMOVER RESOURCES SDN. BHD.",
-    "footer_architecture_note": "Seni Bina Sistem Diuruskan Penuh Oleh Pasukan Jurutera Bromover AI",
-    "packages": {
-      "starter": {
-        "badge": "PAKEJ PERMULAAN",
-        "name": "Salespage Starter",
-        "desc": "Sesuai jika anda mahukan halaman jualan Next.js premium yang ultra-pantas untuk menerima trafik iklan.",
-        "spec_label": "// SPESIFIKASI UTAMA",
-        "specs": [
-          "Custom Domain & Hosting (Percuma Tahun 1)",
-          "Design Salespage Premium Next.js (Laju & Lincah)",
-          "Ultra-Low Latency Load Time (< 0.1s) via Edge CDN",
-          "High-Converting Sales Copywriting Architecture",
-          "Meta/TikTok Pixel Tracking Ready",
-          "Bimbingan Setup Payment Gateway"
-        ],
-        "value_label": "RM1,499 VALUE",
-        "investment_label": "Total Pelaburan One-Off",
-        "price": "RM699",
-        "renewal_note": "Hosting & domain percuma tahun pertama. Seterusnya cuma RM129/tahun (tiada yuran bulanan).",
-        "btn_cta": "Pilih Pakej Salespage Starter"
-      },
-      "agent": {
-        "badge": "INTEGRASI BACKEND AI",
-        "name": "AROS AI Agent",
-        "desc": "Sistem AI backend WhatsApp untuk menguruskan FAQ, tagging, dan follow-up prospek secara automatik terus ke sistem/situs sedia ada anda.",
-        "spec_label": "// SPESIFIKASI BACKEND AI",
-        "specs_bold": [
-          {
-            "title": "AI Closing Brain:",
-            "desc": " FAQ & closing sales 24/7/365"
-          },
-          {
-            "title": "Memori Pintar AI:",
-            "desc": " Ingat sejarah pesanan & konteks lama"
-          },
-          {
-            "title": "Auto Follow-Up:",
-            "desc": " Kejar leads 'blue-tick' secara autonomi"
-          },
-          {
-            "title": "Auto Tagging Pelanggan:",
-            "desc": " Sistem tag status terus ke DB"
-          },
-          {
-            "title": "Transisi Staf Manusia:",
-            "desc": " Laluan sembang manual bila perlu"
-          },
-          {
-            "title": "Lesen Meta Cloud API:",
-            "desc": " Hantar blast pukal rasmi & selamat"
-          }
-        ],
-        "value_label": "RM2,197 VALUE",
-        "investment_label": "Total Pelaburan One-Off",
-        "price": "RM699",
-        "monthly_label": "Mulai Bulan Kedua:",
-        "monthly_fee": "RM99",
-        "monthly_unit": "/bln",
-        "btn_cta": "Pilih Pakej AROS AI Agent"
-      },
-      "complete": {
-        "top_badge": "PILIHAN UTAMA BISNES: JIMAT RM399",
-        "badge": "GABUNGAN PENUH (FRONTEND + BACKEND)",
-        "name": "Complete AI Engine",
-        "desc": "Sistem hadapan (Salespage Next.js Premium) disambung terus dengan otak AI WhatsApp untuk melayan dan closing sales secara autopilot 24/7.",
-        "spec_label": "// KELENGKAPAN EKOSISTEM PENUH",
-        "specs_bold": [
-          {
-            "title": "Semua Kelebihan Salespage Starter:",
-            "desc": " Halaman jualan Next.js premium, domain (.com), ultra-pantas & copywriter-engineered."
-          },
-          {
-            "title": "Semua Kelebihan AROS AI Agent:",
-            "desc": " Otak AI WhatsApp, memori pintar, transisi staf manual, & enjin blast rasmi Meta Cloud API."
-          },
-          {
-            "title": "Integrasi Lancar End-to-End:",
-            "desc": " Sambungan automatik antara borang pesanan salespage terus ke WhatsApp AI autopilot."
-          },
-          {
-            "title": "Setup Webhook & Pangkalan Data:",
-            "desc": " Rekod penuh log perbualan untuk analitik & pemantauan kempen."
-          },
-          {
-            "title": "30 Hari Sokongan Pasca Pelancaran:",
-            "desc": " Pasukan jurutera kami pantau & tala semula respon AI untuk closing maksima."
-          }
-        ],
-        "breakdown_label": "// BREAKDOWN NILAI KOMPONEN (Pakej Complete)",
-        "value_label": "Total Nilai Sebenar",
-        "value_price": "RM3,696 VALUE",
-        "investment_label": "Total Pelaburan Hari Ini",
-        "price": "RM999",
-        "separate_buy_label": "Beli berasingan: ",
-        "separate_buy_price": "RM1,398",
-        "bundle_save_label": "→ Bundle jimat RM399 serta-merta",
-        "fire_save_desc": "🔥 JIMAT RM399 berbanding beli berasingan (RM699 + RM699). Percuma setup penuh & lesen bulan pertama!",
-        "unstop_desc_start": "AI anda kekal aktif mengejar leads, membalas prospek & generate sale — ",
-        "unstop_desc_end": "24/7 tanpa henti.",
-        "btn_cta": "Pilih Pakej AROS Complete AI Engine"
-      }
-    },
-    "section_title_highlight": "Perniagaan Anda"
-  },
+  "section_sub": "PELAN PELABURAN AROS",
+  "section_title_line1": "Satu Sistem. ",
+  "section_title_highlight": "Satu Keputusan.",
+  "section_desc": "Kami tidak jual website baharu. Kami tidak minta anda tukar iklan atau domain. Kami hanya pasang otak AI terus ke nombor WhatsApp rasmi anda — dan ia mula bekerja dalam masa 72 jam.",
+  "early_adopter_badge": "Harga Pelancaran Awal (Early Adopter Offer) — Slot Terhad",
+  "promo_badge": "PROMOSI MINGGU INI",
+  "promo_text_start": "Harga promo pelancaran awal ini sah dari ",
+  "promo_text_end": " sahaja.",
+  "promo_limit_note": "Slot setup mingguan dihadkan bagi mengekalkan kualiti konfigurasi AI optimum untuk setiap klien.",
+  "bot_diff_title": "⚡ Ini Bukan Chatbot Biasa",
+  "bot_diff_desc": "ManyChat, Wati, dan bot butang membalas ikut aliran kaku. AROS memahami konteks, handle objections, dan close jualan — seperti closer manusia terbaik anda, tapi 24/7 tanpa tidur.",
+  "dfy_badge": "100% Done-For-You (DFY)",
+  "dfy_title": "Dipasang secara ",
+  "dfy_highlight": "Autopilot",
+  "dfy_desc": " oleh jurutera kami. Anda sedia maklumat bisnes & FAQ, kami uruskan setup server, latihan AI & integrasi Meta API sehingga live. Anda tidak perlu sakit kepala setup teknikal yang rumit — kami uruskan semuanya untuk anda.",
+  "guarantee_title": "Jaminan 72 Jam",
+  "guarantee_desc": "Jika sistem tidak live dalam masa 72 jam selepas onboarding — kami refund 100% tanpa soal.",
+  "secure_payment_label": "🔒 Pembayaran Selamat SSL",
+  "corporate_ssm_label": "Bromover Resources Sdn. Bhd. (201901003230)",
+  "fee_faq_q": "Kenapa Ada Caj RM99/Bulan Mulai Bulan Kedua?",
+  "fee_faq_a_part1": "Sistem AI anda berjalan 24/7 di atas infrastruktur awan enterprise — cloud server, lesen Meta Cloud API rasmi, dan maintenance berterusan — semuanya diuruskan penuh oleh pasukan jurutera kami. Ini menggantikan keperluan untuk mengupah staf malam ",
+  "fee_faq_a_salary": "RM2,500+/bulan",
+  "fee_faq_a_part2": " atau berlangganan platform inbox biasa ",
+  "fee_faq_a_inbox_cost": "RM300–400/bulan",
+  "fee_faq_a_part3": " — dengan kapasiti dan kecerdasan yang jauh lebih tinggi.",
+  "entity_verification_label": "Diselia oleh entiti sah: ",
+  "corporate_title_raw": "BROMOVER RESOURCES SDN. BHD.",
+  "footer_architecture_note": "Seni Bina Sistem Diuruskan Penuh Oleh Pasukan Jurutera Bromover AI",
+  "packages": {
+    "solo": {
+      "badge": "PAKEJ TUNGGAL AI WHATSAPP",
+      "name": "AROS AI Agent",
+      "desc": "Keep your current website. Keep your active ads. Kami pasang otak AI terus ke nombor WhatsApp rasmi anda untuk tangkap dan close 40% leads yang masuk lepas jam 10 malam — secara automatik.",
+      "spec_label": "// SPESIFIKASI SISTEM AI",
+      "specs_bold": [
+        {
+          "title": "AI Closing Brain:",
+          "desc": " FAQ & closing sales 24/7/365 — layan beratus leads serentak"
+        },
+        {
+          "title": "Memori Pintar AI:",
+          "desc": " Ingat sejarah pesanan & konteks perbualan lama"
+        },
+        {
+          "title": "Auto Follow-Up:",
+          "desc": " Kejar semula leads 'blue-tick' secara autonomi"
+        },
+        {
+          "title": "Auto Tagging Pelanggan:",
+          "desc": " Sistem tag status prospek terus ke pangkalan data"
+        },
+        {
+          "title": "Transisi Staf Manusia:",
+          "desc": " Laluan sembang manual bila perlu"
+        },
+        {
+          "title": "Lesen Meta Cloud API:",
+          "desc": " Hantar blast pukal rasmi & selamat tanpa risiko ban"
+        }
+      ],
+      "breakdown_label": "// BREAKDOWN NILAI KOMPONEN",
+      "breakdown_items": [
+        { "label": "Custom AI Prompt Engineering", "value": "RM 700" },
+        { "label": "Meta Cloud API Integration + Setup", "value": "RM 500" },
+        { "label": "Webhook + Database Architecture", "value": "RM 400" },
+        { "label": "30-Day Post-Launch Support", "value": "RM 299" },
+        { "label": "Meta Cloud API License (Bulan 1)", "value": "RM 299" }
+      ],
+      "value_label": "Total Nilai Sebenar",
+      "value_price": "RM2,197 VALUE",
+      "investment_label": "Bulan 1 — All-In (Setup + Operasi Penuh)",
+      "price": "RM499",
+      "monthly_label": "Mulai Bulan Kedua:",
+      "monthly_fee": "RM99",
+      "monthly_unit": "/bln",
+      "nightshift_anchor": "Berbanding upah staf malam: RM2,500+/bulan",
+      "btn_cta": "Kunci Slot AI WhatsApp Saya Sekarang"
+    }
+  }
+},
   "roi_bridge": {
     "section_sub": "ANALISIS ROI PERNIAGAAN ANDA",
     "section_title": "SIMULASI ROI — CONTOH SPEND RM300/HARI",
     "label_leak": "Anggaran Kebocoran Iklan / Tahun",
     "sub_leak": "40% leads malam × 80% drop-off",
     "label_cost": "Kos Operasi AROS Setahun",
-    "sub_cost": "RM999 setup + RM99 × 12 bulan",
+    "sub_cost": "RM499 setup + RM99 × 12 bulan",
     "label_saving": "Penjimatan Bersih Anggaran",
     "sub_saving_part1": "berdasarkan bajet iklan anda",
     "sub_saving_part2": "contoh bajet RM300/hari",
@@ -541,12 +495,12 @@
     ],
     "summary": {
       "item1_title": "Seni Bina Sistem",
-      "item1_val": "Nilai RM3,098",
+      "item1_val": "Nilai RM2,197",
       "item2_title": "2 Service Bonuses",
       "item2_val": "+ Nilai RM598",
       "total_title": "TOTAL NILAI SEBENAR",
-      "total_val": "RM3,696",
-      "footer_desc": "Pelaburan combo premium yang membebaskan anda daripada batasan manual dan kerugian kos iklan."
+      "total_val": "RM2,795",
+      "footer_desc": "Pelaburan yang membebaskan anda daripada batasan manual dan kerugian kos iklan — tanpa perlu tukar website atau domain."
     }
   },
   "closure": {
@@ -606,7 +560,15 @@
       },
       {
         "q": "Kalau saya tak puas hati dengan hasil, boleh minta refund?",
-        "a": "Jaminan Komitmen & Kualiti Penuh: Memandangkan sistem ini melibatkan kos penyediaan server awan khusus dan integrasi API rasmi Meta yang disesuaikan mengikut struktur perniagaan anda secara eksklusif, tiada pembatalan atau pulangan wang ditawarkan sebaik sahaja fasa pembangunan infrastruktur sistem anda dimulakan."
+        "a": "Jaminan kami mudah: jika sistem tidak live dalam masa 72 jam selepas anda hantar semua maklumat onboarding, kami refund 100% tanpa soal. Sebaik sistem live dan operasi cloud server bermula, kos infrastruktur yang telah dilaksanakan tidak boleh dikembalikan — sama seperti mana-mana perkhidmatan teknikal profesional yang lain."
+      },
+      {
+        "q": "Saya sudah ada website dan salespage sendiri. Adakah sistem ini masih sesuai?",
+        "a": "Ya — ini adalah kes penggunaan utama AROS. Kami tidak sentuh, ubah, atau gantikan website anda langsung. Kami hanya sambungkan otak AI terus ke nombor WhatsApp rasmi anda. Pixel, domain, dan semua data iklan anda kekal 100% seperti sedia kala. Setup ini plug-and-play sepenuhnya."
+      },
+      {
+        "q": "Apa bezanya AROS dengan ManyChat, Wati, atau chatbot biasa yang saya dah cuba?",
+        "a": "ManyChat, Wati, dan kebanyakan chatbot bekerja mengikut aliran kaku — jika pelanggan tanya soalan di luar 'butang' yang disediakan, sistem tersebut jammed dan tidak boleh balas. AROS menggunakan Large Language Model (LLM) yang dilatih khusus mengikut produk dan skrip bisnes anda. Ia faham konteks, jawab soalan tidak dijangka, handle objections, dan hantar link pembayaran — seperti closer manusia terbaik anda, tapi beroperasi 24/7/365 tanpa gaji."
       }
     ]
   },

@@ -14,8 +14,8 @@ export default function ROIBridge({ dailyBudget, dict }) {
 
   // Formula: 40% leads malam × 80% drop-off × 365 hari
   const yearlyLoss = Math.round(effectiveDaily * 0.40 * 0.80 * 365);
-  // Kos AROS setahun penuh: RM999 setup + RM99 × 12 bulan
-  const arosCostYear = 999 + 99 * 12; // = RM2,187
+  // Kos AROS setahun penuh: RM499 setup + RM99 × 12 bulan
+  const arosCostYear = 499 + 99 * 12; // = RM1,687
   const netSaving = Math.max(0, yearlyLoss - arosCostYear);
 
   const fmt = (n) => `RM${Intl.NumberFormat('en-US').format(n)}`;

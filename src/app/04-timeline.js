@@ -2,7 +2,7 @@
 "use client";
 
 import React from 'react';
-import { Cpu, FileCode2, GitMerge, CheckCircle2, KanbanSquare, ShieldCheck } from 'lucide-react';
+import { Cpu, Brain, GitMerge, CheckCircle2, KanbanSquare, ShieldCheck, BarChart2 } from 'lucide-react';
 
 export default function TimelineProcess({ dict }) {
   const defaultDeliverables = [
@@ -129,10 +129,10 @@ export default function TimelineProcess({ dict }) {
                       <span className="text-[9px] font-mono font-bold text-orange-400 uppercase bg-white/5 border border-white/10 px-2 py-0.5 rounded">
                         {item.tag}
                       </span>
-                      {idx === 0 && <FileCode2 className="w-4 h-4 text-blue-400" />}
+                      {idx === 0 && <Brain className="w-4 h-4 text-orange-400" />}
                       {idx === 1 && <Cpu className="w-4 h-4 text-indigo-400" />}
                       {idx === 2 && <GitMerge className="w-4 h-4 text-purple-400" />}
-                      {idx === 3 && <CheckCircle2 className="w-4 h-4 text-emerald-400" />}
+                      {idx === 3 && <BarChart2 className="w-4 h-4 text-emerald-400" />}
                     </div>
                     <h4 className="font-black text-sm text-white mb-1.5 tracking-tight">{item.title}</h4>
                     <p className="text-neutral-400 text-xs leading-relaxed font-medium">{item.desc}</p>
