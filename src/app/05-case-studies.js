@@ -3,8 +3,9 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import { KanbanSquare, ShieldCheck } from 'lucide-react';
+import TrafficIntegrationTrust from './traffic-integration-trust.js';
 
-export default function CaseStudies({ dict }) {
+export default function CaseStudies({ dict, dictTraffic }) {
   // FASA 5 Chat Sequence Data
   const defaultChatMessages = [
     {
@@ -305,6 +306,9 @@ export default function CaseStudies({ dict }) {
             </div>          </div>
 
         </div>
+        
+        {/* TRAFFIC & INTEGRATION TRUST REINFORCEMENT */}
+        <TrafficIntegrationTrust dict={dictTraffic} />
       </div>
     </section>
   );

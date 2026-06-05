@@ -58,8 +58,8 @@ export default function Home({ params }) {
       <BleedingMath dailyBudget={dailyBudget} setDailyBudget={setDailyBudget} dict={dict.bleeding_math} />
       <DiagnosticBoard dailyBudget={dailyBudget} dict={dict.diagnostic} />
       <PainGrid dict={dict.pain_grid} />
-      <CaseStudies dict={dict.case_studies} />
-      <TimelineProcess dict={dict.timeline} dictTraffic={dict.traffic_trust} />
+      <CaseStudies dict={dict.case_studies} dictTraffic={dict.traffic_trust} />
+      <TimelineProcess dict={dict.timeline} />
       <AuthorityProfile dict={dict.authority} />
       <Testimonials dict={dict.testimonials} />
       <PricingMatrix dict={dict.pricing} lang={lang} />
