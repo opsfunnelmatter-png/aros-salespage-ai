@@ -591,5 +591,24 @@
     "warn_note": "⚠️ Slots for this weekly configuration batch are near capacity",
     "ssm_note": "Bromover Resources Sdn. Bhd. · Corporate Registered SSM: 201901003230",
     "btn_text": "Secure My Activation Slot Now"
+  },
+  "traffic_trust": {
+    "section_label": "TRAFFIC & INTEGRATION ECOSYSTEM",
+    "section_headline": "This System Works With Every Platform You Already Use",
+    "p1_badge": "▸ OMNICHANNEL TRAFFIC INTERCEPT",
+    "p1_headline": "No Matter Where Your Ads Run — AROS Captures Every Lead at the WhatsApp Door",
+    "p1_body": "TikTok Ads, Facebook, Instagram, or YouTube? Every ad click is funneled directly into WhatsApp and responded to by AI within 0.2 seconds — 24/7, without missing a single lead.",
+    "p1_status": "ALL PLATFORMS ACTIVE",
+    "p1_platforms": ["TikTok Ads", "Meta Ads", "Instagram", "YouTube"],
+    "p2_badge": "▸ ZERO FUNNEL DISRUPTION",
+    "p2_headline": "Plugs In Without Touching Anything You Already Have",
+    "p2_body": "100% plug-and-play. Whether your website runs on WordPress, Shopify, WooCommerce, or a Custom Salespage — AROS connects directly to your official WhatsApp number only. No broken pixels. Zero downtime.",
+    "p2_status": "PLUG-AND-PLAY · NO CODE",
+    "p2_platforms": ["WordPress", "Shopify", "WooCommerce", "Custom"],
+    "center_label": "Official WhatsApp",
+    "slim_label": "Zero Touch. Zero Downtime. Zero Disruption.",
+    "tag_1": "4 Major Ad Platforms",
+    "tag_2": "No Website Changes Required",
+    "tag_3": "Connected to Official WhatsApp"
   }
 }

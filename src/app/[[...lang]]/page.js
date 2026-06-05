@@ -54,13 +54,13 @@ export default function Home({ params }) {
       <LanguageToggle currentLang={lang} />
 
       {/* 🚀 THE 12 CHRONOLOGICAL SALESPAGE SECTIONS TREE (PSYCHOLOGICAL CONVERSION FLOW) */}
-      <HeroSection dailyBudget={dailyBudget} dict={dict.hero} />
+      <HeroSection dailyBudget={dailyBudget} dict={dict.hero} dictTraffic={dict.traffic_trust} />
       <BleedingMath dailyBudget={dailyBudget} setDailyBudget={setDailyBudget} dict={dict.bleeding_math} />
       <DiagnosticBoard dailyBudget={dailyBudget} dict={dict.diagnostic} />
       <PainGrid dict={dict.pain_grid} />
-      <TimelineProcess dict={dict.timeline} />
-      <AuthorityProfile dict={dict.authority} />
       <CaseStudies dict={dict.case_studies} />
+      <TimelineProcess dict={dict.timeline} dictTraffic={dict.traffic_trust} />
+      <AuthorityProfile dict={dict.authority} />
       <Testimonials dict={dict.testimonials} />
       <PricingMatrix dict={dict.pricing} lang={lang} />
       <ROIBridge dailyBudget={dailyBudget} dict={dict.roi_bridge} />

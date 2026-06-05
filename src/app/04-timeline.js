@@ -3,8 +3,9 @@
 
 import React from 'react';
 import { Cpu, Brain, GitMerge, CheckCircle2, KanbanSquare, ShieldCheck, BarChart2 } from 'lucide-react';
+import TrafficIntegrationTrust from './traffic-integration-trust.js';
 
-export default function TimelineProcess({ dict }) {
+export default function TimelineProcess({ dict, dictTraffic }) {
   const defaultDeliverables = [
     {
       tag: "Latihan AI",
@@ -187,6 +188,8 @@ export default function TimelineProcess({ dict }) {
           </div>
         </div>
 
+        {/* TRAFFIC & INTEGRATION TRUST REINFORCEMENT */}
+        <TrafficIntegrationTrust dict={dictTraffic} />
 
       </div>
     </section>

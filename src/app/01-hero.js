@@ -3,9 +3,9 @@
 
 import React, { useState, useEffect } from 'react';
 import { ArrowRight, ShieldCheck } from 'lucide-react';
-import IntegrationTrustBanner from './integration-trust-banner.js';
+import TrafficIntegrationTrust from './traffic-integration-trust.js';
 
-export default function HeroSection({ dailyBudget, dict }) {
+export default function HeroSection({ dailyBudget, dict, dictTraffic }) {
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
@@ -74,14 +74,7 @@ export default function HeroSection({ dailyBudget, dict }) {
           {subheadline}
         </p>
 
-        <div 
-          className={`transform transition-all duration-1000 ${
-            isMounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
-          }`}
-          style={{ transitionDelay: '500ms' }}
-        >
-          <IntegrationTrustBanner />
-        </div>
+
 
         {/* CONVERSION DIRECT INTERACTIVE TRIGGER */}
         <div 
@@ -108,6 +101,16 @@ export default function HeroSection({ dailyBudget, dict }) {
           <div className="mt-3.5 text-xs font-mono text-neutral-400/90 tracking-wide flex items-center justify-center gap-1.5 select-none">
             {cta_sub}
           </div>
+        </div>
+
+        {/* TRAFFIC TRUST SLIM STRIP */}
+        <div
+          className={`mb-3 transform transition-all duration-1000 ${
+            isMounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+          }`}
+          style={{ transitionDelay: '680ms' }}
+        >
+          <TrafficIntegrationTrust dict={dictTraffic} variant="slim" />
         </div>
 
         {/* CREDIBILITY ANCHOR BAR */}

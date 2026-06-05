@@ -591,5 +591,24 @@
     "warn_note": "⚠️ 本周系统部署名额即将满额",
     "ssm_note": "Bromover Resources Sdn. Bhd. · SSM 企业合规认证: 201901003230",
     "btn_text": "立即锁死名额"
+  },
+  "traffic_trust": {
+    "section_label": "流量渠道与系统对接生态",
+    "section_headline": "无论您使用哪个平台，此系统均完美兼容",
+    "p1_badge": "▸ 全渠道流量拦截引擎",
+    "p1_headline": "不管您的广告投放在哪个平台 — AROS 全部在 WhatsApp 门口拦截所有 Leads",
+    "p1_body": "TikTok广告、Facebook、Instagram 还是 YouTube？每一次广告点击都会被直接導入 WhatsApp，并由 AI 在 0.2 秒内完成接卖 — 24 小时全天候，一个都不漏掉。",
+    "p1_status": "全平台已全面对接激活",
+    "p1_platforms": ["TikTok Ads", "Meta Ads", "Instagram", "YouTube"],
+    "p2_badge": "▸ 零漏斗、零中断接入",
+    "p2_headline": "即插即用，完全不需动您现有的任何东西",
+    "p2_body": "100% 即插即用。无论您的官网是 WordPress、Shopify、WooCommerce 还是定制落地页 — AROS 只需直接对接您的 WhatsApp 官方号码。像素不会损坏，系统不会停机。",
+    "p2_status": "即插即用 · 无需代码",
+    "p2_platforms": ["WordPress", "Shopify", "WooCommerce", "定制页面"],
+    "center_label": "WhatsApp 官方号",
+    "slim_label": "Zero Touch. Zero Downtime. Zero Disruption.",
+    "tag_1": "4 大主流广告平台",
+    "tag_2": "完全不需改动现有网站",
+    "tag_3": "直接对接官方 WhatsApp 号码"
   }
 }

@@ -591,5 +591,24 @@
     "warn_note": "⚠️ Slot minggu ini hampir penuh",
     "ssm_note": "Bromover Resources Sdn. Bhd. · SSM: 201901003230",
     "btn_text": "Kunci Slot Sekarang"
+  },
+  "traffic_trust": {
+    "section_label": "EKOSISTEM TRAFIK & INTEGRASI",
+    "section_headline": "Sistem Ini Serasi Dengan Semua Platform Anda",
+    "p1_badge": "▸ OMNICHANNEL TRAFFIC INTERCEPT",
+    "p1_headline": "Tak Kisah Iklan Dari Mana — AROS Tangkap Semua Leads Di Pintu WhatsApp",
+    "p1_body": "TikTok Ads, Facebook, Instagram, atau YouTube? Setiap klik iklan anda akan disalurkan terus ke WhatsApp dan dilayan AI dalam masa 0.2 saat — 24 jam, tanpa miss seorang pun.",
+    "p1_status": "SEMUA PLATFORM AKTIF",
+    "p1_platforms": ["TikTok Ads", "Meta Ads", "Instagram", "YouTube"],
+    "p2_badge": "▸ ZERO FUNNEL DISRUPTION",
+    "p2_headline": "Sistem Ini Masuk Tanpa Ubah Apa-Apa Yang Ada",
+    "p2_body": "Plug-and-play 100%. Sama ada website anda WordPress, Shopify, WooCommerce, atau Custom Salespage — AROS disambung terus ke nombor WhatsApp rasmi anda. Tiada pixel rosak. Tiada downtime.",
+    "p2_status": "PLUG-AND-PLAY · NO CODE",
+    "p2_platforms": ["WordPress", "Shopify", "WooCommerce", "Custom"],
+    "center_label": "WhatsApp Rasmi",
+    "slim_label": "Zero Touch. Zero Downtime. Zero Disruption.",
+    "tag_1": "4 Platform Iklan Utama",
+    "tag_2": "Tiada Perubahan Website",
+    "tag_3": "Disambung ke WhatsApp Rasmi"
   }
 }
