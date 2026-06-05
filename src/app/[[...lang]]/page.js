@@ -10,7 +10,6 @@ import BleedingMath from '../02-bleeding-math.js';
 import DiagnosticBoard from '../01b-diagnostic.js';
 import PainGrid from '../03-pain-grid.js';
 import TimelineProcess from '../04-timeline.js';
-import TechnicalArchitecture from '../05-technical-architecture.js';
 import AuthorityProfile from '../07-authority.js';
 import CaseStudies from '../05-case-studies.js';
 import Testimonials from '../06-testimonials.js';
@@ -62,7 +61,6 @@ export default function Home({ params }) {
       <TimelineProcess dict={dict.timeline} />
       <AuthorityProfile dict={dict.authority} />
       <CaseStudies dict={dict.case_studies} />
-      <TechnicalArchitecture dict={dict.technical_architecture} />
       <Testimonials dict={dict.testimonials} />
       <PricingMatrix dict={dict.pricing} lang={lang} />
       <ROIBridge dailyBudget={dailyBudget} dict={dict.roi_bridge} />
