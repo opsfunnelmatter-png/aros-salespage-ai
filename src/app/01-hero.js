@@ -3,6 +3,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { ArrowRight, ShieldCheck } from 'lucide-react';
+import IntegrationTrustBanner from './integration-trust-banner.js';
 
 export default function HeroSection({ dailyBudget, dict }) {
   const [isMounted, setIsMounted] = useState(false);
@@ -72,6 +73,15 @@ export default function HeroSection({ dailyBudget, dict }) {
         >
           {subheadline}
         </p>
+
+        <div 
+          className={`transform transition-all duration-1000 ${
+            isMounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
+          }`}
+          style={{ transitionDelay: '500ms' }}
+        >
+          <IntegrationTrustBanner />
+        </div>
 
         {/* CONVERSION DIRECT INTERACTIVE TRIGGER */}
         <div 
