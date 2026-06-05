@@ -74,31 +74,6 @@ export default function PricingMatrix({ dict, lang = 'bm' }) {
             </div>
           </div>
         </div>
-        {/* PROMO DATE BANNER */}
-        {promoDate && (
-          <div className="mb-10 bg-gradient-to-r from-orange-500/5 to-amber-500/5 border border-orange-500/20 rounded-2xl p-5 shadow-[0_0_30px_rgba(249,115,22,0.05)] relative overflow-hidden">
-            <div className="absolute top-0 left-0 w-1.5 h-full bg-gradient-to-b from-orange-500 to-amber-500" />
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-center text-left pl-2">
-              <div className="space-y-1">
-                <span className="inline-flex items-center gap-1.5 text-[10px] font-mono font-black text-orange-400 uppercase tracking-widest bg-orange-500/10 px-2.5 py-1 rounded">
-                  {dict.promo_badge}
-                </span>
-                <p className="text-sm text-neutral-300 font-medium pt-1">
-                  {dict.promo_text_start}<strong className="text-white text-base font-black underline decoration-orange-500 underline-offset-4">{promoDate}</strong>{dict.promo_text_end}
-                </p>
-              </div>
-              <div className="flex items-center gap-3 bg-orange-500/10 border border-orange-500/15 p-4 rounded-xl">
-                <span className="relative flex h-2 w-2 shrink-0">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
-                </span>
-                <p className="text-xs text-orange-200/90 leading-relaxed font-medium">
-                  {dict.promo_limit_note}
-                </p>
-              </div>
-            </div>
-          </div>
-        )}
         {/* SINGLE HERO PRICING CARD */}
         <div className="relative">
           {/* RECOMMENDED BADGE */}
