@@ -187,20 +187,6 @@ export default function TimelineProcess({ dict }) {
           </div>
         </div>
 
-        <div className="text-center mt-12">
-          <button
-            onClick={() => {
-              const target = document.getElementById('pricing_section');
-              if (target) {
-                const y = target.getBoundingClientRect().top + window.scrollY - 80;
-                window.scrollTo({ top: y, behavior: 'smooth' });
-              }
-            }}
-            className="inline-flex items-center gap-2 text-orange-400 border border-orange-500/30 hover:border-orange-500/60 bg-orange-500/5 hover:bg-orange-500/10 font-bold text-sm px-6 py-3 rounded-xl transition-all duration-200 cursor-pointer"
-          >
-            {btn_action}
-          </button>
-        </div>
 
       </div>
     </section>
