@@ -3,6 +3,49 @@
 import React from 'react';
 import { CheckCircle2, Lock, Zap, AlertCircle, Brain, Database, Tags, UserCheck, RefreshCw, Megaphone, ShieldCheck, ArrowRight } from 'lucide-react';
 
+/* ─── Inline SVG Platform Logos ─────────────────────────────────────────── */
+const TikTokSVG = ({ className }) => (
+  <svg viewBox="0 0 24 24" className={className} fill="currentColor" aria-label="TikTok">
+    <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+  </svg>
+);
+
+const MetaSVG = ({ className }) => (
+  <svg viewBox="0 0 40 20" className={className} fill="currentColor" aria-label="Meta">
+    <path d="M4 10c0-3.3 1.6-6 3.5-6S11 7 11 10s-1.6 6-3.5 6S4 13.3 4 10zm9 0c0-4.4 2.5-8 5.5-8S24 5.6 24 10s-2.5 8-5.5 8S13 14.4 13 10zm11 0c0-4.7 1.6-8 3.5-8S31 5.3 31 10s-1.6 8-3.5 8S24 14.7 24 10z" />
+  </svg>
+);
+
+const InstagramSVG = ({ className }) => (
+  <svg viewBox="0 0 24 24" className={className} fill="currentColor" aria-label="Instagram">
+    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+  </svg>
+);
+
+const YouTubeSVG = ({ className }) => (
+  <svg viewBox="0 0 24 24" className={className} fill="currentColor" aria-label="YouTube">
+    <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.6 3.5 12 3.5 12 3.5s-7.6 0-9.4.6A3 3 0 0 0 .5 6.2C0 8 0 12 0 12s0 4 .5 5.8a3 3 0 0 0 2.1 2.1C4.4 20.5 12 20.5 12 20.5s7.6 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 16 24 12 24 12s0-4-.5-5.8zM9.75 15.5v-7l6.5 3.5-6.5 3.5z"/>
+  </svg>
+);
+
+const WordPressSVG = ({ className }) => (
+  <svg viewBox="0 0 24 24" className={className} fill="currentColor" aria-label="WordPress">
+    <path d="M21.469 6.825c.84 1.537 1.318 3.3 1.318 5.175 0 3.979-2.156 7.456-5.363 9.325l3.295-9.527c.615-1.54.82-2.771.82-3.864 0-.405-.026-.78-.07-1.109m-7.981.105c.647-.033 1.232-.099 1.232-.099.582-.066.514-.93-.067-.896 0 0-1.743.137-2.87.137-1.057 0-2.84-.137-2.84-.137-.583-.034-.65.863-.068.896 0 0 .54.066 1.121.099l1.665 4.552-2.338 7.003L7.375 6.93c.648-.033 1.232-.099 1.232-.099.583-.066.515-.93-.065-.896 0 0-1.744.137-2.87.137-.202 0-.44-.005-.692-.015C7.27 3.766 9.483 2.5 12 2.5c1.907 0 3.645.734 4.94 1.93-.031-.002-.062-.004-.094-.004-1.055 0-1.804.92-1.804 1.903 0 .886.513 1.634 1.057 2.521.41.72.89 1.643.89 2.977 0 .921-.354 1.993-.821 3.479l-1.075 3.585-3.9-11.56m9.921-1.557c.017.286.026.576.026.87 0 1.261-.235 2.677-.94 4.451l-3.779 10.925C22.073 19.107 24 15.765 24 12c0-1.999-.518-3.879-1.432-5.504m-7.928 14.302L12.183 22.5c-1.504-.05-2.934-.396-4.228-.979l3.337-9.678 3.189 8.832zm-7.593-2.055L3.631 9.25a9.456 9.456 0 0 0-.404 2.75c0 2.641 1.065 5.04 2.79 6.817M1.154 9.333A11.531 11.531 0 0 0 .5 12c0 5.695 3.315 10.632 8.146 12.97L1.154 9.333z"/>
+  </svg>
+);
+
+const ShopifySVG = ({ className }) => (
+  <svg viewBox="0 0 24 24" className={className} fill="currentColor" aria-label="Shopify">
+    <path d="M15.337.15a.402.402 0 0 0-.37-.143c-.148.02-3.384.627-3.384.627L9.2 2.857l-.83-.098C7.674 1.774 6.956 1.5 6.12 1.5c-1.83 0-2.72 2.284-3.003 3.444l-1.29.4C1 5.667.98 5.686.94 6.068L0 20.07l14.336 2.43L24 20.444V19.6S15.535.526 15.337.15zM11.43 1.98l-1.563 1.507a3.19 3.19 0 0 0-2.023-.673c.13-.93.637-2.745 1.775-2.745a.98.98 0 0 1 .45.104zM8.945 7.41l-2.027-1.098c.4-1.444.99-2.103 1.553-2.103.473 0 .79.308.99.607zm.58-1.667a3.028 3.028 0 0 0-1.175-.44l.614-1.834zm1.252-.34-.758-1.764 2.056-1.99C12.415 3.29 11.26 5.22 10.777 5.403z"/>
+  </svg>
+);
+
+const WooCommerceSVG = ({ className }) => (
+  <svg viewBox="0 0 24 24" className={className} fill="currentColor" aria-label="WooCommerce">
+    <path d="M21.791 0H2.21C.988 0 0 .988 0 2.21v13.256c0 1.22.988 2.21 2.21 2.21h8.728l2.97 6.324 2.971-6.323h4.912c1.22 0 2.21-.99 2.21-2.21V2.21C24 .988 23.012 0 21.791 0zM4.196 12.57a.8.8 0 0 1-.805-.605l-1.31-5.882A.8.8 0 0 1 2.86 5.1h.003a.8.8 0 0 1 .78.62l.753 3.39 1.48-2.95a.8.8 0 0 1 1.433.008l1.308 2.858.728-3.306a.8.8 0 0 1 1.567.313l-1.31 5.882a.8.8 0 0 1-1.487.136L6.59 8.77l-1.56 3.282a.8.8 0 0 1-.834.518zm12.85.605h-4.11a.8.8 0 0 1-.8-.8V7.4a.8.8 0 0 1 1.6 0v4.175h3.31a.8.8 0 0 1 0 1.6z"/>
+  </svg>
+);
+
 export default function PricingMatrix({ dict, lang = 'bm' }) {
   const paymentLink = "https://buy.stripe.com/cNi9ALgQe23cdWufyj4ZG0n";
   const [promoDate, setPromoDate] = React.useState('');
@@ -74,6 +117,24 @@ export default function PricingMatrix({ dict, lang = 'bm' }) {
             </div>
           </div>
         </div>
+        
+        {/* INTEGRATION CAPSULE */}
+        <div className="flex justify-center mb-8 relative z-20 animate-fade-in">
+          <div className="inline-flex flex-wrap sm:flex-nowrap items-center justify-center gap-3 bg-white/[0.02] border border-white/[0.08] px-4 py-2.5 rounded-2xl text-[9px] sm:text-[10px] font-mono font-bold tracking-wide text-neutral-300">
+            <span className="text-neutral-200 uppercase tracking-widest leading-none whitespace-nowrap">ZERO TOUCH. ZERO DOWNTIME. ZERO DISRUPTION.</span>
+            <span className="hidden sm:inline text-neutral-700">│</span>
+            <div className="flex items-center gap-2.5 text-neutral-400 shrink-0">
+              <TikTokSVG className="h-3 w-auto text-neutral-400 hover:text-white transition-colors duration-200" />
+              <MetaSVG className="h-3 w-auto text-neutral-400 hover:text-white transition-colors duration-200" />
+              <InstagramSVG className="h-3 w-auto text-neutral-400 hover:text-white transition-colors duration-200" />
+              <YouTubeSVG className="h-3 w-auto text-neutral-400 hover:text-white transition-colors duration-200" />
+              <WordPressSVG className="h-3 w-auto text-neutral-400 hover:text-white transition-colors duration-200" />
+              <ShopifySVG className="h-3 w-auto text-neutral-400 hover:text-white transition-colors duration-200" />
+              <WooCommerceSVG className="h-3 w-auto text-neutral-400 hover:text-white transition-colors duration-200" />
+            </div>
+          </div>
+        </div>
+
         {/* SINGLE HERO PRICING CARD */}
         <div className="relative">
           {/* RECOMMENDED BADGE */}
