@@ -3,7 +3,6 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import { KanbanSquare, ShieldCheck } from 'lucide-react';
-import IntegrationTrustBanner from './integration-trust-banner.js';
 
 export default function CaseStudies({ dict }) {
   // FASA 5 Chat Sequence Data
@@ -306,8 +305,6 @@ export default function CaseStudies({ dict }) {
             </div>          </div>
 
         </div>
-        
-        <IntegrationTrustBanner />
       </div>
     </section>
   );
