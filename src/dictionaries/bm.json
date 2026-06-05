@@ -25,11 +25,11 @@
     "feedback_high": "Asas bisnes anda kukuh. Ini bermakna AROS akan berfungsi pada kapasiti tertinggi untuk memaksimumkan setiap ringgit iklan yang anda belanjakan. Sila tembus ke analisis bawah untuk meneliti impak kebocoran sisa.",
     "feedback_low": "Aliran jualan dikesan mengalami kebocoran kritikal. Sistem pemasaran anda kehilangan momentum jualan berharga terutamanya luar waktu operasi.",
     "items": [
-      "Salespage ultra-laju (< 0.5 saat) yang dioptimumkan untuk mobile conversion (bukan sekadar templat basic WordPress yang lambat)",
+      "Sistem respons AI ultra-pantas (< 0.2 saat) yang melayan & menapis prospek secara real-time (bukan chatbot menu kaku yang lambat)",
       "Integrasi WhatsApp Cloud API rasmi Meta (bukan perisian blast haram / personal phone yang berisiko disekat bila-bila masa)",
       "Sistem penapisan intent (Lead Filtering) automatik sebelum diproses (supaya tidak membakar masa melayan leads tidak serius)",
       "Sistem tangkapan data automatik (Real-time Lead Capture) saat prospek mendarat, walaupun mereka menutup halaman tanpa membeli",
-      "Pautan pembayaran langsung (Payment Gateway Integration) di dalam salespage tanpa redirect luar yang membunuh momentum pembelian",
+      "Pautan pembayaran langsung (Payment Gateway Integration) di dalam halaman jualan tanpa redirect luar yang membunuh momentum pembelian",
       "Pangkalan data leads awan (Cloud Database) yang diselaraskan secara real-time untuk penjejakan analitik ROI iklan",
       "Otak AI Agent (Autonomous Closing Engine) 24/7 tanpa henti yang terlatih mengikut tingkah laku dan skrip syarikat",
       "Mekanisme susulan pintar (Algorithmic Follow-Up Loops) automatik berasaskan state perbualan prospek (blue-tick, senyap, atau minat)",
@@ -161,8 +161,8 @@
       {
         "step": "02",
         "day": "Hari Kedua",
-        "title": "Latihan AI & Setup Salespage",
-        "desc": "Kami mula melatih sistem AI mengikut skrip closing anda dan membina reka bentuk halaman jualan Next.js premium."
+        "title": "Latihan AI & Sistem Webhook Integration",
+        "desc": "Kami mula melatih sistem AI mengikut skrip closing anda dan menyediakan integrasi webhook serta pangkalan data awan."
       },
       {
         "step": "03",
@@ -242,7 +242,7 @@
       {
         "id": "03",
         "title": "Intent Warming",
-        "desc": "Prospek mendarat di halaman jualan Premium Static Salespage (Deliverable 1) bagi mengekalkan minat dan fokus membeli secara serta-merta."
+        "desc": "Prospek dilayan secara mesra oleh WhatsApp AI Agent bagi membina minat membeli dan mengekalkan fokus prospek secara serta-merta."
       },
       {
         "id": "04",
@@ -544,7 +544,7 @@
       },
       {
         "q": "Saya bukan orang technical — boleh ikut atau uruskan ke?",
-        "a": "Sistem AROS berjalan di atas infrastruktur Cloud API rasmi yang telah diluluskan oleh Meta. Tugas berat setup API, konfigurasi otak AI 10-langkah, and deployment salespage kesemuanya kami uruskan A-to-Z. Anda cuma perlu isi onboarding form mudah dan tonton video walkthrough untuk pantau dashboard."
+        "a": "Sistem AROS berjalan di atas infrastruktur Cloud API rasmi yang telah diluluskan oleh Meta. Tugas berat setup API, konfigurasi otak AI 10-langkah, dan integrasi pangkalan data kesemuanya kami uruskan A-to-Z. Anda cuma perlu isi onboarding form mudah dan tonton video walkthrough untuk pantau dashboard."
       },
       {
         "q": "Adakah sistem Autonomous AI Agent ini berisiko akaun WhatsApp kena ban?",
@@ -563,7 +563,7 @@
         "a": "Jaminan kami mudah: jika sistem tidak live dalam masa 72 jam selepas anda hantar semua maklumat onboarding, kami refund 100% tanpa soal. Sebaik sistem live dan operasi cloud server bermula, kos infrastruktur yang telah dilaksanakan tidak boleh dikembalikan — sama seperti mana-mana perkhidmatan teknikal profesional yang lain."
       },
       {
-        "q": "Saya sudah ada website dan salespage sendiri. Adakah sistem ini masih sesuai?",
+        "q": "Saya sudah ada website dan halaman jualan sendiri. Adakah sistem ini masih sesuai?",
         "a": "Ya — ini adalah kes penggunaan utama AROS. Kami tidak sentuh, ubah, atau gantikan website anda langsung. Kami hanya sambungkan otak AI terus ke nombor WhatsApp rasmi anda. Pixel, domain, dan semua data iklan anda kekal 100% seperti sedia kala. Setup ini plug-and-play sepenuhnya."
       },
       {

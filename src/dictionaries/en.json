@@ -25,11 +25,11 @@
     "feedback_high": "Your business foundation is solid. This means AROS will operate at maximum capacity to fully leverage every single dollar of ad spend. Proceed to the analysis below to inspect residual leakage impacts.",
     "feedback_low": "Critical leakage detected in your sales pipeline. Your current system is bleeding high-value sales momentum, especially outside standard operational hours.",
     "items": [
-      "Ultra-fast salespage (< 0.5 seconds) optimized for mobile conversion (not just another slow, generic WordPress template)",
+      "Ultra-fast AI response system (< 0.2 seconds) that handles and qualifies leads in real-time (not a rigid, slow menu-based chatbot)",
       "Official Meta WhatsApp Cloud API integration (no risky, illegal blast software or personal phones prone to instant bans)",
       "Automated intent screening (Lead Filtering) before processing (stopping you from wasting time on non-serious leads)",
       "Real-time Lead Capture instantly when prospects land, even if they exit the page without completing a purchase",
-      "Direct Payment Gateway Integration inside the salespage without external redirects that kill buying momentum",
+      "Direct Payment Gateway Integration within the chat flow without complex redirects that kill buying momentum",
       "Real-time synchronized Cloud Database for precise ad ROI analytics tracking",
       "24/7 non-stop Autonomous Closing Engine trained specifically on your company's behavior and scripts",
       "Algorithmic Follow-Up Loops automated based on the prospect's real-time chat state (blue-ticks, silent, or interested)",
@@ -161,8 +161,8 @@
       {
         "step": "02",
         "day": "Day Two",
-        "title": "AI Model Training & Page Architecture",
-        "desc": "We initialize local training algorithms based on your sales scripts while engineering your premium Next.js interface."
+        "title": "AI Model Training & Webhook Integration",
+        "desc": "We initialize local training algorithms based on your sales scripts while establishing secure webhook and database integrations."
       },
       {
         "step": "03",
@@ -242,7 +242,7 @@
       {
         "id": "03",
         "title": "Intent Warming",
-        "desc": "Direct routing of inbound traffic onto your Premium Static Salespage (Deliverable 1) to lock focus and preserve purchasing velocity."
+        "desc": "Prospects are engaged instantly by the WhatsApp AI Agent to warm up interest, answer questions, and lock focus on the solution."
       },
       {
         "id": "04",
@@ -544,7 +544,7 @@
       },
       {
         "q": "I possess zero technical background or code capability — can I follow along or manage this dashboard?",
-        "a": "The entire AROS architecture operates on top of official Meta-sanctioned and approved Cloud API enterprise layers. The heavy structural lift of cloud API authorization, 10-step custom AI logic calibration, and Next.js static production environment deployment are managed entirely by our deployment crew from A-to-Z. Your singular input loop is to submit an uncomplicated onboarding asset form and review a clean video walkthrough to master your visualization analytics dashboard."
+        "a": "The entire AROS architecture operates on top of official Meta-sanctioned and approved Cloud API enterprise layers. The heavy structural lift of cloud API authorization, 10-step custom AI logic calibration, and secure database pipeline integrations are managed entirely by our deployment crew from A-to-Z. Your singular input loop is to submit an uncomplicated onboarding asset form and review a clean video walkthrough to master your visualization analytics dashboard."
       },
       {
         "q": "Does deploying this Autonomous AI Agent infrastructure expose my business numbers to WhatsApp account ban risks?",
@@ -563,7 +563,7 @@
         "a": "Our guarantee is simple: if the system is not live within 72 hours of your onboarding submission, we issue a 100% refund — no questions asked. Once the system is live and cloud server operations have commenced, the infrastructure costs already deployed cannot be reversed — consistent with standard professional technical service agreements."
       },
       {
-        "q": "I already have my own website and sales page. Is this system still relevant?",
+        "q": "I already have my own website and sales pages. Is this system still relevant?",
         "a": "Yes — this is actually AROS's primary use case. We do not touch, modify, or replace your website in any way. We simply connect our AI brain directly to your official WhatsApp number. Your pixels, domain, and all ad attribution data remain 100% intact. This is a pure plug-and-play backend integration."
       },
       {

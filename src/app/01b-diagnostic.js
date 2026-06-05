@@ -47,11 +47,11 @@ export default function DiagnosticBoard({ dailyBudget, dict }) {
   };
 
   const defaultItems = [
-    "Salespage ultra-laju (< 0.5 saat) yang dioptimumkan untuk mobile conversion (bukan sekadar templat basic WordPress yang lambat)",
+    "Halaman jualan ultra-laju (< 0.5 saat) yang dioptimumkan untuk mobile conversion (bukan sekadar templat basic WordPress yang lambat)",
     "Integrasi WhatsApp Cloud API rasmi Meta (bukan perisian blast haram / personal phone yang berisiko disekat bila-bisa masa)",
     "Sistem penapisan intent (Lead Filtering) automatik sebelum diproses (supaya tidak membakar masa melayan leads tidak serius)",
     "Sistem tangkapan data automatik (Real-time Lead Capture) saat prospek mendarat, walaupun mereka menutup halaman tanpa membeli",
-    "Pautan pembayaran langsung (Payment Gateway Integration) di dalam salespage tanpa redirect luar yang membunuh momentum pembelian",
+    "Pautan pembayaran langsung (Payment Gateway Integration) di dalam halaman jualan tanpa redirect luar yang membunuh momentum pembelian",
     "Pangkalan data leads awan (Cloud Database) yang diselaraskan secara real-time untuk penjejakan analitik ROI iklan",
     "Otak AI Agent (Autonomous Closing Engine) 24/7 tanpa henti yang terlatih mengikut tingkah laku dan skrip syarikat",
     "Mekanisme susulan pintar (Algorithmic Follow-Up Loops) automatik berasaskan state perbualan prospek (blue-tick, senyap, atau minat)",

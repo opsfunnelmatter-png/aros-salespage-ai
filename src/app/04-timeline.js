@@ -7,9 +7,9 @@ import { Cpu, Brain, GitMerge, CheckCircle2, KanbanSquare, ShieldCheck, BarChart
 export default function TimelineProcess({ dict }) {
   const defaultDeliverables = [
     {
-      tag: "Halaman Jualan",
-      title: "Salespage Ultra-Pantas",
-      desc: "Sales page premium Next.js dioptimumkan untuk kelajuan loading bawah 0.1 saat. Prospek tak lari selepas klik iklan."
+      tag: "Latihan AI",
+      title: "Custom AI Brain Training",
+      desc: "Otak AI dilatih khusus mengikut produk, skrip FAQ dan objection-handling perniagaan anda sendiri — bukan templat generik."
     },
     {
       tag: "Otak AI Utama",
@@ -22,9 +22,9 @@ export default function TimelineProcess({ dict }) {
       desc: "Sistem susulan automatik. Ia mengejar semula prospek yang 'blue-tick' atau senyap mengikut reaksi perbualan."
     },
     {
-      tag: "Gerbang Bayaran",
-      title: "Integrasi Bayaran Lancar",
-      desc: "Pautan gerbang pembayaran (Stripe/FPX) dipasang terus di dalam sales page. Checkout pantas tanpa friction."
+      tag: "Analitik",
+      title: "Laporan Analitik Bulanan",
+      desc: "Dashboard prestasi AI anda setiap bulan — leads yang dilayan, kadar respons, dan anggaran recovery jualan."
     }
   ];
 
@@ -38,8 +38,8 @@ export default function TimelineProcess({ dict }) {
     { 
       step: "02", 
       day: "Hari Kedua", 
-      title: "Latihan AI & Setup Salespage", 
-      desc: "Kami mula melatih sistem AI mengikut skrip closing anda dan membina reka bentuk halaman jualan Next.js premium." 
+      title: "Latihan AI & Sistem Webhook Integration", 
+      desc: "Kami mula melatih sistem AI mengikut skrip closing anda dan menyediakan integrasi webhook serta pangkalan data awan." 
     },
     { 
       step: "03", 
@@ -82,7 +82,7 @@ export default function TimelineProcess({ dict }) {
   const deployment_title = dict?.deployment_title || "Sistem Live Dalam Masa 3 Hari";
   const deployment_desc = dict?.deployment_desc || "Proses setup tersusun, pantas, dan telus tanpa sebarang delay.";
   const limit_note_title = dict?.limit_note_title || "Had Setup Mingguan:";
-  const limit_note_desc = dict?.limit_note_desc || "Kami hadkan setup kepada 3 syarikat sahaja seminggu demi menjaga kualiti setup AI dan kelajuan sales page anda pada tahap terbaik.";
+  const limit_note_desc = dict?.limit_note_desc || "Kami hadkan setup kepada 3 syarikat sahaja seminggu demi menjaga kualiti konfigurasi AI dan integrasi sistem pada tahap terbaik untuk setiap klien.";
   const btn_action = dict?.btn_action || "Lihat Pakej & Harga →";
 
   return (
