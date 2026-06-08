@@ -47,7 +47,7 @@ const WooCommerceSVG = ({ className }) => (
 );
 
 export default function PricingMatrix({ dict, lang = 'bm' }) {
-  const paymentLink = "https://buy.stripe.com/cNi9ALgQe23cdWufyj4ZG0n";
+  const paymentLink = "https://buy.stripe.com/28E6oz6bAcHQg4Ccm74ZG0o";
   const [promoDate, setPromoDate] = React.useState('');
   React.useEffect(() => {
     const today = new Date();
@@ -263,6 +263,56 @@ export default function PricingMatrix({ dict, lang = 'bm' }) {
                   <span>•</span>
                   <span>Bromover Resources Sdn. Bhd. (201901003230)</span>
                 </div>
+
+                {/* PAYMENT METHOD ICONS */}
+                <div className="mt-4 pt-4 border-t border-white/5">
+                  <p className="text-[9px] font-mono text-neutral-600 uppercase tracking-widest text-center mb-3">
+                    {dict.payment_methods_label}
+                  </p>
+                  <div className="flex items-center justify-center gap-2.5 flex-wrap">
+                    {/* Visa */}
+                    <div className="bg-white/[0.06] border border-white/10 rounded-md px-2.5 py-1.5 flex items-center gap-1.5" title="Visa">
+                      <svg viewBox="0 0 38 24" className="h-4 w-auto" aria-label="Visa">
+                        <rect width="38" height="24" rx="3" fill="#1A1F71"/>
+                        <path d="M16.5 7.5l-2.3 9h-2L14.5 7.5h2zm8.3 5.8l1.1-3 .6 3h-1.7zm2.2 3.2h1.8L27.3 7.5h-1.7c-.4 0-.7.2-.8.5l-3 8.5h2.1l.4-1.1h2.5l.2 1.1zm-5.1-3c0-2.1-2.9-2.2-2.9-3.1 0-.3.3-.6.9-.6.5 0 1 .1 1.4.3l.3-1.4c-.4-.2-1-.3-1.7-.3-1.8 0-3.1 1-3.1 2.4 0 1 1 1.6 1.8 2 .8.4 1.1.7 1.1 1.1 0 .6-.7.9-1.3.9-.7 0-1.3-.2-1.8-.4l-.3 1.5c.5.2 1.3.4 2.1.4 2 0 3.3-1 3.5-2.8zM13.2 7.5L10 16.5H7.8L6.2 9c-.1-.4-.2-.5-.5-.7C5.1 8 4.2 7.7 3.5 7.6l.1-.1h3.5c.5 0 .9.3 1 .8l.9 4.8 2.1-5.6h2.1z" fill="white"/>
+                      </svg>
+                    </div>
+                    {/* Mastercard */}
+                    <div className="bg-white/[0.06] border border-white/10 rounded-md px-2.5 py-1.5 flex items-center gap-1.5" title="Mastercard">
+                      <svg viewBox="0 0 38 24" className="h-4 w-auto" aria-label="Mastercard">
+                        <rect width="38" height="24" rx="3" fill="#252525"/>
+                        <circle cx="15" cy="12" r="7" fill="#EB001B"/>
+                        <circle cx="23" cy="12" r="7" fill="#F79E1B"/>
+                        <path d="M19 7.3a7 7 0 0 1 0 9.4A7 7 0 0 1 19 7.3z" fill="#FF5F00"/>
+                      </svg>
+                    </div>
+                    {/* FPX */}
+                    <div className="bg-white/[0.06] border border-white/10 rounded-md px-2.5 py-1.5 flex items-center" title="FPX Online Banking">
+                      <span className="text-[10px] font-black tracking-tight" style={{color: '#D0103A'}}>FP</span><span className="text-[10px] font-black tracking-tight text-white">X</span>
+                    </div>
+                    {/* GrabPay */}
+                    <div className="bg-white/[0.06] border border-white/10 rounded-md px-2.5 py-1.5 flex items-center gap-1" title="GrabPay">
+                      <svg viewBox="0 0 20 20" className="h-3.5 w-3.5" fill="none" aria-label="GrabPay">
+                        <circle cx="10" cy="10" r="10" fill="#00B14F"/>
+                        <path d="M10 5.5C7.5 5.5 5.5 7.5 5.5 10s2 4.5 4.5 4.5 4.5-2 4.5-4.5h-4.5V10H13c-.3 1.4-1.5 2.5-3 2.5A3 3 0 0 1 7 10a3 3 0 0 1 3-3c.8 0 1.5.3 2 .8l1-1A4.5 4.5 0 0 0 10 5.5z" fill="white"/>
+                      </svg>
+                      <span className="text-[9px] font-black text-[#00B14F] tracking-tight">GrabPay</span>
+                    </div>
+                  </div>
+
+                  {/* GRABPAY INSTALLMENT BADGE */}
+                  {dict.grabpay_installment_note && (
+                    <div className="mt-3 mx-auto max-w-xs flex items-center justify-center gap-1.5 bg-[#00B14F]/5 border border-[#00B14F]/20 rounded-lg px-3 py-2">
+                      <svg viewBox="0 0 20 20" className="h-3 w-3 shrink-0" fill="none">
+                        <circle cx="10" cy="10" r="10" fill="#00B14F"/>
+                        <path d="M10 5.5C7.5 5.5 5.5 7.5 5.5 10s2 4.5 4.5 4.5 4.5-2 4.5-4.5h-4.5V10H13c-.3 1.4-1.5 2.5-3 2.5A3 3 0 0 1 7 10a3 3 0 0 1 3-3c.8 0 1.5.3 2 .8l1-1A4.5 4.5 0 0 0 10 5.5z" fill="white"/>
+                      </svg>
+                      <span className="text-[9px] font-mono text-[#00B14F] leading-snug">
+                        {dict.grabpay_installment_note}
+                      </span>
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
           </div>
@@ -292,6 +342,11 @@ export default function PricingMatrix({ dict, lang = 'bm' }) {
           <p className="text-xs font-mono text-neutral-600 leading-relaxed uppercase tracking-widest">
             {dict.footer_architecture_note}
           </p>
+          {dict.token_topup_note && (
+            <p className="mt-3 text-xs font-mono text-neutral-500 leading-relaxed max-w-xl mx-auto">
+              {dict.token_topup_note}
+            </p>
+          )}
         </div>
       </div>
     </section>

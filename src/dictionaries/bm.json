@@ -317,7 +317,7 @@
           "desc": "Komitmen kewangan bulanan dan tahunan.",
           "human": "RM2,500 - RM4,000 / Bln (Kos gaji & bonus staff)",
           "bot": "RM150 - RM400 / Bln (Inbox kaku tanpa AI)",
-          "aros": "RM499 Setup (Bulan 1 All-In) + RM99/bln mulai bulan ke-2",
+          "aros": "RM499 Sekali Bayar (Yuran Kejuruteraan Bulan 1) + RM99/bln Kos Infrastruktur Mentah (Bulan 2+)",
           "status": "KOS PALING PENJIMATAN"
         }
       ]
@@ -399,7 +399,7 @@
   "promo_text_end": " sahaja.",
   "promo_limit_note": "Slot setup mingguan dihadkan bagi mengekalkan kualiti konfigurasi AI optimum untuk setiap klien.",
   "bot_diff_title": "⚡ Ini Bukan Chatbot Biasa",
-  "bot_diff_desc": "ManyChat, Wati, dan bot butang membalas ikut aliran kaku. AROS memahami konteks, handle objections, dan close jualan — seperti closer manusia terbaik anda, tapi 24/7 tanpa tidur.",
+  "bot_diff_desc": "ManyChat, Wati, dan bot butang membalas ikut aliran kaku. AROS adalah otak AI custom yang direkabentuk oleh Bromover — dilatih khusus mengikut skrip anda, berjalan di atas Enterprise Gateway Infrastructure — memahami konteks, handle objections, dan close jualan 24/7 tanpa tidur.",
   "dfy_badge": "100% Done-For-You (DFY)",
   "dfy_title": "Dipasang secara ",
   "dfy_highlight": "Autopilot",
@@ -407,21 +407,24 @@
   "guarantee_title": "Jaminan 72 Jam",
   "guarantee_desc": "Jika sistem tidak live dalam masa 72 jam selepas onboarding — kami refund 100% tanpa soal.",
   "secure_payment_label": "🔒 Pembayaran Selamat SSL",
+  "payment_methods_label": "Kaedah Pembayaran Diterima:",
+  "grabpay_installment_note": "GrabPay PayLater tersedia — bayar serendah RM167/bulan dalam 3 ansuran mudah.",
   "corporate_ssm_label": "Bromover Resources Sdn. Bhd. (201901003230)",
-  "fee_faq_q": "Kenapa Ada Caj RM99/Bulan Mulai Bulan Kedua?",
-  "fee_faq_a_part1": "Sistem AI anda berjalan 24/7 di atas infrastruktur awan enterprise — cloud server, lesen Meta Cloud API rasmi, dan maintenance berterusan — semuanya diuruskan penuh oleh pasukan jurutera kami. Ini menggantikan keperluan untuk mengupah staf malam ",
+  "fee_faq_q": "Apa yang RM499 cover — dan kenapa ada komitmen infrastruktur RM99/bulan mulai Bulan 2?",
+  "fee_faq_a_part1": "RM499 adalah **Yuran Kejuruteraan & Latihan AI Custom** kami — ia merangkumi pembinaan otak AI dari awal, rangka prompt khusus mengikut skrip jualan anda, dan kerja integrasi webhook penuh untuk menghubungkan WhatsApp anda ke Enterprise Gateway Infrastructure kami. Platform infrastruktur itu sendiri disediakan oleh sebuah Enterprise Gateway Engine rasmi — dan mulai Bulan 2, caj RM99/bulan adalah **yuran infrastruktur mentah yang dibayar terus ke gateway tersebut** — bukan kepada kami. Kami serahkan pada harga asal tanpa sebarang markup. Ini menggantikan keperluan mengupah staf malam ",
   "fee_faq_a_salary": "RM2,500+/bulan",
   "fee_faq_a_part2": " atau berlangganan platform inbox biasa ",
   "fee_faq_a_inbox_cost": "RM300–400/bulan",
-  "fee_faq_a_part3": " — dengan kapasiti dan kecerdasan yang jauh lebih tinggi.",
+  "fee_faq_a_part3": " — sambil memberikan anda pemilikan 100% ke atas dashboard sistem anda sendiri, tanpa sebarang ikatan dengan agensi kami selepas setup.",
   "entity_verification_label": "Diselia oleh entiti sah: ",
   "corporate_title_raw": "BROMOVER RESOURCES SDN. BHD.",
-  "footer_architecture_note": "Seni Bina Sistem Diuruskan Penuh Oleh Pasukan Jurutera Bromover AI",
+  "token_topup_note": "📊 Bisnes bervolume tinggi boleh topup token pemprosesan AI tambahan terus dalam dashboard platform pada kadar wholesale mentah — RM12 per 1 Juta token. Tiada markup agensi. Terus dari infrastruktur ke akaun anda.",
+  "footer_architecture_note": "Otak AI Custom & Seni Bina Webhook Direkabentuk oleh Bromover · Infrastruktur Platform Dioperasikan melalui Enterprise Gateway Engine Rasmi",
   "packages": {
     "solo": {
       "badge": "AROS 24/7 FULL-STACK AI SALES ENGINE",
       "name": "AROS AI Agent",
-      "desc": "Keep your current website. Keep your active ads. Kami pasang otak AI terus ke nombor WhatsApp rasmi anda untuk tangkap dan close 40% leads yang masuk lepas jam 10 malam — secara automatik.",
+      "desc": "Kekalkan website anda. Kekalkan iklan anda. Kami bina otak AI custom dan pasangkannya ke atas Enterprise Gateway Infrastructure yang disambung terus ke nombor WhatsApp rasmi anda — untuk tangkap dan close 40% leads yang masuk lepas jam 10 malam, secara automatik.",
       "spec_label": "// SPESIFIKASI SISTEM AI",
       "specs_bold": [
         {
@@ -455,11 +458,11 @@
         { "label": "Meta Cloud API Integration + Setup", "value": "RM 500" },
         { "label": "Webhook + Database Architecture", "value": "RM 400" },
         { "label": "30-Day Post-Launch Support", "value": "RM 299" },
-        { "label": "Meta Cloud API License (Bulan 1)", "value": "RM 299" }
+        { "label": "Yuran Infrastruktur Platform Bulan 1 (Enterprise Gateway) — Ditaja", "value": "RM 299" }
       ],
       "value_label": "Total Nilai Sebenar",
       "value_price": "RM2,197 VALUE",
-      "investment_label": "Bulan 1 — All-In (Setup + Operasi Penuh)",
+      "investment_label": "Bulan 1 — All-In (Yuran Kejuruteraan + Infrastruktur Ditaja)",
       "price": "RM499",
       "monthly_label": "Mulai Bulan Kedua:",
       "monthly_fee": "RM99",
@@ -531,8 +534,16 @@
     "footer_grace_end": " untuk penangguhan sementara sebelum akaun dinyahaktifkan secara automatik demi menjamin integriti data server. Pengaktifan semula selepas fasa tersebut akan tertakluk kepada caj penyambungan semula standard syarikat.",
     "questions": [
       {
+        "q": "Saya dengar platform infrastruktur tu takde caj setup. Jadi RM499 tu bayar apa sebenarnya?",
+        "a": "Soalan yang sangat bagus — dan kami memang sengaja dedahkan ini kerana ketelusan adalah keutamaan kami. Enterprise Gateway Infrastructure yang kami gunakan memang tidak mengenakan bayaran daftar masuk platform. Betul. Tapi platform itu adalah cangkerang kosong — tiada otak AI, tiada skrip jualan, tiada logik custom, dan tiada sambungan webhook. RM499 yang anda bayar adalah untuk kerja kejuruteraan kami: membina otak AI custom anda dari awal, merekabentuk rangka prompt yang dilatih mengikut produk dan skrip jualan anda sendiri, serta melakukan integrasi webhook teknikal penuh untuk menyambungkan semuanya. Bayangkan begini — tanah tu percuma. Arkitek dan tukang bina tidak percuma."
+      },
+      {
+        "q": "Selepas setup, siapa yang miliki sistem ni? Adakah saya terikat dengan Bromover selamanya?",
+        "a": "Anda miliki 100% semuanya selepas setup. Nombor WhatsApp anda, akaun Meta Cloud API anda, dan login dashboard — semuanya atas nama anda. Selepas kami serahkan sistem, anda log masuk sendiri, uruskan dashboard anda, dan topup token infrastruktur terus dalam platform pada kadar wholesale mentah (RM12 per 1 Juta token). Penglibatan berterusan Bromover hanyalah yuran infrastruktur RM99/bulan — yang merupakan kos mentah yang diserahkan terus kepada Enterprise Gateway Engine tanpa sebarang markup agensi. Jika anda memutuskan untuk berpisah, semua data dan akses adalah milik anda."
+      },
+      {
         "q": "Adakah caj bulanan RM99 ini wajib? Kenapa tidak bayar one-off sahaja?",
-        "a": "Sistem AI Agent berprestasi tinggi bukan sekadar bot 'auto-reply' biasa. Ia menuntut kuasa pemprosesan Cloud Server 24/7, kos pemprosesan token LLM yang berat, and penyelenggaraan infrastruktur Meta Webhook yang berterusan. Sebagai perbandingan industri, platform pengurusan mesej biasa seperti Sleekf*** atau Resp***.io mengenakan caj langganan asas bermula RM300 hingga RM400+ sebulan (hanya untuk sistem inbox kaku, belum termasuk kapasiti AI). Komitmen RM99/bulan ini merangkumi kos operasi Cloud Server, pengurusan token AI, dan penyelenggaraan infrastruktur sistem anda secara berterusan."
+        "a": "RM99/bulan adalah kos infrastruktur mentah yang dikenakan terus oleh Enterprise Gateway Engine yang menjalankan sistem AI anda — ia bukan yuran Bromover. Kami serahkan pada harga asal tanpa sebarang markup. Sebagai perbandingan: platform perisian pesanan komersial lain (tanpa sebarang kapasiti AI) mengenakan caj RM300–RM400+/bulan untuk inbox berkongsi yang kaku. RM99 anda mendapat pemprosesan kluster enterprise khusus, penjanaan token LLM, dan penyelenggaraan pipeline Meta Webhook berterusan — pada kadar wholesale di bawah pasaran. Anda bayar gateway itu terus dari dashboard anda. Kami hanya konfigurasi apa yang berjalan di dalamnya."
       },
       {
         "q": "Saya stuck dengan Meta Ads / TikTok Ads — sesuai ke sistem ini?",

@@ -317,7 +317,7 @@
           "desc": "Aggregated short-term and long-term operating cash commitments.",
           "human": "RM2,500 - RM4,000 / Mth (Fixed basic salaries, overheads, and bonuses)",
           "bot": "RM150 - RM400 / Mth (Rigid message inbox software devoid of AI assets)",
-          "aros": "RM499 One-Time Setup (Month 1 All-In) + RM99/mth starting Month 2",
+          "aros": "RM499 One-Time Engineering Setup (Month 1) + RM99/mth Raw Infrastructure Pass-Through (Month 2+)",
           "status": "MAXIMUM ROI PENNY-SAVING"
         }
       ]
@@ -399,7 +399,7 @@
     "promo_text_end": " only.",
     "promo_limit_note": "Weekly server onboarding configurations are strictly capped to sustain optimum AI architecture calibration for each client profile.",
     "bot_diff_title": "⚡ This Is Not a Regular Chatbot",
-    "bot_diff_desc": "ManyChat, Wati, and button bots reply on rigid fixed flows. AROS understands context, handles objections, and closes sales — like your best human closer, but 24/7 without sleep.",
+    "bot_diff_desc": "ManyChat, Wati, and button bots reply on rigid fixed flows. AROS is a custom AI brain engineered by Bromover — trained specifically on your scripts, running on an Enterprise Gateway Infrastructure — understanding context, handling objections, and closing sales 24/7 without sleep.",
     "dfy_badge": "100% Done-For-You (DFY)",
     "dfy_title": "Fully Deployed on ",
     "dfy_highlight": "Autopilot",
@@ -407,21 +407,24 @@
     "guarantee_title": "72-Hour Guarantee",
     "guarantee_desc": "If the system is not live within 72 hours of your onboarding submission — we issue a 100% refund, no questions asked.",
     "secure_payment_label": "🔒 Secure SSL Encrypted Payment",
+    "payment_methods_label": "Accepted Payment Methods:",
+    "grabpay_installment_note": "GrabPay PayLater available — pay as low as RM167/month in 3 easy instalments.",
     "corporate_ssm_label": "Bromover Resources Sdn. Bhd. (201901003230)",
-    "fee_faq_q": "Why is there a Recurring RM99/Month Overhead Starting From Month Two?",
-    "fee_faq_a_part1": "Your autonomous AI operates 24/7/365 on an enterprise cloud infrastructure layer — containing dedicated cluster nodes, official Meta Cloud API secure licenses, and constant backend technical updates managed directly by our team. This entirely offsets the capital allocation of hiring a night shift team costing ",
+    "fee_faq_q": "What exactly does the RM499 cover — and why is there a RM99/month infrastructure commitment from Month 2?",
+    "fee_faq_a_part1": "The RM499 is our **Engineering & Custom AI Training Fee** — it covers the custom AI brain we architect from scratch, the prompt frameworks we engineer for your specific sales script, and the full webhook integration work we perform to connect your WhatsApp to our Enterprise Gateway Infrastructure. The platform infrastructure itself is provided by an official Enterprise Gateway Engine — and from Month 2 onwards, the RM99/month is a **raw infrastructure fee paid directly to that gateway** — not to us. We pass this through at zero markup. This entirely offsets the capital allocation of hiring a night shift team costing ",
     "fee_faq_a_salary": "RM2,500+/month",
     "fee_faq_a_part2": " or subscribing to generic shared communication inbox software costing ",
     "fee_faq_a_inbox_cost": "RM300–400/month",
-    "fee_faq_a_part3": " — while delivering incomparably superior AI closing intelligence.",
+    "fee_faq_a_part3": " — while giving you 100% ownership of your own system dashboard, with zero lock-in to our agency after setup.",
     "entity_verification_label": "Supervised by verified corporate entity: ",
     "corporate_title_raw": "BROMOVER RESOURCES SDN. BHD.",
-    "footer_architecture_note": "Enterprise Framework Administered Fully by the Bromover AI Engineering Force",
+    "token_topup_note": "📊 High-volume businesses can top up additional AI processing tokens directly inside the platform dashboard at raw wholesale rates — RM12 per 1 Million tokens. Zero agency markup. Direct from infrastructure to your account.",
+    "footer_architecture_note": "Custom AI Brain & Webhook Architecture Engineered by Bromover · Platform Infrastructure Operated via Official Enterprise Gateway Engine",
     "packages": {
       "solo": {
         "badge": "AROS 24/7 FULL-STACK AI SALES ENGINE",
         "name": "AROS AI Agent",
-        "desc": "Keep your current website. Keep your active ads. We plug our AI brain directly into your official WhatsApp number to catch and close the 40% of leads that pour in past 10 PM — automatically.",
+        "desc": "Keep your current website. Keep your active ads. We engineer a custom AI brain and deploy it onto an Enterprise Gateway Infrastructure connected directly to your official WhatsApp number — catching and closing the 40% of leads that pour in past 10 PM, automatically.",
         "spec_label": "// SYSTEM AI SPECIFICATIONS",
         "specs_bold": [
           {
@@ -455,11 +458,11 @@
           { "label": "Meta Cloud API Integration + Setup", "value": "RM 500" },
           { "label": "Webhook + Database Architecture", "value": "RM 400" },
           { "label": "30-Day Post-Launch Support", "value": "RM 299" },
-          { "label": "Meta Cloud API License (Month 1)", "value": "RM 299" }
+          { "label": "Sponsored Month 1 Platform Infrastructure Fee (Enterprise Gateway)", "value": "RM 299" }
         ],
         "value_label": "Total True Value",
         "value_price": "RM2,197 VALUE",
-        "investment_label": "Month 1 — All-In (Setup + Full Operations)",
+        "investment_label": "Month 1 — All-In (Engineering Fee + Sponsored Infrastructure)",
         "price": "RM499",
         "monthly_label": "Commencing Month Two onwards:",
         "monthly_fee": "RM99",
@@ -531,8 +534,16 @@
     "footer_grace_end": " for temporary data parking suspension before absolute node teardown sequences execute to preserve cluster network integrity. Re-activation attempts logged outside this grace window threshold are subject to standard structural database rebuild and port restoration fees.",
     "questions": [
       {
+        "q": "I heard the platform infrastructure has no setup fee. So what exactly did I pay RM499 for?",
+        "a": "Great question — and we proactively address this because transparency is everything to us. The Enterprise Gateway Infrastructure we deploy on does not charge a platform sign-up fee. That is correct. But the platform is an empty shell — it has no AI brain, no sales script, no custom logic, and no webhook connections out of the box. What you paid RM499 for is our elite engineering work: building your custom AI brain from scratch, architecting the prompt framework trained on your specific product and closing scripts, and performing the full technical webhook integration to connect everything. Think of it this way — the land is free. The architect and the construction crew are not."
+      },
+      {
+        "q": "After setup, who owns the system? Am I locked in to Bromover forever?",
+        "a": "You own 100% of everything after setup. Your WhatsApp number, your Meta Cloud API account, and your dashboard login — all in your name. After we hand over the system, you log in directly, manage your own dashboard, and top up infrastructure tokens yourself inside the platform at raw wholesale rates (RM12 per 1 Million tokens). Bromover's only ongoing involvement is the RM99/month infrastructure fee — which is a pass-through raw cost to the Enterprise Gateway Engine with zero agency markup. If you ever decide to part ways, all your data and access belong to you."
+      },
+      {
         "q": "Is the RM99 monthly commitment mandatory? Why isn't this sold as an absolute one-off buy option?",
-        "a": "A high-scale, real-time Autonomous AI Agent ecosystem is fundamentally distinct from an outdated, static 'auto-reply' menu script script. It requires persistent 24/7 computing allocations on enterprise cluster cloud networks, high-concurrency LLM token generation processing, and non-stop operational optimization of custom Meta Webhook pipelines. For context on software market metrics, baseline legacy multi-agent messaging software architectures devoid of closing intelligence (such as Sleekf*** or Resp***.io) command starting subscription overheads tracking from RM300 to north of RM400+ per month purely to host a dead, rigid shared inbox interface. Your minimal RM99 monthly commitment completely absorbs dedicated cloud host hardware fees, text calculation processing, and perpetual architecture security optimization."
+        "a": "The RM99/month is the raw infrastructure cost charged directly by the Enterprise Gateway Engine that powers your AI system — it is not a Bromover fee. We pass this through at zero markup. For context: competing commercial messaging software platforms (without any AI capability) charge RM300–RM400+/month for a basic shared inbox. Your RM99 buys dedicated enterprise cluster processing, LLM token generation, and ongoing Meta Webhook pipeline maintenance — at below-market wholesale rates. You pay the gateway directly from your dashboard. We simply configured what runs inside it."
       },
       {
         "q": "My active marketing run-rates are currently stuck with poor Meta Ads / TikTok Ads metrics — is this system viable?",
