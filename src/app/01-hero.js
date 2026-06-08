@@ -37,7 +37,7 @@ export default function HeroSection({ dailyBudget, dict, dictTraffic }) {
           </span>
         </div>
         <div className="text-xs font-mono text-neutral-500 tracking-tight text-right select-none">
-          ⚡ Powered by Bromover Resources Sdn. Bhd.
+          ⚡ Integrated by Bromover Resources Sdn. Bhd.
         </div>
       </div>
 

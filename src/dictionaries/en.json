@@ -119,10 +119,10 @@
   },
   "timeline": {
     "section_sub": "IMPLEMENTATION TIMELINE",
-    "section_desc": "Your sales leakage isn't caused by bad ads — it's an infrastructure problem in handling customers. We don't sell courses or standard guidebooks. We operate as engineers: we build a structured funnel, deploy the AI, test it extensively, and hand over a complete autopilot sales engine directly to you.",
-    "component_title_sub": "DEVELOPMENT STACK",
-    "component_title": "What We Build",
-    "component_desc": "Four core infrastructure layers deployed and connected directly to your operational ecosystem.",
+    "section_desc": "Your sales leakage isn't caused by bad ads — it's an infrastructure problem in handling customers. We don't sell courses or standard guidebooks. We act as certified integration engineers: we configure a structured sales architecture on top of Enterprise Gateway Infrastructure, deploy your custom AI brain, stress-test every node, and hand over a fully operational autopilot sales ecosystem directly to your business.",
+    "component_title_sub": "INTEGRATION STACK",
+    "component_title": "What We Configure For You",
+    "component_desc": "Four core integration layers engineered and deployed using Enterprise Gateway Infrastructure — connected directly to your operational business ecosystem.",
     "deployment_title_sub": "DEPLOYMENT SCHEDULE",
     "deployment_title": "System Live In Exactly 3 Days",
     "deployment_desc": "A highly structured, rapid, and transparent onboarding workflow with zero delays.",
@@ -326,10 +326,10 @@
     "section_title_highlight": "AROS AI Engine vs Traditional Methods"
   },
   "authority": {
-    "section_sub": "AROS FOUNDATION ARCHITECT",
-    "section_desc": "A commercial automation system forged from actual high-scale conversion records, not another template bot.",
+    "section_sub": "THE STRATEGY BEHIND AROS",
+    "section_desc": "A commercial automation system validated through real high-scale conversion battles — engineered and deployed by the Bromover integration team.",
     "name": "Amin Azman",
-    "role": "AROS System Architect",
+    "role": "Chief Strategy Officer, Bromover",
     "company_tag": "BROMOVER RESOURCES SDN. BHD. · EST. 2019 · 30+ Enterprises Digitalized",
     "pilot_title": "// EARLY ACCESS LAUNCH — PILOT CLIENT OFFER",
     "pilot_desc": "AROS is currently deployed under an exclusive early access launch timeline. We are strictly onboarding only 3 pilot client slots this week to ensure our backend engineers provide absolute structural dedication. As an early pilot client, you secure full grandfathered launch pricing — and we stand committed to making your environment live within 72 hours, or we issue a 100% immediate no-questions refund.",
@@ -346,7 +346,7 @@
       },
       {
         "title": "Enterprise Prompt Engineering Nodes",
-        "subtitle": "Proprietary AI model alignment custom-trained to ingest your specific catalog specs, closing scripts, and FAQ databases."
+        "subtitle": "AI model alignment custom-trained to ingest your specific catalog specs, closing scripts, and FAQ databases."
       },
       {
         "title": "Secure Context Storage Relational Database",
@@ -380,13 +380,13 @@
       }
     ],
     "bio_narrative": [
-      "I have operated inside the raw business ecosystem since 2008 — spending 17 years aggressively navigating high-stakes market terrains across diverse industries: enterprise SMS infrastructure, MLM networks, F&B operations, cosmetics, supplements, and heavy structural construction sectors.",
-      "Following years of relentless execution, failures, and structural rebuilds, I engineered a proprietary Business Engineering Framework built on cold, mathematically proven scaling mechanisms that fundamentally flipped my operational direction. Utilizing strategic Hero Product funnels, calculated Negative CAC acquisition models, and extreme Lifetime Value (LTV) maximization, I successfully propelled a newly launched asset to hit a RM12 Million annual run rate within its first 12 months of deployment.",
-      "This output was neither luck nor commercial magic — it is pure business mathematics designed to be replicated.",
-      "AROS is the direct infrastructural manifestation born from these real-world scaling battles. We engineered this system to plug the exact wounds we bled from: massive surges of high-intent traffic crashing in past midnight, left completely unanswered while ad spend dissolved with zero returns. If this operational architecture is resilient enough to anchor a RM12 Million pipeline, it is more than capable of protecting every single piece of revenue entering your business."
+      "I have operated inside the raw business ecosystem since 2008 — spending 17 years navigating high-stakes market terrains across diverse industries: enterprise SMS infrastructure, MLM networks, F&B operations, cosmetics, supplements, and heavy structural construction sectors.",
+      "Following years of relentless execution, failures, and structural rebuilds, I developed a Business Engineering Framework built on cold, mathematically proven scaling mechanisms. Utilizing strategic Hero Product funnels, calculated Negative CAC acquisition models, and Lifetime Value (LTV) maximization, I successfully propelled a newly launched asset to hit a RM12 Million annual run rate within its first 12 months.",
+      "This outcome was neither luck nor commercial magic — it is pure business mathematics designed to be replicated.",
+      "AROS was born to solve the exact problem I experienced firsthand: massive surges of high-intent traffic arriving past midnight, left completely unanswered while ad spend dissolved. The Bromover engineering team built and configured this system so that every business we onboard never bleeds another lead after midnight again."
     ],
-    "section_title_line1": "The Engineering Blueprint Behind ",
-    "section_title_highlight": "The AROS Automation Framework"
+    "section_title_line1": "Why This System ",
+    "section_title_highlight": "Was Built"
   },
   "pricing": {
     "section_sub": "AROS INVESTMENT FRAMEWORK",

@@ -119,10 +119,10 @@
   },
   "timeline": {
     "section_sub": "GARIS MASA PELAKSANAAN",
-    "section_desc": "Kebocoran jualan anda bukan masalah iklan tak menarik — ia masalah sistem melayan customer. Kami bukan jual kelas atau buku panduan. Kami bertindak sebagai jurutera: bina sistem jualan tersusun, pasang AI, uji, dan serahkan enjin jualan autopilot yang lengkap kepada anda.",
-    "component_title_sub": "KOMPONEN PEMBANGUNAN",
-    "component_title": "What We Build",
-    "component_desc": "Empat lapisan infrastruktur utama terpasang yang akan disambung terus ke perniagaan anda.",
+    "section_desc": "Kebocoran jualan anda bukan masalah iklan tak menarik — ia masalah sistem melayan customer. Kami bukan jual kelas atau buku panduan. Kami bertindak sebagai jurutera integrasi bertauliah: kami konfigurasi seni bina jualan tersusun di atas Enterprise Gateway Infrastructure, pasang otak AI anda, uji setiap nod, dan serahkan ekosistem jualan autopilot yang sepenuhnya operasional terus ke perniagaan anda.",
+    "component_title_sub": "KOMPONEN INTEGRASI",
+    "component_title": "Apa Yang Kami Konfigurasi Untuk Anda",
+    "component_desc": "Empat lapisan integrasi utama yang direka bentuk dan dipasang menggunakan Enterprise Gateway Infrastructure — disambung terus ke ekosistem operasi perniagaan anda.",
     "deployment_title_sub": "TIMELINE PEMASANGAN",
     "deployment_title": "Sistem Live Dalam Masa 3 Hari",
     "deployment_desc": "Proses setup tersusun, pantas, dan telus tanpa sebarang delay.",
@@ -326,10 +326,10 @@
     "section_title_highlight": "AROS AI Engine vs Kaedah Biasa"
   },
   "authority": {
-    "section_sub": "PENGASAS SISTEM AROS",
-    "section_desc": "Sistem automasi jualan yang dibina berdasarkan data jualan sebenar, bukan sekadar templat bot kosong.",
+    "section_sub": "STRATEGI DI SEBALIK AROS",
+    "section_desc": "Sistem automasi jualan yang disahkan melalui pertempuran jualan berskala besar yang sebenar — direka bentuk dan dipasang oleh pasukan integrasi Bromover.",
     "name": "Amin Azman",
-    "role": "AROS System Architect",
+    "role": "Ketua Pegawai Strategi, Bromover",
     "company_tag": "BROMOVER RESOURCES SDN. BHD. · EST. 2019 · 30+ Bisnes Didigitalkan",
     "pilot_title": "// FASA PELANCARAN AWAL — PILOT CLIENT OFFER",
     "pilot_desc": "AROS kini dalam fasa pelancaran awal. Kami membuka 3 slot pilot klien sahaja minggu ini bagi memastikan setiap setup mendapat perhatian penuh pasukan jurutera kami. Sebagai pilot klien pertama, anda mendapat harga pelancaran — dan kami committed untuk sistem live dalam masa 72 jam, atau kami refund 100% tanpa soal.",
@@ -346,7 +346,7 @@
       },
       {
         "title": "Prompt Engineering Tersuai",
-        "subtitle": "Otak AI dilatih khusus mengikut produk, skrip closing, dan FAQ perniagaan anda sendiri."
+        "subtitle": "Otak AI dikonfigurasikan khusus mengikut produk, skrip closing, dan FAQ perniagaan anda sendiri."
       },
       {
         "title": "Pangkalan Data Selamat",
@@ -380,13 +380,13 @@
       }
     ],
     "bio_narrative": [
-      "Saya berada dalam arena perniagaan sejak 2008 — 17 tahun mengharungi pasaran dan \"berdarah\" dalam pelbagai industri: bisnes sistem SMS, MLM, F&B, kosmetik, suplemen, hingga sektor pembinaan.",
-      "Selepas bertahun-tahun mencuba, gagal, dan bangkit semula — saya menemui satu Sistem Kejuruteraan Bisnes (Business Engineering) berasaskan matematik tegar yang mengubah kompas perniagaan saya sepenuhnya. Melalui strategi Hero Product, taktik Negative CAC, dan pemaksimuman Lifetime Value (LTV), saya berjaya memacu sebuah perniagaan baru sehingga mencapai run rate RM12 Juta dalam tahun pertama.",
+      "Saya berada dalam arena perniagaan sejak 2008 — 17 tahun mengharungi pasaran dan berdarah dalam pelbagai industri: bisnes sistem SMS, MLM, F&B, kosmetik, suplemen, hingga sektor pembinaan.",
+      "Selepas bertahun-tahun mencuba, gagal, dan bangkit semula — saya menemui satu Sistem Kejuruteraan Bisnes berasaskan matematik tegar yang mengubah kompas perniagaan saya sepenuhnya. Melalui strategi Hero Product, taktik Negative CAC, dan pemaksimuman Lifetime Value (LTV), saya berjaya memacu sebuah perniagaan baru sehingga mencapai run rate RM12 Juta dalam tahun pertama.",
       "Ini bukan kebetulan atau magik — ini matematik bisnes yang boleh direplikasi.",
-      "AROS adalah sistem yang lahir dari pengalaman sebenar ini. Kami bina untuk menyelesaikan masalah yang kami sendiri hadapi: leads masuk waktu tidur, tiada siapa layan, duit iklan hangus tanpa hasil. Kalau sistem ini cukup kuat untuk memacu RM12 juta, ia cukup kuat untuk menjaga setiap lead yang masuk ke bisnes anda."
+      "AROS lahir untuk menyelesaikan masalah yang saya sendiri hadapi: leads masuk waktu tidur, tiada siapa layan, duit iklan hangus tanpa hasil. Pasukan jurutera Bromover bina dan konfigurasi sistem ini supaya setiap bisnes yang kami onboard tidak pernah lagi kehilangan satu lead pun selepas tengah malam."
     ],
-    "section_title_line1": "Di Sebalik Pembangunan Enjin ",
-    "section_title_highlight": "Automasi AROS Engine"
+    "section_title_line1": "Kenapa Sistem Ini ",
+    "section_title_highlight": "Wujud"
   },
   "pricing": {
   "section_sub": "PELAN PELABURAN AROS",
